@@ -1,0 +1,45 @@
+import { motion } from "motion/react"
+
+import { getCategory } from "@/content/categories"
+import { EASE } from "@/components/motion/reveal"
+import { isVisible, useFilter } from "./filter-context"
+
+/**
+ * Section header inside a recap. Collapses smoothly (with its top spacing) when
+ * the reader filters to another category. The spacing lives *inside* the
+ * animated element so it disappears together with the header.
+ */
+export function Category({ slug }: { slug: string }) {
+  const { active } = useFilter()
+  const meta = getCategory(slug)
+  const visible = isVisible(active, slug)
+
+  return (
+    <motion.div
+      data-category-header={slug}
+      aria-hidden={!visible}
+      initial={false}
+      animate={{ height: visible ? "auto" : 0, opacity: visible ? 1 : 0 }}
+      transition={{ duration: 0.32, ease: EASE }}
+      className="overflow-hidden"
+    >
+      <div className="flex items-center gap-3 pt-12 pb-5">
+        <span
+          className="size-2.5 shrink-0 rounded-full"
+          style={{ backgroundColor: meta.accent }}
+          aria-hidden
+        />
+        <h2 className="font-heading text-2xl leading-none font-medium tracking-tight">
+          {meta.label}
+        </h2>
+        <span
+          className="h-px flex-1"
+          style={{
+            background: `linear-gradient(to right, ${meta.accent}55, transparent)`,
+          }}
+          aria-hidden
+        />
+      </div>
+    </motion.div>
+  )
+}

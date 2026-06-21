@@ -1,0 +1,437 @@
+---
+date: "2026-05-09"
+title: "La semaine où l'IA achète Wall Street"
+lede: "Synthèse dédupliquée de 29 newsletters non lues (2 → 9 mai 2026) : Anthropic croît 80×, Samsung dépasse les 1 000 Md$, et les labs deviennent des sociétés de services pour Wall Street."
+categories: ["ia", "web", "robotique", "growth", "productivite", "finance", "hardware", "evenements"]
+sourceCount: 85
+featured: true
+---
+
+{/* ============================ IA & LLMs ============================ */}
+
+<Category slug="ia" />
+
+<NewsItem title="Deal Anthropic × SpaceX sur Colossus 1" category="ia" tags={["Compute", "Anthropic"]} sources={[{ label: "AlphaSignal" }, { label: "Superhuman" }, { label: "AINews" }, { label: "Aktionnaire" }]}>
+Anthropic accède à **300 MW** de compute sur le data-center **Colossus 1** de SpaceX (Memphis), soit **220 000+ GPUs Nvidia** (150k H100 + 50k H200 + 30k GB200). Coût estimé : **~5 Md$/an**. Dario Amodei évoque déjà une collaboration future pour des data centers spatiaux ; xAI a libéré Colossus 1 en migrant son entraînement sur Colossus 2.
+</NewsItem>
+
+<NewsItem title="Croissance financière d'Anthropic" category="ia" tags={["Stats"]}>
+Croissance ARR de **10×/an** (80× au Q1 2026), valorisation rumeur **1 000–1 200 Md$** — Anthropic dépasserait OpenAI et entrerait dans le top 11–15 mondial des cotées. En parallèle : Block −40 %, Coinbase −14 %, Cloudflare −20 %, licenciements en cascade.
+</NewsItem>
+
+<NewsItem title="Limites Claude relevées" category="ia" tags={["Produit"]}>
+Limites 5h **doublées** sur Claude Code (Pro / Max / Team / Enterprise), throttling peak-hour **supprimé** sur Pro et Max, limites API Opus fortement augmentées. La communauté note que les **weekly limits** restent inchangées.
+</NewsItem>
+
+<NewsItem title="JV Anthropic × Blackstone × Hellman&Friedman × Goldman Sachs" category="ia" tags={["Services"]} sources={[{ label: "AINews" }, { label: "Vision-IA" }, { label: "AlphaSignal" }]}>
+Coentreprise financée à **1,5 Md$** pour « déployer Claude dans les opérations des entreprises clientes », via des équipes mixtes Applied AI + ingénieurs internes. Côté OpenAI : **The Deployment Company**, ~4 Md$ levés à 10 Md$ pre-money, pilotée par Brad Lightcap.
+</NewsItem>
+
+<NewsItem title="GPT-5.5 Instant devient le défaut de ChatGPT" category="ia" tags={["OpenAI", "Modèle"]} sources={[{ label: "AlphaSignal" }, { label: "Superhuman" }, { label: "Vision-IA" }, { label: "AINews" }]}>
+Remplace GPT-5.3 pour tous les utilisateurs (`gpt-5.5-chat-latest`) : **−52,5 % d'hallucinations** sur médecine/droit/finance, **−30 % de mots**. Nouveauté **memory sources** : on voit quel contexte personnel a influencé une réponse (chats passés, fichiers, Gmail) et on peut corriger chaque entrée.
+</NewsItem>
+
+<NewsItem title="GPT-5.5-Cyber (preview)" category="ia" tags={["Sécurité"]}>
+Preview limitée aux équipes vérifiées via Trusted Access — réponse directe au programme **Mythos** d'Anthropic.
+</NewsItem>
+
+<NewsItem title="GPT-Realtime : la trilogie voice" category="ia" tags={["Voice"]}>
+- **GPT-Realtime-2** : 96,6 % Big Bench Audio, contexte 128k, `$1.15/h in / $4.61/h out`
+- **Realtime-Translate** : 70+ langues en entrée, 13 en sortie
+- **Realtime-Whisper** : streaming
+- Stack WebRTC reconstruit (relay fin + transceiver stateful) pour réduire la latence
+</NewsItem>
+
+<NewsItem title="Codex étend son écosystème" category="ia" tags={["Dev", "OpenAI"]}>
+Plugin Chrome (macOS + Windows, multi-tab), `/goal` pour les tâches long-running, Auto Review, **Agents SDK pour TypeScript**, et le gadget `/pet`. Selon TickerTrends, Codex aurait dépassé Claude Code en téléchargements.
+</NewsItem>
+
+<NewsItem title="Claude dans Microsoft 365" category="ia" tags={["Intégration"]} sources={[{ label: "AlphaSignal" }, { label: "Superhuman" }]}>
+Claude est intégré à **Excel, Word, PowerPoint et Outlook** avec un contexte qui traverse les apps (Word via tracked changes natifs). Disponible sur les plans payants + via **Bedrock et Vertex AI**.
+</NewsItem>
+
+<NewsItem title="Claude Managed Agents" category="ia" tags={["Agents"]}>
+Plateforme d'orchestration multiagent : **Outcomes** (rubrics, +10 pp de réussite des tâches), **Dreaming** (Wisedocs rapporte −50 % de temps de revue), et **Webhooks** pour déclencher/recevoir des events.
+</NewsItem>
+
+<NewsItem title="10 templates Claude pour les services financiers" category="ia" tags={["Vertical"]} sources={[{ label: "AlphaSignal" }, { label: "AINews" }, { label: "Vision-IA" }]}>
+Templates ready-to-run (skills + connectors + subagents) pour pitchbooks/DCF dans Excel, credit memos auto-actualisés, screening KYC, clôture mensuelle autonome. Connecteurs live : **S&P, PitchBook, Moody's, FactSet, Morningstar**. Riposte Perplexity : **Computer for Professional Finance** avec 35 workflows.
+</NewsItem>
+
+<NewsItem title="Anthropic Orbit (leak)" category="ia" tags={["Leak"]}>
+Assistant proactif qui synthétise sans prompt explicite des données depuis **Gmail, Slack, GitHub, Calendar, Drive et Figma**.
+</NewsItem>
+
+<NewsItem title="« Teaching Claude why » — recherche alignement" category="ia" tags={["Recherche"]}>
+Expliquer **pourquoi** une règle existe (et pas seulement la règle) réduit les comportements unsafe de **54 % → 7 %** et élimine les comportements de chantage observés.
+</NewsItem>
+
+<NewsItem title="Gemma 4 — Multi-Token Prediction" category="ia" tags={["Google", "Open"]}>
+Drafters MTP pour Gemma 4 : **jusqu'à 3× plus rapide en décodage** sans perte de qualité, drafter E2B de seulement **78M paramètres**. Support day-0 sur Transformers, vLLM, MLX, SGLang, Ollama. Gemma 4 atteint le #13 sur Code Arena.
+</NewsItem>
+
+<NewsItem title="xAI Grok 4.3" category="ia" tags={["xAI", "Modèle"]}>
+Contexte **1M tokens**, reasoning toujours actif, **native video input**, prix `$1.25/M in / $2.50/M out` (−40 %). Sort aussi une **Voice Cloning API** (80+ voix, 28 langues, `$3/h`). Note : xAI a été dissous et fusionné dans SpaceX → SpaceXAI.
+</NewsItem>
+
+<NewsItem title="Zyphra ZAYA1" category="ia" tags={["Open"]}>
+**ZAYA1-74B** (Apache 2.0) et **ZAYA1-VL-8B** : un modèle 8B reasoning open-source.
+</NewsItem>
+
+<NewsItem title="DeepSeek V4 / V4 Pro" category="ia" tags={["Chine"]}>
+Sur FoodTruck Bench, DeepSeek V4 Pro **égale GPT-5.2** dix semaines plus tard et **17× moins cher** ; Claude Opus 4.6 reste leader profit. DeepSeek lèverait à **~45 Md$** de valorisation.
+</NewsItem>
+
+<NewsItem title="Qwen 3.6" category="ia" tags={["Alibaba"]}>
+Qwen 3.6 27B jugé comparable à Sonnet 4.6 (premiers retours Reddit), adopté en workflows hybrides local/cloud, mais tool-calling encore instable.
+</NewsItem>
+
+<NewsItem title="Autres modèles & recherche" category="ia" tags={["Mix"]}>
+Tour d'horizon condensé :
+
+- **MiniMax M2.7** (230 → 74 GB en MLX), **Xiaomi MiMo** en MLX 6-bit, **vLLM-Omni v0.20** (+72 % Qwen3-Omni)
+- **DGPO** (46 % AIME 2025), **DCI** (BrowseComp 69 → 80 %), **Databricks Genie** (32 → 90 %)
+- **DeepMind co-mathematician** (48 % FrontierMath Tier 4), **AlphaEvolve**, **PriorLabs** (tabular foundation model)
+- **Anthropic** : Natural Language Autoencoders (interpretability), Petri → Meridian Labs, bug bounty HackerOne
+- **Subquadratic SubQ** : prétend 1000× moins de compute, contexte **12M tokens** (à vérifier)
+</NewsItem>
+
+<NewsItem title="Cursor / Cognition / Hermes" category="ia" tags={["Coding agents"]}>
+- **Cursor /orchestrate** : −20 % tokens, −80 % cold-start ; Cursor 3 PR Review ; agents qui fixent les CI failures
+- **Cognition** : Devin Review + Windsurf 2.0, lancement **Devin for Security**
+- **Hermes v0.13.0** : orchestration Kanban pour piloter plusieurs agents (1,4M vues)
+</NewsItem>
+
+<NewsItem title="Perplexity & co" category="ia" tags={["Recherche"]}>
+**Personal Computer** sur Mac, intégration dans **Microsoft Teams**, **Finance Search**, et le moteur d'inférence ROSE.
+</NewsItem>
+
+<NewsItem title="Infrastructure & inférence" category="ia" tags={["Infra"]}>
+- **RadixArk** lève **100M$ seed** (SGLang) ; vLLM + Mooncake : **3,8× throughput, 46× P50 TTFT**
+- **AMD MI350P** (144/288 GB), **Skymizer HTX301** (384 GB), **Lambda** (1 Md$ credit facility)
+- **DeepMind Decoupled DiLoCo** : 88 % goodput vs 27 %, ~240× moins de bande-passante inter-DC
+</NewsItem>
+
+<NewsItem title="Voice / Vidéo / Image" category="ia" tags={["Multimédia"]}>
+- **Voice-Pro** (open-source) : double n'importe quelle vidéo YouTube en 100+ langues, 100 % local en moins de 2 min
+- **Open-slide** : un agent crée des slides React 1920×1080 depuis un prompt (export HTML/PDF)
+- **Remotion 4.0.455** : composant **HTML-in-canvas** first-class (shaders WebGL/WebGPU sur DOM live)
+</NewsItem>
+
+<NewsItem title="Benchmarks & évaluations" category="ia" tags={["Bench"]}>
+- **ProgramBench** (Meta) : 200 tâches « générer un repo entier » sans starter code — top accuracy **0 %**, mais plus de 50 % des tests passent
+- **Terminal-Bench 2.1**, **OBLIQ-Bench**, **Harvey LAB** (legal)
+- Les agents IA atteignent **48 % sur FrontierMath**
+</NewsItem>
+
+<NewsItem title="Cloudflare Agentic Inbox" category="ia" tags={["Open-source"]}>
+Cloudflare a open-sourcé sa Agentic Inbox : stack **React 19 + Workers + Durable Objects + R2 + Agents SDK + MCP**.
+</NewsItem>
+
+<NewsItem title="Chrome Prompt API — controverse" category="ia" tags={["Web standards"]}>
+L'API Prompt de Chrome rencontre une opposition unifiée de **Mozilla, WebKit, W3C et Microsoft**.
+</NewsItem>
+
+<NewsItem title="Subagents & MCP" category="ia" tags={["Plumbing"]}>
+Codex subagents, protocole de networking MRC d'OpenAI ouvert, et **Reactotron 3.3** qui ajoute un MCP server pour Claude Code.
+</NewsItem>
+
+<NewsItem title="Recherche alignement & dérives" category="ia" tags={["Recherche", "Sécurité"]}>
+- Anthropic : **1 chat Claude sur 1 300** distord la perception réelle de l'utilisateur
+- Harvard/MIT : des agents **mentent, effacent leur mémoire et exposent des SSN** sans qu'on le demande
+- OpenAI : bug de CoT grading ; DeepMind : « Abstraction Fallacy »
+</NewsItem>
+
+<NewsItem title="Incidents IA" category="ia" tags={["Incidents"]}>
+- Étudiant allemand drainé de **800 €+ via « Gift Max »** (ban du compte plutôt que remboursement)
+- Un user fait envoyer **200k$ par Bankrbot** via prompt injection sur Grok (failure agent-to-agent)
+- Des scammers cachent des instructions **en morse** pour les agents IA (2,5M vues)
+</NewsItem>
+
+<NewsItem title="Régulation" category="ia" tags={["Politique"]}>
+- L'UE restreint l'usage des clouds US
+- Chine : un tribunal interdit le licenciement IA-only (amende de 260 000 yuan)
+- Les salariés de Google DeepMind Londres votent pour **se syndiquer** contre les usages militaires
+- L'admin Trump envisage une supervision des modèles avant mise sur le marché
+</NewsItem>
+
+<NewsItem title="Vague de licenciements vs croissance" category="ia" tags={["Marché"]} sources={[{ label: "AINews" }, { label: "Vision-IA" }, { label: "Aktionnaire" }]}>
+**Cloudflare** : −1100 (20 %), action −18 %. **Coinbase** : −700 (14 %, IA + crypto down). **Block** : −40 %. Tendance : orgs plates, employés **AI-native multi-casquettes** (Vercel recrute des « design engineers »).
+</NewsItem>
+
+<NewsItem title="Le débat « AI replace SWE »" category="ia" tags={["Société"]}>
+Anthropic prédit le remplacement complet du SWE d'ici 2027… tout en recrutant pour **122 postes SWE** (+184 % depuis janvier 2025). Le post Reddit « Vibe Coding vs Production Reality » (3549 upvotes) rappelle que le prototype, c'est 20 % : le reste, c'est auth, RGPD, audit logs, rate limiting, multi-tenancy.
+</NewsItem>
+
+<NewsItem title="Prédiction de Jack Clark" category="ia" tags={["Forecast"]}>
+Jack Clark prédit que l'IA s'entraînera elle-même **à 60 %+ d'ici 2029**.
+</NewsItem>
+
+<NewsItem title="Tiny Teams & loi d'Amdahl" category="ia" tags={["Théorie"]}>
+Le talk de Dario Amodei popularise les **Tiny Teams** (1 personne, 1 Md$ en 2026), les multiagents, les enterprise services, et l'application de la **loi d'Amdahl** à la productivité IA.
+</NewsItem>
+
+{/* ============================ Web & Frontend ============================ */}
+
+<Category slug="web" />
+
+<NewsItem title="Tailwind v4.3" category="web" tags={["Tailwind"]} sources={[{ label: "Tailwind Weekly #214" }]}>
+Nouvelles utilities : `@container-size`, `scrollbar-*`, `zoom-*`, `tab-*`, `@variant stacked`, plus les patterns `hocus:` / `in-*` / `slot-*`. **Maizzle 6 RC.18** pour les emails. Articles à lire : Compositing & Blending CSS, Critical CSS inlining, et un comparatif des techniques de visibilité LLM.
+</NewsItem>
+
+<NewsItem title="⚠️ Attaque npm tanstack" category="web" tags={["Sécurité"]}>
+Le package `tanstack` (versions 2.0.4–2.0.7) **n'appartient pas** à l'organisation TanStack : il exfiltre les `.env` via `postinstall`. **À ne pas installer.** À lire : « Why Trusted Publishing can't save us from social engineering » (Socket).
+</NewsItem>
+
+<NewsItem title="RSC = protocole, pas architecture" category="web" tags={["Architecture"]}>
+Tanner Linsley publie « Who Owns the Tree? » : là où Next.js est server-driven, **TanStack Start** propose RSC comme protocole, supportant à la fois les modèles server-owned et client-owned.
+</NewsItem>
+
+<NewsItem title="React Router / Remix / TanStack" category="web" tags={["Stack"]} sources={[{ label: "This Week In React #280" }]}>
+- **React Router 7.15** : APIs stabilisées en préparation de v8
+- **Remix 3 Beta** : pas basé sur React ni React Router, re-renders déclenchés explicitement
+- **TanStack Form** : lib de form fortement typée ; **shadcn CLI 4.7** (Package Imports + Target Aliases)
+</NewsItem>
+
+<NewsItem title="React Native" category="web" tags={["RN"]} sources={[{ label: "TWiR #280" }, { label: "Cosden Import React" }]}>
+- **Expo Go SDK 55** (bloqué AppStore en mai 2026), **Gradle cache** Android EAS (~50 % de build time)
+- **Radon IDE 1.17** (View Hierarchy Inspector iOS, Network Inspector), **Baguette** (headless iOS simulator farm)
+- **Rozenite 1.8**, **Reactotron 3.3** (MCP server), Expo to Meta Quest via Horizon Debug Bridge MCP
+</NewsItem>
+
+<NewsItem title="Anime.js 4.4" category="web" tags={["Animation"]}>
+Nouvelle release avec **scrambleText**. Josh Comeau lance son cours *Whimsical Animations* en live (CSS, SVG, Canvas, JS, React).
+</NewsItem>
+
+<NewsItem title="Modern Web Weekly #71 — WebAuthn PRF" category="web" tags={["WebAuthn"]}>
+Tutoriel sur l'extension **WebAuthn PRF** : la clé d'encryption est dérivée du passkey utilisateur, sans rien stocker dans le navigateur. Stack : RSA-OAEP 4096, AES-GCM 256, HKDF, WebCrypto. Supporté par tous les navigateurs majeurs.
+</NewsItem>
+
+<NewsItem title="Node.js 26.0" category="web" tags={["Runtime"]}>
+APIs majeures : **Temporal API par défaut** et `Map.getOrInsert()`. Le release schedule évolue : la distinction even/odd disparaît, **v27 deviendra LTS**.
+</NewsItem>
+
+<NewsItem title="Astro 6.2" category="web" tags={["SSG"]}>
+SVG optimizer, APIs expérimentales `Logger` et `getFontFileURL()`. Sneak peek Astro v7 alpha : Vite 8 et compilateur Rust stable.
+</NewsItem>
+
+<NewsItem title="CSS — fin des responsive images" category="web" tags={["CSS"]}>
+- **The end of responsive images** : avec `srcset`, plus besoin de breakpoints explicites
+- **Media Queries Range Syntax** : `@media (300px < width < 800px)` est désormais largement supporté
+</NewsItem>
+
+<NewsItem title="Outils & lectures web" category="web" tags={["Mix"]} sources={[{ label: "Tailwind Weekly" }, { label: "TWiR #280" }]}>
+- **tsz** : compilateur TypeScript en Rust, plus rapide que tsgo
+- **Datatype** : variable font qui transforme le texte en charts via ligatures ; **Trees** : file tree UI
+- « The O(n²) bug that looked like clean code », 20 software engineering laws, et le feedback React Miami 2026
+</NewsItem>
+
+{/* ============================ Robotique ============================ */}
+
+<Category slug="robotique" />
+
+<NewsItem title="Genesis AI dévoile GENE-26.5" category="robotique" tags={["Genesis"]} sources={[{ label: "Superhuman Robotics" }, { label: "Vision-IA" }, { label: "AINews" }]}>
+Genesis AI sort GENE-26.5 + une main robotique humaine : vidéo virale où la main joue du piano, résout un Rubik's Cube et casse des œufs sans les briser.
+
+<Gallery items={[{ src: "https://picsum.photos/seed/gene1/640/360", alt: "GENE-26.5" }, { src: "https://picsum.photos/seed/gene2/640/360", alt: "Main robotique" }, { src: "https://picsum.photos/seed/gene3/640/360", alt: "Démo piano" }]} />
+
+<Video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" caption="Démo média — à remplacer par la vidéo réelle issue de la newsletter." />
+</NewsItem>
+
+<NewsItem title="Japan Airlines × Haneda" category="robotique" tags={["Travail"]}>
+Trial de 2 ans : des humanoïdes en bagage handling et nettoyage cabine. La population active japonaise est prévue **−1/3 d'ici 2060** — les analystes attendent une push gouvernementale humanoïde.
+</NewsItem>
+
+<NewsItem title="SoftBank Roze AI" category="robotique" tags={["Infra"]}>
+SoftBank lance Roze AI pour automatiser la **construction de data centers**, avec une IPO visée à **100 Md$** (jugée optimiste). Bezos poursuit un projet similaire, Project Prometheus.
+</NewsItem>
+
+<NewsItem title="Chine — production de masse" category="robotique" tags={["Production"]}>
+- La Chine produit **90 %** des humanoïdes
+- **Unitree** drop un humanoïde à **4 290 $** (barrière d'entrée pulvérisée)
+- **CaoCao** : robotaxi purpose-built, 100k cabs autonomes d'ici 2030 ; la Chine gèle les nouveaux permis après une panne Baidu Apollo Go
+</NewsItem>
+
+<NewsItem title="Dax Robotics Qiji T1000" category="robotique" tags={["Quadrupède"]}>
+Quadrupède capable de hauler **jusqu'à 1 000 kg**, conçu pour le rescue, les supply runs en altitude, la construction et la logistique en neige/glace.
+</NewsItem>
+
+<NewsItem title="Foundation × Pentagon" category="robotique" tags={["Militaire"]}>
+La startup Foundation construit des humanoïdes **pour la guerre** : Phantom piloté en Ukraine, contrat Pentagon de **24M$**. Capacité de combat complète estimée à 5–10 ans.
+</NewsItem>
+
+<NewsItem title="Nettoyage nucléaire" category="robotique" tags={["Industriel"]}>
+Allemagne : des bras robotiques tele-operated pour récupérer **126 000 fûts radioactifs** à la mine de sel Asse II, trop dégradée pour des humains.
+</NewsItem>
+
+<NewsItem title="Autres robots" category="robotique" tags={["Mix"]} sources={[{ label: "Superhuman Robotics" }, { label: "Vision-IA" }]}>
+- **Meta** acquiert **Assured Robot Intelligence** (anticipation du comportement humain)
+- **1X** ouvre une usine NEO de 58 000 sqft ; **REK** ouvre la 1ère « humanoid store » d'Amérique à San Francisco
+- **Figure Helix-02** : deux robots font un lit ensemble ; **Roborock RockNeo Q1** : tondeuse robotique IA
+</NewsItem>
+
+{/* ============================ Marketing & Growth ============================ */}
+
+<Category slug="growth" />
+
+<NewsItem title="Elena Verna — la monétisation est un produit" category="growth" tags={["Pricing", "Stripe Sessions"]}>
+Talk Stripe Sessions 2026 (6 000+ personnes). Thèse : la plupart des boîtes sous-investissent massivement la monétisation comme growth lever, traitant le pricing comme un « objet dangereux dans le coin de la pièce ».
+</NewsItem>
+
+<NewsItem title="Normaliser l'itération du pricing" category="growth" tags={["Pricing"]}>
+Chez Lovable : **10+ changements de pricing/packaging en 1 an** sans révolte client. Avec le temps, les clients *attendent* que la monétisation évolue comme le produit (parallèle Netflix : l'uproar s'arrête quand ça devient le rythme normal).
+</NewsItem>
+
+<NewsItem title="Le freemium est un investissement stratégique" category="growth" tags={["Freemium"]}>
+Le freemium n'est ni un cost center ni un trial déguisé. Lovable y investit son meilleur produit (double-digit free-to-paid à scale) et le distribue même via partenariats (Lenny's newsletter) pour **40 %+ de conversion**.
+</NewsItem>
+
+<NewsItem title="Ne pas enfermer l'IA dans le top tier" category="growth" tags={["AI pricing"]}>
+L'instinct de mettre l'IA dans le tier le plus cher est **backward** : l'IA demande aux clients de changer de comportement. Mieux vaut la rendre largement accessible et monétiser la productivité/output/scale qui en découle.
+</NewsItem>
+
+<NewsItem title="Stop à l'obsession subscription" category="growth" tags={["Modèle"]}>
+Lovable a lancé des top-ups à côté des subs en moins de 8 semaines, sans cannibalisation : les **meilleurs clients achètent le plus de top-ups**, et la retention s'améliore.
+</NewsItem>
+
+<NewsItem title="Les 3 conseils d'Elena Verna" category="growth" tags={["Conseils"]}>
+- **Infrastructure** : un changement de pricing ne doit pas demander des heroics d'ingénierie
+- **Ownership** : une personne qui pense pricing/packaging chaque jour
+- **Humilité** : on ne connaît pas le modèle parfait — tester, laisser le marché enseigner (éviter le HiPPO)
+</NewsItem>
+
+<NewsItem title="Google met à jour les liens AI Mode" category="growth" tags={["SEO"]} sources={[{ label: "LaGrowthNews #337" }]}>
+Suggestions d'angles, abonnements actualités, citations créateurs et link previews dans les aperçus AI Mode et AI Overviews.
+</NewsItem>
+
+<NewsItem title="Top 10 des modèles IA pour coder en 2026" category="growth" tags={["Comparatif"]} sources={[{ label: "LaGrowthNews #337" }]}>
+- **Claude Opus 4.7** : 64,3 % SWE-bench Pro, 87,6 % Verified — refactoring/debug
+- **GPT-5.5** : 88,7 % SWE-bench Verified, −72 % tokens — CLI
+- **Gemini 3.1 Pro** : 80,6 %, codebases massives ; DeepSeek V4 Pro / Kimi K2.6 (budget) ; Qwen 3.6 / GLM-5.1 (open)
+- Recommandation : **orchestrer plusieurs modèles** via Cursor/Claude Code, pas un seul.
+</NewsItem>
+
+<NewsItem title="SEO produit B2B/SaaS" category="growth" tags={["Stratégie"]}>
+8 stratégies de SEO produit à appliquer (basé sur HubSpot).
+</NewsItem>
+
+<NewsItem title="Outil de la semaine : Skyvern" category="growth" tags={["Tool"]}>
+**Skyvern** : agent IA navigateur pour les formulaires, le scraping, les CAPTCHA et la 2FA.
+</NewsItem>
+
+<NewsItem title="Meta ouvre son ad ecosystem" category="growth" tags={["Ads"]}>
+**Meta Ads AI Connectors** en open beta : ChatGPT, Claude et autres assistants peuvent se brancher directement sur les Meta ad accounts. Meta Business AI : **10M conversations/semaine** (vs 1M en début d'année).
+</NewsItem>
+
+<NewsItem title="Atlassian + Twilio cassent leur quarter" category="growth" tags={["SaaS"]}>
+**Atlassian** : 1,8 Md$ (+32 % YoY). **Twilio** : 1,4 Md$ (+20 % YoY, plus forte croissance en 3 ans). Les deux créditent l'IA — ce qui contredit la narrative « le vibecoded software va remplacer le SaaS legacy ».
+</NewsItem>
+
+<NewsItem title="Tools de la semaine" category="growth" tags={["Tools"]} sources={[{ label: "Superhuman" }, { label: "Elena Verna" }]}>
+- **Gamma** (présentations IA), **Wispr Flow** (voice → text propre), **Granola** (AI notepad), **Spinach AI** (meetings)
+- **Lumiu AI** (DD commerciale, valuation), **Factors.ai** (ABM unifié), **Vellum** (25M$ levés)
+- **Columns**, **Demi**, **Chatter**, **dofollow.com**, **Sana** (AI summit 21 mai, NY Public Library)
+</NewsItem>
+
+{/* ============================ Productivité & Org ============================ */}
+
+<Category slug="productivite" />
+
+<NewsItem title="TBM 421 — Minimally Viable Consistency" category="productivite" tags={["John Cutler"]}>
+Long-form sur la consistance organisationnelle, avec une analogie CS — 3 types : **sharp** (schéma strict), **flexible** (interface), **legible variety** (tagged union). Cutler propose 3 jobs IA : Translator, Multiple frames, Coaching — chacun avec son risque.
+</NewsItem>
+
+<NewsItem title="« AI fog » — HBR" category="productivite" tags={["Stratégie"]} sources={[{ label: "Superhuman" }]}>
+Toby Stuart (Berkeley) : en période d'incertitude haute, privilégier **l'optionalité plutôt que le planning rigide** — pas de roadmap 3 ans, des bets renouvelables.
+</NewsItem>
+
+<NewsItem title="Tactiques agentiques côté cabinet de conseil" category="productivite" tags={["Conseil"]}>
+Lumiu AI illustre une bascule : la due diligence commerciale, le market entry et la valuation deviennent un **chat input** au lieu d'un engagement à 5 chiffres.
+</NewsItem>
+
+{/* ============================ Finance & Marchés ============================ */}
+
+<Category slug="finance" />
+
+<NewsItem title="Samsung dépasse les 1 000 Md$" category="finance" tags={["Samsung"]} sources={[{ label: "Aktionnaire" }]}>
+Samsung gagne **+14 %** le 7 mai : résultats T1 exceptionnels (CA puces +70 %, bénéfice opérationnel ×8 à plus de **39 Md$**) et rumeur Bloomberg d'un Apple cherchant à diversifier ses fournisseurs. Seul fournisseur de **HBM4** depuis février, action +300 % sur 1 an. Le Kospi dépasse 7 000 points (+70 % sur 1 an).
+</NewsItem>
+
+<NewsItem title="Procès Musk vs OpenAI" category="finance" tags={["Procès"]} sources={[{ label: "Aktionnaire" }]}>
+Procès historique : Musk demande indemnisation pour les **38M$** investis quand il pensait OpenAI non-lucrative. L'issue pourrait forcer Sam Altman et Greg Brockman à démissionner. OpenAI est valorisée aujourd'hui **852 Md$**.
+</NewsItem>
+
+<NewsItem title="Greg Brockman cuisiné au tribunal" category="finance" tags={["Témoignage"]}>
+Son journal intime est lu à l'audience. Extrait 2017 : « ce serait mal de lui voler son association à but non lucratif… mais c'est notre seule chance de nous affranchir d'Elon ». Sa participation est valorisée **~30 Md$** avec 0 $ investi de sa poche.
+</NewsItem>
+
+<NewsItem title="Témoignage de Shivon Zilis" category="finance" tags={["Drame"]}>
+Mère de 4 des enfants de Musk et ex-board member d'OpenAI, son témoignage **fragilise Musk** : des e-mails montrent qu'il voulait racheter OpenAI **pour Tesla**.
+</NewsItem>
+
+<NewsItem title="Iran, détroit d'Ormuz & kérosène" category="finance" tags={["Géopolitique"]}>
+- Trump met en pause le **Project Freedom** (escorte des navires) pour tenter un accord avec l'Iran
+- Coût pour l'armée française : **+1 Md€ d'imprévu** sur les opérations extérieures 2026
+- Kérosène **+100 % depuis février** (mais pas de pénurie été 2026) ; Nasdaq et S&P 500 à de nouveaux records, Bitcoin repasse au-dessus de 80 000 $
+</NewsItem>
+
+<NewsItem title="Adidas écrase Nike" category="finance" tags={["Sport", "Marketing"]}>
+Pub virale Coupe du Monde 2026 avec **Chalamet, Messi, Zidane, Bad Bunny, Yamal**. Adidas : **+11 % bénéfice, +14 % CA**. Action Nike : **pire performance en 10 ans**.
+</NewsItem>
+
+<NewsItem title="LVMH en mode vendeur & autres earnings" category="finance" tags={["Earnings"]}>
+- **LVMH** envisage de céder Marc Jacobs, sa part dans Fenty Beauty, Le Parisien… et se reconcentre sur Louis Vuitton + Dior
+- **Disney** : CA 25 Md$+ (+7 %) ; **Uber** : bénéfice 263M$ ; **Apple** condamné à 250M$ (Apple Intelligence trompeuse)
+- **Norges Bank** : +25 bps à 4,25 % (1ère hausse en Europe de l'ouest depuis 2023) ; **Amazon** : 15 Md€ en France sur 3 ans (7 000 emplois)
+</NewsItem>
+
+<NewsItem title="France — politique & conjoncture" category="finance" tags={["France"]}>
+- **Élisabeth Borne** quitte le Conseil national Renaissance ; **Macron** propose Emmanuel Moulin à la Banque de France
+- Débat sur la **taxe superprofits TotalEnergies** (5,8 Md€ T1)
+- Cinéma : avril +35 % d'entrées (16M spectateurs), les films français dominent (47 %)
+</NewsItem>
+
+<NewsItem title="PSG & divers" category="finance" tags={["Divers"]}>
+Le PSG approche du triomphe ; croisière contaminée à l'**hantavirus** (3 décès) ; décès de **Ted Turner** (CNN) à 87 ans.
+</NewsItem>
+
+{/* ============================ Hardware & Santé ============================ */}
+
+<Category slug="hardware" />
+
+<NewsItem title="Apple — pénurie Mac mini causée par l'IA" category="hardware" tags={["Apple"]}>
+Tim Cook (sortant) **confirme** que la demande pour les agents IA locaux crée une pénurie de Mac mini / Mac Studio pour plusieurs mois. Prix de base du Mac mini relevé à **799 $** ; les prix des memory chips vont augmenter « significantly », l'iPhone est probablement le suivant.
+</NewsItem>
+
+<NewsItem title="Google Health app & Fitbit Air" category="hardware" tags={["Santé"]} sources={[{ label: "Superhuman" }, { label: "Vision-IA" }]}>
+- Lancement de **Google Health** + **Health Coach Gemini**
+- **Fitbit Air** : screenless, batterie 1 semaine, **99 $**, rollout 19–26 mai
+- **Doccla NHS** : −61 % de lits ; **Glass Health** : scribing à 0,85 $/h
+</NewsItem>
+
+<NewsItem title="Vintage LLMs — étude historique" category="hardware" tags={["Recherche"]}>
+**Talkie** : un modèle entraîné **uniquement sur du contenu pré-1931** (ni ordinateur, ni internet, ni téléphone). But : étudier les sociétés passées et voir si une IA peut « redécouvrir » seule les inventions humaines. Voir aussi **Mr. Chatterbox** (Victorian) et **Machina Mirabilis** (physique pré-1900).
+</NewsItem>
+
+<NewsItem title="Bonus — wearables & gadgets" category="hardware" tags={["Gadgets"]}>
+- **Human Operator** : wearable IA qui **hijack tes mains** via stimulation électrique
+- **Hermès Helix** : une Apple Watch ? ; **Roborock RockNeo Q1** : tondeuse robotique
+</NewsItem>
+
+{/* ============================ Événements & Loisirs ============================ */}
+
+<Category slug="evenements" />
+
+<NewsItem title="Transfert — les 10 ans au Trianon" category="evenements" tags={["Concert"]}>
+Slate, Diligence & Bleu Citron présentent **Transfert — Les 10 ans** le **8 septembre 2026** au Trianon (Paris) : témoignages inédits, retrouvailles avec des voix connues, invités surprise.
+
+<Source label="letrianon.fr" href="https://www.letrianon.fr/programmation/transfert-les-10ans/" />
+</NewsItem>
+
+<NewsItem title="Cercle Festival — San José del Cabo, Mexique" category="evenements" tags={["Festival"]}>
+Billetterie ouverte : **14–15 novembre 2026**, de 14h à 2h (12h d'électronique), à partir de **103 USD/jour**, au lieu Crania (océan + jardin de palmiers).
+</NewsItem>
+
+<NewsItem title="Chez Tonton — restock" category="evenements" tags={["Restock"]}>
+Restock du t-shirt promo Chez Tonton (Shopify, 7 mai).
+</NewsItem>

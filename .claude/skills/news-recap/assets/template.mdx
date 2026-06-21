@@ -1,0 +1,49 @@
+---
+date: "2026-06-22"
+title: "Titre court et factuel de la journée"
+lede: "Une à deux phrases qui résument les faits marquants du jour, sans esbroufe."
+categories: ["ia", "finance"]
+sourceCount: 3
+featured: false
+---
+
+{/* Copy this file to apps/web/src/content/digests/<date>.mdx and replace the
+    content. Keep <Category> dividers in canonical order; each <NewsItem> category
+    must match a divider above it. Real source links only. */}
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Fait principal en IA"
+  category="ia"
+  tags={["modèle", "open-source"]}
+  sources={[{ label: "Source", url: "https://example.com/article" }]}
+>
+Résumé factuel en une à trois phrases : le fait, puis le chiffre ou le pourquoi.
+
+<NewsImage src="https://cdn.example.com/visuel.jpg" alt="Description" caption="Légende courte." />
+</NewsItem>
+
+<NewsItem
+  title="Brève secondaire en IA, avec une vidéo"
+  category="ia"
+  tags={["vidéo"]}
+  sources={[{ label: "Source A" }, { label: "Source B", url: "https://example.com/b" }]}
+>
+Une à deux phrases. Lien inline vers [le papier](https://arxiv.org/abs/0000.00000) si utile.
+
+<Video src="https://youtu.be/VIDEO_ID" caption="Démo." />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Fait marquant en finance, repris d'un post X"
+  category="finance"
+  tags={["marchés"]}
+  sources={[{ label: "Reuters", url: "https://www.reuters.com/…" }]}
+>
+Le fait, avec le chiffre exact tel que donné par la source.
+
+<Tweet id="1790000000000000000" />
+</NewsItem>
