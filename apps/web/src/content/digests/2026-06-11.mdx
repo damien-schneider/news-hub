@@ -1,0 +1,196 @@
+---
+date: "2026-06-11"
+title: "Anthropic ouvre Fable 5, sa classe Mythos"
+lede: "Anthropic met sa classe Mythos à portée du public avec Fable 5, sur fond de polémique sur un bridage silencieux ; Neura lève jusqu'à 1,4 Md$ et la Coupe du monde s'ouvre avec un dynamic pricing qui dérape."
+categories: ["ia", "robotique", "growth", "finance", "evenements"]
+sourceCount: 14
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic ouvre Fable 5, premier modèle public de classe Mythos"
+  category="ia"
+  tags={["anthropic", "modèle"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/claude-fable-5-mythos-5" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/" },
+    { label: "via LaGrowthNews", url: "https://news.deux.io/" },
+  ]}
+>
+Lancé le 9 juin, **Claude Fable 5** est la première version grand public d'un modèle Mythos, donné en tête sur la plupart des benchmarks agentiques et de code. Sur les requêtes sensibles (cyber, biologie, chimie), il bloque et bascule vers Opus 4.8 ; Anthropic dit que plus de 95 % des sessions ne déclenchent pas la redirection. Tarif : `10 $`/M tokens en entrée, `50 $` en sortie, soit le double d'Opus 4.8. Une variante **Mythos 5** sans garde-fous cyber reste réservée au Project Glasswing, avec le gouvernement américain.
+</NewsItem>
+
+<NewsItem
+  title="Le bridage silencieux de Fable 5 déclenche une fronde"
+  category="ia"
+  tags={["anthropic", "confiance"]}
+  sources={[
+    { label: "Wired", url: "https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/" },
+    { label: "Latent Space — AINews", url: "https://www.latent.space/p/ainews-open-models-model-labs-vs" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/argentine-ia" },
+  ]}
+>
+Anthropic dégradait en sous-main l'aide de Claude sur les sujets de R&D en IA concurrente, sans refus explicite. Des chercheurs (Lambert, Casado, Li, Delangue) ont qualifié la manœuvre de sabotage déguisé ; l'entreprise a fini par abandonner la restriction. Autre point de friction : 30 jours de rétention des prompts pour la classe Mythos, sans opt-out dans certains réglages, incompatible avec les environnements *zero-retention* et une partie de l'Europe. En parallèle, Dario Amodei publie *Policy on the AI Exponential* et plaide pour un contrôle public renforcé.
+</NewsItem>
+
+<NewsItem
+  title="Google sort DiffusionGemma, un LLM par diffusion en open weights"
+  category="ia"
+  tags={["google", "open-source"]}
+  sources={[
+    { label: "The Decoder", url: "https://the-decoder.com/googles-new-open-model-diffusiongemma-generates-text-from-noise-instead-of-word-by-word/" },
+    { label: "Hugging Face", url: "https://huggingface.co/google" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/argentine-ia" },
+  ]}
+>
+DeepMind publie **DiffusionGemma** (Apache 2.0), un MoE de 26 Md de paramètres (~3,8 Md actifs) bâti sur Gemma 4 qui génère le texte par diffusion de blocs de 256 tokens, pas mot à mot. Résultat : jusqu'à **4× plus rapide** (~1 100 tokens/s sur un H100), au prix d'une qualité encore en retrait. Support jour zéro dans vLLM, Transformers et MLX ; tourne en local sous 18 Go de VRAM une fois quantifié.
+</NewsItem>
+
+<NewsItem
+  title="Cohere lance North Mini Code, 30B pour le code sur un seul H100"
+  category="ia"
+  tags={["cohere", "code", "open-source"]}
+  sources={[
+    { label: "MarkTechPost", url: "https://www.marktechpost.com/2026/06/11/meet-north-mini-code-coheres-30b-open-weight-mixture-of-experts-model-with-3b-active-parameters-for-agentic-coding/" },
+    { label: "Hugging Face", url: "https://huggingface.co/CohereLabs/North-Mini-Code-1.0" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Premier modèle de code de Cohere : **North Mini Code 1.0**, un MoE de 30 Md de paramètres dont 3 Md actifs, en poids ouverts. Il tient sur un seul H100 en FP8, gère 256K de contexte et revendique **80,2 % sur SWE-Bench Verified** (pass@10). Positionné sur l'IA « souveraine », à exécuter chez soi.
+</NewsItem>
+
+<NewsItem
+  title="Gemini 3.5 Live Translate : traduction vocale en continu sur 70+ langues"
+  category="ia"
+  tags={["google", "traduction"]}
+  sources={[
+    { label: "Google", url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Google déploie un modèle de traduction voix-à-voix qui traite la parole en flux, sans attendre les pauses, avec quelques secondes de décalage et préservation de l'intonation. Plus de 70 langues, 2 000 combinaisons en une même réunion Google Meet (contre 5 langues et l'anglais obligatoire auparavant), via l'API Live, AI Studio et l'app Translate.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux outils & repos open-source"
+  category="ia"
+  tags={["open-source", "outils"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)** — génère une vidéo courte complète (script, voix off, sous-titres, stock, musique) depuis un seul mot-clé ; ~76K stars.
+- **[Microsoft ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners)** — cursus gratuit de machine learning classique, 12 semaines, 26 leçons, 52 quiz.
+- **[Minecraft en un prompt](https://www.anthropic.com/news/claude-fable-5-mythos-5)** — Fable 5 reconstruit un clone jouable en HTML/Three.js (terrain infini, TNT, audio génératif) pour ~30 $, en un seul appel.
+</NewsItem>
+
+<NewsItem
+  title="En bref — IA au travail"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/argentine-ia" }]}
+>
+- **Perplexity × Harvard** : sur 10 000 requêtes, les agents (plateforme Computer) abattent un travail plus complexe mais prennent 26 min en moyenne, contre 33 s pour une recherche simple. [Perplexity](https://research.perplexity.ai/articles/how-ai-agents-reshape-knowledge-work)
+- **AWS Graviton5** : puce maison 3 nm, 192 cœurs, +25 % par cœur, optimisée IA agentique. [Amazon Science](https://www.amazon.science/blog/graviton5s-improved-design-increases-speed-and-energy-efficiency-beyond-moores-law)
+- **McDonald's ArchIQ** (avec Google) gère 90 % des commandes au drive sans humain ; >1 M de transactions sur 5 restaurants. [AI News](https://www.artificialintelligence-news.com/news/mcdonalds-ai-drive-thru-google-archiq/)
+- **Lyria 3** : des musiciens attaquent Google, l'accusant d'avoir entraîné son IA musicale sur leurs morceaux YouTube sans accord. [The Verge](https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube)
+- **Svalbard** : un modèle suit chaque mois les fronts de vêlage des 145 glaciers, marge d'erreur ramenée de >1 km à 68,7 m. [IEEE Spectrum](https://spectrum.ieee.org/tracking-glacier-melting-ai)
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Neura Robotics lève jusqu'à 1,4 Md$ pour les humanoïdes"
+  category="robotique"
+  tags={["levée", "humanoïde"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/10/neura-robotics-funding-ai-humanoid-robots.html" },
+    { label: "Neura Robotics", url: "https://neura-robotics.com/record-series-c/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/argentine-ia" },
+  ]}
+>
+L'allemand **Neura Robotics** annonce une série C pouvant atteindre **1,4 Md$** à 7 Md$ de valorisation, menée par Tether avec Nvidia, Amazon, Qualcomm, Bosch, Schaeffler et la BEI. Le « jusqu'à » est conditionné à des jalons de performance. Objectif : production en série « multi-millions » de robots d'ici 2030. La robotique a déjà levé 55,8 Md$ en 2026, record annuel.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="Mediaocean lance NIVO AI, le « cerveau » des campagnes pub"
+  category="growth"
+  tags={["adtech", "agents"]}
+  sources={[
+    { label: "Innovid", url: "https://www.innovid.com/about-us/news/nivo-ai-launch" },
+    { label: "AdExchanger", url: "https://www.adexchanger.com/ai/this-ai-brain-wants-to-get-rid-of-the-grunt-work-in-creative-campaigns/" },
+    { label: "via LaGrowthNews", url: "https://news.deux.io/" },
+  ]}
+>
+**NIVO AI** orchestre des agents spécialisés (scoring créatif prédictif, trafficking, QA, reporting) en langage naturel, par-dessus Innovid Orchestrator. Mediaocean revendique **jusqu'à 90 %** de temps gagné sur la mise en campagne ; Optimum, early adopter, parle de 80 % de temps d'exécution en moins. Connecteurs vers Meta Ads et les workflows Snapchat.
+</NewsItem>
+
+<NewsItem
+  title="Google construit un écosystème de fidélité, pas de trafic"
+  category="growth"
+  tags={["seo", "geo", "google"]}
+  sources={[
+    { label: "Dataconomy", url: "https://dataconomy.com/2026/06/11/google-preferred-sources-loyal-publisher-visibility/" },
+    { label: "SEO for Google News", url: "https://www.seoforgooglenews.com/p/google-audience-loyalty-ecosystem" },
+    { label: "via LaGrowthNews", url: "https://news.deux.io/" },
+  ]}
+>
+Google empile **Sources Préférées** (désormais étendues à AI Overviews et AI Mode, badge dédié), **Profils de Recherche** (page suivable pour les éditeurs de plus de 100 000 abonnés) et le **lien d'abonnement**. Plus de 345 000 sources sélectionnées depuis décembre. Le message aux éditeurs : viser l'engagement et la rétention plutôt que le clic, alors que le trafic organique se tarit.
+</NewsItem>
+
+<NewsItem
+  title="L'outil de la semaine : Mantiks"
+  category="growth"
+  tags={["prospection", "outil"]}
+  sources={[
+    { label: "Mantiks", url: "https://www.mantiks.io" },
+    { label: "via LaGrowthNews", url: "https://news.deux.io/" },
+  ]}
+>
+**Mantiks** transforme les offres d'emploi en signaux de prospection B2B : une boîte qui recrute un profil commercial, IT ou RH a un besoin actif. On filtre les annonces et on récupère nom, email pro et téléphone du décideur ; l'outil remonte l'entreprise cliente finale derrière les cabinets de recrutement. La newsletter cite +60 % de réponses et +40 % de meetings ; API branchable sur Make ou n8n.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="SpaceX réussit la plus grosse IPO de l'histoire"
+  category="finance"
+  tags={["ipo", "spacex"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/09/spacex-ipo-explained-stock-price-date.html" },
+    { label: "Fortune", url: "https://fortune.com/2026/06/11/spacex-ipo-largest-history-wall-street-analysts-split-valuation-debate/" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+SpaceX entre en Bourse le 12 juin au NASDAQ (`SPCX`), à `135 $`/action, levant ~75 Md$ pour une valorisation proche de **1,8 T$** — soit ~94× le chiffre d'affaires. Wall Street est divisé : 18,67 Md$ de revenus 2025 (+33 %) mais 4,94 Md$ de perte nette, Starlink pesant ~61 % du CA. Anthropic et OpenAI ont aussi déposé confidentiellement pour suivre.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Inflation US à 4,2 %** sur un an en mai, plus haut depuis 3 ans : l'énergie (+23,5 %) pèse pour plus de 60 % de la hausse mensuelle, sur fond de conflit avec l'Iran. [CNBC](https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html)
+- **xAI poursuivi** : un ex-ingénieur, licencié après avoir alerté sur la sécurité de Grok, attaque xAI et SpaceX, à quelques jours de l'IPO. [TechCrunch](https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/)
+- **Morpho lève 175 M$** (a16z crypto, Paradigm, Ribbit, Apollo) à ~2 Md$ pour son « réseau de crédit ouvert » ; ~11 Md$ de dépôts. [Fortune](https://fortune.com/2026/06/09/morpho-fundraise-a16z-crypto-paradigm-ribbit-capital-175-million/)
+- **Revolut bridé par la BCE** : restrictions sur les nouveaux produits dans l'EEE, audit indépendant exigé sur le contrôle des risques. [Irish Times](https://www.irishtimes.com/business/2026/06/10/ecb-moved-to-rein-in-revoluts-self-guided-missiles-in-europe/)
+- **Oracle** dépasse les attentes (cloud +93 %, 5,8 Md$) mais l'action recule, les investisseurs s'inquiétant de la dette liée à l'IA. [CNBC](https://www.cnbc.com/2026/06/10/oracle-orcl-q4-earnings-report-2026.html)
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Coup d'envoi du Mondial : le dynamic pricing a calé la demande"
+  category="evenements"
+  tags={["coupe-du-monde", "billetterie"]}
+  sources={[
+    { label: "ESPN", url: "https://www.espn.com/soccer/story/_/id/48947095/2026-fifa-world-cup-sticker-shock-ugly-cost-beautiful-game-grand-event" },
+    { label: "NPR", url: "https://www.npr.org/2026/05/28/nx-s1-5836514/2026-world-cup-fifa-ticket-prices" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+La Coupe du monde s'ouvre avec **180 000 billets** encore en revente. La FIFA vise **13 Md$** sur le cycle, dopés par une billetterie à prix variables : finale jusqu'à plus de 13 000 $, listings de revente à 2 M$ sur sa propre place de marché (commission 15–30 %). New York, le New Jersey et le Texas ont ouvert une enquête. Côté terrain, **Google fait de l'Argentine** son banc d'essai Gemini pour l'analyse tactique et la préparation. [Wired — Gemini AFA](https://www.wired.com/story/artificial-intelligence-sneaks-into-the-world-cup-thanks-to-google-gemini/)
+</NewsItem>

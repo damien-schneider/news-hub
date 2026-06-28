@@ -1,15 +1,14 @@
-import { createFileRoute, Link } from "@tanstack/react-router"
-import { HugeiconsIcon } from "@hugeicons/react"
 import {
   ArrowRight01Icon,
   ArrowUpRight01Icon,
 } from "@hugeicons/core-free-icons"
-
-import { getDigests } from "@/content"
-import { siteConfig } from "@/config/site"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { createFileRoute, Link } from "@tanstack/react-router"
+import { Reveal } from "@/components/motion/reveal"
 import { FeaturedPosts } from "@/components/posts/featured-posts"
 import { PostRow } from "@/components/posts/post-row"
-import { Reveal } from "@/components/motion/reveal"
+import { siteConfig } from "@/config/site"
+import { getDigests } from "@/content"
 
 export const Route = createFileRoute("/")({
   loader: () => getDigests(),
@@ -18,17 +17,22 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const digests = Route.useLoaderData()
-  const featured = digests.filter((digest) => digest.featured)
-  const recent = digests.slice(0, 8)
+  const featured = digests.filter((digest) => digest.featured).slice(0, 3)
+  const featuredDates = new Set(featured.map((digest) => digest.date))
+  const recent = digests
+    .filter((digest) => !featuredDates.has(digest.date))
+    .slice(0, 8)
 
   return (
     <div className="mx-auto max-w-[680px] px-5 py-14 sm:py-20">
       {/* Intro */}
       <Reveal className="space-y-4">
-        <h1 className="flex items-center gap-2 font-heading text-[28px] leading-none text-foreground">
+        <h1 className="flex items-center gap-2 font-heading text-[28px] text-foreground leading-none">
           Bienvenue <span className="text-2xl">👋</span>
         </h1>
-        <p className="leading-relaxed text-muted-foreground">{siteConfig.bio}</p>
+        <p className="text-muted-foreground leading-relaxed">
+          {siteConfig.bio}
+        </p>
       </Reveal>
 
       {/* Links */}
@@ -59,7 +63,7 @@ function Home() {
         </ul>
       </Reveal>
 
-      <div className="mt-14 border-t border-border/60" />
+      <div className="mt-14 border-border/60 border-t" />
 
       {/* Featured */}
       {featured.length > 0 && (
@@ -79,7 +83,7 @@ function Home() {
           </h2>
           <Link
             to="/posts"
-            className="group inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            className="group inline-flex items-center gap-1 text-muted-foreground text-sm transition-colors hover:text-foreground"
           >
             Tous les articles
             <HugeiconsIcon
@@ -97,7 +101,7 @@ function Home() {
             ))}
           </div>
         ) : (
-          <p className="mt-4 text-sm text-muted-foreground">
+          <p className="mt-4 text-muted-foreground text-sm">
             Aucun article pour le moment.
           </p>
         )}

@@ -1,5 +1,5 @@
-import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 /**
  * A source attribution inside a news item. Renders a link when a URL is given,
@@ -8,7 +8,7 @@ import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
 export function Source({ label, href }: { label: string; href?: string }) {
   if (!href) {
     return (
-      <span className="text-xs font-medium text-muted-foreground">{label}</span>
+      <span className="font-medium text-muted-foreground text-xs">{label}</span>
     )
   }
 
@@ -17,7 +17,7 @@ export function Source({ label, href }: { label: string; href?: string }) {
       href={href}
       target="_blank"
       rel="noreferrer noopener"
-      className="inline-flex items-center gap-0.5 rounded-md text-xs font-medium text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
+      className="inline-flex items-center gap-0.5 rounded-md font-medium text-muted-foreground text-xs underline-offset-2 transition-colors hover:text-foreground hover:underline"
     >
       {label}
       <HugeiconsIcon

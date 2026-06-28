@@ -1,14 +1,14 @@
-import { Link } from "@tanstack/react-router"
 import { HugeiconsIcon } from "@hugeicons/react"
+import { Link } from "@tanstack/react-router"
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@workspace/ui/components/avatar"
-
-import { siteConfig, siteInitials } from "@/config/site"
+import { SearchTrigger } from "@/components/search/search-trigger"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
+import { siteConfig, siteInitials } from "@/config/site"
 
 const NAV = [
   { label: "Accueil", to: "/" },
@@ -34,17 +34,22 @@ export function SiteSidebar() {
             ) : null}
             <AvatarFallback>{siteInitials()}</AvatarFallback>
           </Avatar>
-          <span className="text-sm font-medium">{siteConfig.name}</span>
+          <span className="font-medium text-sm">{siteConfig.name}</span>
         </Link>
 
+        {/* Global search */}
+        <div className="mt-8">
+          <SearchTrigger />
+        </div>
+
         {/* Nav */}
-        <nav className="mt-10 flex flex-col gap-0.5">
+        <nav className="mt-4 flex flex-col gap-0.5">
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground data-[status=active]:bg-muted/60 data-[status=active]:text-foreground"
+              className="rounded-lg px-3 py-2 text-muted-foreground text-sm transition-colors hover:bg-muted/60 hover:text-foreground data-[status=active]:bg-muted/60 data-[status=active]:text-foreground"
             >
               {item.label}
             </Link>
@@ -55,7 +60,7 @@ export function SiteSidebar() {
         </nav>
 
         {/* Footer block, pinned to the bottom of the gutter */}
-        <div className="mt-auto space-y-3 text-sm text-muted-foreground">
+        <div className="mt-auto space-y-3 text-muted-foreground text-sm">
           <div className="flex items-center gap-3">
             {siteConfig.links.map((link) => (
               <a

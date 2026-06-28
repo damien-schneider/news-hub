@@ -1,0 +1,215 @@
+---
+date: "2026-05-22"
+title: "Karpathy passe chez Anthropic, Google I/O lâche Gemini Omni"
+lede: "Andrej Karpathy quitte le camp OpenAI pour diriger le pré-entraînement de Claude, Google sort un modèle qui génère de la vidéo nativement, et trois briques d'infra IA — Exa, Modal, Turbopuffer — entrent dans la cour des licornes."
+categories: ["ia", "web", "robotique", "finance"]
+sourceCount: 16
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Karpathy rejoint Anthropic pour diriger le pré-entraînement de Claude"
+  category="ia"
+  tags={["anthropic", "openai", "recrutement"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" },
+  ]}
+>
+Andrej Karpathy, co-fondateur d'OpenAI parti en 2024, prend la tête de l'équipe de pré-entraînement chez Anthropic, avec pour mission principale l'auto-amélioration des modèles. Passé par Tesla (Autopilot) puis [Eureka Labs](https://eurekalabs.ai/), il rejoint le labo de Dario Amodei au moment où celui-ci s'apprête à devenir le premier de l'IA à être rentable.
+</NewsItem>
+
+<NewsItem
+  title="Google I/O : Gemini Omni génère de la vidéo, 3.5 Flash talonne Opus 4.7"
+  category="ia"
+  tags={["google", "modèle", "multimodal"]}
+  sources={[
+    { label: "Google (Gemini Omni)", url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/" },
+    { label: "Gemini app", url: "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" },
+  ]}
+>
+**Gemini Omni** prend texte, image, audio et vidéo en entrée et produit directement de la vidéo en sortie — une première pour un modèle de fondation généraliste. **Gemini 3.5 Flash** approche Opus 4.7 et GPT-5.5 sur les benchmarks tout en restant rapide et économique. Google a aussi lancé les agents **Spark** intégrés à Search, une app macOS native et un agent Daily Brief.
+</NewsItem>
+
+<NewsItem
+  title="Google amène AI Studio sur mobile et ouvre les agents managés"
+  category="ia"
+  tags={["google", "agents", "dev"]}
+  sources={[
+    { label: "Google AI Studio (I/O 2026)", url: "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+AI Studio arrive en app autonome ([pré-inscription](https://aistudio.google.com/mobile)) : on décrit une idée à la voix ou au clavier, elle se construit en arrière-plan, se prévisualise et se déploie depuis le téléphone. En parallèle, l'API Gemini lance des **agents managés** : un seul appel pour un agent qui raisonne, exécute du code et browse dans un environnement Linux isolé hébergé par Google, configuré via des fichiers `AGENTS.md` et `SKILL.md`.
+</NewsItem>
+
+<NewsItem
+  title="Un modèle interne d'OpenAI réfute une conjecture d'Erdős vieille de 80 ans"
+  category="ia"
+  tags={["openai", "recherche", "maths"]}
+  sources={[
+    { label: "OpenAI", url: "https://openai.com/index/model-disproves-discrete-geometry-conjecture/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" },
+  ]}
+>
+Un modèle de raisonnement non encore déployé aurait réfuté la conjecture de la distance unitaire formulée par Paul Erdős en 1946, en construisant un contre-exemple appuyé sur la théorie des nombres algébriques. Si la communauté valide la preuve en peer review, ce serait la première réfutation d'une conjecture ouverte majeure réalisée par une IA.
+</NewsItem>
+
+<NewsItem
+  title="GPT-image-2 invente du texte caché dans des nuages de points"
+  category="ia"
+  tags={["vision", "hallucination", "open-source"]}
+  sources={[
+    { label: "GraphGlyph (GitHub)", url: "https://github.com/Tenobrus/graphglyph" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Soumis à une image de points orange, GPT-image-2 affirme avec aplomb y lire un message caché — différent à chaque lecture, alors qu'il n'y a rien. Les modèles Gemini, eux, lisent toujours « SEND NUDES », de façon reproductible. De ce dérapage est né [**GraphGlyph**](https://github.com/Tenobrus/graphglyph), un outil Python qui encode et décode pour de vrai du texte dans ces graphes en points bleu-orange.
+</NewsItem>
+
+<NewsItem
+  title="ChatGPT édite désormais vos slides PowerPoint"
+  category="ia"
+  tags={["openai", "bureautique"]}
+  sources={[
+    { label: "OpenAI", url: "https://chatgpt.com/apps/powerpoint/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/chatgpt-gets-powerpoint-skills" },
+  ]}
+>
+On crée, met à jour et finalise des présentations PowerPoint directement dans ChatGPT, sans copier-coller. Les slides restent pleinement éditables dans les outils natifs de PowerPoint. La fonctionnalité est en bêta.
+</NewsItem>
+
+<NewsItem
+  title="Modèles, repos & papers"
+  category="ia"
+  tags={["open-source", "modèle", "recherche"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" }]}
+>
+- **[SAM3](https://github.com/facebookresearch/sam3)** (Meta) — segmentation open-source qui suit n'importe quel objet en vidéo via une description texte.
+- **[GRAM](https://arxiv.org/abs/2605.19376)** (KAIST) — modèle de raisonnement de 10M de paramètres : 97 % au Sudoku, 52 % sur ARC-AGI-1.
+- **[Hy-MT2](https://huggingface.co/tencent/Hy-MT2-1.8B-GGUF)** (Tencent) — traduction open-source qui tient dans 440 Mo en local.
+- **[Command A+](https://the-decoder.com/cohere-open-sources-its-strongest-model-yet/)** (Cohere) — le modèle le plus puissant du labo passe en Apache 2.0.
+- **[Skills NVIDIA](https://github.com/nvidia/skills)** — skills d'agent vérifiés, avec security cards pour Claude, Codex et Cursor.
+- **[Stanford](https://arxiv.org/abs/2605.19407)** — les grands modèles s'entraînent mieux sans aucun filtrage des données.
+</NewsItem>
+
+<NewsItem
+  title="Co-Scientist dans Nature, et un benchmark d'alignement par villes simulées"
+  category="ia"
+  tags={["recherche", "alignement"]}
+  sources={[
+    { label: "Nature", url: "https://www.nature.com/articles/s41586-026-10644-y" },
+    { label: "Emergence AI", url: "https://world.emergence.ai/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" },
+  ]}
+>
+Google DeepMind publie dans Nature **Co-Scientist**, un système où des agents Gemini s'affrontent en « tournois d'idées » pour générer et critiquer des hypothèses, testé sur la fibrose hépatique à Stanford. De son côté, Emergence AI a gouverné cinq villes virtuelles par différents modèles pendant 15 jours : **Claude Sonnet 4.6** termine à zéro crime et 332 votes, **Grok 4.1 Fast** à plus de 200 crimes et tous les agents éliminés.
+</NewsItem>
+
+<NewsItem
+  title="En bref IA"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/chatgpt-gets-powerpoint-skills" }]}
+>
+- **OpenAI adopte SynthID** : watermark invisible Google sur les images GPT-image-2, vérifiable gratuitement. [OpenAI](https://openai.com/index/advancing-content-provenance/)
+- **ChatGPT se branche aux banques** : les abonnés payants US relient 12 000+ institutions financières pour analyser leurs dépenses. [OpenAI](https://openai.com/index/personal-finance-chatgpt/)
+- **Spotify + Universal** ouvrent les covers et remixes IA aux abonnés Premium, avec partage des revenus pour les artistes. [TechCrunch](https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/)
+- **Nvidia cède le marché chinois** des puces IA avancées à Huawei, de l'aveu de Jensen Huang. [AI News](https://www.artificialintelligence-news.com/news/nvidia-vera-chip-200-billion-market/)
+- **Gen Z** : l'enthousiasme pour l'IA chute de 36 % à 22 % en un an. [Gallup](https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx)
+- **Meta** licencie 10 à 20 % de ses effectifs pour financer ses investissements IA. [The Verge](https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Trois briques d'infra IA franchissent le cap de la licorne"
+  category="web"
+  tags={["infrastructure", "levée"]}
+  sources={[{ label: "AINews (Latent Space)", url: "https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa" }]}
+>
+- **[Exa](https://exa.ai/blog/announcing-series-c)** — moteur de recherche pour agents : Série C de 250 M$ à 2,2 Md$.
+- **[Modal](https://x.com/bernhardsson/status/2057530320790995262)** — compute serverless pour l'IA : Série C de 355 M$ à 4,7 Md$.
+- **[Turbopuffer](https://x.com/Sirupsen/status/2057470756070781400)** — base vectorielle : 100 M$ d'ARR et déjà rentable.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="XPeng produit en masse son robotaxi pendant que Tesla lance FSD en Chine"
+  category="robotique"
+  tags={["robotaxi", "conduite-autonome"]}
+  sources={[
+    { label: "XPeng", url: "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/05/21/tesla-full-self-driving-china-launch-fsd.html" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/karpathy" },
+  ]}
+>
+XPeng devient le premier constructeur chinois à produire en masse un robotaxi de niveau 4, sur une architecture vision-only sans LiDAR (modèle VLA 2.0). Le même jour, Tesla ouvre enfin FSD (Supervised) en Chine après des années de blocage réglementaire.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Anthropic en passe de devenir le premier labo IA rentable"
+  category="finance"
+  tags={["anthropic", "résultats"]}
+  sources={[
+    { label: "Wall Street Journal", url: "https://www.wsj.com/tech/ai/mind-blowing-growth-is-about-to-propel-anthropic-into-its-first-profitable-quarter-7edbf2f4" },
+    { label: "The Decoder", url: "https://the-decoder.com/anthropic-is-about-to-become-the-first-profitable-ai-lab/" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+Anthropic vise **10,9 Md$** de chiffre d'affaires au T2 2026 (presque doublé sur un an) pour un résultat opérationnel de **559 M$** — deux ans plus tôt que prévu, à un rythme supérieur à celui de Zoom au pic de la pandémie. La demande pour Claude dépasse même la capacité de calcul disponible. Microsoft serait par ailleurs en [discussions](https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html) pour lui fournir ses puces Maia 200.
+</NewsItem>
+
+<NewsItem
+  title="SpaceX dépose la plus grosse IPO de l'histoire"
+  category="finance"
+  tags={["ipo", "spacex"]}
+  sources={[
+    { label: "SEC (S-1)", url: "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/chatgpt-gets-powerpoint-skills" },
+  ]}
+>
+Le S-1 dévoile les premiers comptes du groupe : **18,7 Md$** de revenus en 2025 pour une perte nette de **4,9 Md$**. SpaceX vise une levée de **80 Md$** à une valorisation de **1 700 Md$**, soit environ 3× le record de l'IPO d'Aramco en 2019.
+</NewsItem>
+
+<NewsItem
+  title="La France reste n°1 des investissements étrangers en Europe"
+  category="finance"
+  tags={["france", "attractivité"]}
+  sources={[
+    { label: "Baromètre EY", url: "https://www.ey.com/fr_fr/foreign-direct-investment-surveys/barometre-de-l-attractivite-de-la-france/barometre-de-l-attractivite-de-la-france-2026" },
+    { label: "Franceinfo", url: "https://www.franceinfo.fr/economie/entreprises/ia-cybersecurite-logistique-la-france-championne-europeenne-des-investissements-etrangers-pour-la-septieme-annee-consecutive_8017199.html" },
+    { label: "via Aktionnaire", url: "https://aktionnaire.com/articles/pourquoi-la-france-attire-encore-les-investisseurs-etrangers" },
+  ]}
+>
+Septième année consécutive en tête du baromètre EY, portée par l'IA, la défense et l'énergie bas-carbone. La performance est relative : les décisions d'investissement en Europe reculent de 7 % (5 026 projets dans 47 pays), et les flux vers la France baissent de 17 % entre 2024 et 2025. Les investissements américains en Europe ont été divisés par deux depuis 2022.
+</NewsItem>
+
+<NewsItem
+  title="Stellantis met 60 Md€ pour pivoter vers les États-Unis"
+  category="finance"
+  tags={["automobile", "stratégie"]}
+  sources={[{ label: "Les Échos", url: "https://www.lesechos.fr/industrie-services/automobile/automobile-stellantis-met-60-milliards-sur-la-table-pour-reussir-son-come-back-2232765" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+Le plan d'Antonio Filosa réduit la production européenne de 800 000 véhicules par an et mise sur l'Amérique, son marché le plus rentable, avec un objectif de +25 % de revenus d'ici 2030. Le titre a perdu 5,2 % sur la séance et 37 % depuis le début de l'année.
+</NewsItem>
+
+<NewsItem
+  title="En bref finance"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/chatgpt-gets-powerpoint-skills" }]}
+>
+- **Hark** lève **700 M$** (valorisation 6 Md$) pour une interface IA « universelle », fondée par Brett Adcock. [TechCrunch](https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/)
+- **OpenAI** offre **~2 Md$** de crédits à chaque startup de la promo Y Combinator, contre une part au capital. [TechCrunch](https://techcrunch.com/2026/05/20/sam-altman-makes-mic-drop-offer-to-every-y-combinator-startup/)
+- **Samsung** versera ~26,6 Md$ de bonus (≈340 000 $/salarié) pour éviter une grève dans les semi-conducteurs ; titre +8,5 %. [Bloomberg](https://www.bloomberg.com/news/articles/2026-05-21/samsung-chip-workers-to-get-average-340-000-bonus-in-ai-boom)
+- **McDonald's France** subit une fuite de données : des comptes fidélité vidés de leurs points. [Le Figaro](https://www.lefigaro.fr/secteur/high-tech/mcdonald-s-france-victime-d-une-fuite-de-donnees-des-comptes-fidelite-debites-20260521)
+- **SpaceX** reporte à vendredi le lancement de sa fusée Starship. [Le Figaro](https://www.lefigaro.fr/societes/spacex-reporte-le-lancement-tres-attendu-de-sa-derniere-fusee-starship-20260522)
+</NewsItem>

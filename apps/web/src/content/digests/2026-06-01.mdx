@@ -1,0 +1,170 @@
+---
+date: "2026-06-01"
+title: "SoftBank parie 75 Md€ sur la France"
+lede: "Le japonais SoftBank ouvre Choose France avec 75 Md€ de data centers IA, Nvidia entre dans l'humanoïde avec Unitree et débarque sur le PC en ARM, pendant que Codex prend la main sur Windows."
+categories: ["ia", "robotique", "hardware", "finance", "evenements"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Codex prend le contrôle de Windows, pilotable depuis le mobile"
+  category="ia"
+  tags={["openai", "codex", "agents"]}
+  sources={[
+    { label: "OpenAI (X)", url: "https://x.com/openai/status/2060428604727771421" },
+    { label: "Microsoft Store", url: "https://apps.microsoft.com/detail/9NT1R1C2HH7J" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Le mode *computer use* de Codex arrive sur Windows : l'agent voit l'écran, clique, tape et teste une app sans API, déclenché par `@Computer` ou `@AppName`. On lance, approuve et pilote les tâches depuis l'app ChatGPT mobile (iOS/Android) pendant que le PC travaille. Sur Windows, l'exécution se fait au premier plan — Codex occupe l'écran — et les captures transitent par les serveurs d'OpenAI.
+
+<Tweet id="2060428604727771421" />
+</NewsItem>
+
+<NewsItem
+  title="xAI ouvre grok-build, son modèle de code agentique, à 1 $/M tokens"
+  category="ia"
+  tags={["xai", "modèle", "code"]}
+  sources={[
+    { label: "xAI docs", url: "https://docs.x.ai/docs/models" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+`grok-build-0.1` passe en API publique : contexte de **256K**, entrée texte et images, tool use et raisonnement activés par défaut. Tarif **1 $/M en entrée, 2 $/M en sortie**, et **0,20 $/M** sur prompts en cache. Branchable sur Cursor, Kilo Code, OpenCode, l'API xAI ou OpenRouter.
+</NewsItem>
+
+<NewsItem
+  title="Microsoft lance Copilot Health en préversion"
+  category="ia"
+  tags={["microsoft", "santé"]}
+  sources={[
+    { label: "Microsoft", url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/05/29/copilot-health-now-in-preview/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Copilot Health agrège données de wearables, résultats de labo et dossiers médicaux dans un espace sécurisé, en s'appuyant sur **50 000+** prestataires américains. Microsoft adosse les recommandations à un partenariat avec Harvard Health et un panel de **250+** médecins.
+
+<Video src="https://www.youtube.com/watch?v=L15u6-cr1_I" caption="Copilot Health en action. Source : Microsoft." />
+</NewsItem>
+
+<NewsItem
+  title="Apple reconstruit Siri sur Google Gemini"
+  category="ia"
+  tags={["apple", "siri"]}
+  sources={[
+    { label: "Bloomberg", url: "https://www.bloomberg.com/news/features/2026-05-28/apple-ios-27-photos-screenshots-revamped-siri-pro-camera-app-new-ai-features" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Apple refond entièrement Siri en l'appuyant sur Google Gemini pour des capacités génératives proches de ChatGPT. La nouvelle version s'intègre à la Dynamic Island, ouvre la recherche web dopée à l'IA et les agents tiers, tout en exploitant les données *on-device* — sur des centaines de millions d'appareils.
+</NewsItem>
+
+<NewsItem
+  title="En bref IA & recherche"
+  category="ia"
+  tags={["en-bref", "recherche"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+- **[Nano Banana 2 & Pro](https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-and-nano-banana-pro-are-generally-available)** — les modèles d'image de Google (Gemini 3.1 Flash Image / Gemini 3 Pro Image) passent en disponibilité générale et acceptent désormais la **vidéo** en entrée de prompt.
+- **[Biohub ESM](https://biohub.ai/esm/protein/about)** — l'initiative Chan Zuckerberg publie ses Evolutionary Scale Models ; ESMFold2, entraîné sur **2,8 Md** de séquences protéiques, vise des résultats SOTA en prédiction de structure.
+- **[Kog AI](https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/)** — inférence à **3 000 tokens/s par utilisateur** sur GPU datacenter standard, soit 10 à 30× les 100–300 tokens/s habituels.
+- **[DeepSWE](https://deepswe.datacurve.ai/blog)** — benchmark de code *long-horizon* sur tâches inédites (anti-contamination) : GPT-5.5 à **70 %**, GPT-5.4 à 56 %, Claude Opus 4.7 à 54 %.
+- **[NVIDIA Cosmos 3](https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai)** — modèle ouvert pour l'IA physique, génère et comprend des vidéos pour simuler des agents autonomes.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Nvidia entre dans l'humanoïde avec le chinois Unitree"
+  category="robotique"
+  tags={["nvidia", "humanoïde"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/01/nvidia-unitree-humanoid-robotics-system-researchers.html" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Nvidia lance sa première plateforme de robotique humanoïde accessible publiquement, sur le matériel de la startup chinoise **Unitree**, qui prépare son IPO. Le fabricant de puces ne vend plus seulement les GPU des robots : il fournit la plateforme complète, sur un axe États-Unis/Chine inédit pour lui.
+</NewsItem>
+
+<NewsItem
+  title="En bref robotique"
+  category="robotique"
+  tags={["en-bref"]}
+  sources={[
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+- **[Qwen-VLA](https://huggingface.co/Qwen)** — le Tongyi Lab d'Alibaba sort un modèle unique capable de piloter **11 morphologies** de robots différentes.
+- **[Atlas](https://www.youtube.com/watch?v=V1Lxp-Q6Y9g)** — Boston Dynamics fait apprendre le football à Atlas à partir de vidéos, jusqu'au "Ghost Rabona" ; présentation envisagée avec Spot lors de la Coupe du Monde 2026.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Nvidia attaque le PC Windows avec sa première puce ARM"
+  category="hardware"
+  tags={["nvidia", "arm", "pc"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/05/31/nvidias-new-chip-to-power-fresh-line-of-windows-laptops-by-dell-hp.html" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Jensen Huang dévoile une puce ARM pour ordinateurs portables, marquant l'entrée de Nvidia sur le PC grand public. Elle équipera dès le lancement des laptops Microsoft, Dell, HP et ASUS, avec l'IA locale comme argument — frontalement face au x86 d'Intel et AMD et au Snapdragon de Qualcomm.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="SoftBank promet 75 Md€ de data centers IA en France"
+  category="finance"
+  tags={["softbank", "data-center", "choose-france"]}
+  sources={[
+    { label: "Les Échos", url: "https://www.lesechos.fr/tech-medias/hightech/le-japonais-softbank-promet-un-investissement-de-75-milliards-deuros-dans-des-data-centers-en-france-2234182" },
+    { label: "The Decoder", url: "https://the-decoder.com/softbank-plans-75-billion-euro-ai-data-center-buildout-in-france/" },
+    { label: "La Tribune", url: "https://www.latribune.fr/article/la-tribune-dimanche/dimanche-eco/1066811520050914/masayoshi-son-president-fondateur-de-softbank-nous-allons-investir-75-milliards-en-france-dans-les-infrastructures-liees-a-l-intelligence-artificielle" },
+  ]}
+>
+Annoncée pendant la finale de la Ligue des Champions, en ouverture de la 9e édition de **Choose France**, l'enveloppe vise **5 GW** de capacité (≈ 4 réacteurs), dont **45 Md€** opérationnels d'ici **2031** sur trois sites en Normandie. SoftBank cherche surtout à sécuriser du calcul pour OpenAI (≈ 11 % du capital détenu) et cite l'électricité française comme avantage. À tempérer : le groupe a l'habitude d'annoncer des mégaprojets qui peinent à se matérialiser.
+</NewsItem>
+
+<NewsItem
+  title="En bref crypto & finance — mai 2026"
+  category="finance"
+  tags={["crypto", "en-bref"]}
+  sources={[{ label: "via Snapshot by Hasheur", url: "https://mailchi.mp/hasheur/snapshot-2" }]}
+>
+- **[Clarity Act](https://youtu.be/KIJ9Bafi5Z4)** — le comité bancaire du Sénat US adopte le Digital Asset Market Clarity Act par un vote bipartisan **15 contre 9**, posant les bases du premier cadre fédéral crypto ; le texte doit encore fusionner avec la version agriculture et passer le seuil de 60 voix en séance.
+- **[ETF HYPE](https://cryptoast.fr/demarrage-record-etf-hype-spot-concentrent-1-pourcent-capitalisation/)** — démarrage record pour les ETF spot sur HYPE (Hyperliquid), qui captent déjà **1 %** de la capitalisation du jeton ; HYPE fait +120 % YTD quand le BTC recule de ~12 %.
+- **[Fed](https://cryptoast.fr/kevin-warsh-succede-jerome-powell-comme-president-fed-apres-vote-senat/)** — Kevin Warsh assermenté président de la Fed le 22 mai (confirmé 54-45), première réunion FOMC les 16-17 juin sur fond d'inflation au plus haut depuis trois ans.
+</NewsItem>
+
+<NewsItem
+  title="En bref marchés"
+  category="finance"
+  tags={["en-bref", "marchés"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **SpaceX** vise **1 800 Md$** pour son IPO sur le Nasdaq (contre 2 000 Md$ évoqués en avril), prix attendu le 11 juin — la plus grosse introduction de l'histoire. [Financial Times](https://www.ft.com/content/7a05e500-de0a-468f-bd82-0a454d99e165)
+- **Berkshire Hathaway** rachète le promoteur Taylor Morrison pour **6,8 Md$**. [CNBC](https://www.cnbc.com/2026/06/01/berkshire-hathaway-taylor-morrison-home-acquisition-housing-market.html)
+- **Apollo** monte une dette de **36 Md$** pour acheter des puces Google destinées à Anthropic. [Bloomberg](https://www.bloomberg.com/news/articles/2026-05-28/apollo-shops-36-billion-debt-deal-to-buy-google-chips-for-anthropic)
+- **France** : le PIB recule de **0,1 %** au trimestre, l'inflation accélère à **2,4 %** sur un an en mai. [Les Échos](https://www.lesechos.fr/economie-france/conjoncture/linflation-accelere-en-france-2233981)
+- **S&P** laisse la note de la France inchangée. [BFMTV](https://www.bfmtv.com/economie/economie-social/finances-publiques/l-agence-s-p-laisse-la-note-de-la-france-inchangee_AD-202605290915.html)
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="La fusée New Glenn de Blue Origin explose au sol"
+  category="evenements"
+  tags={["espace", "blue-origin"]}
+  sources={[
+    { label: "Les Échos", url: "https://www.lesechos.fr/industrie-services/air-defense/une-fusee-geante-blue-origin-de-jeff-bezos-explose-sur-sa-rampe-de-lancement-2233947" },
+    { label: "NBC News", url: "https://www.nbcnews.com/science/space/blue-origin-rocket-explosion-setback-nasa-moon-missions-rcna347522" },
+  ]}
+>
+Le lanceur de 100 m a explosé lors d'un test moteur à Cape Canaveral, détruisant le booster et l'unique pas de tir opérationnel de l'entreprise — un nouvel échec après avril. Pas de blessé, mais le calendrier de la constellation d'Amazon et le programme lunaire Artemis de la NASA sont touchés.
+</NewsItem>

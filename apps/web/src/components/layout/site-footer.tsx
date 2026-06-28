@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer className="mx-auto mt-24 w-full max-w-2xl px-4 pb-12 min-[1180px]:hidden">
       <Separator className="mb-6 bg-border/60" />
-      <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
+      <div className="flex flex-wrap items-center justify-between gap-3 text-muted-foreground text-sm">
         <span>
           © {YEAR} {siteConfig.name}
         </span>

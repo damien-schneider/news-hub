@@ -4,11 +4,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "vite dev --port 3005",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "biome check --write",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6",
     "eslint": "^9",
+    "react-grab": "^0.1.47",
     "typescript": "^6",
     "vite": "^8"
   }

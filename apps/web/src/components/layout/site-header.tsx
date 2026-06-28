@@ -5,9 +5,9 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@workspace/ui/components/avatar"
-
-import { siteConfig, siteInitials } from "@/config/site"
+import { SearchTrigger } from "@/components/search/search-trigger"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
+import { siteConfig, siteInitials } from "@/config/site"
 
 const NAV = [
   { label: "Accueil", to: "/" },
@@ -16,7 +16,7 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl min-[1180px]:hidden">
+    <header className="sticky top-0 z-40 border-border/60 border-b bg-background/80 backdrop-blur-xl min-[1180px]:hidden">
       <div className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-4 px-4">
         <Link to="/" className="flex items-center gap-2.5">
           <Avatar size="sm">
@@ -25,7 +25,7 @@ export function SiteHeader() {
             ) : null}
             <AvatarFallback>{siteInitials()}</AvatarFallback>
           </Avatar>
-          <span className="text-sm font-medium">{siteConfig.name}</span>
+          <span className="font-medium text-sm">{siteConfig.name}</span>
         </Link>
 
         <nav className="flex items-center gap-1">
@@ -34,11 +34,12 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="rounded-lg px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-foreground"
+              className="rounded-lg px-3 py-1.5 text-muted-foreground text-sm transition-colors hover:text-foreground data-[status=active]:text-foreground"
             >
               {item.label}
             </Link>
           ))}
+          <SearchTrigger variant="icon" />
           <ThemeToggle />
         </nav>
       </div>

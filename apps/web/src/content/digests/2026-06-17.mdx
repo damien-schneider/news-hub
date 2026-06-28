@@ -1,0 +1,217 @@
+---
+date: "2026-06-17"
+title: "GLM-5.2 talonne Opus, Cursor attaque GitHub"
+lede: "Z.ai place un modèle open-weights juste derrière Opus 4.8 en code, Cursor lance Origin pour encaisser 22 commits/seconde, et la France débranche Palantir au profit de champions tricolores."
+categories: ["ia", "web", "robotique", "finance", "hardware"]
+sourceCount: 16
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="GLM-5.2 : l'open-weights se hisse juste derrière Opus 4.8 en code"
+  category="ia"
+  tags={["modèle", "open-source", "code"]}
+  sources={[
+    { label: "Z.ai", url: "https://z.ai/blog/glm-5.2" },
+    { label: "Hugging Face", url: "https://huggingface.co/zai-org/GLM-5.2" },
+    { label: "via AINews", url: "https://news.smol.ai" },
+  ]}
+>
+Z.ai publie **GLM-5.2**, un MoE de **744 Md de paramètres** (40 Md actifs), licence MIT, contexte **1M tokens** et deux modes d'effort (high, max). Il passe **81,0** sur Terminal-Bench 2.1 (contre 62,0 pour GLM-5.1) et prend la **1re place du Design Arena** ainsi que la 2e du Code Arena Frontend, derrière le seul Fable 5. Tarif API inchangé : **1,4 $ / 4,4 $** le M tokens, soit ~1/6 de GPT-5.5. Côté inférence, l'innovation `IndexShare` réutilise un indexeur toutes les quatre couches sparse, pour **2,9× moins de FLOPs** par token à 1M de contexte.
+
+<Tweet id="2066940737011560652" />
+</NewsItem>
+
+<NewsItem
+  title="Cursor lance Origin, un hébergement git taillé pour les agents"
+  category="ia"
+  tags={["cursor", "agents", "outils"]}
+  sources={[
+    { label: "Cursor", url: "https://cursor.com/origin" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Au Compile, Cursor a présenté **Origin**, sa plateforme d'hébergement git pensée pour les agents qui ouvrent des pull requests plus vite que les humains ne les relisent. La démo affichait **22,6 commits/seconde** sur un seul dépôt — une charge pour laquelle GitHub n'a pas été conçu. La résolution de conflits est automatisée par IA au niveau du merge ; Origin s'appuie sur la techno de Graphite, rachetée fin 2025. Liste d'attente ouverte, disponibilité prévue à l'automne.
+</NewsItem>
+
+<NewsItem
+  title="SpaceX rachète Cursor pour 60 Md$, juste après son IPO"
+  category="ia"
+  tags={["m&a", "cursor"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+SpaceX a levé son option d'achat sur Cursor, en actions, pour une valorisation de **60 Md$**. L'opération, annoncée en avril, doit être bouclée au 3e trimestre et doit doter la division IA de SpaceX (fusionnée avec xAI) d'un outil de code de pointe ; un modèle entraîné conjointement doit sortir dans Cursor et Grok Build.
+</NewsItem>
+
+<NewsItem
+  title="Les « coworkers » agentiques deviennent grand public"
+  category="ia"
+  tags={["agents", "microsoft", "databricks"]}
+  sources={[
+    { label: "Microsoft", url: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/" },
+    { label: "Databricks", url: "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-genie-one-all-new-agentic-coworker-every-team" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+**Copilot Cowork** passe en disponibilité générale pour tous les utilisateurs Microsoft 365, avec choix du modèle, facturation à l'usage et un coût annoncé **30–40 % inférieur** au Claude Cowork d'Anthropic par prompt. Le même jour, Databricks lance **Genie One**, un agent qui exécute des tâches métier branché sur les données de l'entreprise via sa couche de contexte Genie Ontology.
+
+<Video src="https://www.youtube.com/watch?v=X4aPTGja1Mw" caption="Démo de Databricks Genie One. Source : Databricks." />
+</NewsItem>
+
+<NewsItem
+  title="OpenAI a perdu 38,5 Md$ en 2025, ChatGPT sous les 50 %"
+  category="ia"
+  tags={["openai", "résultats"]}
+  sources={[
+    { label: "Ars Technica", url: "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/" },
+  ]}
+>
+Des états financiers audités, vérifiés par le *Financial Times*, montrent une perte nette de **38,5 Md$** en 2025 — plus de 7× les 5 Md$ de 2024 — pour un chiffre d'affaires passé de 3,7 à **13 Md$**. Le même jour, la part de marché de ChatGPT tombe pour la première fois **sous 50 %** (1,1 Md d'utilisateurs mensuels), grignotée par Gemini (662 M) et Claude (245 M), alors qu'OpenAI a déposé un S-1 confidentiel la semaine passée.
+</NewsItem>
+
+<NewsItem
+  title="Plus Anthropic défie Trump, plus ses ventes grimpent"
+  category="ia"
+  tags={["anthropic", "régulation"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/16/anthropics-latest-feud-with-the-trump-admin-may-actually-help-it-sales-data-suggests/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Malgré le bras de fer avec Washington sur ses modèles **Claude Fable 5** et **Mythos 5**, l'adoption d'Anthropic en entreprise ne ralentit pas : les données de dépenses compilées par **Ramp** pointent un impact commercial positif. Le conflit nourrit une image de fournisseur indépendant, argument de poids quand le choix d'un modèle engage des données stratégiques.
+</NewsItem>
+
+<NewsItem
+  title="Souveraineté IA : la France débranche Palantir et déploie Mistral"
+  category="ia"
+  tags={["france", "souveraineté"]}
+  sources={[
+    { label: "Le Figaro — ChapsVision", url: "https://www.lefigaro.fr/secteur/high-tech/qui-est-chapsvision-cette-societe-francaise-qui-va-remplacer-palantir-aupres-de-la-dgsi-20260616" },
+    { label: "Le Figaro — Mistral", url: "https://www.lefigaro.fr/conjoncture/un-chatgpt-en-version-souveraine-le-gouvernement-va-deployer-un-outil-conversationnel-d-ia-pour-ses-fonctionnaires-20260616" },
+  ]}
+>
+La DGSI abandonne Palantir, sous contrat depuis 2016, au profit du français **ChapsVision** et de sa plateforme Argonos. En parallèle, le gouvernement annonce **655 M€** d'investissements IA et un assistant développé par **Mistral AI** pour 1,8 million de fonctionnaires, afin de ne plus dépendre de Claude ou ChatGPT. Les Pays-Bas dévoilent le même jour leur modèle souverain **GPT-NL** ([TNO](https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/)).
+</NewsItem>
+
+<NewsItem
+  title="En bref — IA"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }, { label: "AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **Agents qui paient** : l'agent Hermes de [Nous Research](https://github.com/NousResearch) gagne trois skills Stripe pour acheter en ligne, régler des API à l'appel et facturer ses propres SaaS, sans exposer les identifiants.
+- **Gemini Omni Flash** prend la 1re place de l'[Arena](https://arena.ai/leaderboard) en génération vidéo, text-to-video comme image-to-video.
+- **Databricks** affiche **+80 %** de croissance (6,9 Md$ annualisés) dopée par les agents, au prix de marges sous pression. [CNBC](https://www.cnbc.com/2026/06/16/databricks-revenue-growth-tops-80percent-to-6point9-billion-annualized.html)
+- **AI Overviews** : un tribunal de Berlin juge les résumés IA de Google comme un simple « nouveau format de recherche », pas un contenu original. [The Decoder](https://the-decoder.com/berlin-court-rules-googles-ai-overviews-are-just-a-new-search-format-not-original-content/)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Le React Compiler réécrit en Rust arrive dans les outils"
+  category="web"
+  tags={["react", "compiler", "rust"]}
+  sources={[
+    { label: "Oxlint", url: "https://oxc.rs/docs/guide/usage/linter/rules/react/react-compiler.html" },
+    { label: "via This Week In React", url: "https://thisweekinreact.com/newsletter" },
+  ]}
+>
+Le portage Rust du React Compiler commence à atterrir dans l'écosystème : Oxlint 1.70 expose une règle `react/react-compiler`, et le support gagne SWC, Rspack, Rolldown/Vite et Next.js (option `turbopackRustReactCompiler`). React Spectrum et Sanity rapportent des gains **×5–6** ; Rspack annonce la version Rust **7–13× plus rapide** que celle en Babel.
+</NewsItem>
+
+<NewsItem
+  title="React Native 0.86, sans breaking change"
+  category="web"
+  tags={["react-native", "release"]}
+  sources={[
+    { label: "React Native", url: "https://reactnative.dev/blog/2026/06/11/react-native-0.86" },
+    { label: "via This Week In React", url: "https://thisweekinreact.com/newsletter" },
+  ]}
+>
+Version centrée sur la stabilité, sans nouveauté majeure ni rupture : support edge-to-edge complet sur Android 15+, traçage de performance amélioré dans les DevTools. Le dépôt rejoint l'org GitHub `/react` sous la **React Foundation**, et `react-native-edge-to-edge` n'est plus nécessaire. Expo SDK 56 doit bientôt passer à 0.86.
+</NewsItem>
+
+<NewsItem
+  title="Outils & libs front"
+  category="web"
+  tags={["tooling", "open-source"]}
+  sources={[{ label: "via This Week In React", url: "https://thisweekinreact.com/newsletter" }]}
+>
+- **[Babel 8.0](https://babeljs.io/blog/2026/06/16/8.0.0/)** — passage à l'ESM-only, abandon d'ES5 par défaut.
+- **[Biome 2.5](https://biomejs.dev/blog/biome-v2-5/)** — 500 règles de lint, plugins avec code-fix, linting cross-fichiers.
+- **[pnpm 11.7](https://pnpm.io/blog/releases/11.7)** — résolution entièrement en Rust, `--frozen-store`.
+- **[Node.js — package maps](https://github.com/nodejs/node/pull/62239)** — résolution via un JSON statique plutôt qu'en parcourant `node_modules` (déjà dans Yarn 4.17).
+- **[StyleX 0.19](https://github.com/facebook/stylex/blob/main/CHANGELOG.md#0190-jun-14-2026)** — styles atomiques inline façon Tailwind.
+- **[Hydrogen](https://hydrogen.shopify.dev/update/hydrogen-developer-preview)** — le framework de Shopify devient agnostique runtime, conçu avec l'équipe Next.js.
+- **[TanStack AI Beta](https://tanstack.com/blog/tanstack-ai-beta)** — outillage IA neutre, support React natif.
+- **[Zod Compiler](https://github.com/gajus/zod-compiler)** — compile les schémas Zod en validateurs sans surcoût à l'exécution.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Genesis AI dévoile Eno, un robot qui n'imite pas l'humain"
+  category="robotique"
+  tags={["humanoïde", "startup"]}
+  sources={[
+    { label: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/951283/genesis-ai-humanoid-robot-eno" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+La startup française **Genesis AI**, soutenue par Eric Schmidt, présente **Eno** : ni tête ni jambes, mais une base mobile à roues qui se replie comme une chaise de plage. Pensé comme un généraliste « autour des capacités humaines » plutôt que de l'apparence, il ne conserve d'humain que ses **mains**, calquées sur la forme et la fonction de la main.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Le BHV Marais largue Shein et change de propriétaire"
+  category="finance"
+  tags={["retail", "shein"]}
+  sources={[
+    { label: "Aktionnaire", url: "https://www.aktionnaire.com/articles/le-bhv-marais-est-cede-a-un-nouvel-exploitant-shein-va-quitter-le-grand-magasin" },
+    { label: "Libération", url: "https://www.liberation.fr/economie/magasin-desert-ventes-au-plus-bas-mal-etre-des-salaries-le-bhv-marais-en-plein-marasme-20260507_OBJG5QZVIJGV7JDTTQ6MA7E5FM/" },
+  ]}
+>
+Depuis l'arrivée de Shein en novembre 2025, le chiffre d'affaires du BHV est passé de **11 M€ à 1 M€** par mois et les grandes marques (Dior, Sandro, Guerlain) ont fui. F. Merlin cède le fonds de commerce à une nouvelle structure fondée par les cadres du magasin ; le départ de Shein, contraint par contrat, n'interviendra pas avant Noël.
+</NewsItem>
+
+<NewsItem
+  title="Yum! Brands vend Pizza Hut pour 2,7 Md$"
+  category="finance"
+  tags={["m&a", "restauration"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/16/yum-brands-sells-pizza-hut-to-private-equity-firm-longrange-capital-for-2point7-billion.html" }]}
+>
+Yum! Brands cède Pizza Hut : les activités hors Chine continentale partent au fonds LongRange Capital pour **1,5 Md$**, les activités chinoises à Yum China pour 1,2 Md$. Première chaîne de pizzerias au monde de 1971 à 2017, l'enseigne souffre désormais face à Domino's.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Pétrole** : le Brent repasse sous **80 $** pour la première fois depuis mars, près de son niveau d'avant-guerre, après l'annonce de la réouverture du détroit d'Ormuz.
+- **SpaceX** dépasse Amazon et devient la 5e capitalisation mondiale à **2 658 Md$**, +800 Md$ depuis vendredi.
+- **Info** : pour la première fois, réseaux sociaux et plateformes vidéo dépassent les médias traditionnels comme source d'info (54 % des sondés, étude Reuters, 48 pays). [Libération](https://www.liberation.fr/economie/medias/acces-a-linformation-pour-la-premiere-fois-les-reseaux-sociaux-et-les-plateformes-video-depassent-les-medias-traditionnels-20260616_SFVCPVCB3RFWRBBK5JOXVWYKEM/)
+- **France** : la Banque de France table désormais sur une croissance **nulle** au 2e trimestre. [franceinfo](https://www.franceinfo.fr/economie/croissance/la-banque-de-france-prevoit-une-croissance-nulle-au-deuxieme-trimestre-et-de-0-5-en-2026_8064497.html)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Apple prépare des AirPods à caméra et des lunettes connectées"
+  category="hardware"
+  tags={["apple", "wearables"]}
+  sources={[
+    { label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-06-16/apple-plans-camera-airpods-iphone-foldable-2-20th-anniversary-iphone-in-2027" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+D'ici fin 2027, Apple préparerait des **AirPods équipés de capteurs photo** pour donner à Siri un contexte visuel sur l'environnement, suivis de lunettes connectées face aux Ray-Ban Meta, d'un iPhone pliable et d'un modèle anniversaire. Le nouveau patron J. Ternus veut marquer sa première année ; le groupe accélère aussi sur ses propres puces.
+</NewsItem>

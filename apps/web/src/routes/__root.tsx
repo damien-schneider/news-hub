@@ -1,20 +1,20 @@
 import {
+  createRootRoute,
   HeadContent,
   Link,
   Scripts,
-  createRootRoute,
 } from "@tanstack/react-router"
 import { createServerFn } from "@tanstack/react-start"
 import { getCookie } from "@tanstack/react-start/server"
 
 import appCss from "@workspace/ui/globals.css?url"
-
-import { siteConfig } from "@/config/site"
+import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteSidebar } from "@/components/layout/site-sidebar"
-import { SiteFooter } from "@/components/layout/site-footer"
-import { ThemeProvider, themeScript } from "@/components/theme/theme-provider"
+import { SearchProvider } from "@/components/search/search-context"
 import type { Theme } from "@/components/theme/theme-provider"
+import { ThemeProvider, themeScript } from "@/components/theme/theme-provider"
+import { siteConfig } from "@/config/site"
 
 const getThemeServerFn = createServerFn().handler(() => {
   return (getCookie("ui-theme") ?? "system") as Theme
@@ -49,12 +49,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ThemeProvider initialTheme={theme}>
-          <SiteSidebar />
-          <div className="flex min-h-svh flex-col">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </div>
+          <SearchProvider>
+            <SiteSidebar />
+            <div className="flex min-h-svh flex-col">
+              <SiteHeader />
+              <main className="flex-1">{children}</main>
+              <SiteFooter />
+            </div>
+          </SearchProvider>
         </ThemeProvider>
         <Scripts />
       </body>
@@ -65,13 +67,13 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 function NotFound() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-24 text-center">
-      <p className="font-heading text-5xl font-semibold">404</p>
+      <p className="font-heading font-semibold text-5xl">404</p>
       <p className="mt-3 text-muted-foreground">
         Cette page n'existe pas (ou plus).
       </p>
       <Link
         to="/"
-        className="mt-6 inline-block text-sm font-medium underline underline-offset-4"
+        className="mt-6 inline-block font-medium text-sm underline underline-offset-4"
       >
         Retour à l'accueil
       </Link>

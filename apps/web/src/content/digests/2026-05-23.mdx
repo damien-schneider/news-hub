@@ -1,0 +1,113 @@
+---
+date: "2026-05-23"
+title: "Les labos de modèles deviennent des labos d'agents"
+lede: "Greg Brockman acte que « le modèle seul n'est plus le produit » ; DeepSeek lève 10,29 Md$ et pérennise sa remise de 75 % ; ETH Zurich dévoile un humanoïde à quatre bras pour l'orbite."
+categories: ["ia", "web", "robotique"]
+sourceCount: 9
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="« Le modèle seul n'est plus le produit »"
+  category="ia"
+  tags={["agents", "stratégie"]}
+  sources={[{ label: "AINews — Latent Space", url: "https://www.latent.space/p/ainews-all-model-labs-are-now-agent" }]}
+>
+À la veille du dépôt d'IPO probable d'OpenAI, Greg Brockman tranche : le produit gagnant est désormais **modèle + harness + workflow + UI + mémoire**, pas le modèle nu. Le virage se confirme côté labos : AI21 ferme son équipe modèles pour pivoter sur les agents, et DeepSeek monte une équipe « Harness » pour la première fois.
+</NewsItem>
+
+<NewsItem
+  title="DeepSeek lève 10,29 Md$ et garde le cap open source"
+  category="ia"
+  tags={["levée", "deepseek", "open-source"]}
+  sources={[
+    { label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-05-22/deepseek-founder-declares-agi-goal-as-10-billion-round-advances" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-all-model-labs-are-now-agent" },
+  ]}
+>
+Liang Wenfeng réaffirme un objectif AGI et le maintien de modèles ouverts plutôt qu'une commercialisation à court terme. En parallèle, DeepSeek a rendu **permanente** sa remise de 75 % sur V4-Pro : Artificial Analysis chiffre l'inférence à ~0,18 $/M en moyenne pondérée, soit ~3× moins cher que Gemini 3.1 Pro, ~12× moins que GPT-5.5 et ~19× moins que Claude Opus 4.7.
+</NewsItem>
+
+<NewsItem
+  title="MCP passe en RC 2026-07-28 et devient stateless"
+  category="ia"
+  tags={["mcp", "protocole"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-all-model-labs-are-now-agent" }]}
+>
+La release candidate du Model Context Protocol supprime le handshake et l'identifiant de session : toute requête peut atteindre n'importe quelle instance serveur. S'ajoutent les extensions de première classe **MCP Apps** et **Tasks**, un durcissement de l'auth et une politique de dépréciation claire. Pour l'infra, fin des sessions collantes et scaling simplifié.
+</NewsItem>
+
+<NewsItem
+  title="Meta met en demeure le projet Heretic sur les poids Llama"
+  category="ia"
+  tags={["llama", "open-source", "juridique"]}
+  sources={[{ label: "Codeberg — Heretic", url: "https://codeberg.org/p-e-w/heretic" }, { label: "via r/LocalLLaMA", url: "https://www.reddit.com/r/LocalLLaMA/comments/1tjmvx6/heretic_has_been_served_a_legal_notice_by_meta_inc/" }]}
+>
+Après une mise en demeure d'un prestataire mandaté par Meta, le projet Heretic a retiré ses dérivés de poids Llama et bascule sur un miroir allemand hébergé chez Codeberg, en préparant des « mesures techniques » pour ne plus dépendre d'un seul hébergeur.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & cours"
+  category="ia"
+  tags={["modèles", "ressources"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-all-model-labs-are-now-agent" }]}
+>
+- **[Qwen3.7-Max](https://qwen.ai/blog?id=qwen3.7)** — Alibaba positionne son flagship au niveau des modèles Claude sur l'agentique et le tool-use ; la série Max reste fermée.
+- **[Z-Image 6B / L2P](https://nju-pcalab.github.io/projects/L2P/)** (Tencent) — génération en espace pixel, **sans VAE**, 1K de résolution ([poids HF](https://huggingface.co/zhen-nan/L2P)).
+- **[Anthropic Learn](https://www.anthropic.com/learn)** — catalogue gratuit de 13+ cours certifiants : Claude Code, API, MCP (transports STDIO et StreamableHTTP), déploiement Bedrock/Vertex AI.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Shared Storage API : du cross-site sans tracking"
+  category="web"
+  tags={["privacy", "navigateur"]}
+  sources={[{ label: "Privacy Sandbox (YouTube)", url: "https://www.youtube.com/watch?v=X52kDDacvkw" }, { label: "via Tailwind Weekly", url: "https://tailwindweekly.com" }]}
+>
+Tara (équipe Privacy Sandbox) explique pourquoi le stockage partitionné (localStorage, IndexedDB) bloque les usages cross-site légitimes, et comment la **Shared Storage API** stocke des données non partitionnées lisibles uniquement dans des worklets sécurisés. Deux sorties : *Select URL* (choix de contenu, A/B, créa pub) et *Private Aggregation* (histogrammes bruités).
+
+<Video src="https://www.youtube.com/watch?v=X52kDDacvkw" caption="Shared Storage API expliquée par l'équipe Privacy Sandbox." />
+</NewsItem>
+
+<NewsItem
+  title="En bref — CSS & accessibilité"
+  category="web"
+  tags={["css", "aria"]}
+  sources={[{ label: "via Tailwind Weekly", url: "https://tailwindweekly.com" }]}
+>
+- **[clip-path: shape()](https://frontendmasters.com/blog/creating-flower-shapes-using-clip-path-shape/)** — dessiner des formes de fleurs avec la seule commande `arc`, les points générés par une boucle Sass plutôt qu'à la main.
+- **[Guide pratique des rôles ARIA](https://www.levelaccess.com/blog/aria-roles-explained-a-practical-guide-for-web-developers/)** — quand ne PAS utiliser ARIA parce que le HTML natif donne déjà la bonne sémantique ; rôles vs états vs propriétés, et les erreurs qui dégradent l'accessibilité.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="HELIOS, l'humanoïde à quatre bras conçu pour l'orbite"
+  category="robotique"
+  tags={["spatial", "humanoïde"]}
+  sources={[
+    { label: "heise", url: "https://www.heise.de/en/news/Four-arms-are-better-than-two-humanoid-robot-for-zero-gravity-11303448.html" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-gatsby-unveils-humanoid-home-cleaning-service" },
+  ]}
+>
+ETH Zurich présente HELIOS, un humanoïde à quatre bras dédié aux missions en orbite (entretien de satellites et de stations). Un système à câbles le garde léger et adroit en apesanteur. Avec une heure de travail d'astronaute estimée à ~140 000 $, la startup vise l'externalisation de la maintenance de routine.
+
+<Video src="https://www.youtube.com/watch?v=cqEEX4ct2A0" caption="HELIOS en action, conçu pour les missions en orbite. Source : Heise." />
+</NewsItem>
+
+<NewsItem
+  title="Figure : 200 heures de tri de colis en entrepôt réel"
+  category="robotique"
+  tags={["figure", "logistique"]}
+  sources={[
+    { label: "Ars Technica", url: "https://arstechnica.com/ai/2026/05/the-internet-cant-stop-watching-figure-ais-humanoid-robots-handling-packages/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-gatsby-unveils-humanoid-home-cleaning-service" },
+  ]}
+>
+Les robots F.03 de Figure AI ont enchaîné **200 heures** de tri de colis dans un entrepôt réel : près de 250 000 articles traités à une cadence proche de l'humain, sans défaillance. Le livestream a cumulé des millions de vues. En parallèle, le startup San Francisco Gatsby a envoyé un humanoïde nettoyer un appartement d'un client payant pour **150 $** la prestation, sur un modèle de location à la Uber.
+
+<Tweet id="2057651077928145235" />
+</NewsItem>

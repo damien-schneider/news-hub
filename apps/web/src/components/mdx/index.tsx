@@ -1,9 +1,9 @@
 import type { ComponentProps } from "react"
 
 import { Category } from "./category"
+import { Embed, Gallery, MdxImage, NewsImage, Video } from "./media"
 import { NewsItem } from "./news-item"
 import { Source } from "./source"
-import { Embed, Gallery, MdxImage, NewsImage, Video } from "./media"
 import { Tweet } from "./tweet"
 
 function isExternal(href: string | undefined): boolean {
@@ -54,7 +54,7 @@ export const mdxComponents = {
   ),
 }
 
-export { Category, NewsItem, Source }
+export { FilterProvider, useFilter } from "./filter-context"
 export { Embed, Gallery, NewsImage, Video } from "./media"
 export { Tweet } from "./tweet"
-export { FilterProvider, useFilter } from "./filter-context"
+export { Category, NewsItem, Source }

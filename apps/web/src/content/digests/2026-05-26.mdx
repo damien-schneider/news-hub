@@ -1,0 +1,148 @@
+---
+date: "2026-05-26"
+title: "Le terminal devient le champ de bataille de l'IA"
+lede: "xAI lance Grok Build avec un mode plan obligatoire, DeepSeek casse les prix de 75 % sur puces Huawei, et le pape Léon XIV consacre sa première encyclique à l'IA aux côtés d'Anthropic."
+categories: ["ia", "robotique", "finance", "hardware", "evenements"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="xAI lance Grok Build, un agent de code qui montre son plan avant d'agir"
+  category="ia"
+  tags={["xai", "agent", "cli"]}
+  sources={[{ label: "xAI", url: "https://x.ai/news/grok-build-cli" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+xAI ouvre la bêta de [Grok Build](https://x.ai/cli), un agent de code en terminal qui lit le projet, planifie, édite les fichiers et lance des commandes. Son **Plan Mode** inverse le schéma habituel : l'agent expose tout le plan, l'utilisateur approuve ou réécrit chaque étape, et rien n'est touché avant validation. Sous-agents parallèles, mode headless (`-p`) pour la CI, support des MCP et lecture native des fichiers `CLAUDE.md` existants. Réservé aux abonnés SuperGrok, sur `grok-build-0.1` (contexte 256K).
+</NewsItem>
+
+<NewsItem
+  title="Léon XIV consacre sa première encyclique à l'IA, Anthropic à ses côtés"
+  category="ia"
+  tags={["régulation", "anthropic", "vatican"]}
+  sources={[
+    { label: "Vatican News", url: "https://www.vaticannews.va/fr/pape/news/2026-05/pape-leon-encyclique-magnifica-humanitas-ia-eglise-vatican.html" },
+    { label: "The Decoder", url: "https://the-decoder.com/at-the-launch-of-pope-leo-xivs-encyclical-anthropic-co-founder-says-ai-models-show-signs-of-introspection/" },
+    { label: "Anthropic", url: "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" },
+  ]}
+>
+Dans *Magnifica Humanitas* (plus de 42 000 mots), le pape pose une doctrine complète sur l'IA : régulation publique des labos, protection et reconversion des travailleurs, contrôle humain obligatoire sur toute décision militaire, garde-fous pour les enfants. Il compare l'IA au nucléaire. Le Vatican a présenté le texte aux côtés de Chris Olah, cofondateur d'Anthropic — un alignement qui scelle un an d'approche des communautés religieuses par l'entreprise.
+</NewsItem>
+
+<NewsItem
+  title="DeepSeek baisse de 75 % le prix de V4-Pro grâce aux puces Huawei"
+  category="ia"
+  tags={["deepseek", "prix", "chine"]}
+  sources={[{ label: "The Tech Portal", url: "https://thetechportal.com/2026/05/23/chinas-deepseek-permanently-cuts-prices-of-flagship-v4-pro-ai-model-by-75/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+DeepSeek réduit **définitivement** les tarifs de son modèle phare V4-Pro : **0,0035–0,83 $ le million de tokens**, soit 10 à 100 fois moins que les modèles américains équivalents. La baisse est rendue possible par les supernodes Ascend 950 de Huawei, qui lèvent les contraintes de calcul — démonstration directe que l'embargo américain sur les GPU n'a pas freiné la chaîne d'approvisionnement chinoise.
+</NewsItem>
+
+<NewsItem
+  title="Alibaba sort Qwen3.7-Max, optimisé pour 35 heures d'exécution autonome"
+  category="ia"
+  tags={["alibaba", "modèle", "agent"]}
+  sources={[{ label: "Qwen", url: "https://qwen.ai/blog?id=qwen3.7" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Qwen3.7-Max vise les workflows agentiques longue durée, capables de tenir des centaines à des milliers d'étapes. Pour la démonstration, le modèle a optimisé un kernel GPU sur une architecture inédite en **35 heures d'exécution continue**, sans intervention humaine. Positionnement frontal face aux modèles agentiques de Google et OpenAI.
+</NewsItem>
+
+<NewsItem
+  title="AlphaProof Nexus résout des problèmes d'Erdős ouverts depuis 56 ans"
+  category="ia"
+  tags={["deepmind", "recherche", "maths"]}
+  sources={[{ label: "The Decoder", url: "https://the-decoder.com/google-deepminds-alphaproof-nexus-solves-decades-old-math-problems-for-a-few-hundred-dollars/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Google DeepMind a résolu **9 problèmes Erdős** ouverts — dont 2 non résolus depuis 56 ans — pour quelques centaines de dollars d'inférence. Le système vérifie formellement chaque étape via le compilateur Lean. Le taux de succès global reste de 2,5 %, mais les résultats sont historiques.
+</NewsItem>
+
+<NewsItem
+  title="Outils & repos open-source"
+  category="ia"
+  tags={["open-source", "outils"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[Bumblebee](https://github.com/perplexityai/bumblebee)** (Perplexity, Apache 2.0) — scanner *read-only* qui détecte packages et configs compromis sans jamais exécuter le code visé ; premier outil open-source à traiter les fichiers MCP comme surface d'attaque. Réponse au piratage de 160+ packages npm/PyPI de mai.
+- **[ppf-contact-solver](https://github.com/st-tech/ppf-contact-solver)** (ZOZO, Apache 2.0) — solveur physique pour tissus, cordes et corps mous : **180 M de points de contact** sur un seul GPU, sans interpénétration, add-on Blender et interface JupyterLab.
+</NewsItem>
+
+<NewsItem
+  title="En bref — études & métier"
+  category="ia"
+  tags={["en-bref", "étude"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **George Hotz** juge les agents de codage « l'une des erreurs les plus coûteuses » du secteur : prototypes rapides mais bugs subtils et dette technique. [The Decoder](https://the-decoder.com/george-hotz-says-coding-agents-will-be-one-of-the-most-costly-mistakes-in-software-development/)
+- **CiteVQA** : des chercheurs de Pékin montrent que GPT et Gemini citent souvent des sources qui n'étayent pas leur réponse, même correcte. [The Decoder](https://the-decoder.com/ai-models-often-give-the-right-answers-but-point-to-the-wrong-sources/)
+- **ClickUp** licencie plusieurs centaines d'employés pour les remplacer par des milliers d'agents IA. [TechCrunch](https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/)
+- **« Token-maxxing »** : Microsoft retire Claude Code et Uber a brûlé son budget IA 2026 dès avril (500–2 000 $/ingénieur/mois), signe d'un backlash sur la facturation au token. [Pragmatic Engineer](https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/)
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Hugging Face sort un humanoïde open-source imprimable à ~2 500 $"
+  category="robotique"
+  tags={["humanoïde", "open-source"]}
+  sources={[{ label: "Hugging Face", url: "https://huggingface.co/blog/VirgileBatto/lerobot-humanoid" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Un robot bipède entièrement imprimable en 3D, livré avec designs hardware, outils de simulation, calibration et pipelines sim-to-real. À ~2 500 $, le point d'entrée le plus accessible jamais proposé pour la recherche en robotique humanoïde.
+</NewsItem>
+
+<NewsItem
+  title="En bref — robotique"
+  category="robotique"
+  tags={["en-bref", "humanoïde"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+- **Bosch, Nvidia, Hyundai** : Bosch produira les HMND 01 en Europe, Hyundai déploiera plus de 25 000 robots Atlas de Boston Dynamics dans ses usines américaines. [Forbes](https://www.forbes.com/sites/johnkoetsier/2026/05/21/humanoids-new-deal-bosch-will-build-its-robots-with-schaeffler-parts/)
+- **Waymo** suspend ses robotaxis à Atlanta, Dallas, San Antonio et Houston : les véhicules entrent dans les zones inondées, la NHTSA lance un rappel. [TechCrunch](https://techcrunch.com/2026/05/21/waymo-pauses-service-in-four-cities-as-robotaxis-keep-driving-into-floods/)
+- **GigaAI** teste 100 unités de son humanoïde domestique SeeLight S1 dans des foyers de Wuhan (cuisine, lessive, lits). [Tech in Asia](https://www.techinasia.com/news/chinese-household-robot-set-home-tests-2027)
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="L'IA fait dérailler le modèle économique du conseil"
+  category="finance"
+  tags={["conseil", "mckinsey"]}
+  sources={[{ label: "Financial Times", url: "https://www.ft.com/content/8318a754-7b63-4f1f-8978-7691e7ed3511" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+À mesure que l'IA absorbe le travail d'analyse jadis facturé à l'heure, les clients exigent des honoraires indexés sur les résultats. McKinsey restructure la rémunération de ses associés pour amortir l'imprévisibilité des revenus. Cabinets d'avocats et auditeurs subissent la même pression de répercuter les gains d'efficacité.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref", "bourse"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Nvidia** franchit 5 000 Md$ de capitalisation : **81,6 Md$** de revenus au Q1 2027 (+85 % sur un an), carnet de commandes à 500 Md$. [CNBC](https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html)
+- **Uber** propose de racheter Delivery Hero à **33 €/action** ; des actionnaires réclament plus de 40 €, le marché parie sur une surenchère. [Aktionnaire](https://www.aktionnaire.com/articles/les-marches)
+- **Taïwan** dépasse l'Inde et devient le 5e marché boursier mondial, porté par TSMC. [Bloomberg](https://www.bloomberg.com/news/articles/2026-05-26/tsmc-s-relentless-rise-powers-taiwan-s-market-value-above-india)
+- **Huawei** vise une production autonome de puces de pointe « réalisables et abordables » d'ici 2031, face aux sanctions américaines. [Reuters](https://www.reuters.com/world/asia-pacific/huawei-proposes-new-path-chip-development-amid-us-sanctions-2026-05-25/)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Google sépare entraînement et inférence sur ses TPU de 8e génération"
+  category="hardware"
+  tags={["google", "tpu", "datacenter"]}
+  sources={[{ label: "Google", url: "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Deux architectures distinctes : le **TPU 8t** pour l'entraînement (cycles ramenés de mois à semaines), le **TPU 8i** pour l'inférence continue des agents. Un superpod de **9 600 puces** délivre **121 ExaFlops**. Séparer physiquement training et inférence répond aux besoins des agents autonomes, très différents d'un chatbot ponctuel.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Ferrari dévoile la Luce, sa première électrique à 550 000 €"
+  category="evenements"
+  tags={["ferrari", "automobile"]}
+  sources={[{ label: "Ferrari", url: "https://www.ferrari.com/fr-FR/auto/ferrari-luce" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+Présentée à Rome, la [Luce](https://www.ferrari.com/fr-FR/auto/ferrari-luce) embarque une batterie de **122 kWh** (plus de 500 km d'autonomie) et un moteur dans chaque roue : 0 à 100 km/h en **2,5 s**, pointe à 310 km/h, malgré 2,26 tonnes. Ferrari a fait appel à la NASA pour les sensations et à Jony Ive, ex-designer d'Apple, pour l'habitacle. Prix : **550 000 €**, premières livraisons en octobre.
+</NewsItem>

@@ -1,0 +1,179 @@
+---
+date: "2026-06-12"
+title: "SpaceX lève 75 Md$, la guerre des prix de l'IA s'ouvre"
+lede: "SpaceX boucle la plus grosse IPO de l'histoire et la BCE remonte ses taux, pendant qu'OpenAI envisage de casser ses tarifs face à Anthropic — qui valait pourtant plus cher pour la première fois."
+categories: ["ia", "web", "robotique", "finance", "evenements"]
+sourceCount: 13
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="OpenAI prêt à casser ses prix face à Anthropic"
+  category="ia"
+  tags={["openai", "anthropic", "tarifs"]}
+  sources={[
+    { label: "Wall Street Journal", url: "https://www.wsj.com/tech/ai/openai-considers-drastic-price-cuts-anticipating-war-for-users-with-anthropic-9b8c178e" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+OpenAI envisage des coupes drastiques sur ses tarifs par token, anticipant un mouvement similaire d'Anthropic — qui vient de dépasser OpenAI en valorisation pour la première fois, porté par Claude Code. SemiAnalysis chiffre l'ampleur des subventions : un abonnement Claude Max à 200 $/mois peut coûter jusqu'à ~8 000 $ de compute à Anthropic, un ChatGPT Pro jusqu'à ~14 000 $ à OpenAI.
+
+<Tweet id="2064815044085318040" />
+</NewsItem>
+
+<NewsItem
+  title="Moonshot ouvre Kimi-K2.7-Code, devant Claude sur le tool-use"
+  category="ia"
+  tags={["modèle", "code", "open-source"]}
+  sources={[
+    { label: "Moonshot AI (Hugging Face)", url: "https://huggingface.co/moonshotai/Kimi-K2.7-Code" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Modèle agentique de code en MoE (1 000 Md de paramètres, 32 Md actifs, contexte 256K), licence MIT modifiée. Face à K2.6 : **+21,8 %** en code (62,0 vs 50,9 sur Kimi Code Bench v2) et **−30 %** de tokens de raisonnement. Il atteint **81,1 %** en tool-use, devant les 76,4 % de Claude Opus 4.8. API à **0,95 $/M** de tokens d'entrée (0,19 $/M en cache), poids librement auto-hébergeables.
+</NewsItem>
+
+<NewsItem
+  title="DiffusionGemma : Google génère du texte par diffusion, 4× plus vite"
+  category="ia"
+  tags={["google", "modèle", "open-source"]}
+  sources={[
+    { label: "Google", url: "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" },
+    { label: "via AINews", url: "https://www.latent.space" },
+  ]}
+>
+Modèle de diffusion texte expérimental (Apache 2.0, 26 Md de paramètres MoE / 3,8 Md actifs, contexte 256K, multimodal) qui raffine 256 tokens en parallèle. Débit ~1 000 tok/s sur H100, ~700 tok/s sur RTX 5090 ; Demis Hassabis revendique **4× plus rapide** que la génération classique, au prix d'une qualité encore sous Gemma 4. GGUF Unsloth et support [llama.cpp](https://github.com/ggml-org/llama.cpp/pull/24423) déjà dispos.
+</NewsItem>
+
+<NewsItem
+  title="Visa branche ChatGPT sur ses rails de paiement"
+  category="ia"
+  tags={["visa", "agents", "paiement"]}
+  sources={[{ label: "AI News", url: "https://www.artificialintelligence-news.com/news/visa-chatgpt-integration-enables-ai-agent-retail-purchasing/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Visa connecte son infrastructure à ChatGPT pour que des agents IA recommandent des produits et règlent l'achat chez tout marchand compatible, là où les chatbots restaient mono-vendeur. Conséquence pour les commerçants : optimiser les données produits pour les LLM plutôt que pour le SEO. Même semaine, [Coinbase](https://www.cnbc.com/2026/06/11/coinbase-launches-tool-to-let-ai-agents-manage-trading-and-payments.html) ouvre le trading et les paiements aux agents autonomes.
+</NewsItem>
+
+<NewsItem
+  title="Modèles, outils & papers open-source"
+  category="ia"
+  tags={["open-source", "papers"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via AINews", url: "https://www.latent.space" }]}
+>
+- **[North-Mini-Code 1.0](https://huggingface.co/CohereLabs/North-Mini-Code-1.0)** — premier modèle de code open-source de Cohere (Apache 2.0, 30 Md / 3 Md actifs), 33,4 à l'Artificial Analysis Coding Index.
+- **[SkillSpector](https://github.com/NVIDIA/SkillSpector)** — scanner NVIDIA (Apache 2.0) qui audite les « skills » d'agents : 68 motifs de vulnérabilité, constat de 26,1 % de skills vulnérables et 5,2 % probablement malveillants.
+- **[Anatomy of Post-Training](https://arxiv.org/abs/2606.12360)** — Goodfire utilise l'interprétabilité pour auditer et façonner le signal d'entraînement *avant* l'optimisation.
+- **[Optimal Transport Eigenmaps](https://arxiv.org/abs/2407.01718)** — alignement et plongement conjoint de jeux de données haute dimension mal appariés via transport optimal entropique.
+- **[Loopcraft](https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking)** — l'essai de swyx : concevoir des boucles qui pilotent les agents plutôt que les prompter, et savoir quand monter (levier) ou descendre (fiabilité) d'un cran.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Microsoft débranche Claude Code de ses équipes"
+  category="web"
+  tags={["microsoft", "claude-code", "dev-tools"]}
+  sources={[
+    { label: "The Verge", url: "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally" },
+    { label: "via ImportReact", url: "https://importreact.beehiiv.com" },
+  ]}
+>
+Microsoft bascule des milliers d'ingénieurs de son org Experiences + Devices de Claude Code vers GitHub Copilot CLI d'ici le 30 juin, et restreint en interne le dernier modèle d'Anthropic faute de « zéro rétention de données » (prompts conservés 30 jours, jusqu'à 2 ans si signalés). Le calendrier colle à la clôture de l'exercice fiscal — argument coût — et à la décision d'Anthropic du 15 juin de facturer l'usage programmatique au tarif API plein.
+</NewsItem>
+
+<NewsItem
+  title="En bref — front-end"
+  category="web"
+  tags={["en-bref", "outils"]}
+  sources={[{ label: "via ImportReact", url: "https://importreact.beehiiv.com" }]}
+>
+- **Next.js** publie une série de correctifs de sécurité (contournement middleware/proxy, DoS, SSRF) : patcher sans attendre. [Avis](https://github.com/vercel/next.js/security/advisories)
+- **Vite 8** est stable avec le bundler Rust Rolldown unique ; des builds passant de 46 s à 6 s. [Annonce](https://vite.dev/blog/announcing-vite8)
+- **Expo SDK 55** (beta) embarque React Native 0.83 et React 19.2, et supprime l'ancienne architecture — la New Architecture devient obligatoire. [Changelog](https://expo.dev/changelog)
+- **Worm Shai-Hulud** : la campagne malveillante s'étend de npm à PyPI, 294 842 secrets volés sur 6 943 machines, et détourne les outils de code IA. [Socket](https://socket.dev/blog/mini-shai-hulud-miasma-and-hades-worms-target-bioinformatics-and-mcp-developers-via-malicious)
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Neura Robotics lève jusqu'à 1,4 Md$ pour ses humanoïdes"
+  category="robotique"
+  tags={["humanoïde", "levée"]}
+  sources={[
+    { label: "NEURA Robotics", url: "https://neura-robotics.com/record-series-c/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+La startup allemande boucle une série C de jusqu'à **1,4 milliard $**, à 7 Md$ de valorisation — record européen pour l'humanoïde — menée par Tether (USDT), avec Amazon, Nvidia, Qualcomm, Bosch et la Banque européenne d'investissement. Une partie du montant est conditionnée à des objectifs de performance ; carnet de commandes déjà supérieur à 1 Md$, production en série visée d'ici 2030.
+
+<NewsImage src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/55adb011-d724-4846-8fe4-32f66a4ac177/image.jpeg" alt="Robot humanoïde de Neura Robotics" />
+</NewsItem>
+
+<NewsItem
+  title="Un robot qui se redresse seul, entraîné par RL et codé avec Codex"
+  category="robotique"
+  tags={["rl", "diy"]}
+  sources={[{ label: "GitHub", url: "https://github.com/homemadegarbage/SelfRisingRobot" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Un développeur a construit un petit robot qui se relève tout seul : politique entraînée par renforcement (PPO, Stable-Baselines3) dans MuJoCo, exportée en simple header C et flashée sur un microcontrôleur M5Atom. Corps imprimé en 3D, deux servomoteurs, tout tourne en local sans cloud ni GPU à l'exécution.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="SpaceX réalise la plus grande IPO de l'histoire"
+  category="finance"
+  tags={["spacex", "ipo", "bourse"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html" },
+    { label: "Aktionnaire", url: "https://www.aktionnaire.com" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+SpaceX lève **75 milliards de dollars** — record absolu — avec 555,6 millions d'actions placées à **135 $** pièce, avant ses débuts au Nasdaq. La demande a explosé : plus de 100 milliards $ d'ordres des particuliers, à qui le groupe d'Elon Musk réserve au moins 20 % du placement. Fonds fléchés vers l'expansion spatiale et les technologies autonomes.
+
+<NewsImage src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/451df6b5-54a2-447b-a6a2-e36ac5edfce9/Flat_vector_editorial_illustration__ultra-wide_202606120917.jpeg" alt="Illustration de l'introduction en bourse de SpaceX" />
+</NewsItem>
+
+<NewsItem
+  title="La BCE relève ses taux, première hausse depuis 2023"
+  category="finance"
+  tags={["bce", "taux"]}
+  sources={[
+    { label: "Le Figaro", url: "https://www.lefigaro.fr/conjoncture/la-bce-releve-ses-taux-de-0-25-point-face-a-l-inflation-liee-a-la-guerre-au-moyen-orient-20260611" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+La Banque centrale européenne remonte ses taux directeurs de **2 % à 2,25 %** (+25 pb), à l'unanimité — première hausse depuis septembre 2023, sur une inflation jugée durablement au-dessus de la cible de 2 %. Christine Lagarde écarte une hausse « préventive » ; Bloomberg évoque une [deuxième hausse possible dès juillet](https://www.bloomberg.com/news/articles/2026-06-11/ecb-officials-see-next-rate-increase-possible-as-soon-as-july). Croissance de la zone euro révisée à +0,8 % sur un an.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref", "bourse"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **Oracle** : 19 Md$ de CA trimestriel (+21 %) et carnet de commandes à 638 Md$ (×4,6), mais l'action chute après l'annonce de 40 Md$ de financements supplémentaires pour ses data centers. [CNBC](https://www.cnbc.com/2026/06/11/oracle-shares-tumble-11percent-on-increased-capital-raise-cash-concerns.html)
+- **Prometheus**, la startup d'IA physique de Jeff Bezos, lève 12 Md$ à 41 Md$ de valorisation, sans produit. [The Decoder](https://the-decoder.com/jeff-bezos-ai-startup-prometheus-closes-12-billion-round-at-a-41-billion-valuation/)
+- **Hugo Boss** bondit (~+10 %) sur une offre de rachat de son actionnaire Frasers. [Aktionnaire](https://www.aktionnaire.com/articles/les-marches)
+- **JD.com** part à l'assaut de l'Europe via JoyBuy et promet de « faire mieux qu'Amazon ». [Le Figaro](https://www.lefigaro.fr/societes/nous-cherchons-a-faire-mieux-qu-amazon-le-plan-de-bataille-du-chinois-jd-com-pour-conquerir-l-europe-20260611)
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="WWDC : Apple refond Siri et glisse l'IA dans vos photos"
+  category="evenements"
+  tags={["apple", "wwdc"]}
+  sources={[
+    { label: "Engadget", url: "https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/" },
+    { label: "Wired", url: "https://www.wired.com/story/apple-camera-chief-thinks-ai-can-give-you-superpowers/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Pour la dernière WWDC de Tim Cook, Apple présente un Siri façon chatbot qui puise dans messages, mails et photos pour conseiller l'utilisateur, aux côtés d'iOS 27, macOS « Golden Gate » et un aperçu de homeOS. iOS 27 introduit aussi la photographie générative : l'iPhone complétera les clichés avec des pixels produits par IA.
+
+<Video src="https://www.youtube.com/watch?v=2PW5y3zAvPE" caption="Démo du nouveau Siri à la WWDC 2026." />
+</NewsItem>

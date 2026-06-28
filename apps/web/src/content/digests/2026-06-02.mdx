@@ -1,0 +1,194 @@
+---
+date: "2026-06-02"
+title: "La Floride attaque OpenAI, Nvidia s'invite dans le PC"
+lede: "Premier procès d'un État américain contre OpenAI et Sam Altman après une fusillade ; Nvidia dévoile sa puce RTX Spark pour Windows et Anthropic dépose son dossier d'IPO."
+categories: ["ia", "web", "growth", "finance", "hardware", "evenements"]
+sourceCount: 15
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="La Floride poursuit OpenAI et Sam Altman après la fusillade de FSU"
+  category="ia"
+  tags={["openai", "justice"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/" },
+    { label: "CBS News", url: "https://www.cbsnews.com/news/florida-openai-chatgpt-lawsuit-sam-altman/" },
+    { label: "via Vision IA", url: "https://www.vision-ia.fr" },
+  ]}
+>
+Premier procès d'un État américain contre un fournisseur d'IA : le procureur général James Uthmeier dépose une plainte de 83 pages visant nommément OpenAI et **Sam Altman**, tenu personnellement responsable. Le dossier s'appuie sur la fusillade de **Florida State University** (2 morts), où le tireur aurait consulté ChatGPT avant son acte. Florida réclame des dommages pouvant atteindre **plusieurs milliards de dollars**.
+</NewsItem>
+
+<NewsItem
+  title="MiniMax M3 : open-weight chinois à 1M de contexte"
+  category="ia"
+  tags={["modèle", "open-source", "chine"]}
+  sources={[
+    { label: "MiniMax (Hugging Face)", url: "https://huggingface.co/MiniMaxAI/MiniMax-M3" },
+    { label: "The Decoder", url: "https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/" },
+  ]}
+>
+Le laboratoire shanghaïen sort **M3**, modèle open-weight multimodal de ~428 Md de paramètres (~23 Md actifs) avec une fenêtre de **1 million de tokens**. Il revendique **59,0 %** sur SWE-Bench Pro, devant GPT-5.5 et Gemini 3.1 Pro sur ce test de code. Son attention creuse (MSA) divise par 20 le calcul par token à 1M de contexte.
+</NewsItem>
+
+<NewsItem
+  title="Nvidia Nemotron 3 Ultra, meilleur open-source américain"
+  category="ia"
+  tags={["nvidia", "modèle", "open-source"]}
+  sources={[
+    { label: "Nvidia (Hugging Face)", url: "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16" },
+    { label: "The Decoder", url: "https://the-decoder.com/nvidias-nemotron-3-ultra-becomes-the-smartest-open-us-model-but-china-still-leads/" },
+  ]}
+>
+Présenté à Computex, **Nemotron 3 Ultra** (550 Md de paramètres, 55 Md actifs, architecture LatentMoE) est classé par Artificial Analysis comme le meilleur modèle open-source d'origine américaine, à ~48 d'indice d'intelligence. Il sert à 300+ tokens/s mais reste derrière le chinois Kimi K2.6 au classement global. Licence OpenMDW, poids et recettes ouverts.
+</NewsItem>
+
+<NewsItem
+  title="Cosmos 3, l'omni-modèle de Nvidia pour l'IA physique"
+  category="ia"
+  tags={["nvidia", "world-model", "open-source"]}
+  sources={[
+    { label: "Nvidia", url: "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai" },
+    { label: "Hugging Face", url: "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3" },
+  ]}
+>
+**Cosmos 3** unifie langage, image, vidéo, audio et action dans une architecture Mixture-of-Transformers (un transformeur autorégressif couplé à un générateur par diffusion), en versions Nano (16 Md) et Super (64 Md). Artificial Analysis le classe **n°1 des open-weights** en Text-to-Image et Image-to-Video. Nvidia lance la Cosmos Coalition avec Runway, Black Forest Labs et Skild AI.
+</NewsItem>
+
+<NewsItem
+  title="Booster un agent IA sans toucher au modèle"
+  category="ia"
+  tags={["agents", "recherche"]}
+  sources={[
+    { label: "Life-Harness (GitHub)", url: "https://github.com/Tianshi-Xu/Life-Harness" },
+    { label: "arXiv", url: "https://arxiv.org/abs/2605.22166" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Plutôt que de réentraîner le modèle, **Life-Harness** corrige le *harness* — la couche entre l'agent et son environnement. La méthode transforme les échecs récurrents en correctifs réutilisables appliqués à l'exécution, modèle gelé. Résultat : **116 des 126** combinaisons modèle-environnement améliorées, **+88,5 %** en moyenne sur 18 modèles, et un harness construit sur un seul petit modèle transféré à 17 autres.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & outils open-source"
+  category="ia"
+  tags={["open-source", "modèle"]}
+  sources={[
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3" },
+  ]}
+>
+- **[LongCat-Video-Avatar 1.5](https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5)** — Meituan ; une photo plus un clip audio donnent un avatar parlant synchronisé, licence MIT, 8 étapes d'inférence.
+- **[JetBrains Mellum2](https://huggingface.co/blog/JetBrains/mellum2-launch)** — modèle de code 12 Md en Mixture-of-Experts (2,5 Md actifs), pensé pour l'inférence ultra-rapide en IDE et RAG.
+- **[Qwen3.7-Plus](https://qwenlm.github.io/blog/)** — Alibaba ; agent multimodal unifiant pilotage GUI/CLI, code et recherche, disponible via Alibaba Cloud.
+- **[Perplexity Search as Code](https://www.perplexity.ai/hub)** — le modèle écrit du Python contre un SDK de recherche ; score interne WANDR de 0,152 à 0,386.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Le chatbot de support Meta détourné pour pirater Instagram"
+  category="web"
+  tags={["sécurité", "meta"]}
+  sources={[{ label: "The Verge", url: "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+Une faille du chatbot de support Meta permettait de demander au bot de changer l'email d'un compte puis d'en réinitialiser le mot de passe pour en prendre le contrôle. Plusieurs comptes officiels auraient été détournés, dont @obamawhitehouse et celui d'un responsable de l'US Space Force. Meta affirme avoir corrigé la faille.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="Lovable : 400 M$ d'ARR avec ~200 personnes"
+  category="growth"
+  tags={["hiring", "organisation"]}
+  sources={[{ label: "Elena Verna", url: "https://www.elenaverna.com/p/hiring-lovable-cowboys-farmers-old-guard-new-guard" }]}
+>
+Elena Verna détaille la grille de recrutement de Lovable, qui revendique **400 M$+ d'ARR pour ~200 employés** : croiser « cowboys » (exploration) et « farmers » (mise à l'échelle), vétérans et jeunes diplômés natifs de l'IA. Leviers concrets : **essai rémunéré de 2-3 jours** avant embauche, conversion de contractants en CDI, hiérarchie quasi plate sans titres internes.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Anthropic dépose son dossier d'IPO, valorisation visée >1 000 Md$"
+  category="finance"
+  tags={["anthropic", "ipo"]}
+  sources={[
+    { label: "Le Figaro", url: "https://www.lefigaro.fr/secteur/high-tech/ia-anthropic-a-depose-sa-demande-d-introduction-en-bourse-20260601" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/" },
+  ]}
+>
+Le créateur de Claude a déposé de façon confidentielle son projet de S-1 auprès de la **SEC**, coupant l'herbe sous le pied d'OpenAI. Valorisé **900 Md$** après une levée récente de 65 Md$ (devant OpenAI à 852 Md$), Anthropic vise une introduction à plus de **1 000 Md$**, possible dès la rentrée. En parallèle, il ouvre l'accès à son modèle Mythos à l'agence cyber de l'UE (ENISA).
+</NewsItem>
+
+<NewsItem
+  title="Alphabet veut lever 80 Md$ pour son infrastructure IA"
+  category="finance"
+  tags={["alphabet", "capex"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+Alphabet prépare une émission d'actions allant jusqu'à **80 Md$** pour étendre son calcul et ses data centers, la demande entreprises et grand public dépassant déjà sa capacité. Berkshire Hathaway figure parmi ses soutiens. La levée alimentera Gemini et le cloud Google.
+</NewsItem>
+
+<NewsItem
+  title="Choose France : 93 Md€ d'investissements annoncés"
+  category="finance"
+  tags={["france", "investissement"]}
+  sources={[{ label: "Libération", url: "https://www.liberation.fr/economie/sommet-choose-france-emmanuel-macron-promet-des-investissements-record-de-93-milliards-deuros-20260601_EPVOK5RJQZGGZJG2EVJENETEMQ/" }]}
+>
+À Versailles, **93 Md€** d'investissements étrangers et **15 000 emplois** annoncés pour l'édition 2026 du sommet, soit 71 projets (Mars, Royal Canin, Ferrero, Ikea, Salesforce). Une année qui fait mieux que les huit précédentes cumulées (87 Md€). Le ratio reste élevé : près de 100 Md€ pour 15 000 emplois.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Strategy vend du bitcoin** : 32 BTC cédés pour 2,5 M€, une première depuis 2022 ; l'action perd 4 %, le réserve restant à 843 706 BTC. [Barron's](https://www.barrons.com/articles/strategy-stock-bitcoin-2b079994)
+- **EasyJet décolle** après l'intérêt du fonds Castlelake pour un rachat ; le titre avait chuté de 20 % depuis janvier. [Aktionnaire](https://www.aktionnaire.com/articles/les-marches)
+- **Duralex** de nouveau en redressement judiciaire, moins d'un an après sa levée citoyenne de 19,8 M€ ; 243 salariés menacés. [Libération](https://www.liberation.fr/economie/la-verrerie-duralex-annonce-louverture-dune-procedure-de-redressement-judiciaire-20260601_CRXKDMUX45DXPCAJBTICW3AG24/)
+- **Voitures électriques** : 29 % du marché du neuf en France en mai, nouveau record, porté par les prix du carburant et l'aide de l'État. [Libération](https://www.liberation.fr/economie/transports/automobile-le-100-electrique-bat-un-nouveau-record-en-france-avec-pres-du-tiers-des-ventes-en-mai-20260601_5UKH55RBR5FRPHFADWIK57MKRM/)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Nvidia dévoile RTX Spark, sa puce pour PC Windows"
+  category="hardware"
+  tags={["nvidia", "puce", "pc"]}
+  sources={[
+    { label: "Nvidia", url: "https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark" },
+    { label: "Aktionnaire", url: "https://www.aktionnaire.com" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Annoncé avec Microsoft, **RTX Spark** fusionne un CPU Grace 20 cœurs et un GPU Blackwell RTX (6 144 cœurs CUDA) en un *superchip* de 1 petaflop FP4 et 128 Go de mémoire unifiée. Présenté comme « la puce PC la plus efficace jamais conçue », il vise les agents IA locaux, attaque Intel, AMD et Apple Silicon, et sortira cet automne chez Dell, HP, Lenovo, Asus et Microsoft (Surface Laptop Ultra). Nvidia a pris ~4 % en Bourse, Intel -3 %, AMD -5 %.
+
+<Tweet id="2061329225886453989" />
+</NewsItem>
+
+<NewsItem
+  title="La Chine approuve le premier implant cérébral commercial"
+  category="hardware"
+  tags={["santé", "bci", "chine"]}
+  sources={[{ label: "MIT Technology Review", url: "https://www.technologyreview.com/2026/06/01/1138207/the-download-china-bci-brain-implant-nvidia-ai-chips-laptops/" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+La Chine autorise **NEO**, première interface cerveau-machine invasive validée hors essais cliniques (approbation en mars 2026). Un patient paralysé depuis six ans a retrouvé la capacité d'écrire son nom. Pékin accélère sur un marché où la course avec les acteurs américains s'intensifie.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Céline Dion ajoute 10 dates à Paris en mai 2027"
+  category="evenements"
+  tags={["concert", "musique"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+Dix nouvelles dates de concert ajoutées à Paris en mai 2027. La billetterie reste réservée aux inscrits de la première vague, prévenus par email dans les prochains jours.
+</NewsItem>

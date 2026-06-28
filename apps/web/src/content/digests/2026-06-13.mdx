@@ -1,0 +1,109 @@
+---
+date: "2026-06-13"
+title: "Anthropic coupe l'accès à Fable et Mythos"
+lede: "Sur ordre du gouvernement américain, Anthropic suspend Fable 5 et Mythos 5 trois jours après leur sortie — pendant que Kimi, MiniMax et Huawei poussent l'open-weight et que Maizzle 6 passe à Tailwind 4."
+categories: ["ia", "web"]
+sourceCount: 8
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic révoque Fable 5 et Mythos 5 pour tous les clients"
+  category="ia"
+  tags={["anthropic", "régulation"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/fable-mythos-access" },
+    { label: "AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" },
+  ]}
+>
+Trois jours après leur lancement, Anthropic coupe l'accès à **Claude Fable 5 et Mythos 5** sur directive du gouvernement américain, qui invoque un risque de cybersécurité national lié à un possible jailbreak. La mesure touche **tous les clients dans le monde**, pas seulement le secteur public US. Anthropic dispute le rapport de capacité — il n'aurait reçu qu'une « preuve verbale d'un jailbreak étroit et non universel » — et rappelle que des capacités similaires existent dans GPT-5.5. Les nouvelles sessions retombent sur Opus 4.8 ; les sessions Fable 5 en cours renvoient des erreurs.
+
+<Tweet id="2065597531644743999" />
+</NewsItem>
+
+<NewsItem
+  title="L'index Coding Agent recule pour la première fois"
+  category="ia"
+  tags={["benchmark", "agents"]}
+  sources={[
+    { label: "Artificial Analysis", url: "https://x.com/ArtificialAnlys/status/2065328920514515037" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" },
+  ]}
+>
+Artificial Analysis remplace SWE-Bench Pro par **DeepSWE** (Datacurve) dans son Coding Agent Index pour limiter le gaming : Claude Code + Fable 5 [max] entre en tête à **77**, devant Codex + GPT-5.5 [xhigh] à 76 et Claude Code + Opus 4.8 [max] à 73. Le labo note que la suspension de Fable « fait reculer pour la première fois » sa courbe Intelligence Frontier. En parallèle, AA lance **AA-AgentPerf**, un benchmark d'inférence agentique dont la métrique phare est le nombre d'« agents par mégawatt ».
+</NewsItem>
+
+<NewsItem
+  title="Vague d'open-weight : Kimi K2.7-Code, MiniMax M3, openPangu 2.0"
+  category="ia"
+  tags={["open-source", "moe"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" }]}
+>
+- **[Kimi-K2.7-Code](https://huggingface.co/moonshotai/Kimi-K2.7-Code)** (Moonshot) — MoE 1T params, 32B actifs, contexte 256K, attention MLA. +21,8 % sur Kimi Code Bench v2, +11 % sur Program Bench, et ~30 % de tokens de raisonnement en moins.
+- **[MiniMax M3](https://huggingface.co/MiniMaxAI/MiniMax-M3)** — multimodal ~428B params, ~23B actifs, contexte 1M. L'attention sparse MSA divise le calcul par token par ~20 ; support jour-0 chez SGLang, vLLM, Together et Fireworks.
+- **[openPangu 2.0](https://www.reddit.com/r/LocalLLaMA/comments/1u3q1j9/huawei_released_openpangu_20_will_open_source_on/)** (Huawei) — annoncé, open-source le 30 juin : variante Flash 92B/6B actifs et Pro 505B/18B actifs, contexte 512K.
+</NewsItem>
+
+<NewsItem
+  title="DiffusionGemma : 4× plus rapide, 6× plus d'erreurs"
+  category="ia"
+  tags={["diffusion", "quantization"]}
+  sources={[
+    { label: "Hugging Face", url: "https://huggingface.co/nvidia/diffusiongemma-26B-A4B-it-NVFP4" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" },
+  ]}
+>
+NVIDIA publie une version NVFP4 de **DiffusionGemma 26B-A4B** (3,8B actifs, diffusion par blocs de 256 tokens), au-delà de 1 100 tok/s sur H100 FP8. Un test communautaire sur H100 mesure ~763 tok/s contre 218 pour le Gemma 4 autorégressif, mais une exactitude factuelle bien moindre : **33 réponses justes / 28 fausses** contre 45 / 5, les erreurs montant sur les sujets de niche. Les commentateurs attribuent l'écart à une architecture neuve et sous-entraînée plutôt qu'à une limite intrinsèque de la diffusion.
+</NewsItem>
+
+<NewsItem
+  title="FrontierMath v2 : 42 % de problèmes corrigés, scores en hausse"
+  category="ia"
+  tags={["benchmark", "maths"]}
+  sources={[
+    { label: "Epoch AI", url: "https://x.com/EpochAIResearch/status/2065488154086568445" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" },
+  ]}
+>
+Epoch AI sort **FrontierMath v2** (Tiers 1–4) après avoir audité des erreurs dans **42 %** des problèmes ; les corrections relèvent les scores en gardant le classement. [Claude Fable 5](https://x.com/EpochAIResearch/status/2065511916035018943) atteint **87 %** sur les Tiers 1–3 et **88 %** sur le Tier 4. Google Research annonce de son côté [Gemini-SQL2](https://x.com/GoogleResearch/status/2065475343205740911), qu'il dit SOTA sur BIRD en text-to-SQL.
+</NewsItem>
+
+<NewsItem
+  title="Fable 5 décompile un exécutable DOS de 1989 en une nuit"
+  category="ia"
+  tags={["reverse-engineering", "vibe-coding"]}
+  sources={[
+    { label: "midwinter-remaster", url: "https://midwinter-remaster.titanium-helix.com/decode" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-fable-and-mythos-officially" },
+  ]}
+>
+Un développeur qui remasterise *Midwinter* rapporte que Fable 5 a rétro-conçu l'exécutable DOS d'origine en une nuit — six mois de travail avec les modèles précédents — produisant une carte de **602 fonctions** (terrain, physique des véhicules, IA, formats graphiques) ; le générateur de terrain est réimplémenté en Python avec une sortie au bit près, publié sous MIT. Sur le même registre, un autre a [« vibe codé »](https://github.com/levy-street/world-of-claudecraft) un MMORPG navigateur, *World of ClaudeCraft*, en deux jours.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Maizzle 6 passe à Tailwind 4 ; patch v4.3.1"
+  category="web"
+  tags={["tailwind", "email"]}
+  sources={[
+    { label: "Maizzle", url: "https://maizzle.com/" },
+    { label: "via Tailwind Weekly", url: "https://tailwindweekly.com" },
+  ]}
+>
+Plus grosse version du projet : [Maizzle 6](https://maizzle.com/) apporte le support natif de **Tailwind CSS 4**, le templating Vue (composants, props, slots), un plugin Vite pour Laravel, Next, Nuxt et Astro, une librairie de composants email testés au rendu, et une *Agent Skill* officielle pour éviter le markup cassé sous Outlook. En parallèle, Tailwind sort le patch [v4.3.1](https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.3.1) : flag `--silent` pour le CLI, `@apply` compatible avec les mixins CSS, et corrections sur `@source` et le watch mode.
+</NewsItem>
+
+<NewsItem
+  title="Outils & lectures front-end"
+  category="web"
+  tags={["outils", "performance"]}
+  sources={[{ label: "via Tailwind Weekly", url: "https://tailwindweekly.com" }]}
+>
+- **[Cap](https://cap.so/)** — alternative open-source à Loom (19k+ étoiles GitHub), trois modes (Instant, Studio, capture), titres et transcriptions auto, stockage sur votre propre S3 ou en local.
+- **[Lazy loading sans tuer la perf](https://www.debugbear.com/blog/lazy-loading-performance)** — quand le chargement différé dégrade le LCP, le CLS et l'INP, avec une checklist lazy-vs-eager.
+- **[Curlwind](https://curlwind.com/)** — « Tailwind sans build » : on lie une feuille de style et on demande le CSS des seules classes utilisées via un paramètre d'URL.
+- **[State of Web Dev AI 2026](https://2026.stateofai.dev/en-US)** — enquête auprès de 7 258 développeurs sur l'adoption de l'IA, les dépenses, les modèles et les risques.
+</NewsItem>

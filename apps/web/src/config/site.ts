@@ -1,4 +1,4 @@
-import { NewTwitterIcon, RssIcon, Mail01Icon } from "@hugeicons/core-free-icons"
+import { Mail01Icon, NewTwitterIcon, RssIcon } from "@hugeicons/core-free-icons"
 import type { IconSvgElement } from "@hugeicons/react"
 
 /**

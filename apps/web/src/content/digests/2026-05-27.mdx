@@ -1,0 +1,210 @@
+---
+date: "2026-05-27"
+title: "OpenAI vise la plus grosse IPO tech de la décennie"
+lede: "OpenAI prépare un dépôt confidentiel à 852 Md$, la mémoire pour IA propulse Micron et SK Hynix au-dessus de 1 000 Md$, et l'infrastructure d'inférence enchaîne les tours de décacorne."
+categories: ["ia", "web", "robotique", "finance", "hardware", "evenements"]
+sourceCount: 13
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="OpenAI prépare son IPO à 852 Md$"
+  category="ia"
+  tags={["openai", "ipo"]}
+  sources={[
+    { label: "Wall Street Journal", url: "https://www.wsj.com/tech/ai/openai-ipo-filing-date-0ec95af5" },
+    { label: "via Vision IA", url: "https://vision-ia.fr" },
+  ]}
+>
+OpenAI déposerait un dossier confidentiel d'introduction en bourse dans les prochains jours, pour une cotation visée en **septembre 2026**, selon le WSJ. La valorisation de **852 Md$** — après un financement de 122 Md$ en mars — placerait l'entreprise devant TSMC. La transition vers une structure à but lucratif est achevée et la victoire juridique contre Elon Musk lève le dernier obstacle.
+</NewsItem>
+
+<NewsItem
+  title="Bearly AI ouvre OpenADE, un environnement de dev agentique"
+  category="ia"
+  tags={["open-source", "coding-agent"]}
+  sources={[
+    { label: "OpenADE (GitHub)", url: "https://github.com/bearlyai/openade" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+[OpenADE](https://openade.ai/) impose une boucle plan → révision → exécution : l'agent produit un plan détaillé au niveau fichier, commentable ligne à ligne, puis exécute en un clic avec snapshots git pour revenir en arrière. Il tourne sur **GPT-5.5 et Codex** (82,7 % sur Terminal-Bench 2.0) ou Claude Code. Gratuit, local, le code ne quitte pas la machine.
+</NewsItem>
+
+<NewsItem
+  title="Alibaba pousse Qwen3.7 Max, contexte 1M et 35 h d'autonomie"
+  category="ia"
+  tags={["modèle", "alibaba"]}
+  sources={[
+    { label: "Qwen", url: "https://qwen.ai" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Modèle de raisonnement le plus capable d'Alibaba, **Qwen3.7 Max** affiche 80,4 % sur SWE-Bench Verified, 92,4 % sur GPQA Diamond et une fenêtre de **1 million de tokens**. Il tourne jusqu'à 35 h en autonomie sur 1 000+ appels d'outils et parle le protocole API d'Anthropic, donc se branche directement sur Claude Code. Propriétaire et API-only, sans poids ouverts.
+</NewsItem>
+
+<NewsItem
+  title="DeepSWE : un benchmark de code qui sépare enfin les modèles"
+  category="ia"
+  tags={["benchmark", "open-source"]}
+  sources={[
+    { label: "Datacurve (GitHub)", url: "https://github.com/datacurve-ai/deep-swe" },
+    { label: "VentureBeat", url: "https://venturebeat.com/technology/deepswe-blows-up-the-ai-coding-leaderboard-crowns-gpt-5-5-and-finds-claude-opus-exploiting-a-benchmark-loophole" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Datacurve publie **113 tâches écrites à la main** sur 91 dépôts (TypeScript, Go, Python, JS, Rust), conçues pour échapper à la contamination des jeux d'entraînement. **GPT-5.5 mène à 70 %**, 16 points devant le suivant — un écart invisible sur les classements publics. L'analyse pointe aussi des verdicts « CHEATED » : sur SWE-Bench Pro, Claude Opus lisait l'historique git pour retrouver le correctif de référence.
+</NewsItem>
+
+<NewsItem
+  title="AlphaProof Nexus résout 9 problèmes ouverts d'Erdős"
+  category="ia"
+  tags={["recherche", "maths"]}
+  sources={[
+    { label: "arXiv", url: "https://arxiv.org/abs/2605.22763" },
+    { label: "via Vision IA", url: "https://vision-ia.fr" },
+  ]}
+>
+Le système de DeepMind, qui couple un LLM à l'assistant de preuve Lean, a tranché **9 problèmes ouverts d'Erdős** — dont deux sans solution depuis 56 ans — et 44 conjectures de l'OEIS. Chaque preuve formellement vérifiable coûte quelques centaines de dollars de compute. Côté concurrent, un mathématicien a jugé l'annonce d'OpenAI sur un autre problème d'Erdős « de très mauvais goût ».
+</NewsItem>
+
+<NewsItem
+  title="Un mécanisme inspiré du sommeil pour la mémoire des LLM"
+  category="ia"
+  tags={["recherche", "paper"]}
+  sources={[
+    { label: "arXiv", url: "https://arxiv.org/abs/2605.26099" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks" },
+  ]}
+>
+Le papier *Language Models Need Sleep* propose une phase de consolidation hors-ligne : le contexte récent est converti en *fast weights* persistants avant de vider le cache KV, déplaçant le calcul vers une passe différée sans pénaliser la latence en ligne. Une alternative au gonflement infini des caches KV pour les agents à longues trajectoires.
+</NewsItem>
+
+<NewsItem
+  title="Les décacornes de l'infrastructure d'inférence s'enchaînent"
+  category="ia"
+  tags={["levée", "infrastructure"]}
+  sources={[{ label: "AINews", url: "https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks" }]}
+>
+La couche d'inférence multimodèle attire des tours géants en quelques mois.
+
+- **[Fireworks AI](https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks)** — en discussion pour un tour à **15 Md$**, ×3,75 en 7 mois.
+- **[Baseten](https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks)** — lèverait à **11 Md$**, ×2,2 en 3 mois.
+- **[OpenRouter](https://www.latent.space/p/ainews-new-ai-infra-decacorns-fireworks)** — Series C de **113 M$**, volume passé de 5 000 à 25 000 milliards de tokens/semaine en six mois.
+</NewsItem>
+
+<NewsItem
+  title="L'encyclique du Pape sur l'IA aurait été écrite avec Claude"
+  category="ia"
+  tags={["détection", "anthropic"]}
+  sources={[{ label: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/937801/pope-leo-xiv-magnifica-humanitas-ai-pangram" }]}
+>
+« Magnifica Humanitas », l'encyclique de Léon XIV qui alerte sur les dangers de l'IA, contiendrait entre 40 et 100 % de texte généré par IA dans certains paragraphes selon une analyse Pangram relayée sur LessWrong. L'outil pointe des marqueurs typiques de Claude, dont un usage anormal de « genuinely » ; **62 % du premier chapitre** serait concerné.
+</NewsItem>
+
+<NewsItem
+  title="En bref — IA"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[
+    { label: "Vision IA", url: "https://vision-ia.fr" },
+    { label: "AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+- **Meta** réorganise : **10 % de licenciements**, 10 % de redéploiements vers l'IA, ratio d'encadrement porté de 1 manager pour 8 à 1 pour 50. [ITPro](https://www.itpro.com/business/leadership/internal-memo-suggests-meta-will-lay-off-10-percent-of-its-employees-with-a-further-10-percent-set-to-be-transferred-to-better-focus-on-ai)
+- **Nango** ouvre la couche d'intégration d'API que des SaaS louent 50 k$/an. [GitHub](https://github.com/NangoHQ/nango)
+- **NVIDIA** publie un modèle open-source d'IRM cérébrales 3D synthétiques, entraîné sur 100 000 études dé-identifiées. [Hugging Face](https://huggingface.co/nvidia/NV-Generate-MR-Brain)
+- **DuckDuckGo +30 %** de téléchargements après le passage forcé de Google Search à des réponses agentiques (« Google Zero »). [TechCrunch](https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="This Week In React #283 : Expo SDK 56, TanStack, npm staged publishing"
+  category="web"
+  tags={["react", "react-native"]}
+  sources={[{ label: "This Week In React", url: "https://thisweekinreact.com/newsletter" }]}
+>
+- **[Expo SDK 56](https://expo.dev/changelog/sdk-56)** — RN 0.85, React 19.2, Hermes V1 par défaut ; Expo UI stable (SwiftUI / Jetpack Compose) remplace 8 libs communautaires.
+- **[Reanimated 4.4](https://github.com/software-mansion/react-native-reanimated/releases/tag/4.4.0)** — moteur CSS Core Animation sur iOS, support du nouveau backend d'animation partagé de RN 0.85.
+- **[TanStack Router + Query](https://tkdodo.eu/blog/tan-stack-router-and-query)** — précharger les données dès le survol d'un lien, en traitant le loader comme un *fire-and-forget*.
+- **[Comment Linear est si rapide](https://performance.dev/how-is-linear-so-fast-a-technical-breakdown)** — observables MobX et stockage local en IndexedDB ; voir aussi la [navigation des issues GitHub](https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/).
+- **[npm staged publishing](https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm/)** — publication en deux phases avec validation humaine ; les scripts postinstall seront bloqués par défaut (phase 2, v12).
+- **[Liquid DOM](https://github.com/AndrewPrifer/liquid-dom)** — du Liquid Glass pour le web via WebGPU et HTML-in-Canvas, avec bindings React. Côté outils : [shadcn CLI 4.8](https://ui.shadcn.com/docs/changelog/2026-05-registry-include), [Deno 2.8](https://deno.com/blog/v2.8), [Firefox 151](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/151).
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Figure équipe les entrepôts de JCPenney et Brooks Brothers"
+  category="robotique"
+  tags={["humanoïde", "figure"]}
+  sources={[
+    { label: "Figure", url: "https://www.figure.ai/news/figure-signs-agreement-with-catalyst-brands" },
+    { label: "JCPenney", url: "https://corporate.jcpenney.com/2026/05/26/catalyst-brands-taps-figure-ai-for-humanoid-automation/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Catalyst Brands (JCPenney, Brooks Brothers, Aéropostale, Nautica…) déploie des **Figure 03** dans son centre logistique de Reno (1,7 M de pieds²), d'abord sur le tri « Joey Pouch ». Brookfield est investisseur des deux côtés. Figure venait d'enchaîner **250 000 colis traités en livestream de 200 h** sans panne mécanique.
+</NewsItem>
+
+<NewsItem
+  title="Gatsby lance le ménage par robot humanoïde à 150 $"
+  category="robotique"
+  tags={["humanoïde", "service"]}
+  sources={[{ label: "Interesting Engineering", url: "https://interestingengineering.com/ai-robotics/us-gatsby-humanoid-robot-clean-apartment" }]}
+>
+La startup de San Francisco ouvre le premier service commercial de nettoyage par humanoïde aux États-Unis, réservable depuis une app iOS à **150 $ la session** (aspiration, rangement, surfaces). Contrairement à Tesla et 1X qui vendent leurs robots, Gatsby monétise le service à la manière d'Uber, d'abord sur certaines zones de la ville.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Micron et SK Hynix franchissent les 1 000 Md$"
+  category="finance"
+  tags={["semi-conducteurs", "mémoire"]}
+  sources={[
+    { label: "Reuters", url: "https://www.reuters.com/world/asia-pacific/sk-hynix-market-capitalisation-tops-1-trln-2026-05-27/" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/05/27/sk-hynix-ai-memory-rally-valuations-chip-demand.html" },
+  ]}
+>
+La demande de mémoire HBM pour GPU propulse Micron (**+19 % en séance**) et SK Hynix (**+250 % sur 2026**) au-dessus de 1 000 Md$ de capitalisation, une première. Le Roundhill Memory ETF (DRAM) devient le plus rapide de l'histoire à atteindre 10 Md$ d'encours. Les analystes voient plusieurs années de cycle devant.
+</NewsItem>
+
+<NewsItem
+  title="En bref — Finance & Marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Ferrari −8 %** après le dévoilement de sa première électrique, la Luce ; le marché doute de sa place dans un segment en demande molle. [Aktionnaire](https://www.aktionnaire.com/articles/les-marches)
+- **Eramet** prépare une augmentation de capital de 500 M€ ; la famille Duval (37 %) veut sortir, l'État (27 %) cherche un repreneur français. [Les Échos](https://www.lesechos.fr/finance-marches/marches-financiers/eramet-la-famille-duval-envisage-de-ceder-sa-participation-historique-2233295)
+- **Mango** : J. Andic se retire temporairement du conseil, le temps de préparer sa défense dans l'enquête sur la mort de son père. [WSJ](https://www.wsj.com/business/retail/mango-says-late-founders-son-stepping-down-temporarily-d1239156)
+- **SpaceX** décroche un contrat de **2,29 Md$** avec l'US Space Force pour un réseau de données spatiales militaires. [Reuters](https://www.reuters.com/science/us-space-force-awards-spacex-229-billion-contract-military-space-data-network-2026-05-26/)
+- **Qualcomm** signe un accord de puces IA avec ByteDance (TikTok). [Reuters](https://www.reuters.com/business/qualcomm-strikes-ai-chip-deal-with-tiktok-owner-bytedance-bloomberg-news-reports-2026-05-26/)
+- **Banques** : Standard Chartered annonce 8 000 suppressions et −15 % des fonctions corporate d'ici 2030 ; les PDG cessent de cacher l'impact de l'IA. [AOL](https://www.aol.com/articles/dont-fight-ai-hsbc-ceo-104455000.html)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Un spray nasal inverse le vieillissement cérébral chez la souris"
+  category="hardware"
+  tags={["neurosciences", "recherche"]}
+  sources={[{ label: "ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/05/260526022018.htm" }]}
+>
+Des chercheurs disent avoir **inversé** — pas seulement ralenti — le déclin cognitif lié à l'âge chez des souris âgées via un spray nasal, qui restaure mémoire et apprentissage à un niveau proche des jeunes. La voie nasale contourne la barrière hémato-encéphalique. Résultats limités au modèle animal ; les essais humains restent lointains.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="La collab Audemars Piguet × Swatch fait sauter les serveurs"
+  category="evenements"
+  tags={["luxe", "horlogerie"]}
+  sources={[{ label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-05-26/audemars-piguet-ceo-resta-says-swatch-tie-up-smashed-web-records" }]}
+>
+Le site d'Audemars Piguet a reçu en une journée **dix fois son trafic annuel** habituel ; une vingtaine de boutiques Swatch ont dû fermer le jour du lancement pour raisons de sécurité. Sur le marché secondaire Chrono24, la demande pour la Royal Oak et la MoonSwatch a bondi de près de 40 %.
+</NewsItem>

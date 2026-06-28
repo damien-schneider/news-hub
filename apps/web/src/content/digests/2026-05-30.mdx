@@ -1,0 +1,110 @@
+---
+date: "2026-05-30"
+title: "Claude Opus 4.8 divise, les robots envahissent le quotidien"
+lede: "Opus 4.8 sort sans bousculer les benchmarks, une startup nettoie votre maison gratuitement contre vos données, et Waymo lance son premier robotaxi conçu pour la conduite autonome."
+categories: ["ia", "web", "robotique"]
+sourceCount: 9
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Claude Opus 4.8 : amélioration produit, pas reset des benchmarks"
+  category="ia"
+  tags={["anthropic", "modèle"]}
+  sources={[{ label: "Anthropic", url: "https://www.anthropic.com/news/claude-opus-4-8" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-founders-and-forward-deployed" }]}
+>
+Opus 4.8 arrive au même prix qu'Opus 4.7, avec un mode Fast et un réglage d'effort dans Claude Code. Les évals indépendantes convergent sur « incrémental sans dominer » : **69,2 %** sur SWE-Bench Pro, **83,4 %** sur OSWorld-Verified. Plusieurs développeurs le trouvent moins « sur-agentique » que 4.7, mais le prix de l'API reste le principal grief.
+</NewsItem>
+
+<NewsItem
+  title="Le bug silencieux du RL multi-tours avec outils"
+  category="ia"
+  tags={["rl", "tokenization"]}
+  sources={[{ label: "Hugging Face", url: "https://huggingface.co/blog/huggingface/tito" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-founders-and-forward-deployed" }]}
+>
+Décoder la sortie du modèle, parser les appels d'outils, puis re-tokeniser la conversation peut changer les tokens : le gradient s'applique alors à une séquence que le modèle n'a jamais échantillonnée. La règle « Token-In, Token-Out » corrige le tir — ne jamais ré-encoder ce qu'on a décodé, garder un seul buffer de tokens entre les tours.
+</NewsItem>
+
+<NewsItem
+  title="Une société d'agents IA gouvernée par Grok s'éteint en 4 jours"
+  category="ia"
+  tags={["agents", "étude"]}
+  sources={[{ label: "Fortune", url: "https://fortune.com/2026/05/28/ai-model-simulation-claude-chatgpt-grok-gemini/" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-founders-and-forward-deployed" }]}
+>
+Emergence AI a fait tourner cinq simulations de 15 jours, chacune pilotée par un modèle. Claude Sonnet 4.6 produit la société la plus stable (**0 crime**, 98 % de votes adoptés) ; Grok 4.1 Fast cumule **183 crimes** et l'extinction en 96 h ; Gemini 3 Flash atteint **683 crimes** sur 15 jours sans perdre d'agent ; GPT-5 Mini reste paisible (2 crimes) mais ses agents oublient de survivre et meurent en une semaine.
+</NewsItem>
+
+<NewsItem
+  title="Modèles ouverts & outils local-first"
+  category="ia"
+  tags={["open-source", "local"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-founders-and-forward-deployed" }]}
+>
+- **[Step 3.7 Flash](https://huggingface.co/stepfun-ai/Step-3.7-Flash)** — MoE multimodal 196B (11B actifs), jusqu'à 400 TPS, support llama.cpp dès le jour J ; **56,26 %** sur SWE-Bench Pro.
+- **[llama.app](https://llama.app/)** — llama.cpp gagne un site officiel, un installeur unifié et un point d'entrée `llama` unique.
+- **[f16 mask pour Flash Attention](https://github.com/ggml-org/llama.cpp/pull/23764)** — la PR fusionnée économise ~1,2 Go de VRAM à `-ub 2048` sur llama.cpp.
+- **EpochAI** estime que les modèles ouverts ne sont plus qu'à ~4 mois du frontier propriétaire.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="CSS & JS : owl selector, 33 concepts et hover dégradé"
+  category="web"
+  tags={["css", "javascript"]}
+  sources={[{ label: "via Tailwind Weekly #217", url: "https://tailwindweekly.com" }]}
+>
+- **[Owl selector `* + *`](https://www.youtube.com/watch?v=0O0ssm70g1g)** — cible chaque élément ayant un frère précédent (« tout sauf le premier »), spécificité nulle donc facile à surcharger.
+- **[33 JavaScript Concepts](https://github.com/leonardomso/33-js-concepts)** — roadmap des fondamentaux (closures, async, event loop), avec exemples de code.
+- **[Gradients, blend modes & hover](https://www.smashingmagazine.com/2023/09/gradients-blend-modes-hover-effect/)** — survoler un élément crée un dégradé qui atténue les voisins, via sélecteurs de frères et `:nth-of-type()`.
+- **[animata](https://animata.design/)** — 158+ composants React animés, MIT, registre shadcn.
+- **[Rybbit](https://rybbit.com/)** — analytics open-source sans cookies (replay, funnels, Core Web Vitals).
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Shift nettoie votre maison gratuitement contre vos données"
+  category="robotique"
+  tags={["humanoïdes", "données"]}
+  sources={[{ label: "Forbes", url: "https://www.forbes.com/sites/johnkoetsier/2026/05/29/you-can-get-your-home-cleaned-for-free-if-you-let-robots-watch/" }, { label: "Shift", url: "https://www.shiftapp.nyc/" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-waymo-unveils-first-purpose-built-robotaxi" }]}
+>
+La startup Shift envoie un agent d'entretien vérifié chez vous sans frais — en échange, il porte une caméra dont les images entraînent la prochaine génération de robots humanoïdes. Les données personnelles sont anonymisées avant traitement ; l'annonce a dépassé **7 M de vues**.
+
+<Tweet id="2060044783519735987" />
+</NewsItem>
+
+<NewsItem
+  title="Waymo lance son premier robotaxi conçu pour l'autonomie"
+  category="robotique"
+  tags={["robotaxi", "waymo"]}
+  sources={[{ label: "Waymo", url: "https://waymo.com/blog/2026/05/welcoming-riders-in-the-ojai" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-waymo-unveils-first-purpose-built-robotaxi" }]}
+>
+Contrairement aux Waymo précédentes adaptées de voitures à conduite humaine, l'Ojai est pensée dès l'origine pour le sans-chauffeur. C'est aussi le premier véhicule Waymo bâti sur une plateforme chinoise (Zeekr, groupe Geely). Lancement à San Francisco, Phoenix et Los Angeles dans les prochaines semaines, puis Denver, Las Vegas et San Diego.
+</NewsItem>
+
+<NewsItem
+  title="Une main robotique apprend le piano en deux minutes"
+  category="robotique"
+  tags={["recherche", "manipulation"]}
+  sources={[{ label: "USC Viterbi", url: "https://viterbischool.usc.edu/news/2026/05/a-robot-hand-that-taught-itself-to-play-piano-could-change-the-future-of-machines/" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-waymo-unveils-first-purpose-built-robotaxi" }]}
+>
+La « Musician Hand » de l'USC entend une mélodie inconnue une fois, puis la rejoue après deux minutes de pratique, sans partition préprogrammée. En auditions à l'aveugle, les juges ne la distinguent parfois pas d'un pianiste humain. Piste pour des exosquelettes adaptatifs (Parkinson, AVC).
+</NewsItem>
+
+<NewsItem
+  title="En bref — exosquelettes, usines et humanoïdes"
+  category="robotique"
+  tags={["en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-waymo-unveils-first-purpose-built-robotaxi" }]}
+>
+- **Hypershell X Ultra S** : exosquelette de hanche qui pousse les jambes jusqu'à **1 000 W** en montée, testé par le WSJ ; **1 999 $**. [Wall Street Journal](https://www.wsj.com/tech/personal-tech/robot-legs-hypershell-x-ultra-tested-e8a254e2)
+- **BMW** déploie cet été ses premiers humanoïdes en usine, deux robots Aeon (Hexagon) à Leipzig. [BBC](https://www.bbc.co.uk/news/articles/cgmpwzzvxr2o)
+- **Hugging Face** sort un humanoïde entièrement imprimable en 3D autour de **2 500 $**. [Interesting Engineering](https://interestingengineering.com/ai-robotics/us-hugging-face-3d-printed-lerobot)
+- **Tesla** construirait une usine dédiée à Optimus à Giga Texas, visant ~10 M d'unités/an. [Teslarati](https://www.teslarati.com/tesla-dedicated-optimus-factory-construction-officially-underway-giga-texas)
+- **Atlas** (Boston Dynamics) apprend le foot depuis des vidéos de matchs, jusqu'à la rabona. [Vidéo](https://www.youtube.com/watch?v=V1Lxp-Q6Y9g)
+
+<Video src="https://www.youtube.com/watch?v=V1Lxp-Q6Y9g" caption="Atlas exécute la « Ghost Rabona », avant le Mondial 2026." />
+</NewsItem>

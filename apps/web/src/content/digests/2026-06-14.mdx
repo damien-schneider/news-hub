@@ -1,0 +1,54 @@
+---
+date: "2026-06-14"
+title: "Le « loop engineering » remplace le prompt"
+lede: "Les créateurs de Claude Code et d'OpenClaw disent ne plus prompter mais écrire des boucles qui pilotent les agents — une pratique qui dérape vite en « loopmaxxing » sans garde-fous."
+categories: ["ia"]
+sourceCount: 4
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="« Je ne prompte plus Claude, j'écris des boucles »"
+  category="ia"
+  tags={["agents", "claude-code"]}
+  sources={[{ label: "Peter Steinberger (X)", url: "https://x.com/steipete/status/2063697162748260627" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Peter Steinberger (créateur d'OpenClaw) résume le virage : « vous ne devriez plus prompter vos agents de code, vous devriez concevoir les boucles qui les promptent ». Même constat chez Boris Cherny, responsable de Claude Code chez Anthropic : « je ne prompte plus Claude, j'ai des boucles qui tournent et le promptent ; mon métier, c'est d'écrire les boucles. » La boucle donne à l'agent un objectif vérifiable, puis observe l'état, agit, vérifie le résultat et décide de continuer, réessayer ou s'arrêter.
+
+<Tweet id="2063697162748260627" />
+</NewsItem>
+
+<NewsItem
+  title="Les cinq primitives d'une boucle, selon Addy Osmani"
+  category="ia"
+  tags={["agents", "architecture"]}
+  sources={[{ label: "Addy Osmani", url: "https://addyosmani.com/blog/loop-engineering/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+L'ingénieur Google Addy Osmani détaille l'anatomie d'une boucle d'agent.
+
+- **Automatisations** — le déclencheur de la boucle : cron, commande `/goal`.
+- **Worktrees** — branches isolées pour que les sous-agents parallèles ne s'écrasent pas.
+- **Skills & outils externes** — fichiers Markdown de consignes + intégrations MCP (Jira, GitHub, bases internes).
+- **Sous-agents** — modèles spécialisés : l'un rédige le code, un autre l'évalue contre un barème strict.
+- **Mémoire** — suivi externe (board Linear, fichier de progression), car le contexte du LLM finit par se vider.
+</NewsItem>
+
+<NewsItem
+  title="Le piège du « loopmaxxing »"
+  category="ia"
+  tags={["agents", "coûts"]}
+  sources={[{ label: "AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Faute de condition de sortie déterministe, la boucle dérive à l'infini : un objectif flou (« refactore cette feature pour qu'elle soit meilleure ») fait tourner l'agent en boucles de retry qui optimisent des métriques hallucinées et brûlent des millions de tokens. S'y ajoute la **dette de compréhension** : le code expédié en arrière-plan creuse l'écart entre le dépôt et ce que l'ingénieur comprend de son fonctionnement. Règle de pouce de l'auteur : deux ou trois tentatives maximum avant d'échouer proprement et de rendre la main à un humain.
+</NewsItem>
+
+<NewsItem
+  title="Boucles de contrôle plutôt que `while(true)`"
+  category="ia"
+  tags={["agents", "bonnes-pratiques"]}
+  sources={[{ label: "AlphaSignal", url: "https://alphasignal.ai" }, { label: "karpathy/autoresearch", url: "https://github.com/karpathy/autoresearch" }]}
+>
+Les ingénieurs efficaces écrivent des boucles de contrôle strictes : du code déterministe gère l'exécution et les appels API, le LLM ne tranche que les décisions dynamiques. Démarrer par une boucle minimale avec vérification humaine, automatiser ensuite les étapes fiables en les remplaçant par du code standard, et toujours séparer l'agent qui exécute de celui qui vérifie. En vitrine du potentiel : [autoresearch](https://github.com/karpathy/autoresearch) d'Andrej Karpathy, une boucle Python légère qui lance des expériences de ML la nuit sans intervention humaine.
+</NewsItem>

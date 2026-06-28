@@ -1,0 +1,184 @@
+---
+date: "2026-06-04"
+title: "Microsoft pilote sa percée quantique avec des agents IA"
+lede: "Microsoft fait avancer Majorana 2 et publie MAI-Thinking-1 sans distillation ; Reve et Ideogram sortent le même jour ; la Search Console de Google ouvre enfin ses chiffres IA aux SEO."
+categories: ["ia", "web", "robotique", "growth", "finance"]
+sourceCount: 14
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Majorana 2 : Microsoft attribue sa percée quantique à des agents IA"
+  category="ia"
+  tags={["microsoft", "quantique"]}
+  sources={[{ label: "AI News", url: "https://www.artificialintelligence-news.com/news/microsoft-discovery-agentic-ai-majorana-2/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Microsoft présente **Majorana 2**, une puce à qubits topologiques **1 000× plus fiables** que la génération précédente et qui conservent leur état **20 secondes** (contre des microsecondes ailleurs). L'avancée a été pilotée par **Microsoft Discovery**, sa plateforme d'IA agentique pour la R&D, désormais en disponibilité générale : les agents automatisent les mesures de qubits, jadis étalées sur plusieurs semaines. Objectif d'un ordinateur quantique commercial scalable visé pour **2029**.
+</NewsItem>
+
+<NewsItem
+  title="Microsoft entraîne MAI-Thinking-1 sans distillation"
+  category="ia"
+  tags={["microsoft", "modèle", "raisonnement"]}
+  sources={[{ label: "Mustafa Suleyman / Microsoft AI (X)", url: "https://x.com/asadovsky/status/2062008312603070891" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts" }]}
+>
+Microsoft sort **MAI-Thinking-1**, un modèle de raisonnement entraîné sans aucune distillation d'un modèle tiers ni données synthétiques : **97 % à l'AIME 2025**, **53 % à SWE-Bench Pro**, et des préférences humaines au-dessus de Sonnet 4.6 en aveugle. Le rapport de **109 pages** publie le détail du mélange de données (50 % code, 17,5 % STEM, 17,5 % maths) et la recette de scaling, salué pour sa transparence. En parallèle, Frontier Tuning vise des modèles métier jusqu'à **10× plus efficaces** sur tâches Excel.
+</NewsItem>
+
+<NewsItem
+  title="Reve 2 et Ideogram 4 sortent le même jour"
+  category="ia"
+  tags={["image", "modèle"]}
+  sources={[
+    { label: "Reve (X)", url: "https://x.com/reve/status/2062260665121919101" },
+    { label: "Ideogram (X)", url: "https://x.com/ideogram_ai/status/2062202208700313872" },
+    { label: "via Superhuman", url: "https://superhuman.ai" },
+  ]}
+>
+Deux labos publient des modèles d'image à quelques heures d'écart. [Reve 2.0](https://app.reve.com/) génère l'image via une mise en page décrite en code, éditable détail par détail, et passe **n°2 du leaderboard Arena**, devant Nano Banana 2. [Ideogram 4.0](https://the-decoder.com/ideogram-4-0-drops-as-an-open-weight-model-with-native-2k-resolution-and-improved-text-rendering/) bascule en open-weight (résolution native 2K, rendu de texte amélioré) et devient le **meilleur modèle d'image ouvert**, n°8 toutes catégories sur Arena.
+
+<Tweet id="2062260665121919101" />
+</NewsItem>
+
+<NewsItem
+  title="Gemma 4 12B tourne sur un laptop à 16 Go"
+  category="ia"
+  tags={["google", "open-source", "local"]}
+  sources={[{ label: "The Decoder", url: "https://the-decoder.com/google-deepminds-gemma-4-12b-squeezes-multimodal-ai-onto-a-laptop-with-just-16-gb-of-ram/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Google sort **Gemma 4 12B**, multimodal natif (texte, image, audio) sans tour d'encodeurs séparée, sous Apache 2.0 et conçu pour ~16 Go de VRAM. Il rivalise avec le Gemma 26B deux fois plus lourd. Les [GGUF dynamiques d'Unsloth](https://huggingface.co/unsloth/gemma-4-12b-it-GGUF) le compressent jusqu'à tenir dans **8 Go de RAM** avec un contexte de **256K**.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & outils open-source"
+  category="ia"
+  tags={["open-source", "modèle"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts" }]}
+>
+- **[NVIDIA Cosmos 3](https://huggingface.co/nvidia/Cosmos3-Super-Text2Image)** — modèle text-to-image en open-weights, livré dans la release Cosmos 3.
+- **[Miso One](https://x.com/kimmonismus/status/2062210845308780639)** — TTS 8B open-weights, clonage de voix one-shot, **110 ms** de latence.
+- **[Kimi-K2.6 519B](https://huggingface.co/0xSero/Kimi-K2.6-519B-NVFP4)** — version élaguée optimisée code, maths et appels d'outils.
+- **[HeyGen frame.md + HyperFrames](https://github.com/heygen-com/hyperframes)** — spec qui apprend aux agents à composer des vidéos en HTML (rendu via Chrome headless + FFmpeg), Apache 2.0.
+- **[Hermes Desktop](https://the-decoder.com/nous-research-releases-hermes-desktop-an-open-source-ai-agent-for-every-platform/)** — agent IA multi-plateforme de Nous Research, sous licence MIT.
+</NewsItem>
+
+<NewsItem
+  title="OpenAI muscle GPT-Rosalind pour les sciences de la vie"
+  category="ia"
+  tags={["openai", "santé"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+OpenAI dote GPT-Rosalind, son modèle dédié à la biologie, de nouvelles briques : raisonnement biologique renforcé, chimie médicinale, analyse génomique et workflows expérimentaux. De quoi viser l'accélération de la découverte de médicaments.
+</NewsItem>
+
+<NewsItem
+  title="En bref"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://superhuman.ai" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+- **ChatGPT** franchit **1 milliard** d'utilisateurs actifs mensuels sur mobile en mai (Sensor Tower), plus vite que TikTok ou Instagram. [GadgetReview](https://www.gadgetreview.com/chatgpt-becomes-fastest-app-to-hit-1-billion-users-as-claude-surges-in-ai-race)
+- **Microsoft** assure que ses data centers récents consomment autant d'eau qu'un seul restaurant grâce au circuit fermé ; **Google** promet un bilan hydrique net positif d'ici 2030. [Engadget](https://www.engadget.com/2186418/google-pledges-to-replenish-water-data-centers-by-2030/)
+- **Scorsese** rejoint Black Forest Labs comme conseiller et utilise **FLUX** pour storyboarder son prochain film. [BFL](https://bfl.ai/martin-scorsese-bfl-advisor)
+- **OpenAI et Anthropic** cosignent une lettre réclamant un suivi des séquences d'ADN synthétique face au risque de bioarmes IA. [Wired](https://www.wired.com/story/openai-anthropic-letter-ai-biological-weapons/)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="« Quelqu'un aime-t-il encore React ? »"
+  category="web"
+  tags={["react", "débat"]}
+  sources={[{ label: "jsx.lol", url: "https://jsx.lol/" }, { label: "via Import React", url: "https://importreact.beehiiv.com" }]}
+>
+Un site compile toutes les prises « il faut arrêter React » des dernières années et atteint la une de **Hacker News** avec 130+ commentaires en quelques heures. Critiques de DX, équipes passées à Svelte, Solid ou LiveView — et un commentaire le plus voté qui défend React de façon si tiède que c'en est pire.
+</NewsItem>
+
+<NewsItem
+  title="Callstack entraîne Apex, un modèle qui ne connaît que React Native"
+  category="web"
+  tags={["react-native", "modèle"]}
+  sources={[{ label: "Callstack", url: "https://www.callstack.com/blog/introducing-apex-a-fast-specialized-model-for-react-native" }, { label: "via Import React", url: "https://importreact.beehiiv.com" }]}
+>
+Au lieu d'un modèle généraliste, l'équipe core-contributor de Callstack entraîne un petit modèle spécialisé exclusivement sur le mobile React Native (modules natifs, contraintes plateforme). Elle revendique des résultats de niveau frontier sur les tâches RN à une fraction du coût des gros modèles. Déjà en bêta privée.
+</NewsItem>
+
+<NewsItem
+  title="Outils & lectures front"
+  category="web"
+  tags={["frontend", "performance"]}
+  sources={[{ label: "via Import React", url: "https://importreact.beehiiv.com" }]}
+>
+- **[Le rewrite de Conductor](https://performance.dev/the-conductor-rewrite)** — l'auteur du « pourquoi Linear est si rapide » détaille comment l'app a été réécrite pour aller deux fois plus vite ; toute la stack est documentée.
+- **[Authentification TanStack Start](https://workos.com/blog/tanstack-start-authentication-guide)** — un guide end-to-end sur le point qui bloque tout le monde.
+- **[skelter](https://github.com/J-Ben/skelter)** — génère les squelettes de chargement à partir du layout du composant.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Un planificateur de mouvement 19× plus rapide que la diffusion"
+  category="robotique"
+  tags={["recherche", "navigation"]}
+  sources={[{ label: "arXiv", url: "https://arxiv.org/abs/2603.13733" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Là où les modèles de diffusion enchaînent les étapes de débruitage, cette méthode emploie **IMLE** pour générer une trajectoire en **une seule étape**. Résultat : de 4,3 à **83 plans/seconde** (×19), **38 % de mouvement en moins** saccadé, en temps réel sur CPU comme GPU, testé sur un vrai robot mobile circulant parmi des passants. [Vidéos et code](https://gmpc-imle.github.io/) en ligne.
+</NewsItem>
+
+<NewsItem
+  title="Unitree H2 Plus : un corps chinois, un cerveau Nvidia"
+  category="robotique"
+  tags={["humanoïde", "nvidia"]}
+  sources={[{ label: "Wired", url: "https://www.wired.com/story/nvidia-unitree-humanoid-robot-h2-plus/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+Nvidia et Unitree s'associent autour du **H2 Plus**, un humanoïde de 1,80 m qui marie la mécanique d'Unitree au contrôle moteur et à l'IA de Nvidia. Le matériel asiatique se combine de plus en plus aux briques logicielles américaines.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="La Search Console de Google ouvre ses chiffres IA"
+  category="growth"
+  tags={["seo", "geo", "google"]}
+  sources={[{ label: "Google Search Central", url: "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" }, { label: "via LaGrowthNews", url: "https://news.deux.io" }]}
+>
+Le 3 juin, Google ajoute à la Search Console un rapport de performances dédié aux fonctionnalités d'IA générative : impressions dans les **AI Overviews**, l'**AI Mode** et Discover, ventilées par pages, pays, appareils et dates. Limite majeure : pas de clics, seulement des impressions. Déploiement d'abord limité au Royaume-Uni ; pour les sites français, le tableau reste vide tant que les fonctionnalités IA ne sont pas activées (blocage sur les droits voisins). Bing avait ouvert la voie en février, en mesurant les citations.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="SpaceX fixe son IPO à 135 $ par action"
+  category="finance"
+  tags={["ipo", "spacex"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html" }, { label: "via Aktionnaire", url: "https://aktionnaire.com" }]}
+>
+SpaceX vise une entrée en Bourse à un prix unique de **135 $**, valorisant le groupe à **1 770 Md$** et levant **75 Md$**. À ce niveau, elle deviendrait la 7e plus grosse cotée américaine, devant Tesla (~1 600 Md$). Le prix fixe, plutôt qu'une fourchette, signale la confiance dans l'appétit des investisseurs. Premier jour attendu le 12 juin.
+</NewsItem>
+
+<NewsItem
+  title="Bruxelles veut tripler ses data centers d'ici 2030"
+  category="finance"
+  tags={["ue", "souveraineté"]}
+  sources={[
+    { label: "Les Échos", url: "https://www.lesechos.fr/tech-medias/hightech/cloud-puces-ia-le-plan-massif-de-leurope-pour-ne-plus-dependre-des-americains-2234803" },
+    { label: "Engadget", url: "https://www.engadget.com/2186709/the-european-union-reveals-details-of-its-tech-sovereignity-package/" },
+  ]}
+>
+La Commission dévoile son « paquet souveraineté technologique » : tripler la capacité européenne en data centers d'ici 2030, viser l'autonomie complète d'ici 2050, et mobiliser **200 Md€**, surtout privés. La Commission jouerait le rôle de centrale d'achat cloud pour les États membres, en écartant les géants américains.
+</NewsItem>
+
+<NewsItem
+  title="En bref"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "via Aktionnaire", url: "https://aktionnaire.com" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" }]}
+>
+- **Suno** lève **400 M$** et double sa valorisation à **5,4 Md$**, en plein procès contre Universal, Sony et Warner. [The Decoder](https://the-decoder.com/ai-music-startup-suno-doubles-its-valuation-to-5-4-billion-while-fighting-major-record-labels-in-court/)
+- **Quobly** (quantique, Grenoble) lève **115 M€** auprès de Bpifrance, SealSQ et STMicroelectronics — 3e startup française du secteur à dépasser 100 M€. [La Tribune](https://www.latribune.fr/article/tech/12241360244867/quantique-quobly-confirme-une-levee-de-fonds-de-115-millions-deuros)
+- **Broadcom** publie un Q2 sous les attentes, plombé par le logiciel, mais maintient ses prévisions de puces IA. [CNBC](https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html)
+- **Shein** écope d'une amende record de **22,4 M€** de la Répression des fraudes pour manquements à l'information des consommateurs. [Le Figaro](https://www.lefigaro.fr/societes/le-combat-continue-la-repression-des-fraudes-inflige-a-shein-une-amende-record-de-22-4-millions-d-euros-20260603)
+- **France** : 4,8 millions de personnes sont « riches » selon l'Observatoire des inégalités, soit **7,5 %** de la population au-dessus de **4 292 €/mois** après impôts. [Observatoire des inégalités](https://www.inegalites.fr/Les-chiffres-cles-sur-les-riches-en-France)
+</NewsItem>

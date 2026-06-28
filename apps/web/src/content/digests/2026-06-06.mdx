@@ -1,0 +1,102 @@
+---
+date: "2026-06-06"
+title: "Nvidia ouvre son humanoïde, l'IA cale sur la fiabilité"
+lede: "Édition robotique chez Superhuman : Nvidia livre un humanoïde de recherche open et Sam Altman mise en douce sur Alfred. Côté modèles, Google sort Gemma 4 en QAT et Sakana ouvre un labo dédié à l'auto-amélioration."
+categories: ["ia", "robotique", "hardware"]
+sourceCount: 9
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Google sort Gemma 4 en quantization-aware training"
+  category="ia"
+  tags={["modèle", "quantization", "open-source"]}
+  sources={[{ label: "Google", url: "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-6b8" }]}
+>
+Google publie des checkpoints QAT pour cinq tailles de [Gemma 4](https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-unquantized) (E2B à 31B). La quantization simulée pendant l'entraînement préserve la qualité au format Q4_0 et divise par trois la VRAM ; le E2B texte tient sous **1 Go** via un format mobile dédié. Intégration immédiate dans llama.cpp, Ollama, vLLM, MLX et Unsloth — qui note qu'une conversion naïve vers GGUF perd de la précision.
+</NewsItem>
+
+<NewsItem
+  title="Sakana ouvre un labo d'auto-amélioration à Tokyo"
+  category="ia"
+  tags={["recherche", "rsi"]}
+  sources={[{ label: "Sakana AI", url: "https://sakana.ai/rsi-lab/" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-6b8" }]}
+>
+Sakana AI lance un **RSI Lab** dédié à l'auto-amélioration récursive, regroupant ses projets antérieurs (The AI Scientist, Darwin Gödel Machine, ShinkaEvolve). La thèse : construire des systèmes auto-améliorants sous contrainte de calcul, et non par la seule force de frappe GPU. Le pari de l'efficacité d'échantillonnage, avec le soutien de la stratégie IA souveraine japonaise.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles open-weight"
+  category="ia"
+  tags={["open-source", "modèle"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-6b8" }]}
+>
+- **[Nemotron 3 Ultra](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16)** (NVIDIA) — 550 Md de paramètres, 55 Md actifs, architecture hybride LatentMoE (Mamba-2 + MoE), contexte 1M, poids et données ouverts. Inférence réservée au datacenter (8× H200 minimum).
+- **[Ideogram 4.0](https://ideogram.ai/blog/ideogram-4.0/)** — premier modèle image open-weight d'Ideogram : Diffusion Transformer 9,3 Md entraîné from scratch, meilleur rendu de texte des modèles ouverts. Le checkpoint [nf4](https://huggingface.co/ideogram-ai/ideogram-4-nf4) tient sur un seul GPU 24 Go.
+- **[KVarN](https://github.com/huawei-csl/KVarN)** (Huawei, Apache 2.0) — quantization de cache KV pour vLLM : 3 à 5× de contexte en plus, débit au-dessus du FP16, précision préservée sur les tâches de raisonnement, activée par un seul flag.
+</NewsItem>
+
+<NewsItem
+  title="Étude Princeton : les agents IA toujours pas fiables"
+  category="ia"
+  tags={["benchmark", "agents"]}
+  sources={[{ label: "Agents' Last Exam", url: "https://substack.com/redirect/ffaf9611-e107-4aee-9aab-70fa268daf9c?j=eyJ1IjoiMmd1NXpmIn0.4TzBZggjYGgM2djV4vBNzk-pb8k1dlR0yz-_dGd76ic" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-6b8" }]}
+>
+Un papier ICML 2026 de Princeton ajoute GPT-5.5, Gemini 3.1 Pro et Claude Opus 4.7 à son banc de fiabilité : aucun n'est sensiblement plus fiable que la génération précédente. En parallèle, le benchmark **Agents' Last Exam** mappe 1 000+ tâches à valeur économique sur la nomenclature professionnelle américaine — le palier le plus dur plafonne à **2,6 %** de réussite complète.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Nvidia dévoile un humanoïde de recherche open-platform"
+  category="robotique"
+  tags={["nvidia", "humanoïde"]}
+  sources={[{ label: "Nvidia", url: "https://nvidianews.nvidia.com/news/nvidia-open-humanoid-robot-reference-design" }, { label: "Reuters", url: "https://www.reuters.com/world/asia-pacific/nvidia-work-with-us-european-humanoid-robot-makers-addition-chinas-unitree-2026-06-01/" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-nvidia-unveils-research-grade-humanoid" }]}
+>
+Le **Isaac GR00T Reference Humanoid** combine un corps Unitree H2 et un GPU Blackwell embarqué, offrant aux universités une plateforme matérielle et logicielle unifiée. Nvidia compte étendre le design de référence au-delà de Unitree, vers des partenaires aux États-Unis, en Europe et en Corée du Sud.
+
+<Video src="https://www.youtube.com/watch?v=yvDDpQZliY8" caption="Le concept d'humanoïde de recherche de Nvidia en action." />
+</NewsItem>
+
+<NewsItem
+  title="Sam Altman finance en douce Alfred, startup robotique"
+  category="robotique"
+  tags={["openai", "investissement"]}
+  sources={[{ label: "Business Insider", url: "https://www.businessinsider.com/sam-altman-startup-alfred-building-software-for-robots-and-cars-2026-6" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-nvidia-unveils-research-grade-humanoid" }]}
+>
+Le patron d'OpenAI aurait investi dans **Alfred**, jeune pousse de neuf mois fondée par d'anciens de Tesla et Meta, qui développe des logiciels d'aide à la conception de robots. Valorisation visée : **40 M$**. Altman vient de désigner publiquement la robotique comme prochaine frontière d'OpenAI ; les startups de physical AI ont levé 5,3 Md$ de VC sur le seul mois d'avril.
+</NewsItem>
+
+<NewsItem
+  title="MIT : le robotaxi ne réduit pas le trafic"
+  category="robotique"
+  tags={["étude", "robotaxi"]}
+  sources={[{ label: "Ars Technica", url: "https://arstechnica.com/cars/2026/06/robotaxis-dont-cut-traffic-any-more-than-ride-hailing-study-finds" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-nvidia-unveils-research-grade-humanoid" }]}
+>
+Une analyse MIT de l'exploitation Waymo en Californie (86 M de miles) montre que les robotaxis roulent à vide **44 %** du temps — quasiment le taux d'Uber et Lyft. La promesse de désengorger les villes rejoint celle, démentie une décennie plus tôt, du VTC.
+</NewsItem>
+
+<NewsItem
+  title="Les robots entrent dans le quotidien"
+  category="robotique"
+  tags={["déploiement", "en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-nvidia-unveils-research-grade-humanoid" }]}
+>
+- **America's Got Talent** : huit robots Unitree dansent en synchro avec la danseuse Wu Yufei, [plus d'1 M de vues YouTube](https://www.youtube.com/watch?v=y7ojRmPxqNg) en 24 h.
+- **Hello Robot** : le Stretch 4 est déjà déployé chez des particuliers à mobilité réduite pour préparer le petit-déjeuner ou se brosser les dents. [TechCrunch](https://techcrunch.com/2026/06/04/is-silicon-valley-ready-to-put-robots-in-peoples-homes-hello-robot-is/)
+- **Amazon** dévoile un robot d'entrepôt répondant aux instructions orales, dans une expansion logistique européenne de 10 Md€. [Reuters](https://www.reuters.com/business/retail-consumer/amazon-unveils-new-ai-warehouse-robot-12-billion-europe-push-2026-06-04/)
+- **Dérapage** : un Unitree G1 frappe un enfant d'un coup de pied lors d'une démo publique en Chine, relançant le débat sur les humanoïdes en foule. [Interesting Engineering](https://interestingengineering.com/ai-robotics/viral-humanoid-robot-kicks-child-in-stomach)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Six enfants atteints d'amyotrophie spinale se lèvent seuls"
+  category="hardware"
+  tags={["santé", "robotique"]}
+  sources={[{ label: "Interesting Engineering", url: "https://interestingengineering.com/ai-robotics/robot-helps-children-with-disorder-stand" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-nvidia-unveils-research-grade-humanoid" }]}
+>
+Après six semaines d'exercices vidéoludiques avec un robot de genou qui résiste doucement aux mouvements, six enfants atteints d'amyotrophie spinale — incapables de se lever sans aide — y sont parvenus seuls. Les gains ont persisté après l'arrêt de l'appareil et le retour à la kinésithérapie classique.
+</NewsItem>

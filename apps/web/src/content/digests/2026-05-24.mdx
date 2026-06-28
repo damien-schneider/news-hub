@@ -1,0 +1,72 @@
+---
+date: "2026-05-24"
+title: "Modèles spécialisés contre frontière, Starship V3 décolle"
+lede: "Composer 2.5 de Cursor montre qu'un modèle de code spécialisé tient tête aux modèles frontière à 1/60e du coût ; SpaceX lance enfin son Starship V3, le plus gros lanceur jamais construit."
+categories: ["ia", "hardware", "evenements"]
+sourceCount: 6
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Composer 2.5 : le modèle spécialisé tient tête à la frontière"
+  category="ia"
+  tags={["cursor", "modèle", "coût"]}
+  sources={[{ label: "Cursor", url: "https://cursor.com/blog/composer-2-5" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+[Composer 2.5](https://cursor.com/blog/composer-2-5) (Cursor, bâti sur [Kimi K2.5](https://huggingface.co/moonshotai/Kimi-K2.5)) score **62** sur le [Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) d'Artificial Analysis, à 4 points d'Opus 4.7 (66) et GPT-5.5 (65). Mais à **0,07 $** la tâche contre ~4 $ pour les modèles frontière, soit jusqu'à 60× moins cher : 0,50 $/2,50 $ le million de tokens entrée/sortie, contre ~5 $/25 $. Cursor a consacré ~85 % de son budget de calcul au RL et aux données synthétiques (×25 de tâches vs Composer 2).
+</NewsItem>
+
+<NewsItem
+  title="L'argument économique des modèles verticaux"
+  category="ia"
+  tags={["inférence", "fine-tuning"]}
+  sources={[{ label: "Thinking Machines", url: "https://thinkingmachines.ai/news/announcing-tinker/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Les boucles agentiques tournant en continu sur GPT-5.5 ou Opus 4.7 épuisent les budgets d'API avant de générer du ROI. La parade : router 80–90 % du code vers un modèle efficace, réserver la frontière aux 10–20 % de cas complexes. L'analyse cite [Tinker](https://thinkingmachines.ai/news/announcing-tinker/) (Thinking Machines), API Python de fine-tuning distribué, comme brique pour que d'autres équipes rejouent la stratégie de Cursor sur leurs propres données.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="SpaceX lance le Starship V3, plus gros lanceur jamais construit"
+  category="hardware"
+  tags={["spacex", "spatial"]}
+  sources={[{ label: "NBC News", url: "https://www.nbcnews.com/science/space/spacex-launches-biggest-beefed-starship-yet-test-flight-rcna346565" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Après plusieurs reports, le Starship V3 a décollé du Texas vendredi pour son vol inaugural, emportant 20 maquettes de satellites Starlink. Haut de **124 m** (407 pieds), c'est le 12e vol d'essai Starship et la première de la génération sur laquelle la NASA compte pour reposer des astronautes sur la Lune.
+
+<Video src="https://www.youtube.com/watch?v=jhp1oRj3KZ0" caption="Décollage du Starship V3 depuis le Texas. SpaceX." />
+</NewsItem>
+
+<NewsItem
+  title="Retatrutide : 28 % de poids perdu, au niveau du bypass"
+  category="hardware"
+  tags={["santé", "obésité"]}
+  sources={[{ label: "New York Times", url: "https://www.nytimes.com/2026/05/21/science/retatrutide-weight-loss-drug.html" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Eli Lilly annonce **28 %** de perte de poids moyenne sur 80 semaines pour son candidat Retatrutide, un résultat qui rivalise avec la chirurgie de bypass gastrique et dépasse Wegovy et Zepbound. Encore en attente d'approbation réglementaire ; les fortes doses entraînent des effets secondaires.
+</NewsItem>
+
+<NewsItem
+  title="Deux avancées vers un cœur réparé en laboratoire"
+  category="hardware"
+  tags={["santé", "recherche"]}
+  sources={[{ label: "Interesting Engineering", url: "https://interestingengineering.com/science/china-develops-lab-grown-heart-tissue" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- Un premier **nœud sinusal** cultivé à partir de cellules souches humaines génère de vraies impulsions électriques et réagit aux médicaments cardiaques — piste vers des pacemakers biologiques. [Interesting Engineering](https://interestingengineering.com/science/china-develops-lab-grown-heart-tissue)
+- UChicago présente un **patch de calcul cutané** qui cartographie les fronts électriques des arythmies fatales avec **99,6 %** de précision, traité en local par puce neuromorphique. [Interesting Engineering](https://interestingengineering.com/ai-robotics/stretchable-computing-patch-heart-monitoring)
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Science du week-end : moa ressuscité et T. rex des mers"
+  category="evenements"
+  tags={["science", "en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **De-extinction** : Colossal Biosciences a fait éclore 26 poussins sains via un œuf artificiel imprimé en 3D, étape vers le retour du moa géant de l'île du Sud (3,6 m), disparu depuis 500 ans, dont l'œuf est trop gros pour toute mère porteuse vivante. [Reuters](https://www.reuters.com/science/chicks-hatch-artificial-egg-us-company-aims-revive-extinct-species-2026-05-22/)
+- **Paléontologie** : une nouvelle espèce de mosasaure baptisée *Tylosaurus rex*, prédateur marin de 13 m découvert au Texas, deux fois plus long que le plus grand grand requin blanc. [ScienceDaily](https://www.sciencedaily.com/releases/2026/05/260522023111.htm)
+</NewsItem>

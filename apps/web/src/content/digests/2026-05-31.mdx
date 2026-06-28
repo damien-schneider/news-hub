@@ -1,0 +1,97 @@
+---
+date: "2026-05-31"
+title: "Le New Glenn de Bezos part en flammes"
+lede: "Édition dominicale plus légère : la fusée de Blue Origin explose et fragilise le retour de la NASA sur la Lune, une thérapie génique d'Eli Lilly coupe le cholestérol en une perfusion, et un nouveau paradigme rend la recherche par embeddings obsolète pour les agents de code."
+categories: ["ia", "hardware", "evenements"]
+sourceCount: 8
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Pour les agents de code, le terminal remplace le RAG"
+  category="ia"
+  tags={["agents", "rag", "papers"]}
+  sources={[{ label: "arXiv (GrepSeek)", url: "https://arxiv.org/abs/2605.05242" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Le RAG classique découpe les documents en chunks et filtre, avant la boucle de raisonnement, les données syntaxiques dont un agent a besoin : code d'erreur exact, chemin de fichier, contrainte de version. Le **Direct Corpus Interaction** contourne les embeddings et donne à l'agent un accès direct au corpus via `grep`, `find`, `cat`, `sed`. Le framework [GrepSeek](https://arxiv.org/abs/2605.05242) entraîne le modèle à émettre des commandes shell, et son moteur sharded-parallèle accélère la recherche jusqu'à **7,6×**. Approche recommandée à grande échelle : retrieval sémantique pour l'ancrage, DCI pour la vérification de précision.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Une perfusion d'Eli Lilly pour remplacer les traitements anti-cholestérol à vie"
+  category="hardware"
+  tags={["santé", "thérapie-génique"]}
+  sources={[
+    { label: "Eli Lilly", url: "https://www.prnewswire.com/news-releases/a-single-dose-of-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-by-up-to-88-and-ldl-c-by-up-to-62-with-durable-effects-supporting-its-potential-as-a-one-time-treatment-for-hypercholesterolemia-302780172.html" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+La thérapie de base editing **VERVE-102** éteint durablement le gène PCSK9 dans le foie en une seule perfusion intraveineuse. Dans l'essai de phase 1b Heart-2 (35 patients), la dose la plus élevée réduit le PCSK9 de **88 %** et le LDL de **62 %**, effet maintenu jusqu'à 18 mois. Elle reproduit une variante génétique naturelle qui protège à vie du risque coronarien. Phase 2 prévue d'ici fin 2026.
+
+<Tweet id="2058949527902560463" />
+</NewsItem>
+
+<NewsItem
+  title="Une technique électrique veut rendre le LASIK obsolète"
+  category="hardware"
+  tags={["santé", "recherche"]}
+  sources={[{ label: "ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/05/260528074032.htm" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Une méthode corrige la vue sans laser ni incision : de légères impulsions électriques, appliquées via une lentille de contact en platine, ramollissent temporairement la cornée pour la remodeler en une minute, avant qu'elle ne durcisse. Les premiers tests sur des yeux de lapin corrigent la myopie sans léser les tissus. Essais humains à plusieurs années, mais coût potentiellement bien inférieur au LASIK.
+</NewsItem>
+
+<NewsItem
+  title="Avancées médicales : mélanome, paralysie, grossesse"
+  category="hardware"
+  tags={["santé", "recherche", "en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **[Tatouage anti-mélanome](https://interestingengineering.com/health/microneedle-tattoo-melanoma-detection)** — des micro-aiguilles déposent sous la peau des nano-capteurs qui cartographient les écarts de chaleur des cellules cancéreuses ; en labo, détection de tumeurs 4 jours après leur formation.
+- **[Régénération nerveuse](https://www.sciencedaily.com/releases/2026/05/260528082459.htm)** — sur des organoïdes cerveau/moelle, des chercheurs identifient le réseau de gènes qui bloque la repousse des fibres nerveuses et le réactivent via le lynestrenol.
+- **[UPatch (Stanford)](https://www.zmescience.com/medicine/wearable-ultrasound-patch-pregnancy-monitoring/)** — patch échographique souple qui suit le flux sanguin fœtal en continu ; sur 62 grossesses il égale l'échographie clinique et a signalé une circulation dangereusement anormale.
+</NewsItem>
+
+<NewsItem
+  title="Gadgets de la semaine"
+  category="hardware"
+  tags={["gadgets", "en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **[Oura Ring 5](https://ouraring.com/store/rings/oura-ring-5)** — la plus petite bague connectée au monde, 40 % plus compacte que la Ring 4 ; suivi du sommeil, HRV, SpO2, température, stress et des traitements GLP-1.
+- **[Framer F1](https://www.framer.com/f1)** — clavier mécanique low-profile en aluminium, avec écran intégré et contrôles programmables.
+- **[Ubiquiti UniFi Travel Router](https://store.ui.com/us/en/products/utr)** — routeur de poche qui réplique le réseau UniFi domestique en déplacement, alimenté en USB-C, et gère seul les portails Wi-Fi d'hôtel.
+- **[Samsung Odyssey G8](https://www.samsung.com/uk/monitors/gaming/odyssey-oled-g8-g85sd-34-inch-oled-ultra-wqhd-ls34dg850suxxu/)** — moniteur gaming OLED 6K de 32 pouces.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="La fusée New Glenn de Blue Origin explose à Cape Canaveral"
+  category="evenements"
+  tags={["espace", "nasa"]}
+  sources={[
+    { label: "NBC News", url: "https://www.nbcnews.com/science/space/blue-origin-rocket-explosion-setback-nasa-moon-missions-rcna347522" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Le New Glenn de Jeff Bezos a pris feu jeudi lors d'un test moteur, détruisant le booster et le seul pas de tir opérationnel de Blue Origin pour ce lanceur. Pièce maîtresse du programme Artemis de la NASA, l'incident place l'objectif d'alunissage de 2028 en sérieux danger.
+
+<Tweet id="2060170680604168319" />
+</NewsItem>
+
+<NewsItem
+  title="James Webb capture la fureur d'un trou noir supermassif"
+  category="evenements"
+  tags={["espace", "astronomie"]}
+  sources={[
+    { label: "BBC Science Focus", url: "https://www.sciencefocus.com/news/jaw-dropping-new-nasa-photo-shows-the-full-power-of-a-supermassive-black-hole" },
+    { label: "NASA", url: "https://www.nasa.gov/image-article/beacon-of-light" },
+  ]}
+>
+Le télescope James Webb dévoile une image de Messier 77 (la « galaxie du Calamar ») : son trou noir central de **8 millions de masses solaires**, deux fois celui de la Voie lactée, dévore activement du gaz et fait de son noyau l'un des plus brillants jamais photographiés.
+
+<NewsImage src="https://www.nasa.gov/wp-content/uploads/2026/05/55255325881-69941927eb-o.jpg" alt="Messier 77, la galaxie du Calamar, imagée par le télescope James Webb" caption="Messier 77 par le JWST. Crédit : NASA." />
+</NewsItem>

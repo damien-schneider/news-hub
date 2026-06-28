@@ -1,0 +1,175 @@
+---
+date: "2026-06-15"
+title: "Washington débranche deux modèles Claude en quelques heures"
+lede: "Un ordre de contrôle d'export force Anthropic à couper Fable 5 et Mythos 5 dans le monde entier ; Z.ai ouvre GLM-5.2 le même jour, OpenRouter mélange les modèles pour battre le frontier, et SpaceX signe la plus grosse IPO de l'histoire."
+categories: ["ia", "web", "robotique", "finance"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic coupe Fable 5 et Mythos 5 après un ordre de contrôle d'export"
+  category="ia"
+  tags={["anthropic", "réglementation"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/fable-mythos-access" },
+    { label: "The Decoder", url: "https://the-decoder.com/amazon-and-five-other-companies-reportedly-triggered-the-government-crackdown-on-anthropics-fable-model/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Le gouvernement américain interdit tout ressortissant étranger d'utiliser **Fable 5 et Mythos 5** via un ordre de contrôle d'export. Faute de pouvoir vérifier la nationalité au niveau de l'API, Anthropic a coupé l'accès public aux deux modèles, trois jours après leur lancement — une première pour un modèle frontière. Selon The Decoder, des chercheurs d'Amazon et de cinq autres entreprises ont alerté l'administration sur une faille de sécurité, ce qu'Anthropic conteste. Les autres modèles Claude restent en ligne.
+</NewsItem>
+
+<NewsItem
+  title="OpenRouter Fusion mélange plusieurs modèles pour battre le frontier"
+  category="ia"
+  tags={["routing", "inférence"]}
+  sources={[
+    { label: "OpenRouter", url: "https://openrouter.ai/blog/announcements/fusion-beats-frontier/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+[Fusion](https://openrouter.ai/fusion) fait passer un prompt par plusieurs modèles de tête, puis fusionne leurs sorties — points de consensus, contradictions, angles morts — en une seule réponse. OpenRouter affirme « surpasser significativement » n'importe quel modèle frontière pris isolément. En bêta dès maintenant.
+</NewsItem>
+
+<NewsItem
+  title="Z.ai ouvre GLM-5.2 le jour même du blocage d'Anthropic"
+  category="ia"
+  tags={["modèle", "open-source"]}
+  sources={[
+    { label: "Hugging Face", url: "https://huggingface.co/zai-org/GLM-5.2" },
+    { label: "Jie Tang (X)", url: "https://x.com/jietang/status/2065784751345287314" },
+    { label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com" },
+  ]}
+>
+[GLM-5.2](https://huggingface.co/zai-org/GLM-5.2) (Z.ai) est un MoE de **744 Md de paramètres**, contexte **1M de tokens**, poids sous licence MIT, qui s'intègre à Claude Code via un seul changement de config. Le fondateur Jie Tang l'a annoncé le 13 juin avec un message sur « l'intelligence frontière qui appartient à tous » — le jour même où Washington forçait Anthropic à couper ses modèles haut de gamme.
+</NewsItem>
+
+<NewsItem
+  title="Moonshot ouvre Kimi K2.7-Code, 30 % de tokens de raisonnement en moins"
+  category="ia"
+  tags={["modèle", "code", "open-source"]}
+  sources={[
+    { label: "Hugging Face", url: "https://huggingface.co/moonshotai/Kimi-K2.7-Code" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+MoE de **1 000 Md de paramètres** (32B actifs), contexte 256K, licence MIT modifiée. Moonshot annonce **−30 %** de tokens de raisonnement face à K2.6 et **+21,8 %** sur son Kimi Code Bench v2. API à 0,95 $/M en entrée et 4 $/M en sortie ; self-hosting via vLLM ou SGLang. Les chiffres restent ceux de l'éditeur, sans benchmark tiers public.
+</NewsItem>
+
+<NewsItem
+  title="OpenAI lance un Partner Network doté de 150 M$"
+  category="ia"
+  tags={["openai", "entreprise"]}
+  sources={[
+    { label: "OpenAI", url: "https://openai.com/index/introducing-openai-partner-network" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+OpenAI structure un réseau de partenaires officiel, doté de **150 M$**, pour financer intégrateurs et consultants chargés de déployer ses modèles en entreprise. La cible : verrouiller la distribution, là où Anthropic, Google et Microsoft courtisent les mêmes cabinets.
+</NewsItem>
+
+<NewsItem
+  title="KPMG retire un rapport truffé d'études de cas IA inventées"
+  category="ia"
+  tags={["étude", "fiabilité"]}
+  sources={[
+    { label: "The Decoder", url: "https://the-decoder.com/kpmg-fabricated-ai-case-studies-in-a-report-designed-to-sell-clients-on-ai-adoption/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Un rapport censé convaincre les clients d'adopter l'IA contenait des études de cas fabriquées impliquant UBS et le NHS. Edward Tian (GPTZero) a contribué à révéler l'affaire et alerte sur les « hallucinations secondaires » : des affirmations fausses relayées par un cabinet de confiance. KPMG a retiré le document.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & outils"
+  category="ia"
+  tags={["open-source", "outils"]}
+  sources={[
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+- **[Gemini Omni Flash](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/)** — Google reprend la 1ʳᵉ place en text-to-video et image-to-video, devant Seedance 2.0 et son propre Veo 3.1.
+- **[Gemini-SQL2](https://www.marktechpost.com/2026/06/12/google-releases-gemini-sql2-gemini-3-1-pro-text-to-sql-scores-80-04-on-bird-single-model-leaderboard/)** — Gemini 3.1 Pro signe **80,04 %** sur le benchmark text-to-SQL BIRD, des requêtes exécutables et non plausibles.
+- **[MiniMax M3 (GGUF Unsloth)](https://huggingface.co/unsloth/MiniMax-M3-GGUF)** — quantification du modèle multimodal 427B (23B actifs) ; GGUF actuel text-only et expérimental.
+- **[LMCache](https://github.com/LMCache/LMCache)** — couche de cache KV open-source, jusqu'à 15× de débit avec vLLM.
+- **[ttsmodachi](https://github.com/coah80/talkmodachi-bot)** — bot Discord qui lit le chat vocal avec les voix de *Tomodachi Life*.
+</NewsItem>
+
+<NewsItem
+  title="Recherche & papers"
+  category="ia"
+  tags={["recherche", "papers"]}
+  sources={[
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+- **[DeepMind, « From AGI to ASI »](https://deepmind.google/research/publications/239142/)** — 14 chercheurs (dont Shane Legg) cartographient quatre voies de l'IA de niveau humain vers la superintelligence ([arXiv](https://arxiv.org/abs/2606.12683)).
+- **[Lookahead Sparse Attention (Tencent)](https://arxiv.org/abs/2606.09079)** — ramène l'empreinte mémoire d'un modèle long-contexte à **13,5 %** de l'original, en maintenant la précision.
+- **[SWE-Explore](https://the-decoder.com/ai-coding-agents-find-the-right-file-but-miss-the-exact-lines-that-matter-study-shows/)** — Claude Code et Codex trouvent le bon fichier mais ratent les lignes décisives ; la recherche de code est le goulot d'étranglement.
+- **[Open Knowledge Format (Google Cloud)](https://the-decoder.com/google-clouds-open-knowledge-format-turns-scattered-docs-into-markdown-files-for-ai-agents/)** — convertit la doc éparpillée en Markdown exploitable par les agents.
+- **[Mirage (Microsoft Research)](https://the-decoder.com/microsoft-researchs-mirage-gives-video-generation-a-persistent-spatial-memory-that-doesnt-forget-whats-around-the-corner/)** — mémoire spatiale persistante pour la vidéo générée, stockée en espace latent.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="React se dote d'une fondation sous la Linux Foundation"
+  category="web"
+  tags={["react", "open-source"]}
+  sources={[
+    { label: "React Foundation", url: "https://react.foundation/" },
+    { label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com" },
+  ]}
+>
+La **React Foundation** est lancée sous l'égide de la Linux Foundation, soutenue par Meta, Microsoft, Amazon et Vercel, pour financer les mainteneurs de 54+ bibliothèques de l'écosystème (Redux, TanStack Query, React Router). On peut parrainer une bibliothèque précise ou devenir membre votant des décisions de financement.
+</NewsItem>
+
+<NewsItem
+  title="Web & dev en bref"
+  category="web"
+  tags={["en-bref", "dev"]}
+  sources={[{ label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com" }]}
+>
+- **Les bots passent la barre des 57 %** du trafic web mondial (Cloudflare Radar : 57,6 % de requêtes HTTP, contre ~30 % il y a neuf mois). [r/webdev](https://www.reddit.com/r/webdev/s/dTNwmX0JUC)
+- **OpenAI rachète Ona** pour donner à Codex (5M+ utilisateurs hebdo) des environnements cloud persistants où les agents tournent des heures. [OpenAI](https://openai.com/index/openai-to-acquire-ona/)
+- **antirez** : la QA est le seul domaine où les LLM améliorent la qualité sans sacrifier la vitesse — un agent qui diffe les commits et simule des jours d'usage. [antirez.com](https://antirez.com/news/168)
+- **VS Code 1.123** impose un délai de **2 h** avant l'auto-mise à jour des extensions, après une série d'attaques de la chaîne d'approvisionnement. [The Hacker News](https://thehackernews.com/2026/06/vs-code-adds-2-hour-extension-auto.html)
+- **curl** suspend tout traitement de rapports de sécurité du 1ᵉʳ juillet au 3 août, épuisé par les signalements (souvent générés par IA). [Daniel Stenberg](https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/)
+- **TanStack Start vu par un cerveau Next.js** : une grille de correspondance concept par concept. [adarsha.dev](https://www.adarsha.dev/blog/tanstack-mental-model-for-nextjs-developers)
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Le robot humanoïde T1 perce le mur d'une frappe au but"
+  category="robotique"
+  tags={["humanoïde", "booster-robotics"]}
+  sources={[
+    { label: "Booster Robotics (X)", url: "https://x.com/boosterobotics/status/2060224106524709299" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com" },
+  ]}
+>
+Une vidéo montre le **T1** de Booster Robotics expédier des penalties dans la lucarne avec assez de puissance pour transpercer le mur derrière le but. Une équipe chinoise équipée du robot a décroché l'or à la RoboCup 2025 au Brésil.
+
+<Tweet id="2060224106524709299" />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="SpaceX signe la plus grosse IPO de l'histoire, Musk premier trillionaire"
+  category="finance"
+  tags={["ipo", "bourse"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html" },
+    { label: "CBS News", url: "https://www.cbsnews.com/news/spacex-spcx-stock-ipo-welder-employee-millionaire/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+L'action SpaceX bondit de **19 %** pour ses débuts et clôture sur une valorisation de **2 100 Md$**, faisant d'Elon Musk le premier trillionaire et créant plus de 4 000 salariés millionnaires, soudeurs et personnel de cantine inclus. La cotation a déclenché une manifestation à Times Square sur le bilan sécurité IA du groupe (parent de xAI) et un débat sur la valorisation, face à 4,69 Md$ de CA au T1.
+</NewsItem>

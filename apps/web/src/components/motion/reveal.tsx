@@ -1,5 +1,5 @@
-import { motion } from "motion/react"
 import type { HTMLMotionProps } from "motion/react"
+import { motion } from "motion/react"
 
 /** Shared easing — a soft "Framer" ease-out for smooth, modern motion. */
 export const EASE = [0.22, 1, 0.36, 1] as const

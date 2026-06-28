@@ -1,0 +1,172 @@
+---
+date: "2026-06-08"
+title: "L'IA construit l'IA, Siri renaît sous Gemini"
+lede: "Anthropic dit faire écrire 80 % de son code par Claude, OpenAI prépare une refonte de ChatGPT en superapp, et Apple rebâtit Siri sur Gemini à la WWDC — pendant que les valeurs IA dévissent et que SFR change de mains pour 20,35 Md€."
+categories: ["ia", "web", "robotique", "finance", "evenements"]
+sourceCount: 13
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic dit faire écrire 80 % de son code par Claude"
+  category="ia"
+  tags={["anthropic", "claude"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/institute/recursive-self-improvement" },
+    { label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com/p/ai-now-writes-80-of-anthropic-s-code" },
+  ]}
+>
+Plus de **80 %** du code fusionné en production chez Anthropic est désormais rédigé par Claude, et l'ingénieur type expédie environ **8×** plus de code par trimestre qu'en 2024. L'entreprise reste candide sur le goulot d'étranglement restant : le goût, le jugement, et la relecture qui ne suit pas le rythme de génération.
+</NewsItem>
+
+<NewsItem
+  title="Claude Opus 4.7 égale les logiciels de chimie sur l'analyse RMN"
+  category="ia"
+  tags={["anthropic", "recherche"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/research/making-claude-a-chemist" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Sans fine-tuning chimie, Opus 4.7 atteint le niveau de **ChemDraw** et **MestReNova** sur l'analyse de spectres RMN, avec une erreur moyenne de **±0,079 ppm** sur l'hydrogène (seuil acceptable : ±0,20). Sur la tâche inverse — déduire une structure depuis les données brutes — il récupère toutes les structures simples et 4 sur 7 des plus denses. Un chimiste peut coller son spectre dans un chat et récupérer une proposition, sans licence propriétaire.
+</NewsItem>
+
+<NewsItem
+  title="OpenAI prépare une refonte de ChatGPT en superapp"
+  category="ia"
+  tags={["openai", "chatgpt"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/07/openai-is-still-working-on-that-super-app/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/chatgpt-is-getting-its-biggest-overhaul-yet" },
+  ]}
+>
+Selon le *Financial Times*, OpenAI s'apprêterait à fusionner Codex, agents, génération d'images et outils tiers dans une seule « superapp », attendue dans les prochaines semaines. En parallèle, trois fonctions ont été livrées : un [Lockdown Mode](https://help.openai.com/en/articles/20001061-lockdown-mode) contre les injections de prompt, une nouvelle [mémoire « dreaming »](https://openai.com/index/chatgpt-memory-dreaming/), et l'envoi d'e-mails directement dans le chat.
+</NewsItem>
+
+<NewsItem
+  title="DeepSeek monte sur tous les fronts"
+  category="ia"
+  tags={["deepseek", "open-weight"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/claude-80-pourcent" }]}
+>
+- **[V4 Pro](https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision)** — un benchmark le place devant GPT-5.5 Pro sur la précision (à confirmer en test indépendant).
+- **[Adoption entreprises](https://the-decoder.com/deepseek-topped-ramps-trending-software-vendors-in-june-2026-as-us-companies-chase-cheaper-ai/)** — n°1 des fournisseurs IA en tendance chez Ramp en juin, devant OpenAI et Anthropic, tiré par le prix ; le chief economist de Ramp alerte sur le risque de sécurité d'un modèle chinois.
+- **[Levée de fonds](https://www.cnbc.com/2026/06/03/deepseek-slated-to-draw-7-billion-in-maiden-fundraising-sources-say.html)** — première ouverture de capital, ~7 Md$ visés.
+</NewsItem>
+
+<NewsItem
+  title="En bref — IA"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/claude-80-pourcent" }]}
+>
+- **Perplexity « Search as Code »** : les modèles écrivent leurs pipelines de recherche en Python plutôt que d'appeler des API figées — jusqu'à **−85 %** de coûts de tokens. [the-decoder](https://the-decoder.com/perplexitys-search-as-code-lets-ai-models-write-their-own-search-pipelines-instead-of-calling-fixed-apis/)
+- **Anthropic débauche Clive Chan**, 2e ingénieur puces d'OpenAI, à l'approche des IPO des deux labos. [the-decoder](https://the-decoder.com/anthropic-poaches-openais-second-ever-chip-engineer-as-both-companies-race-toward-ipos/)
+- **« Tokenpocalypse »** : TechCrunch anticipe une hausse des prix des API IA avant les entrées en bourse. [TechCrunch](https://techcrunch.com/2026/06/07/is-this-the-dawn-of-the-tokenpocalypse/)
+- **Claude Desktop sur Linux** : l'[issue GitHub](https://github.com/anthropics/claude-code/issues/65697) réclamant une version officielle grimpe (489 votes côté HN).
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Le React Compiler porté en Rust, surtout par l'IA"
+  category="web"
+  tags={["react", "rust", "ia"]}
+  sources={[
+    { label: "GitHub — facebook/react #36173", url: "https://github.com/facebook/react/pull/36173" },
+    { label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com/p/ai-now-writes-80-of-anthropic-s-code" },
+  ]}
+>
+Meta réécrit le React Compiler en Rust : environ **3×** plus rapide en plugin Babel et **~10×** sur la transformation cœur, avec les 1 725 fixtures qui passent. L'auteur de la PR le dit nettement : l'architecture est humaine, mais la majorité du code a été écrite par l'IA.
+</NewsItem>
+
+<NewsItem
+  title="Lectures & outils front-end"
+  category="web"
+  tags={["frontend", "outils"]}
+  sources={[{ label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com/p/ai-now-writes-80-of-anthropic-s-code" }]}
+>
+- **[The Problem With useEffect](https://www.react.doctor/blog/the-problem-with-useeffect)** — pourquoi tant de code d'effet est inutile ou subtilement buggé, et quoi utiliser à la place.
+- **[eslint-plugin-react-you-might-not-need-an-effect](https://github.com/nickjvandyke/eslint-plugin-react-you-might-not-need-an-effect)** — encode le guide officiel en règles : il pointe les `useEffect` à supprimer.
+- **[Angular v22](https://blog.angular.dev/announcing-angular-v22-c52bb83a4664)** — nouvelle version majeure.
+- **[Jira est Turing-complet](https://seriot.ch/computation/jira.html)** — preuve par une machine de Minsky bâtie uniquement avec des règles d'automatisation Jira.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Un robot Unitree G1 frappe un enfant lors d'une démo"
+  category="robotique"
+  tags={["unitree", "humanoïde", "sécurité"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/claude-80-pourcent" }]}
+>
+Affublé d'une perruque de clown, un humanoïde Unitree G1 a donné un coup de pied à un enfant lors d'une démonstration publique en Chine. L'enfant n'a pas été gravement blessé, mais la scène virale relance le débat sur la sécurité des humanoïdes dans des espaces bondés.
+
+<Tweet id="2062580144678842791" />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Les valeurs IA dévissent, plus de 1 000 Md$ partis en fumée"
+  category="finance"
+  tags={["marchés", "semi-conducteurs"]}
+  sources={[
+    { label: "Sherwood", url: "https://sherwood.news/markets/broadcoms-underwhelming-results-are-dragging-the-ai-complex-and-the-wider-market-lower/" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/08/softbank-samsung-tech-ai-stocks-asia-fall.html" },
+  ]}
+>
+Des résultats décevants chez Broadcom, Marvell et Micron, conjugués à des chances de baisse de taux en recul, ont effacé plus de **1 000 Md$** des marchés américains et brisé la série de 9 semaines de hausse du S&P 500. La correction s'est propagée à l'Asie : **SoftBank −6 %**, Samsung en repli, dans un mouvement de prise de bénéfices avant plusieurs IPO du secteur.
+</NewsItem>
+
+<NewsItem
+  title="SFR racheté pour 20,35 Md€ par Bouygues, Free et Orange"
+  category="finance"
+  tags={["télécoms", "m&a"]}
+  sources={[
+    { label: "BFM Business", url: "https://www.bfmtv.com/economie/entreprises/bouygues-telecom-free-et-orange-ont-trouve-un-accord-avec-altice-france-pour-le-rachat-de-sfr-pour-plus-de-20-milliards-d-euros_AN-202606070056.html" },
+    { label: "La Tribune", url: "https://www.latribune.fr/article/tech/telecoms/1455738099013614/sfr-rachete-par-bouygues-free-et-orange-le-protocole-daccord-est-signe-pour-le-deal-du-siecle-dans-les-telecoms" },
+  ]}
+>
+Le marché français passerait de quatre à trois opérateurs : Bouygues Telecom récupère ~52 % du chiffre d'affaires de SFR, Free ~27 % (dont RED), Orange ~21 %. L'opération reste soumise aux autorités de concurrence, et l'inquiétude monte chez les 8 000 salariés de SFR. [BFM Business](https://www.bfmtv.com/economie/entreprises/bouygues-telecom-free-et-orange-ont-trouve-un-accord-avec-altice-france-pour-le-rachat-de-sfr-pour-plus-de-20-milliards-d-euros_AN-202606070056.html)
+</NewsItem>
+
+<NewsItem
+  title="Google loue 920 M$/mois de calcul à SpaceX"
+  category="finance"
+  tags={["google", "compute"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/05/google-to-pay-spacex-920-million-a-month-for-xai-compute-capacity.html" },
+    { label: "Le Figaro", url: "https://www.lefigaro.fr/flash-eco/ia-spacex-signe-un-megacontrat-pour-fournir-de-la-puissance-de-calcul-a-google-20260606" },
+  ]}
+>
+Un dépôt réglementaire révèle que Google paiera près de **1 Md$ par mois** à SpaceX pour accéder à **110 000 GPU Nvidia** jusqu'en 2029. L'accord tombe quelques jours avant l'entrée en bourse de SpaceX, prévue vendredi 12 juin.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Anthropic appelle à une pause** concertée du développement de l'IA, le temps que les gouvernements et labos s'accordent sur un cadre. [Franceinfo](https://www.franceinfo.fr/internet/intelligence-artificielle/la-start-up-americaine-anthropic-un-des-feurons-de-l-intelligence-artificielle-suggere-a-ses-rivaux-une-pause-concertee-du-developpement-de-cette-technologie-afin-que-l-humanite-s-adapte_8045825.html)
+- **Irlande −12 %** de PIB sur un an, plombant la zone euro (−0,2 % au T1). [La Tribune](https://www.latribune.fr/article/economie/19690899735566/lirlande-fait-basculer-le-pib-de-la-zone-euro-dans-le-rouge)
+- **Broadway** signe sa saison record : ~**2 Md$** de recettes. [CNBC](https://www.cnbc.com/2026/06/05/broadway-record-ticket-sales.html)
+- **Déficit français** : Bercy projette jusqu'à 6,2 % du PIB en 2027 sans nouvelles économies. [Le Figaro](https://www.lefigaro.fr/conjoncture/le-deficit-pourrait-s-envoler-au-dela-de-6-en-2027-selon-les-dernieres-projections-de-bercy-20260605)
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="WWDC : Apple rebâtit Siri sur Gemini"
+  category="evenements"
+  tags={["apple", "wwdc", "siri"]}
+  sources={[
+    { label: "Apple Newsroom", url: "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" },
+  ]}
+>
+À la WWDC, Apple dévoile la plus grosse refonte de Siri depuis ses débuts, animée par une version custom des modèles **Gemini** de Google, avec conscience de l'écran et tâches multi-étapes entre apps. Le tout arrive avec **iOS 27** à l'automne. C'est la dernière WWDC de Tim Cook, qui cède sa place le 1ᵉʳ septembre. Le même vendredi, **SpaceX** vise l'IPO la plus grande de l'histoire (valorisation ~1 750 Md$).
+</NewsItem>

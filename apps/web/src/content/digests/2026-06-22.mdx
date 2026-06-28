@@ -1,0 +1,143 @@
+---
+date: "2026-06-22"
+title: "Claude pilote un robot 20x plus vite qu'une équipe humaine"
+lede: "Project Fetch phase 2 met un modèle Anthropic seul face à un robot quadrupède ; un second prix Nobel quitte DeepMind ; et la canicule pourrait coûter 210 Md€/an à la France."
+categories: ["ia", "robotique", "growth", "finance"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Sakana AI sort Fugu, un routeur multi-agents qui contourne les frontières"
+  category="ia"
+  tags={["modèle", "agents"]}
+  sources={[{ label: "Sakana AI", url: "https://sakana.ai/fugu/" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+La startup japonaise [annonce](https://x.com/SakanaAILabs/status/2068861630327443966) **Fugu**, une plateforme d'orchestration qui répartit chaque tâche entre plusieurs LLM spécialisés via un seul endpoint API, sans dépendre d'un modèle unique. Les premiers benchmarks rivaliseraient avec les modèles de pointe, mais aucune validation indépendante n'est encore disponible.
+
+<Tweet id="2068861630327443966" />
+</NewsItem>
+
+<NewsItem
+  title="John Jumper (Nobel 2024) quitte DeepMind pour Anthropic"
+  category="ia"
+  tags={["talents", "anthropic"]}
+  sources={[{ label: "John Jumper (X)", url: "https://x.com/JohnJumperSci/status/2068001285173834106" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Le co-lauréat du prix Nobel de chimie 2024, qui dirigeait l'équipe AlphaFold, part après près de neuf ans chez DeepMind. Son départ suit de quelques jours celui de Noam Shazeer, co-lead de Gemini et co-auteur du Transformer, parti chez OpenAI.
+</NewsItem>
+
+<NewsItem
+  title="Anthropic impose la vérification d'identité sur Claude"
+  category="ia"
+  tags={["anthropic", "privacy"]}
+  sources={[{ label: "Support Claude", url: "https://support.claude.com/en/articles/14328960-identity-verification-on-claude" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+La vérification d'identité devient obligatoire pour tous les utilisateurs, au nom de la sécurité et de la conformité. La mesure a fait grimper le fil dédié à **696 points sur Hacker News** et alimente de longues discussions [sur Reddit](https://old.reddit.com/r/ClaudeAI/comments/1ubm53n/official_anthropic_to_require_identity/), beaucoup d'utilisateurs s'inquiétant pour leur vie privée.
+</NewsItem>
+
+<NewsItem
+  title="Nous Research : Hermes Agent passe en mode « Blank Slate »"
+  category="ia"
+  tags={["agents", "open-source"]}
+  sources={[{ label: "Nous Research (X)", url: "https://x.com/NousResearch/status/2068405008685539514" }, { label: "GitHub", url: "https://github.com/NousResearch/hermes-agent" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Le nouveau mode de configuration démarre un agent avec seulement un provider, un modèle, les opérations de fichiers et un terminal — web, navigateur, exécution de code, vision, mémoire et serveurs MCP restent désactivés tant qu'on ne les ajoute pas. Posture de moindre privilège : rien que vous n'ayez choisi ne se charge, même après `hermes update`. La v0.17.0 ajoute iMessage, WhatsApp Business et des subagents en tâche de fond (1 475 commits, 245 contributeurs).
+</NewsItem>
+
+<NewsItem
+  title="OpenAI déploie ChatGPT Enterprise et Codex chez Samsung"
+  category="ia"
+  tags={["openai", "entreprise"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+Samsung Electronics généralise ChatGPT Enterprise (productivité) et Codex (développement) à tous ses salariés dans le monde. OpenAI présente l'opération comme l'un de ses plus gros déploiements en entreprise.
+</NewsItem>
+
+<NewsItem
+  title="UC Berkeley ouvre 2,2 millions de lois locales américaines"
+  category="ia"
+  tags={["dataset", "open-source"]}
+  sources={[{ label: "LOCUS-v1 (Hugging Face)", url: "https://huggingface.co/datasets/LocalLaws/LOCUS-v1" }, { label: "arXiv", url: "https://arxiv.org/abs/2606.19334" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+**LOCUS** rassemble 2,2 millions d'ordonnances locales (zonage, logement, bruit, licences) scrapées sur **9 239 villes et comtés**, couvrant la majorité de la population américaine. Les 7 millions de pages PDF ont été passées au modèle LightOnOCR-2-1B à **0,30 $ / 1 000 pages**, contre 1,50 $ via AWS Textract.
+</NewsItem>
+
+<NewsItem
+  title="Recherche : benchmarks, mémoire d'agents et inférence frugale"
+  category="ia"
+  tags={["recherche", "benchmarks"]}
+  sources={[{ label: "via Vision IA", url: "https://www.vision-ia.fr" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[OpenAI LifeSciBench](https://openai.com/index/introducing-life-sci-bench/)** — 750 tâches conçues par 173 experts pour évaluer le travail scientifique réel (interpréter des données contradictoires, concevoir des protocoles), pas la mémorisation.
+- **[Perplexity Brain](https://www.perplexity.ai/hub/blog/self-improving-memory-for-agents)** — mémoire auto-améliorante : l'agent apprend de ses succès, impasses et corrections, et construit chaque nuit un « wiki LLM » interne.
+- **[DeepAdapt ACI](https://www.deepadapt.ai/)** — traite localement sur CPU les requêtes connues et ne route vers le GPU que les cas nouveaux : jusqu'à **−82 % de coûts** et inférence **33x** plus rapide, chiffres à confirmer.
+- **[Stanford STORM](https://github.com/stanford-oval/storm)** — rédige des rapports cités sur n'importe quel sujet en simulant plusieurs perspectives d'experts (29 000 stars).
+</NewsItem>
+
+<NewsItem
+  title="En bref — outils & repos"
+  category="ia"
+  tags={["outils", "open-source"]}
+  sources={[{ label: "via Vision IA", url: "https://www.vision-ia.fr" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[AWS Continuum & Context](https://the-decoder.com/aws-says-ai-agents-lack-business-context-and-security-launches-two-services-to-patch-the-gaps/)** — Continuum corrige automatiquement les vulnérabilités de code, Context construit un graphe de connaissances métier pour les agents.
+- **[Recall](https://github.com/raiyanyahya/recall)** — mémoire de projet locale pour Claude Code, conserve le contexte entre sessions sans cache API (101 points HN).
+- **[Étude UC Berkeley](https://the-decoder.com/ai-is-inflating-student-grades-and-the-effect-points-to-outsourced-work-not-better-learning/)** — sur 500 000 notes, ChatGPT gonfle les résultats des devoirs maison mais pas des examens : externalisation, pas apprentissage.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Project Fetch : Claude Opus 4.7 configure un robot 20x plus vite qu'une équipe"
+  category="robotique"
+  tags={["anthropic", "agents"]}
+  sources={[{ label: "Anthropic", url: "https://www.anthropic.com/research/project-fetch-phase-two" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+Livré seul face à un robot quadrupède, Claude Opus 4.7 a accompli 5 tâches en **12 minutes** (brancher le matériel, lire caméra et lidar, écrire le code de déplacement, localiser une balle) là où une équipe humaine assistée par Claude avait mis **264 minutes**. Le modèle a produit **1 045 lignes de code** contre 10 309 pour l'équipe. Limite : il n'a pas réussi à rapporter la balle — le contrôle en boucle fermée en temps réel lui échappe encore.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="La confiance du public envers l'IA s'effondre"
+  category="growth"
+  tags={["étude", "opinion"]}
+  sources={[{ label: "Pew Research", url: "https://www.pewresearch.org/internet/2026/06/17/how-opinions-and-use-of-ai-differ-by-age/" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Seuls **16 %** des Américains pensent que l'IA aura un impact positif sur la société dans les 20 prochaines années, contre **40 %** qui anticipent un effet net négatif (Pew). Les moins de 30 ans sont les plus sceptiques (14 % favorables). En parallèle, des fermes de téléphones génèrent à l'échelle industrielle de faux likes et temps de visionnage, faussant les métriques d'engagement.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Accenture dévisse de 18 %, le conseil rattrapé par l'IA"
+  category="finance"
+  tags={["conseil", "résultats"]}
+  sources={[{ label: "Financial Times", url: "https://www.ft.com/content/9f063b07-da39-4feb-92ab-ee0f91385c62" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+L'action a chuté de **18 %** sur la semaine, au plus bas depuis 2017, après une révision à la baisse des prévisions et un recul de **3 %** des nouvelles commandes. Les investisseurs redoutent que l'IA permette aux entreprises de réinternaliser le travail jadis sous-traité aux cabinets.
+</NewsItem>
+
+<NewsItem
+  title="La canicule pourrait coûter 210 Md€/an à la France"
+  category="finance"
+  tags={["climat", "macro"]}
+  sources={[{ label: "La Tribune", url: "https://www.latribune.fr/article/economie/80833466133648/240-milliards-de-dollars-voila-ce-que-leconomie-francaise-pourrait-perdre-a-cause-des-vagues-de-chaleur" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+Allianz Trade estime que les vagues de chaleur amputeraient la croissance des grandes économies européennes de 5 à 7 % d'ici 2030, avec **210 Md€** de pertes de PIB pour la France (Italie −128 Md€, Allemagne −114 Md€). Au-delà de 30 °C, la production horaire baisse de 1,10 € par degré supplémentaire ; **49 départements** sont en vigilance rouge ce lundi. Les recettes fiscales reculeraient de 1,8 %/an, creusant le déficit de 2,2 % en moyenne.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Maisons du Monde** : plus de **400 M€** de pertes en 2025 ; les fonds Alteri et Eicos proposent un refinancement et une prise de contrôle de 95 %, à défaut de redressement judiciaire. [Le Figaro](https://www.lefigaro.fr/societes/maisons-du-monde-devoile-des-pertes-en-2025-deux-fonds-britanniques-prets-a-prendre-la-main-20260619)
+- **Micron** publie ses résultats mercredi, baromètre de la demande mémoire liée à l'IA et aux datacenters.
+- **Iran–États-Unis** : premier round de négociations conclu en Suisse sur une « feuille de route » à 60 jours, malgré un message menaçant de Trump ; le pétrole reste sous tension. [NPR](https://www.npr.org/2026/06/21/g-s1-129222/us-iran-deal-lebanon-israel-strait-hormuz-jd-vance)
+- **Waymo** rappelle ~4 000 robotaxis (6e fois) après au moins 13 incursions dans des zones de chantier d'autoroute. [TechCrunch](https://techcrunch.com/2026/06/18/waymo-recalls-nearly-4000-robotaxis-to-stop-them-driving-into-highway-construction-zones/)
+</NewsItem>

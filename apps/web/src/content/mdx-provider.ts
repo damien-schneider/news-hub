@@ -1,7 +1,7 @@
 import type { ComponentType } from "react"
 import type { ContentProvider } from "./provider"
-import { DigestFrontmatterSchema } from "./types"
 import type { DigestSummary } from "./types"
+import { DigestFrontmatterSchema } from "./types"
 
 /**
  * Each `.mdx` digest compiles to a module exposing:

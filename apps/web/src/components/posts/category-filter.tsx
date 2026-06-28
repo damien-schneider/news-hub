@@ -1,6 +1,5 @@
-import { LayoutGroup, motion } from "motion/react"
-
 import { cn } from "@workspace/ui/lib/utils"
+import { LayoutGroup, motion } from "motion/react"
 
 import { getCategory, sortCategories } from "@/content/categories"
 

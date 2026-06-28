@@ -30,7 +30,7 @@ export function NewsImage({
         className="w-full rounded-xl border border-border/70 bg-muted object-cover"
       />
       {caption ? (
-        <figcaption className="mt-1.5 text-xs text-muted-foreground">
+        <figcaption className="mt-1.5 text-muted-foreground text-xs">
           {caption}
         </figcaption>
       ) : null}
@@ -47,7 +47,7 @@ interface MediaItem {
 /** Horizontal, snap-scrolling media strip (matches the timeline-feed look). */
 export function Gallery({ items }: { items: MediaItem[] }) {
   return (
-    <div className="my-3 flex snap-x snap-mandatory [scrollbar-width:none] gap-1.5 overflow-x-auto [mask-image:linear-gradient(to_right,#000_88%,transparent)] pb-2 [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+    <div className="my-3 flex snap-x snap-mandatory gap-1.5 overflow-x-auto pb-2 [-ms-overflow-style:none] [mask-image:linear-gradient(to_right,#000_88%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {items.map((item) => (
         <div
           key={item.src}
@@ -116,7 +116,7 @@ export function Video({
         )}
       </div>
       {caption ? (
-        <figcaption className="mt-1.5 text-xs text-muted-foreground">
+        <figcaption className="mt-1.5 text-muted-foreground text-xs">
           {caption}
         </figcaption>
       ) : null}

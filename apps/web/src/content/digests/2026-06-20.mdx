@@ -1,0 +1,142 @@
+---
+date: "2026-06-20"
+title: "Spécial robotique : l'anti-humanoïde et le téléphone-robot"
+lede: "Journée calme côté modèles. Genesis AI dévoile Eno, un humanoïde qui ne ressemble à rien d'humain ; Honor sort son téléphone à caméra motorisée au festival de Shanghai ; Tailwind Labs éclate ui.sh en skills locaux."
+categories: ["ia", "web", "robotique"]
+sourceCount: 10
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic négocie la levée du blocage sur Mythos et Fable"
+  category="ia"
+  tags={["anthropic", "réglementation"]}
+  sources={[
+    { label: "AOL / NY Post", url: "https://www.aol.com/articles/anthropic-floats-proposal-commerce-secretary-180806000.html" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-e7b" },
+  ]}
+>
+Une semaine après que l'administration Trump a imposé des contrôles à l'export sur Mythos et Fable 5 — poussant Anthropic à couper l'accès mondial —, le labo soumet une proposition au secrétaire au Commerce Howard Lutnick : meilleure communication avec la Maison-Blanche et résolution plus rapide des failles de sécurité. Le déclencheur : Amazon a alerté le gouvernement sur un contournement possible des garde-fous. ~200 organisations du programme Project Glasswing (Cisco, AWS, JPMorgan) gardent l'accès à Mythos.
+</NewsItem>
+
+<NewsItem
+  title="John Jumper quitte DeepMind pour Anthropic"
+  category="ia"
+  tags={["anthropic", "recrutement"]}
+  sources={[
+    { label: "John Jumper (X)", url: "https://x.com/JohnJumperSci/status/2068001285173834106" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-e7b" },
+  ]}
+>
+Le prix Nobel de chimie 2024 (AlphaFold) rejoint Anthropic, l'un des plus gros transferts de l'année. Le départ suit celui de Noam Shazeer et relance les inquiétudes sur la rétention des talents chez Google DeepMind.
+
+<Tweet id="2068001285173834106" />
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles open-weight"
+  category="ia"
+  tags={["open-source", "modèle"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-e7b" }]}
+>
+- **[poolside Laguna-M.1](https://huggingface.co/poolside/Laguna-M.1)** — MoE coding Apache-2.0, 225B/23B actifs, contexte 262k, **74,6 %** sur SWE-bench Verified ; poids BF16/FP8/NVFP4. Sans doute le meilleur modèle de code open-weight d'un labo américain.
+- **[QUEST-35B](https://www.reddit.com/r/LocalLLaMA/comments/1u9w6my/researchers_trained_a_deep_research_agent_with_32/)** — agent « Deep Research » d'Ohio State, entraîné sur ~32 H100 et ~8k échantillons synthétiques ; code, poids, données et recette ouverts, placé en tête sur Mind2Web 2 et GAIA.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="ui.sh passe au local-first et éclate son skill /ui"
+  category="web"
+  tags={["tailwind", "outils", "ia"]}
+  sources={[
+    { label: "ui.sh", url: "https://ui.sh/" },
+    { label: "via Tailwind Weekly", url: "https://tailwindweekly.com" },
+  ]}
+>
+Tailwind Labs remplace le skill unique `/ui` par une série de skills installés localement, sans serveur MCP distant comme point de défaillance. `/design` reprend les règles couleur/espacement/typo/accessibilité ; suivent `/ideas`, `/brand-kit` (via gpt-image-2), `/componentize`, `/canonicalize-tailwind`, `/add-dark-mode`, `/make-responsive` et `/markup-from-image` (screenshot ou export Figma vers HTML/JSX propre). Le site ajoute aussi des comptes utilisateurs pour le partage de docs en équipe.
+</NewsItem>
+
+<NewsItem
+  title="Trois lectures front-end : animations, @property, design systems"
+  category="web"
+  tags={["css", "lecture"]}
+  sources={[{ label: "via Tailwind Weekly", url: "https://tailwindweekly.com" }]}
+>
+- **[Good vs Great Animations](https://emilkowal.ski/ui/good-vs-great-animations)** — d'Emil Kowalski : origine d'animation crédible pour les dropdowns, easing selon entrée/sortie/déplacement, ressorts (Motion) vs courbes CSS, et quand ne pas animer du tout.
+- **[Taking a closer look at @property](https://utilitybend.com/blog/taking-a-closer-look-at-property-in-css/)** — support navigateur enfin mûr : propriétés typées, fallback propre sur valeur invalide, contrôle de l'héritage, et animation de teintes, de `clip-path` ou de dégradés.
+- **[Framework-agnostic design systems](https://piccalil.li/blog/framework-agnostic-design-systems-part-1/)** — guide pratique (et long) pour une bibliothèque de composants en web components, avec Elena et VitePress, exemple d'un bouton de bout en bout.
+</NewsItem>
+
+<NewsItem
+  title="Outils & ressources front-end"
+  category="web"
+  tags={["outils", "open-source"]}
+  sources={[{ label: "via Tailwind Weekly", url: "https://tailwindweekly.com" }]}
+>
+- **[ReUI](https://reui.io/)** — pack open-source de 1000+ composants bâtis sur les primitives shadcn/ui, compatible Radix et Base UI.
+- **[QuiverAI](https://quiver.ai/)** — modèle de fondation pour graphiques vectoriels : SVG propres (logos, illustrations) générés depuis du texte ou une référence.
+- **[zot](https://www.zot.sh/)** — agent de code en un seul binaire Go, sans Docker, multi-modèles.
+- **[Marked 3](https://markedapp.com/)** — aperçu Markdown live sur Mac, export PDF/HTML/DOCX. **[Peeker](https://getpeeker.com/)** — alerte discrète quand quelqu'un passe derrière vous, on-device.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Genesis AI dévoile Eno, un « anti-humanoïde »"
+  category="robotique"
+  tags={["humanoïde", "design"]}
+  sources={[
+    { label: "Genesis AI", url: "https://www.genesis.ai/press/meet-eno" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-genesis-ai-unveils-the-anti-humanoid" },
+  ]}
+>
+À rebours des startups qui copient l'humain, Genesis AI (Palo Alto) présente Eno : un robot à roues, sans tête ni visage, au design minimaliste d'électroménager pensé pour se fondre dans un salon. Il a réalisé de l'automatisation de laboratoire en démo. Sortie publique au Q3.
+
+<Video src="https://youtu.be/zab62_u-a5U" caption="Eno en action — Genesis AI." />
+</NewsItem>
+
+<NewsItem
+  title="Le téléphone-robot de Honor au festival de Shanghai"
+  category="robotique"
+  tags={["smartphone", "honor"]}
+  sources={[
+    { label: "Variety", url: "https://variety.com/2026/film/festivals/honor-arri-robot-phone-shanghai-film-festival-1236780822" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-genesis-ai-unveils-the-anti-humanoid" },
+  ]}
+>
+Honor a dévoilé son Robot Phone au 28e festival international du film de Shanghai, dont il était partenaire imagerie officiel. Une caméra motorisée sur nacelle titane sort du corps de l'appareil comme une antenne et suit les sujets automatiquement ; co-développée avec ARRI (LogC, LUTs). Elle a filmé les 21 jurés et les tapis rouges. Commercialisation au Q3.
+
+<Video src="https://youtu.be/qP_2sGSg2hA" caption="Première vidéo cinématographique tournée au Robot Phone, jury du SIFF." />
+</NewsItem>
+
+<NewsItem
+  title="Waymo lance un abonnement Premier à 29,99 $/mois"
+  category="robotique"
+  tags={["robotaxi", "waymo"]}
+  sources={[
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/11/waymo-launches-premier-subscription-tier-for-29point99-a-month.html" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-genesis-ai-unveils-the-anti-humanoid" },
+  ]}
+>
+Le robotaxi inaugure une formule sur invitation à **29,99 $/mois** à San Francisco, L.A. et Phoenix : appariement prioritaire, cinq annulations gratuites par mois, 10 % de crédits fidélité. Objectif : capter les gros utilisateurs et bâtir un revenu récurrent au-delà du tarif à la course.
+</NewsItem>
+
+<NewsItem
+  title="En bref robotique"
+  category="robotique"
+  tags={["en-bref"]}
+  sources={[
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/robotics-special-genesis-ai-unveils-the-anti-humanoid" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-e7b" },
+  ]}
+>
+- **Samsung** envisagerait une prise de participation dans **Boston Dynamics**, en rachetant des parts à SoftBank. [SamMobile](https://www.sammobile.com/news/samsung-considers-a-stake-in-us-robotics-firm-boston-dynamics)
+- **Alibaba** ouvre sa **Qwen-Robot Suite** : trois modèles déployables sur humanoïdes, bras et quadrupèdes. [Qwen](https://qwen.ai/blog?id=qwen-robotsuite)
+- **Cancer** : un laboratoire robotisé a enchaîné l'équivalent de 10 000 expériences d'une semaine et identifié 9 médicaments contre les cellules tumorales résiduelles. [Reuters](https://www.reuters.com/business/healthcare-pharmaceuticals/robots-improve-drug-tests-catching-lurking-cancer-cells-2026-06-17/)
+- **Milrem Robotics** propose de border les 3 460 km de frontière est de l'OTAN (Finlande–Pologne) de robots terrestres, drones et capteurs. [The Defense Post](https://thedefensepost.com/2026/06/16/milrem-drone-hunting-robot-wall/)
+- **Tesla Cybercab** : des dépôts EPA suggèrent ~480 km d'autonomie sur une batterie de 48 kWh. [Interesting Engineering](https://interestingengineering.com/innovation/epa-filings-reveals-tesla-cybercab-specs)
+- **Figure** : « pour la première fois, les robots sont plus nombreux que les humains chez Figure ». [Brett Adcock (X)](https://x.com/adcock_brett/status/2068040783295627609)
+</NewsItem>

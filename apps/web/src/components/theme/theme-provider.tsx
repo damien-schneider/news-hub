@@ -1,3 +1,4 @@
+import type { ReactNode } from "react"
 import {
   createContext,
   use,
@@ -6,7 +7,6 @@ import {
   useMemo,
   useState,
 } from "react"
-import type { ReactNode } from "react"
 
 export type Theme = "light" | "dark" | "system"
 

@@ -20,4 +20,7 @@ export const getDigestSummary = mdxGetSummary
 /** The non-serializable MDX body component — resolve inside the component. */
 export const getDigestComponent = mdxGetComponent
 
+export type { SearchHit, SearchItem } from "./search"
+export { getDigestItems, recentHits, searchAll } from "./search"
+
 export type { Digest, DigestSummary, NewsItem } from "./types"

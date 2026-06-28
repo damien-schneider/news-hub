@@ -1,0 +1,183 @@
+---
+date: "2026-06-05"
+title: "L'IA qui écrit l'IA, et le PC qui fait tourner 120 milliards de paramètres"
+lede: "Anthropic dit que Claude écrit 80 % de son code et accélère 52× un script d'entraînement ; Nvidia met une IA de 120 Md de paramètres sur un PC de bureau ; Las Vegas met ses deux plus gros casinos en vente."
+categories: ["ia", "web", "robotique", "hardware", "finance"]
+sourceCount: 13
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic : Claude accélère 52× un entraînement et écrit 80 % de son code"
+  category="ia"
+  tags={["anthropic", "rsi"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/institute/recursive-self-improvement" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-7a8" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/claude-is-accelerating-its-own-development" },
+  ]}
+>
+Sur le test récurrent d'Anthropic — accélérer un script qui entraîne un petit modèle — Opus 4 plafonnait à 3×, le modèle interne *Mythos Preview* atteint **52×**. Plus de **80 % du code** fusionné en production est écrit par Claude (mai), et sur des tâches d'ingénierie ouvertes son taux de réussite est passé de ~26 % à 76 % en six mois. Anthropic parle de premiers signes d'auto-amélioration récursive et écrit qu'il « serait bon que le monde garde l'option de ralentir ou suspendre » le développement de pointe. Le billet a dépassé 3M de vues.
+</NewsItem>
+
+<NewsItem
+  title="ChatGPT « rêve » sa mémoire et franchit le milliard d'utilisateurs"
+  category="ia"
+  tags={["openai", "mémoire"]}
+  sources={[
+    { label: "OpenAI", url: "https://openai.com/index/chatgpt-memory-dreaming" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Le nouveau système *Dreaming* synthétise le contexte des conversations passées en arrière-plan, sans qu'on dise « retiens ça ». Le rappel factuel monte à **82,8 %** (41,5 % en 2024), l'adhérence aux préférences à 71,3 %. La capacité mémoire double pour les abonnés Plus et Pro aux États-Unis. En parallèle, ChatGPT devient l'app la plus rapide à atteindre **1 milliard** d'utilisateurs mensuels.
+</NewsItem>
+
+<NewsItem
+  title="OpenAI glisse l'agent Codex dans ChatGPT pour tous"
+  category="ia"
+  tags={["openai", "agents"]}
+  sources={[
+    { label: "9to5Mac", url: "https://9to5mac.com/2026/06/02/openai-putting-codex-inside-chatgpt-app-everywhere-releasing-6-business-plugins/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/votre-prochain-pc-fera-tourner-une-ia-de-120-milliards-de-parametres-sans-cloud" },
+  ]}
+>
+Codex se déploie dans ChatGPT pour l'ensemble des utilisateurs, avec des plugins par métier, des annotations en ligne et **Sites**, qui génère une application web déployable à partir d'un seul prompt. OpenAI revendique **5 millions d'utilisateurs hebdomadaires** de Codex, tirés par les non-développeurs — un positionnement frontal face à Anthropic Cowork. Un plugin iOS permet aussi de tester une app SwiftUI dans le navigateur avec *hot reload*.
+</NewsItem>
+
+<NewsItem
+  title="NVIDIA sort Nemotron 3 Ultra, 550B ouvert pour agents longue durée"
+  category="ia"
+  tags={["modèle", "open-weights"]}
+  sources={[
+    { label: "NVIDIA — Hugging Face", url: "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-7a8" },
+  ]}
+>
+MoE hybride Mamba/attention de **550 Md de paramètres** (55 Md actifs), contexte 1M, pré-entraîné en NVFP4 sur 20T tokens. NVIDIA annonce jusqu'à 5× plus rapide et 30 % moins cher sur les tâches agentiques, et publie poids, recettes et données sous licence OpenMDW 1.1. Artificial Analysis le mesure à 47,7 sur son indice — meilleur modèle open-weights américain testé, derrière Kimi K2.6 — avec plus de 400 tokens/s.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & génération d'images"
+  category="ia"
+  tags={["open-source", "image"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/votre-prochain-pc-fera-tourner-une-ia-de-120-milliards-de-parametres-sans-cloud" }]}
+>
+- **[Gemma 4 12B](https://huggingface.co/google/gemma-4-12B)** — famille open-weights de Google (E2B à 31B), 140+ langues, contexte 256K, archi sans encodeur ; Unsloth en livre un GGUF 2-bit à **4,66 Go**.
+- **[Ideogram 4.0 & Reve 2.0](https://blog.reve.com/posts/the-layout-bet/)** — deux modèles d'image qui troquent le prompt texte contre le *layout* ; Ideogram 4.0 passe en open-weights (9,3B, OCR anglais 0,97), mais arrive filigrané et censuré.
+- **[Grok Imagine 1.5](https://the-decoder.com/xai-updates-grok-imagine-to-1-5-with-image-to-video-generation-at-720p-resolution/)** — xAI passe à l'image-vers-vidéo en 720p, clips assemblables.
+</NewsItem>
+
+<NewsItem
+  title="Des profs de droit préfèrent les réponses de l'IA, 75 % du temps"
+  category="ia"
+  tags={["étude", "stanford"]}
+  sources={[{ label: "Stanford Law", url: "https://law.stanford.edu/publications/law-professors-prefer-ai-over-peer-answers/" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-7a8" }]}
+>
+Étude en aveugle : 16 professeurs de droit des contrats écrivent 40 questions et jugent **2 918** paires de réponses humain/IA. Le modèle (Gemini 2.5 Pro, réponses bornées à ~50-108 mots) l'emporte **75,3 %** du temps et est jugé « nuisible » bien plus rarement (3,53 % contre 12,06 % pour les humains).
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Le streaming HTML hors ordre arrive dans les navigateurs"
+  category="web"
+  tags={["html", "streaming"]}
+  sources={[
+    { label: "Chrome for Developers", url: "https://developer.chrome.com/blog/declarative-partial-updates" },
+    { label: "via Modern Web Weekly", url: "https://modernwebweekly.substack.com/p/out-of-order-streaming-html-is-coming" },
+  ]}
+>
+Chrome 148 (drapeau expérimental) ajoute les **Declarative Partial Updates** : des instructions `<?marker name>` et des `<template for>` qui laissent injecter du HTML dans la page quel que soit l'ordre de livraison, sans JavaScript. De nouvelles méthodes `streamAppendHTMLUnsafe()` apportent enfin le *parser* en streaming aux SPA. La [spec WICG](https://github.com/WICG/declarative-partial-updates) est posée, WebKit a annoncé son support et Firefox a une position positive.
+</NewsItem>
+
+<NewsItem
+  title="Cloudflare rachète VoidZero, l'équipe derrière Vite"
+  category="web"
+  tags={["cloudflare", "tooling"]}
+  sources={[
+    { label: "Cloudflare", url: "https://blog.cloudflare.com/voidzero-joins-cloudflare/" },
+    { label: "VoidZero", url: "https://voidzero.dev/posts/voidzero-cloudflare" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-not-much-happened-today-7a8" },
+  ]}
+>
+Cloudflare absorbe VoidZero (Vite, Vitest, Rolldown, Oxc, Vite+), Evan You et son équipe rejoignant l'organisation Emerging Technology. Vite — **100M de téléchargements/semaine** — reste MIT et vendor-neutral, avec **1M$** versés à un fonds pour les mainteneurs indépendants. La logique affichée : une chaîne d'outils unique qu'un agent IA pilote de façon fiable, du code local au déploiement edge.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Robots : Proteus parle, BYD vend des humanoïdes, Stretch 4 entre au salon"
+  category="robotique"
+  tags={["humanoïde", "domestique"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/votre-prochain-pc-fera-tourner-une-ia-de-120-milliards-de-parametres-sans-cloud" }]}
+>
+- **[Amazon Proteus](https://www.theverge.com/ai-artificial-intelligence/942884/amazon-next-generation-warehouse-robot-proteus)** — la nouvelle version du robot d'entrepôt comprend les ordres en langage naturel, sans interface dédiée.
+- **[BYD](https://cnevpost.com/2026/06/03/byd-enters-humanoid-robot-market/)** — confirme un programme humanoïde (7e génération) qu'il veut écouler via ses 150+ concessionnaires, tout en équipant ses usines.
+- **[Hello Robot Stretch 4](https://techcrunch.com/2026/06/04/is-silicon-valley-ready-to-put-robots-in-peoples-homes-hello-robot-is/)** — 4e génération du robot d'assistance domestique destiné aux particuliers.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Nvidia RTX Spark : une IA de 120 Md de paramètres en local sur un PC"
+  category="hardware"
+  tags={["nvidia", "ia-locale"]}
+  sources={[{ label: "AP News", url: "https://apnews.com/article/c807f7333b93b9927b62b1240dcf65a1" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/votre-prochain-pc-fera-tourner-une-ia-de-120-milliards-de-parametres-sans-cloud" }]}
+>
+La puce GB10 délivre **1 PFLOP** en FP4 avec **128 Go** de mémoire unifiée et fait tourner des modèles jusqu'à **120 milliards de paramètres** sans cloud. Lenovo et HP assemblent les premiers PC, Microsoft ré-architecture Windows et Adobe refond Photoshop et Premiere pour exploiter la puce.
+
+<NewsImage src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f4aa5b97-3467-4043-834d-b0dfd3bd3f48/newsletter_01_Nvidia_lance_RTX_Spark__lIA_120_milliard.jpeg?t=80643830" alt="Nvidia RTX Spark" caption="Nvidia RTX Spark, l'IA locale sur le bureau." />
+</NewsItem>
+
+<NewsItem
+  title="TSMC ne suit plus, et 70 % des Américains rejettent les data centers"
+  category="hardware"
+  tags={["semi-conducteurs", "data-centers"]}
+  sources={[
+    { label: "The Verge", url: "https://www.theverge.com/tech/943066/tsmc-ai-demand-struggles" },
+    { label: "Heatmap", url: "https://heatmap.news/politics/americans-oppose-data-centers-poll" },
+  ]}
+>
+Le PDG de TSMC, C.C. Wei, reconnaît ne pas pouvoir répondre à la demande américaine de puces IA et prévient que les pénuries de RAM et de NAND dureront plusieurs années. Côté infrastructures, **70 %** des Américains s'opposent désormais à un data center près de chez eux, surtout pour la consommation d'eau (~300 000 gallons/jour) ; Microsoft assure que ses nouveaux centres en consommeraient autant qu'un restaurant.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Las Vegas met Caesars et MGM en vente"
+  category="finance"
+  tags={["tourisme", "m&a"]}
+  sources={[
+    { label: "Les Échos", url: "https://www.lesechos.fr/industrie-services/tourisme-transport/rien-ne-va-plus-dans-les-casinos-de-las-vegas-de-nouveaux-milliardaires-arrivent-a-la-rescousse-2235015" },
+    { label: "LVCVA", url: "https://press.lvcva.com/news-releases/las-vegas-welcomes-38.5-million-visitors-in-a-complex-year-marked-by-shifting-travel-dynamics/s/eb1a5d19-71e6-4df5-b0da-c20fc38fa2ac" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+La fréquentation a chuté de **7,5 %** en 2025, la plus forte baisse hors Covid depuis les années 70. Endettés, les deux plus gros opérateurs, **Caesars** et **MGM Resorts**, sont à vendre et attirent des offres à plusieurs milliards de milliardaires misant sur les paris en ligne. Paradoxe : les revenus des casinos ont atteint un record de **8,8 Md$**, la ville cherchant une clientèle plus riche (mises minimales en hausse, parkings payants).
+</NewsItem>
+
+<NewsItem
+  title="Anthropic vise 47 Md$ avant son IPO, DeepSeek lève 7,4 Md$"
+  category="finance"
+  tags={["levée", "ia"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/" },
+    { label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-06-03/deepseek-close-to-sealing-7-billion-funding-in-historic-ai-deal" },
+  ]}
+>
+Anthropic affiche **47 Md$** de revenus annualisés en mai contre 9 Md$ fin 2025 (+422 % en six mois) ; à l'approche de l'IPO, Daniela Amodei balaie les doutes sur la rentabilité. DeepSeek s'apprête de son côté à lever **7,4 Md$** pour une valorisation proche de **49 Md$**. Anthropic a aussi signé avec l'écurie [Atlassian Williams F1](https://www.williamsf1.com/articles/0f1eece4-e632-49c9-a767-148159bbbf87/anthropic-atlassian-williams-f1-team-multi-year-partnership-claude-official-thinking-partner) pour faire de Claude son « Official Thinking Partner ».
+</NewsItem>
+
+<NewsItem
+  title="En bref"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Blackstone** plafonne à 5 % les retraits de son fonds de crédit privé, après des demandes de **4,4 Md$** (~10 % de l'encours), jugé trop exposé aux éditeurs de logiciels menacés par l'IA. [WSJ](https://www.wsj.com/finance/investing/investors-seek-to-pull-10-from-blackstones-giant-private-credit-fund-7cbca527)
+- **2 millions** de nouveaux millionnaires dans le monde en 2025 (+7,9 %), l'Asie-Pacifique en tête (+9,4 %), selon Capgemini. [Libération](https://www.liberation.fr/economie/le-nombre-de-plus-riches-et-leur-fortune-ont-de-nouveau-augmente-en-2025-20260604_MQVTXPQK55HOPLU4CH5M4JXYJE/)
+- **Tim Berners-Lee** met en garde : intégrer l'IA aux moteurs de recherche trahit les principes fondateurs du Web. [Le Figaro](https://www.lefigaro.fr/secteur/high-tech/preserver-les-valeurs-du-web-l-inventeur-d-internet-met-en-garde-contre-les-derives-de-l-ia-20260604)
+- **Jeff Bezos** finance Flourish, qui lève **500M$** (valo 2,5 Md$) pour chercher l'« algorithme fondamental » du cerveau. [Wired](https://www.wired.com/story/jeff-bezos-is-funding-a-wild-hunt-for-the-brains-core-algorithm/)
+</NewsItem>

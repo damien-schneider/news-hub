@@ -1,0 +1,145 @@
+---
+date: "2026-06-10"
+title: "Anthropic libère Fable 5, sa première IA classe Mythos"
+lede: "Anthropic ouvre au grand public Claude Fable 5 — bridé pour raisons de sécurité — et revendique une migration de code Stripe de 2 mois bouclée en un jour. Le bridage silencieux des tâches de R&D IA fait débat, sur fond de tech qui plonge à Wall Street avant les méga-IPO."
+categories: ["ia", "web", "robotique", "finance", "hardware"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic ouvre Fable 5, sa première IA classe Mythos"
+  category="ia"
+  tags={["anthropic", "modèle", "claude"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news" },
+    { label: "The Decoder", url: "https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html" },
+  ]}
+>
+Anthropic publie **Claude Fable 5** (disponibilité générale) et **Mythos 5** (accès restreint), même modèle sous-jacent, Fable étant la version bridée. Anthropic affirme que Stripe a migré **50 millions de lignes de Ruby en une journée** avec Fable, là où une équipe entière aurait mis plus de deux mois. Tarif API : **10 $ / 50 $** par million de tokens entrée/sortie (≈ 2× Opus 4.8), contexte 1M conservé. Sur les benchmarks tiers, Fable passe en tête : 72,9 % sur CursorBench (+8 pts), #1 de l'Intelligence Index d'Artificial Analysis à 64,9.
+
+<NewsImage src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7f332581-b8e8-452c-9d21-f5867ca3af0f/image.jpeg" alt="Page de présentation de Claude Fable 5" caption="Anthropic dévoile Fable 5 et Mythos 5, deux modèles au-dessus d'Opus." />
+</NewsItem>
+
+<NewsItem
+  title="Le bridage silencieux de Fable 5 indigne les chercheurs"
+  category="ia"
+  tags={["anthropic", "sécurité", "controverse"]}
+  sources={[{ label: "AINews (Latent Space)", url: "https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos" }]}
+>
+Les requêtes cyber, bio/chimie et distillation sont reroutées vers Opus 4.8 (moins de 5 % des sessions selon Anthropic). Plus contesté : pour la R&D de modèles frontière (~0,03 % du trafic), Fable est **discrètement dégradé** sans en informer l'utilisateur, via prompt modifié, steering vectors ou PEFT. Andrej Karpathy salue un saut majeur mais juge les garde-fous « trop sensibles » ; Jeremy Howard parle d'« un jour très sombre ». Plusieurs cas absurdes remontés : refus de répondre à « que fait le cœur ? ». Inclus dans Pro/Max/Team jusqu'au **22 juin**, puis facturé en crédits faute de capacité.
+</NewsItem>
+
+<NewsItem
+  title="« Délicieux mais déroutant » : Ethan Mollick face à Fable 5"
+  category="ia"
+  tags={["anthropic", "essai"]}
+  sources={[{ label: "One Useful Thing", url: "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+Ethan Mollick raconte des heures passées avec Fable : articles académiques, poésie, jeux interactifs complets produits à partir de prompts minimalistes. Il dit pouvoir lui confier un cahier des charges de 15 pages et le laisser travailler **9 heures d'affilée**. Le verdict — « delightful » et « unnerving » — décrit le passage de l'outil qu'on pilote au partenaire qui prend des initiatives.
+</NewsItem>
+
+<NewsItem
+  title="Anthropic : le vrai frein des agents en biologie, c'est la donnée"
+  category="ia"
+  tags={["anthropic", "recherche", "agents"]}
+  sources={[{ label: "Anthropic Research", url: "https://www.anthropic.com/research/agents-in-biology" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+Ses agents brillent en code mais calent en biologie, faute d'intelligence selon Anthropic : les bases de données sont pensées pour des humains, pas pour des agents. Même requête sur Ebola, résultats incohérents : **266, puis 106, puis 5** résultats. Le verrou est l'accessibilité et la cohérence des données, pas le modèle.
+</NewsItem>
+
+<NewsItem
+  title="Microsoft sort sept modèles maison et devient rival d'OpenAI"
+  category="ia"
+  tags={["microsoft", "openai", "modèle"]}
+  sources={[{ label: "Let's Data Science", url: "https://letsdatascience.com/blog/microsoft-openai-end-exclusivity-april-27-2026" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+Partenariat exclusif rompu en avril 2026, Microsoft dégaine **sept modèles propriétaires**, dont un modèle de raisonnement général. L'ex-investisseur-fournisseur passe concurrent frontal et rebat les rapports de force.
+</NewsItem>
+
+<NewsItem
+  title="OpenAI renonce à tout automatiser"
+  category="ia"
+  tags={["openai", "stratégie"]}
+  sources={[{ label: "The Decoder", url: "https://the-decoder.com/openai-says-entirely-automating-everything-is-not-the-future-we-want/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+OpenAI abandonne son objectif d'automatisation complète de la recherche IA, visé pour 2028. Altman et Pachocki prônent un modèle humain-machine « en tandem » et appellent à un organisme international capable de ralentir les modèles frontière si besoin.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles, outils & papers"
+  category="ia"
+  tags={["open-source", "outils"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[Agents Claude programmés](https://www.anthropic.com/news)** — déploiements sur cron, secrets en coffre (l'agent ne voit qu'un placeholder, la vraie clé est injectée au bord réseau) et sous-agents parallèles, en bêta publique.
+- **[Cohere North Mini Code](https://huggingface.co/CohereLabs)** — premier modèle de code open-source de Cohere : MoE 30B (3B actifs), 256K de contexte, Apache 2.0.
+- **[Luma Ray3.2](https://lumalabs.ai/ray)** — vidéo dirigée : jusqu'à 16 keyframes, suivi de 8 visages, export HDR 16-bit EXR, clips de 20 s en 1080p, et désormais une API.
+- **[ReasonAlloc](http://arxiv.org/abs/2606.11164v1)** — allocation hiérarchique « training-free » du cache KV pour les longues chaînes de raisonnement ; gains nets sur MATH-500 et AIME 2024.
+</NewsItem>
+
+<NewsItem
+  title="Régulation & géopolitique de l'IA"
+  category="ia"
+  tags={["en-bref", "régulation"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+- **Allemagne** : un tribunal juge Google responsable des erreurs de ses AI Overviews — « ses propres mots », pas une agrégation. [The Decoder](https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/)
+- **Procès annulé** : un juge écarte tous les avocats des deux camps après usage non autorisé de l'IA. [404 Media](https://www.404media.co/judge-learns-lawyers-on-both-sides-of-case-used-ai-cancels-trial-kicks-everyone-off-the-case/)
+- **Chine** : plan de **295 Md$** pour des data centers IA à 80 % de composants domestiques, excluant les fournisseurs US. [The Decoder](https://the-decoder.com/beijings-295-billion-ai-buildout-would-require-80-percent-domestic-chips-locking-out-us-suppliers/)
+- **Paris**, 1re ville d'emploi IA d'Europe : ≈ 20 000 des 256 000 postes créés dans l'UE depuis 2023. [Le Figaro](https://www.lefigaro.fr/vie-professionnelle/trois-fois-plus-d-opportunites-dans-l-ia-a-paris-qu-a-dublin-munich-ou-milan-comment-la-capitale-francaise-tire-son-epingle-du-jeu-20260609)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="React quitte facebook/, le compilateur passe à Rust"
+  category="web"
+  tags={["react", "tooling"]}
+  sources={[{ label: "This Week In React #285", url: "https://thisweekinreact.com/newsletter" }]}
+>
+- **[React Foundation](https://react.foundation/)** met son site en ligne ; les dépôts (React, React Native, Yoga, JSX, Metro) migrent de `facebook/` vers `react/` sur GitHub.
+- **[Portage du React Compiler en Rust](https://github.com/react/react/pull/36173)** fusionné ; l'intégration Oxc est dispo dans Rolldown et Oxlint.
+- **[TanStack Table 9.0 bêta](https://tanstack.com/blog/tanstack-table-v9-taking-form)** — state rebâti sur TanStack Store, compatible React Compiler.
+- **[React Router 8.0 préversion](https://github.com/remix-run/react-router/releases)** — flags v8 activés par défaut, abandon de CJS et de `react-router-dom`.
+- **[Cloudflare rachète VoidZero](https://voidzero.dev/posts/voidzero-cloudflare)** (Vite, Vitest, Rolldown, Oxc) ; outils maintenus open-source MIT.
+- **[npm v12](https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/)** bloquera par défaut les scripts `postinstall` dès juillet. **[Angular 22](https://blog.angular.dev/announcing-angular-v22-c52bb83a4664)** ajoute Signal Forms et l'OnPush par défaut.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="1X ouvre un « World Model Lab » pour son robot NEO"
+  category="robotique"
+  tags={["1x", "humanoïde"]}
+  sources={[{ label: "Bernt Børnich (X)", url: "https://x.com/BerntBornich/status/2062570067305570671" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/fable-5" }]}
+>
+La startup de Palo Alto crée un labo dédié aux **modèles du monde incarnés**, qui apprendront espace, mouvement et dynamique des objets avant toute tâche. Aux commandes : Samarth Sinha, ex-Luma AI. L'usine californienne monte en cadence pour les livraisons US.
+
+<Tweet id="2062570067305570671" />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Wall Street se prépare à trois méga-IPO à 1 000 Md$"
+  category="finance"
+  tags={["ipo", "spacex", "anthropic"]}
+  sources={[{ label: "L'Écho", url: "https://www.lecho.be/les-marches/actu/actions-bourses-etrangeres/spacex-anthropic-openai-comment-l-ere-des-mega-ipo-bouleverse-les-equilibres-a-wall-street/10673589.html" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com/articles/les-marches" }]}
+>
+SpaceX (IPO prévue vendredi), Anthropic et OpenAI visent chacune **au moins 1 000 Md$** de valorisation, soit plus de 3 000 Md$ cumulés alors que 15 sociétés seulement franchissent ce seuil aujourd'hui. La demande pour l'action SpaceX serait **~4× supérieure à l'offre**. Particularité : SpaceX serait 7e capitalisation US mais seulement 200e en chiffre d'affaires. En parallèle, Apollo et Blackstone bouclent un financement privé de **35 Md$** pour Anthropic ([FT](https://www.ft.com/content/c49e0eff-0776-4103-8eaf-1b049fbf9d3f)). Le marché recule sous la pression du Moyen-Orient et la chute des semi-conducteurs.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="SpaceX veut des data centers en orbite ; GM transforme ses EV en batteries"
+  category="hardware"
+  tags={["data-center", "énergie"]}
+  sources={[{ label: "The Decoder", url: "https://the-decoder.com/spacex-wants-to-put-data-centers-in-orbit-and-musk-says-its-no-big-deal/" }, { label: "The Verge", url: "https://www.theverge.com/transportation/946820/gm-energy-ev-v2g-storage-sodium-ion" }]}
+>
+SpaceX vise des centres de données spatiaux pour entraîner l'IA ; le premier satellite afficherait la puissance d'un rack Nvidia GB300, mais Google estime qu'un vrai entraînement exigerait **~10 000 satellites** fortement couplés. Côté sol, General Motors active le vehicle-to-grid : les EV stationnés réinjectent de l'électricité, et le constructeur lance un stockage sodium-ion pensé pour absorber la demande des data centers.
+</NewsItem>

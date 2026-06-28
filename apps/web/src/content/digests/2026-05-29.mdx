@@ -1,0 +1,221 @@
+---
+date: "2026-05-29"
+title: "Opus 4.8 et les 965 milliards d'Anthropic"
+lede: "Anthropic sort Claude Opus 4.8 le jour même d'une levée de 65 Md$ qui la valorise 965 Md$, devant OpenAI. npm impose enfin la validation humaine des publications, et Remix 3 abandonne React."
+categories: ["ia", "web", "robotique", "finance", "hardware", "evenements"]
+sourceCount: 14
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Claude Opus 4.8, calé sur l'honnêteté, repasse en tête"
+  category="ia"
+  tags={["anthropic", "modèle", "benchmark"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/claude-opus-4-8" },
+    { label: "The Decoder", url: "https://the-decoder.com/anthropic-ships-claude-opus-4-8-as-a-modest-but-tangible-improvement-that-tops-gpt-5-5-in-most-benchmarks/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Opus 4.8 passe **69,2 %** sur SWE-Bench Pro (10 pts devant GPT-5.5) et **1890 Elo** sur GDPval (+137 vs 4.7), au même prix que 4.7 (`$5`/`$25` par M de tokens). Entraîné à signaler ses incertitudes plutôt qu'à affirmer sur preuve mince — la fin du « you're absolutely right ». Détecte ses propres erreurs de code **4× mieux** que 4.7. Ajoute un mode rapide (~2,5× plus vite, 3× moins cher qu'avant) et un contrôle d'effort par réponse, contexte 1M.
+
+<NewsImage src="https://i.redd.it/n8mab3tcjw3h1.png" alt="Tableau de benchmarks Claude Opus 4.8" caption="Benchmarks Opus 4.8 publiés au lancement." />
+<Tweet id="2060042702150930686" />
+</NewsItem>
+
+<NewsItem
+  title="Dynamic Workflows : Claude Code orchestre des centaines de sous-agents"
+  category="ia"
+  tags={["anthropic", "agents", "claude-code"]}
+  sources={[
+    { label: "Anthropic", url: "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-anthropic-raises-965b-series" },
+  ]}
+>
+En recherche-préview, Claude écrit à la volée un script d'orchestration et lance des centaines de sous-agents en parallèle, avec vérification avant restitution — activé par le mot « workflow » dans le prompt. Démonstration : la réécriture du runtime de [Bun](https://bun.sh) de Zig vers Rust, ~750 k lignes, **99,8 %** des tests au vert, 11 jours du premier commit au merge.
+
+<Tweet id="2060050578026189172" />
+</NewsItem>
+
+<NewsItem
+  title="Mistral mise sur l'IA industrielle et ses propres puces"
+  category="ia"
+  tags={["mistral", "industrie"]}
+  sources={[
+    { label: "Investir — Les Échos", url: "https://investir.lesechos.fr/actu-des-valeurs/la-vie-des-actions/ia-airbus-et-bmw-sassocient-a-mistral-ai-dans-leurs-processus-de-fabrication-ce-qui-provoque-la-chute-de-leur-partenaire-de-longue-date-dassault-systemes-en-bourse-2233817" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/05/28/mistral-arthur-mensch-design-chips-ai-data-centers.html" },
+  ]}
+>
+À sa première conférence annuelle, Mistral signe Airbus (contrat de 5 ans, avions et spatial) et BMW (simulation de crash), et rebaptise Le Chat en **Vibe**, agent de travail connecté à Workspace, Outlook, Slack et GitHub. Arthur Mensch n'exclut pas de concevoir ses propres puces mémoire pour réduire sa dépendance à Nvidia.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & outils open-source"
+  category="ia"
+  tags={["open-source", "modèle", "outils"]}
+  sources={[
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-anthropic-raises-965b-series" },
+  ]}
+>
+- **[Liquid LFM2.5-8B-A1B](https://x.com/liquidai/status/2060023455290974474)** — MoE 8B (1,5B actifs), contexte 128K, 38T tokens, open-weight.
+- **[ByteDance BAGEL](https://x.com/kimmonismus/status/2060050186076815792)** — multimodal 7B, Apache-2.0 (génération, édition, compréhension).
+- **[frontend-design](https://github.com/anthropics/skills)** — skill anti-« AI slop » d'Anthropic : impose un brief de design et bannit Inter, Roboto, Space Grotesk.
+- **[make-pages-interactive](https://github.com/paraschopra/make-pages-interactive)** — commente une page HTML locale, Claude la met à jour en direct.
+- **[OmniParse](https://github.com/adithya-s-k/omniparse)** — convertit ~20 types de fichiers en markdown prêt pour le RAG, tourne sur un T4.
+</NewsItem>
+
+<NewsItem
+  title="En bref — IA"
+  category="ia"
+  tags={["en-bref"]}
+  sources={[
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/opus4-8" },
+  ]}
+>
+- **CNN poursuit Perplexity** pour copie verbatim et contournement de paywall. [The Verge](https://www.theverge.com/ai-artificial-intelligence/938893/cnn-perplexity-ai-copyright-lawsuit)
+- **YouTube** déploie des fils personnalisés générés par prompt en langage naturel. [The Verge](https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability)
+- **Apple** prépare la plus grosse refonte de Siri en 15 ans, en application autonome face à ChatGPT. [TechCrunch](https://techcrunch.com/2026/05/28/sneak-peek-at-new-siri-app-reveals-apples-plans-to-take-on-chatgpt-and-more/)
+- **Bourses de l'IA** : CME et Intercontinental Exchange préparent des futures sur les « tokens » de calcul. [TechCrunch](https://techcrunch.com/2026/05/28/just-like-gold-and-oil-well-soon-be-able-to-trade-ai-token-futures/)
+- **Microsoft 365 Copilot** : interface allégée, app 2× plus rapide, −10 % de latence sur les prompts complexes. [Microsoft](https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/)
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="npm impose la validation humaine des publications"
+  category="web"
+  tags={["npm", "supply-chain", "sécurité"]}
+  sources={[
+    { label: "GitHub Changelog", url: "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm/" },
+    { label: "via Import React", url: "https://importreact.beehiiv.com/p/remix-is-no-longer-a-react-framework" },
+  ]}
+>
+Depuis le 22 mai, tout `npm publish` peut passer par une file d'attente exigeant une approbation humaine en 2FA (« proof of presence ») avant mise en ligne, CI/CD et OIDC compris. npm 11.15.0 ajoute les drapeaux `--allow-file` / `--allow-remote` / `--allow-directory` ; pnpm 11.3 ajoute `pnpm stage`. Réponse aux attaques de la chaîne d'approvisionnement, dont la campagne TrapDoor révélée la même semaine (34 paquets, 384 versions sur npm, PyPI et Crates).
+</NewsItem>
+
+<NewsItem
+  title="Remix 3 abandonne React"
+  category="web"
+  tags={["remix", "framework"]}
+  sources={[
+    { label: "Remix", url: "https://remix.run/blog/remix-3-beta-preview" },
+    { label: "LogRocket", url: "https://blog.logrocket.com/remix-3-ditched-react/" },
+  ]}
+>
+La première bêta de Remix 3 (`npx remix@next new`) remplace React par un fork de Preact et réécrit routing, sessions, auth, formulaires et uploads avec quasi zéro dépendance critique. L'équipe vise un code impératif et « LLM-friendly », lisible par les humains comme par les agents. Pas encore destiné à la production.
+</NewsItem>
+
+<NewsItem
+  title="Outils front : Deno 2.8, Expo UI, Storybook"
+  category="web"
+  tags={["outils", "release"]}
+  sources={[
+    { label: "via Import React", url: "https://importreact.beehiiv.com/p/remix-is-no-longer-a-react-framework" },
+  ]}
+>
+- **[Deno 2.8](https://deno.com/blog/v2.8)** — compatibilité Node.js de 42 % à **76,4 %** (devant Bun), plus `deno audit fix` et un profileur CPU intégré.
+- **[Expo UI stable](https://expo.dev/changelog)** (SDK 56) — un import livre du vrai SwiftUI sur iOS et Jetpack Compose sur Android.
+- **[Storybook 10.4](https://storybook.js.org/blog)** — support TanStack de première classe.
+- **[Codemod Axios → fetch](https://docs.codemod.com)** — outil officiel Node.js pour supprimer une dépendance.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Un microrobot chirurgical « 5-en-1 » de la taille d'une graine"
+  category="robotique"
+  tags={["santé", "recherche"]}
+  sources={[
+    { label: "NTU Singapore", url: "https://www.ntu.edu.sg/news/detail/a--5-in-1--seed-sized-surgical-robot" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/opus4-8" },
+  ]}
+>
+L'université NTU de Singapour présente un robot de 4,4 mm guidé sans fil par champ magnétique, qui bascule en moins d'une seconde entre couper, saisir, injecter, prélever et chauffer.
+</NewsItem>
+
+<NewsItem
+  title="Eden Robotics loue des humanoïdes à 10 $/heure"
+  category="robotique"
+  tags={["humanoïdes", "startup"]}
+  sources={[
+    { label: "Eden Robotics", url: "https://x.com/cybermetheus/status/2059649954520736030" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/opus4-8" },
+  ]}
+>
+La startup (Y Combinator) propose son semi-humanoïde Eden-1 pour le picking et l'emballage à l'usage, **10 $/heure**, sans coût initial, piloté par son Theta OS.
+
+<Tweet id="2059649954520736030" />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Anthropic lève 65 Md$ et dépasse OpenAI à 965 Md$"
+  category="finance"
+  tags={["levée", "anthropic"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/series-h" },
+    { label: "The Decoder", url: "https://the-decoder.com/claude-company-anthropic-nears-a-trillion-dollar-valuation-after-raising-65-billion-in-series-h/" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+La Série H de **65 Md$** valorise Anthropic **965 Md$** post-money, devant les 852 Md$ d'OpenAI et trois mois après un tour à 350 Md$. Tour mené par Altimeter, Dragoneer, Greenoaks et Sequoia. Revenu annualisé revendiqué : **47 Md$**, contre 9 Md$ en décembre. IPO possible dès fin 2026.
+
+<Tweet id="2060061347522433422" />
+</NewsItem>
+
+<NewsItem
+  title="Ford au plus haut en trois ans grâce à Ford Energy"
+  category="finance"
+  tags={["ford", "bourse"]}
+  sources={[
+    { label: "Morning Brew", url: "https://www.morningbrew.com/stories/fords-new-profit-vehicle-isnt-actually-a-vehicle" },
+  ]}
+>
++26 % en une semaine : Ford crée Ford Energy, filiale qui alimentera les data centers en recyclant les batteries de VE, pour 2 Md$ d'investissement. Morgan Stanley la valorise déjà ~10 Md$.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+- **Meta** lance des abonnements : Instagram Plus et Facebook Plus à 3,99 $/mois, WhatsApp Plus à 2,99 $/mois. [Le Figaro](https://www.lefigaro.fr/secteur/high-tech/meta-lance-des-abonnements-payants-pour-instagram-whatsapp-et-facebook-20260528)
+- **Ingénieur Google** mis en examen pour délit d'initié : +1,2 M$ sur Polymarket avec des données confidentielles. [TechCrunch](https://techcrunch.com/2026/05/27/google-engineer-charged-with-insider-trading-after-making-1-2m-on-polymarket/)
+- **Robinhood** ouvre le trading piloté par Claude Code ou ChatGPT ; marché des agents de trading estimé >1 000 Md$. [Forbes](https://www.forbes.be/fr/robinhood-ia-trading-actions/)
+- **Michelin** : jusqu'à 1 500 postes supprimés en France sur 2027–2029. [Les Échos](https://www.lesechos.fr/industrie-services/automobile/invoquant-un-contexte-mondial-chaotique-michelin-veut-supprimer-1500-postes-sur-trois-ans-en-france-2233762)
+- **UE** : 200 M€ d'amende à Temu pour avoir permis la vente de produits illégaux. [Euronews](https://www.euronews.com/next/2026/05/28/eu-fines-chinese-e-commerce-giant-temu-200-million-for-dangerous-baby-toys-and-faulty-char)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Google sort une Coral Board qui fait tourner Gemma 3 en local"
+  category="hardware"
+  tags={["google", "edge", "gemma"]}
+  sources={[
+    { label: "The Decoder", url: "https://the-decoder.com/google-launches-a-tiny-board-that-runs-gemma-3-locally/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/opus4-8" },
+  ]}
+>
+Dévoilée à Google I/O 2026, cette carte mono-bloc exécute Gemma 3 entièrement sur l'appareil, sans cloud, pour l'IoT et l'embarqué.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Le premier long-métrage live-action entièrement IA à Tribeca"
+  category="evenements"
+  tags={["cinéma", "ia"]}
+  sources={[
+    { label: "The Verge", url: "https://www.theverge.com/entertainment/939067/ai-film-dreams-of-violets-tribeca" },
+  ]}
+>
+*Dreams of Violets*, 75 minutes tourné pour **2 000 $** par les frères Ash et Pooya Koosha, dramatise des événements réels en Iran. Sélectionné au festival de Tribeca.
+</NewsItem>

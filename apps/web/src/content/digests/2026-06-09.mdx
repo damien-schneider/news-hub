@@ -1,0 +1,171 @@
+---
+date: "2026-06-09"
+title: "Apple dévoile Siri AI à la WWDC, Anthropic ouvre Mythos"
+lede: "Tim Cook clôt son dernier keynote sur un Siri repensé qui laisse la Bourse de marbre, Anthropic met son palier Mythos entre les mains du public avec Fable 5, et Cognition montre que les meilleurs modèles plafonnent à 13/100 sur du vrai code."
+categories: ["ia", "robotique", "finance"]
+sourceCount: 12
+featured: true
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Apple dévoile Siri AI à la WWDC, pour le dernier keynote de Tim Cook"
+  category="ia"
+  tags={["apple", "wwdc", "assistant"]}
+  sources={[
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" },
+    { label: "Engadget", url: "https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/apple-s-siri-ai-openai-s-ipo" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+À la WWDC 2026, Apple a présenté **Siri AI** : un assistant qui suit une conversation, croise le contexte des e-mails, du calendrier, des photos et des contacts, et enchaîne des actions entre apps, via une app de type chatbot. Le keynote dévoile aussi **iOS 27**, **macOS Golden Gate** et un aperçu de **homeOS** pour le futur hub domestique. La présentation, dernière de **Tim Cook** avant la passation à Jeff Williams puis John Ternus, n'a pas convaincu Wall Street : l'action a perdu jusqu'à **−4 %**, plusieurs fonctions ressemblant à des annonces déjà repoussées.
+
+<Video src="https://www.youtube.com/watch?v=2PW5y3zAvPE" caption="Démo officielle de Siri AI. Source : Apple." />
+</NewsItem>
+
+<NewsItem
+  title="Anthropic ouvre son palier Mythos au public avec Claude Fable 5"
+  category="ia"
+  tags={["anthropic", "modèle"]}
+  sources={[
+    { label: "Anthropic", url: "https://www.anthropic.com/news/claude-fable-5-mythos-5" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+**Claude Fable 5** est le premier modèle de la famille **Mythos** disponible publiquement : état de l'art sur presque tous les benchmarks (code, vision, recherche scientifique), avec un écart d'autant plus grand que la tâche est longue. Tarif API à **10 $/M tokens en entrée, 50 $/M en sortie**. Les sujets sensibles (cybersécurité, biologie) sont automatiquement reroutés vers Claude Opus 4.8, dans moins de 5 % des sessions. **Mythos 5**, même modèle avec moins de garde-fous, reste réservé à des partenaires sécurité validés — cinq jours après un papier d'Anthropic appelant à ralentir le développement frontière.
+</NewsItem>
+
+<NewsItem
+  title="FrontierCode : les meilleurs modèles plafonnent à 13/100 sur du vrai code"
+  category="ia"
+  tags={["benchmark", "code"]}
+  sources={[
+    { label: "Cognition", url: "https://cognition.com/blog/frontier-code" },
+    { label: "via AINews", url: "https://www.latent.space/p/ainews-frontiercode-benchmarking" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Le benchmark **FrontierCode** de Cognition ne demande pas « le code passe-t-il les tests ? » mais « un mainteneur le fusionnerait-il ? » — en notant la justesse, la qualité des tests, la discipline de périmètre et le respect du style du dépôt. Les tâches ont été écrites par les mainteneurs de **36 dépôts open-source**, 40 h+ chacune, en trois paliers. Sur le set Diamond, le meilleur modèle (Claude Opus 4.8) atteint **13,4/100** ; GPT-5.5 6,3, Gemini 3.1 Pro 4,7. Le benchmark produit aussi **81 % d'erreurs de notation en moins** que SWE-Bench Pro.
+</NewsItem>
+
+<NewsItem
+  title="NotebookLM passe à l'agentique et exécute du code"
+  category="ia"
+  tags={["google", "notebooklm"]}
+  sources={[
+    { label: "Google", url: "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/" },
+    { label: "The Verge", url: "https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+NotebookLM gagne un **chat agentique** qui planifie et enchaîne plusieurs étapes seul. Chaque notebook dispose d'un ordinateur cloud sécurisé pour écrire et exécuter du code, plus de 100 skills, la recherche autonome de sources via Google Search et de nouveaux exports (PDF, DOCX, XLSX, PPTX, CSV, JSON, PNG, SVG). Le tout sur **Gemini 3.5**, avec un taux de victoire de **65 %** face à l'ancienne version, d'abord pour les abonnés AI Ultra.
+</NewsItem>
+
+<NewsItem
+  title="Kimi Work : un agent de bureau qui lance 300 sous-agents en local"
+  category="ia"
+  tags={["agent", "moonshot"]}
+  sources={[
+    { label: "Decrypt", url: "https://decrypt.co/370954/moonshot-ai-kimi-work-300-agents-desktop" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai/p/apple-s-siri-ai-openai-s-ipo" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+>
+Moonshot lance **Kimi Work**, app de bureau propulsée par Kimi K2.6 qui décompose une tâche en jusqu'à **300 sous-agents** travaillant en parallèle sur la machine (×3 vs la génération précédente). Elle pilote le vrai navigateur via Chrome DevTools Protocol, planifie des tâches en cron et lit les fichiers locaux. App gratuite, swarm complet réservé aux paliers payants ; quand le portable se ferme, les tâches s'arrêtent.
+</NewsItem>
+
+<NewsItem
+  title="Amazon veut des agents IA qui n'hallucinent pas dans l'entrepôt"
+  category="ia"
+  tags={["amazon", "agents"]}
+  sources={[
+    { label: "Amazon Science", url: "https://www.amazon.science/blog/real-world-grounding-in-agentic-ai" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/siri-ia" },
+  ]}
+>
+Amazon détaille **Project Eluna**, un agent cloud qui pilote ses centres de distribution. Le risque visé n'est plus une hallucination textuelle mais physique, aux conséquences matérielles ou humaines. La parade : quatre méthodes d'ancrage — apprentissage guidé par la physique, données métier, simulations numériques, sources externes — appuyées sur ses Foundation Models et une collaboration avec UC San Diego.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & outils open-source"
+  category="ia"
+  tags={["open-source", "modèles"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-frontiercode-benchmarking" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[Roblox Cube](https://github.com/Roblox/cube)** — modèle de fondation 3D open-source qui génère objets et scènes de jeu à partir de texte ([newsroom](https://about.roblox.com/newsroom/2025/03/introducing-roblox-cube)).
+- **[Magenta RealTime 2](https://magenta.withgoogle.com/magenta-realtime-2)** — génération musicale temps réel en open-weights, latence ~200 ms, pilotable au MIDI et intégrable en plugin DAW ([poids](https://huggingface.co/google/magenta-realtime-2)).
+- **[Microsoft Lens](https://the-decoder.com/microsoft-researchs-lens-proves-detailed-captions-matter-more-than-raw-scale-for-training-efficient-image-generators/)** — générateur d'images de **3,8 Md** de paramètres entraîné sur 800 M de légendes détaillées, code et poids ouverts.
+- **[Gemma 4 MTP](https://huggingface.co/google/gemma-4-31B-it)** — la prédiction multi-tokens fusionnée dans llama.cpp double le débit ; ~140 tok/s sur RTX 4070 Super.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="L'Europe ouvre la voie aux robotaxis, Pony.ai déjà commercial à Zagreb"
+  category="robotique"
+  tags={["autonome", "europe"]}
+  sources={[
+    { label: "TechXplore", url: "https://techxplore.com/news/2026-06-europe-taxis.html" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/siri-ia" },
+  ]}
+>
+Après les États-Unis et la Chine, les taxis autonomes arrivent en Europe : l'UE lance un cadre de test harmonisé pour autoriser des essais transfrontaliers et raccourcir les homologations. **Pony.ai** exploite déjà une dizaine de véhicules à **Zagreb** depuis avril, son premier service commercial européen. La Chine aligne, elle, près de 8 000 robotaxis.
+</NewsItem>
+
+<NewsItem
+  title="Un humanoïde Unitree gravit le Chimborazo en 16 heures"
+  category="robotique"
+  tags={["humanoïde", "exploit"]}
+  sources={[
+    { label: "Pablo Berlanga (X)", url: "https://x.com/pabloberlangab/status/2063644251804541303" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/siri-ia" },
+  ]}
+>
+Un **Unitree G1** modifié, baptisé Pemba, a atteint en **16 heures** le sommet du Chimborazo (6 200 m), le point de la surface terrestre le plus éloigné du centre de la Terre. Le robot marche en autonomie sous 30 degrés de pente, avec assistance sur les sections plus raides — première d'une série de trois ascensions extrêmes.
+
+<Tweet id="2063644251804541303" />
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="OpenAI dépose à son tour un dossier d'IPO confidentiel"
+  category="finance"
+  tags={["openai", "ipo"]}
+  sources={[
+    { label: "CNN", url: "https://www.cnn.com/2026/06/08/tech/openai-files-for-ipo" },
+    { label: "CNBC", url: "https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html" },
+    { label: "via Aktionnaire", url: "https://www.aktionnaire.com" },
+  ]}
+>
+OpenAI a déposé un **S-1 confidentiel** auprès du régulateur, une semaine après Anthropic et juste avant l'entrée en Bourse attendue de SpaceX vendredi. Aucun calendrier n'est arrêté — l'entreprise évoque « des choses plus simples à faire en restant privée » — mais l'opération pose les jalons de l'une des plus grosses IPO de l'histoire. Perplexity, de son côté, vise [2028](https://www.cnbc.com/2026/06/09/perplexity-ipo-2028-as-anthropic-openai-prepare-listings.html).
+</NewsItem>
+
+<NewsItem
+  title="La facture de calcul de l'IA structure les marchés du crédit"
+  category="finance"
+  tags={["infrastructure", "semi-conducteurs"]}
+  sources={[
+    { label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/" },
+    { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/siri-ia" },
+  ]}
+>
+**Anthropic** boucle **35 Md$** de dette privée (Apollo, Blackstone, soutien de Broadcom) pour acheter et louer des TPU Google — l'une des plus grosses opérations de crédit privé jamais montées. En parallèle, **Google versera 920 M$/mois à SpaceX** d'octobre 2026 à juin 2029 pour 110 000 GPU Nvidia ; cumulés aux 220 000 processeurs réservés par Anthropic, ces contrats dépassent **70 Md$** et concentrent une part critique du hardware IA chez SpaceX, juste avant son IPO. Débordé, TSMC pousse Google et Nvidia à se tourner vers [Intel](https://the-decoder.com/intel-gets-a-second-life-as-google-and-nvidia-explore-it-as-a-tsmc-backup-for-ai-chips/) comme fonderie de secours.
+</NewsItem>
+
+<NewsItem
+  title="En bref"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "Aktionnaire", url: "https://www.aktionnaire.com" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/siri-ia" }]}
+>
+- **SaaSpocalypse** : les rachats de logiciels par le private equity tombent à **50 Md$** sur 5 mois (vs 88 Md$ un an plus tôt), 2026 vers sa pire année depuis 2018. [Financial Times](https://www.ft.com/content/c7db2d6e-8dec-4de0-9f1c-f73f7e905387)
+- **SCAF** : la France et l'Allemagne actent l'abandon de l'avion de combat du futur après l'échec Dassault-Airbus sur la gouvernance. [Zone Militaire](https://www.opex360.com/2026/06/08/scaf-berlin-et-paris-conviennent-de-mettre-un-terme-a-leur-projet-conjoint-davion-de-combat-de-6e-generation/)
+- **Banques italiennes** : Intesa Sanpaolo dégaine une offre de **31 Md€** sur Monte dei Paschi. [La Tribune](https://www.latribune.fr/article/banques-finance/assurance/2439941375333314/intesa-numero-1-des-banques-en-italie-degaine-une-offre-de-rachat-a-31-milliards-de-monte-dei-paschi)
+- **Meta** retire discrètement le code de reconnaissance faciale de l'app de ses lunettes Ray-Ban. [Engadget](https://www.engadget.com/2190115/meta-quietly-removes-face-recognition-code-from-its-smart-glasses-app/)
+- **New York** gèle un an les data centers de plus de 20 MW, le temps d'en évaluer l'impact environnemental. [The Verge](https://www.theverge.com/policy/944041/new-york-data-center-moratorium)
+</NewsItem>

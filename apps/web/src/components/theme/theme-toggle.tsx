@@ -1,5 +1,5 @@
+import { ComputerIcon, Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Sun03Icon, Moon02Icon, ComputerIcon } from "@hugeicons/core-free-icons"
 
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -9,9 +9,8 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
-
-import { useTheme } from "./theme-provider"
 import type { Theme } from "./theme-provider"
+import { useTheme } from "./theme-provider"
 
 const ICONS: Record<Theme, typeof Sun03Icon> = {
   light: Sun03Icon,

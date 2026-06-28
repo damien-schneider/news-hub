@@ -1,12 +1,11 @@
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { Link } from "@tanstack/react-router"
 import { motion } from "motion/react"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
-
+import { EASE } from "@/components/motion/reveal"
 import type { DigestSummary } from "@/content"
 import { getCategory } from "@/content/categories"
 import { formatDate } from "@/lib/format"
-import { EASE } from "@/components/motion/reveal"
 
 /** A featured recap card (home "À la une" block). */
 export function PostCard({ digest }: { digest: DigestSummary }) {
@@ -23,11 +22,11 @@ export function PostCard({ digest }: { digest: DigestSummary }) {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
             <h3 className="font-medium text-foreground">{digest.title}</h3>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-muted-foreground text-xs">
               · {formatDate(digest.date)}
             </span>
           </div>
-          <p className="mt-0.5 line-clamp-1 text-sm text-muted-foreground">
+          <p className="mt-0.5 line-clamp-1 text-muted-foreground text-sm">
             {digest.lede}
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -43,7 +42,7 @@ export function PostCard({ digest }: { digest: DigestSummary }) {
                 />
               )
             })}
-            <span className="ms-1 text-xs text-muted-foreground">
+            <span className="ms-1 text-muted-foreground text-xs">
               {digest.sourceCount} brèves
             </span>
           </div>

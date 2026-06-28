@@ -1,0 +1,81 @@
+---
+date: "2026-06-21"
+title: "Les agents qui réécrivent leurs propres skills"
+lede: "Édition dominicale : les frameworks d'auto-optimisation traitent les fichiers de skills comme des poids de réseau, et la science livre un capteur de virus aéroportés, une première greffe pulmonaire VIH-vers-VIH et le scanner corporel de Midjourney."
+categories: ["ia", "hardware", "evenements"]
+sourceCount: 6
+featured: false
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Frameworks d'auto-optimisation des skills"
+  category="ia"
+  tags={["agents", "open-source"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Un fichier de skill est un `.md` qui sert de procédure à un agent ; jusqu'ici il s'éditait à la main, sans gradient pour guider les changements. Une vague d'optimiseurs « text-space » le traite désormais comme un paramètre entraînable.
+
+- **[SkillOpt](https://github.com/microsoft/SkillOpt)** (Microsoft Research) — boucle rollout → évaluation → réflexion → édits bornés. Sur GPT-5.5, **+23,5 points** en chat direct et **+24,8** en boucle Codex, pour des skills tenant ~920 tokens médians.
+- **[GEPA](https://github.com/gepa-ai/gepa)** (Genetic-Pareto) — algorithme évolutionnaire qui « mute » l'instruction et sélectionne les candidats sur un front de Pareto ; compatible **[DSPy](https://github.com/stanfordnlp/dspy)**.
+- **[EvoSkill](https://github.com/sentient-agi/EvoSkill)** — applique l'idée de GEPA aux workflows de code multi-agents, chaque variante sur sa branche Git, sélection au front de Pareto.
+</NewsItem>
+
+<NewsItem
+  title="Le « loop engineering » remplace le prompt"
+  category="ia"
+  tags={["agents", "méthode"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+Le goulot d'étranglement n'est plus le modèle mais la façon d'écrire ses procédures. L'approche : monter une boucle découverte → plan → exécution → vérification avec une condition d'arrêt vérifiable, et laisser l'agent itérer seul. Ces optimiseurs exigent un signal de récompense mesurable et un jeu de validation propre ; le coût se concentre sur la phase d'entraînement, le skill final n'ajoutant rien à l'inférence.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Des capteurs détectent les virus dans l'air ambiant"
+  category="hardware"
+  tags={["santé", "capteurs"]}
+  sources={[{ label: "The New York Times", url: "https://www.nytimes.com/2026/06/19/science/indoor-air-viruses-bacteria.html" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+Financé à **150 M$** par l'État fédéral américain, un programme développe des capteurs capables d'identifier des pathogènes en suspension quasi en temps réel, puis de purifier l'air avant la contagion — l'équivalent d'un système anti-incendie pour les maladies aéroportées. Prototypes visés dans des écoles, hôpitaux et crèches d'ici 2028.
+</NewsItem>
+
+<NewsItem
+  title="Première greffe pulmonaire VIH-vers-VIH"
+  category="hardware"
+  tags={["santé", "greffe"]}
+  sources={[{ label: "Interesting Engineering", url: "https://interestingengineering.com/health/worlds-first-hiv-lung-and-liver-transplant" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+À NYU Langone Health, des chirurgiens réalisent la première transplantation de poumon d'un donneur VIH-positif vers un receveur VIH-positif, doublée d'une greffe de foie le même jour. Le patient, Bertrand Nelson (56 ans), respire seul. La technique ouvre un nouveau réservoir d'organes pour les **1,2 million** d'Américains vivant avec le VIH.
+</NewsItem>
+
+<NewsItem
+  title="Midjourney détaille son scanner corporel à ultrasons"
+  category="hardware"
+  tags={["santé", "midjourney"]}
+  sources={[
+    { label: "Midjourney", url: "https://www.midjourney.com/medical/blogpost" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+>
+Le Midjourney Scanner immerge le corps dans l'eau et mobilise un demi-million de capteurs ultrasoniques de la taille d'un grain de sable pour produire une carte 3D en moins de **60 s**, contre 60 à 90 minutes pour une IRM standard. Premier spa annoncé à San Francisco l'an prochain.
+
+<Tweet id="2067422898407837797" />
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="En bref — science & loisirs"
+  category="evenements"
+  tags={["en-bref"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **La Terre survivrait à la mort du Soleil** : selon une [étude A&A](https://www.aanda.org/articles/aa/full_html/2026/06/aa60576-26/aa60576-26.html), la perte de masse du Soleil devenu géante rouge desserrerait son emprise et l'orbite terrestre dériverait vers l'extérieur ; Mars y échapperait aussi, Mercure et Vénus non.
+- **Simulateur de vol Google Earth** : Google ouvre un [simulateur](https://earth.google.com/web/) permettant de piloter un avion au-dessus des cartes 3D de la planète.
+- **Rêver sous anesthésie** : un [protocole en cinq étapes](https://www.zmescience.com/science/psychology-science/doctors-found-a-way-to-make-dreaming-during-anesthesia-much-more-common/) de Stanford (dont 10 min de calme au réveil) porte le rappel de rêves à **93 %**, jugés positifs à 86 %.
+- **Wordle** : des chercheurs affirment résoudre le jeu **99 %** du temps. [ScienceDaily](https://www.sciencedaily.com/releases/2026/06/260619020508.htm)
+- **Gadgets** : la tablette e-ink [reMarkable Paper Pure](https://remarkable.com/products/remarkable-paper/pure) (3 semaines d'autonomie) et le ventilateur sans pâles [Dyson HushJet Mini Cool](https://www.dyson.com/air-treatment/portable-fans/hushjet-mini-cool).
+</NewsItem>

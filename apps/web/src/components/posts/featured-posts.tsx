@@ -1,6 +1,6 @@
-import { Link } from "@tanstack/react-router"
-import { HugeiconsIcon } from "@hugeicons/react"
 import { CircleArrowRight02Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Link } from "@tanstack/react-router"
 
 import type { DigestSummary } from "@/content"
 
@@ -13,11 +13,11 @@ export function FeaturedPosts({ digests }: { digests: DigestSummary[] }) {
           key={digest.date}
           to="/posts/$date"
           params={{ date: digest.date }}
-          className="group flex items-center justify-between gap-4 border-b border-border/50 px-4 py-3.5 transition-colors last:border-b-0 hover:bg-muted/50"
+          className="group flex items-center justify-between gap-4 border-border/50 border-b px-4 py-3.5 transition-colors last:border-b-0 hover:bg-muted/50"
         >
           <div className="min-w-0">
             <h3 className="font-medium text-foreground">{digest.title}</h3>
-            <p className="mt-0.5 truncate text-sm text-muted-foreground">
+            <p className="mt-0.5 truncate text-muted-foreground text-sm">
               {digest.lede}
             </p>
           </div>

@@ -20,15 +20,19 @@ by category. **Signal over completeness** — keep only news that genuinely matt
 1. **Concise.** Target **6–14 brèves** for a normal day (hard cap ~20). Cut
    filler, duplicates, and "interesting but not important". Merge related angles
    into one item. Each item is **1–3 tight sentences**.
-2. **Real, working links — never invented.** Every `<NewsItem>` carries at least
-   one real `sources` URL from the actual source, and **every URL must resolve**
-   (run `scripts/check_links.sh` — see Verify). Prefer the canonical publisher /
-   repo / paper URL the newsletter links to (many newsletters, e.g. Aktionnaire,
-   embed them inline). If a newsletter only exposes an **opaque tracking
-   redirect** (e.g. `app.alphasignal.ai/c?…`) that you cannot resolve to a
-   canonical URL, cite the newsletter itself (`{ label: "AlphaSignal", url:
-   "https://alphasignal.ai" }`) rather than guessing or shipping a dead link.
-   Never fabricate a URL.
+2. **Link the primary source — never invented.** Each `<NewsItem>` links the
+   **primary source first** — the company/product page, the paper, the repo, or
+   the article — then adds the newsletter as a secondary `via` entry, e.g.
+   `sources={[{ label: "Unsloth", url: "https://github.com/unslothai/unsloth" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}`.
+   Find the primary by resolving the newsletter's link (`curl -L`) or
+   **web-searching the named entity** (repo, paper title, company + product).
+   Many newsletters embed canonical links inline (e.g. Aktionnaire → WSJ, Le
+   Figaro); others only expose **opaque tracking redirects** (e.g.
+   `app.alphasignal.ai/c?…`) — recover the primary by search. The **newsletter
+   homepage alone is not an acceptable sole source** (it tells the reader
+   nothing specific); only fall back to it, clearly as `via`, when the primary
+   genuinely cannot be found. **Every URL must resolve** — run
+   `scripts/check_links.sh` (see Verify). Never fabricate or guess a dead URL.
 3. **Regroup recurring buckets.** When several items are the same recurring
    *kind* — new model releases, funding rounds, tool/library updates,
    benchmarks, or assorted "en bref" — combine them into **one** `<NewsItem>`
@@ -131,7 +135,9 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 ## Before finishing — checklist
 
 - [ ] ≤ ~20 items, each genuinely important and 1–3 sentences.
-- [ ] Every item has ≥1 real source URL (or a deliberate label-only source).
+- [ ] Every item links a **primary** source first (company/paper/repo/article),
+      with the newsletter as a `via` entry — no item points only at a newsletter homepage.
+- [ ] `scripts/check_links.sh` shows no `BAD` links (WARN = paywall/anti-bot is OK).
 - [ ] `date` quoted; `sourceCount` matches the item count; `categories` lists only present slugs.
 - [ ] Each `<NewsItem category>` has a matching `<Category slug>` divider.
 - [ ] Media uses real URLs/ids; tweets use the numeric status id.
