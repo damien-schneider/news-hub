@@ -55,30 +55,47 @@ by category. **Signal over completeness** — keep only news that genuinely matt
    `check_links.sh` verifies every image URL like any other link.
 5. **No AI slop.** Plain, factual French. See [references/style.md](references/style.md).
 6. **French content.** Titles, summaries, and the lede are in French.
+7. **Nouveauté — même sujet ≠ même news.** L'unité, c'est **le fait, pas
+   l'entité**. Un sujet récurrent (Fable 5 : lancement → bridage → redéploiement)
+   donne **plusieurs news distinctes** — on garde chaque **nouveau fait** et on
+   ne carte que le changement (pas l'origine). On ne coupe **que** l'item qui
+   redit un fait déjà raconté ; le seul fait qu'un sujet soit déjà apparu n'est
+   jamais une raison de drop. En cas de doute, garder mais réduire au delta.
+   **Date à l'événement, pas au mail** : un mail reçu aujourd'hui qui recape un
+   lancement d'il y a trois jours n'est pas une news d'aujourd'hui. Voir
+   [Continuité & nouveauté](#continuité--nouveauté-cross-day).
 
 ## Workflow
 
-1. **Gather** the day's sources. As Claude with the Gmail MCP, search the
+1. **Continuité — read what's already covered.** Before anything, run
+   `scripts/recent_coverage.sh --before <date>` to dump the titles of the last
+   ~7 digests. Hold that list in mind while selecting: it is the anti-repeat
+   gate (step 3 checks every candidate against it).
+2. **Gather** the day's sources. As Claude with the Gmail MCP, search the
    `Newsletters` label for that date — use the **display name**
    (`label:Newsletters after:YYYY/MM/DD before:YYYY/MM/DD`); the label-id form
    (`label:Label_8428948209629849474`) returns **nothing** in this MCP. Open each
    thread's full body (`get_thread`, `messageFormat="FULL_CONTENT"`) to extract
    **the real article/source links** plus any images, tweet ids, and video URLs.
    Other AIs: ask the user to paste the newsletters or the links.
-2. **Select & dedupe.** Keep only important items; collapse cross-source
-   duplicates into one item with multiple `sources`.
-3. **Categorize** each item into one of the 8 slugs (see Categories below).
-4. **Write** each item as a `<NewsItem>` (1–3 sentences, real sources, tags). Add
+3. **Select, dedupe & gate on novelty.** Keep only important items; collapse
+   cross-source duplicates into one item with multiple `sources`. Then check
+   each survivor against step 1's list — testing the **fact, not the subject**:
+   a familiar subject with a **new fact** (new state, decision, number, actor)
+   stays; an item that only repeats a fact already told gets dropped or folded
+   into a « suivi » line. See [Continuité & nouveauté](#continuité--nouveauté-cross-day).
+4. **Categorize** each item into one of the 8 slugs (see Categories below).
+5. **Write** each item as a `<NewsItem>` (1–3 sentences, real sources, tags). Add
    an `image=` cover from the primary source's `og:image`
    (`scripts/og_image.sh <url>`) on every standalone card, plus inline media when
    available. Put a `<Category slug="…" />` divider before the first item of each
    category, in canonical order.
-5. **Frontmatter** — fill the schema below. **Quote the `date`** (unquoted YAML
+6. **Frontmatter** — fill the schema below. **Quote the `date`** (unquoted YAML
    parses it as a Date and breaks the schema). Set `sourceCount` = number of
    `<NewsItem>`. Set `highlight` to the day's single biggest news (copy the lead
    `<NewsItem>`'s `title`, `category`, and `image`) — its presence is what makes
    the recap eligible for the home "À la une". Omit it on a slow day.
-6. **Validate** (see Verify). Start from [assets/template.mdx](assets/template.mdx).
+7. **Validate** (see Verify). Start from [assets/template.mdx](assets/template.mdx).
 
 ## Frontmatter schema
 
@@ -150,6 +167,56 @@ Common buckets: `Nouveaux modèles`, `Outils & repos open-source`, `Levées de
 fonds`, `Benchmarks & papers`, `En bref`. Keep the major standalone story
 (e.g. a flagship launch, a big study) as its own card.
 
+## Continuité & nouveauté (cross-day)
+
+Dedupe within a single day is not enough. A **big story recurs across many
+newsletters for days** — a launch is still the lede three days later — and if
+you card it every day the feed becomes: *"Fable 5 launched"* on Mon, Tue **and**
+Wed. That is the failure this section prevents.
+
+### Same subject ≠ same news
+
+This is the whole rule, and the easy mistake is to over-cut. **The unit is the
+event, not the entity.** "Fable 5" appearing in a prior digest is **never on its
+own a reason to drop** — the launch, the ban, the negotiation, the redeploy are
+**four separate pieces of news** that happen to share a subject. Kill only the
+item that repeats a **fact already told**, not every item that names a familiar
+subject.
+
+**Gate.** Run `scripts/recent_coverage.sh --before <date>` first (step 1). For
+every candidate whose subject already appears in that list, ask one question:
+**does it carry a fact no prior digest stated?** — a new state, a new decision,
+a new number, a new actor, a shipped mechanism.
+
+- **New fact → keep.** Write *only the new fact* and link the new source; don't
+  re-tell the origin (a reader who missed it can click). An ongoing saga earns a
+  card at each real beat: launched → restricted → open letter → negotiation →
+  partial restore → full redeploy. Each beat is its own news.
+- **No new fact → drop.** A newsletter still recapping yesterday's launch, with
+  nothing added, is not today's news. Cut it, or, if it still matters as
+  context, give it **one line** in an « En bref — suivi » bucket
+  (`Fable 5 toujours hors ligne`) — never a fresh standalone card.
+- **In doubt, keep — but trim to the delta.** Missing a real beat is worse than
+  a thin card. If you can name one concrete thing that changed, it is news;
+  write that one thing.
+
+**Date to the event, not to the email.** The digest date is the day the thing
+*happened*, not the day a newsletter landed in the inbox. When a source recaps
+an older event, either it was already covered (drop) or you are back-filling a
+missed day — put it in that day's file, not today's. If unsure when it broke,
+check the **primary source's publish date** (the article/repo/paper), not the
+newsletter's send date.
+
+Worked example — Fable 5 over 3 weeks (same subject, several distinct news):
+`06-09` launch = card. `06-10`/`06-11` newsletters still leading with that same
+launch, nothing added = **drop**. `06-13` access cut = card (new fact). `06-15`/
+`06-16` same cut, only fresh commentary/angle = one line in suivi. `06-20`
+negotiation, `06-29` partial restore, `07-01` restore announced = each a card.
+`07-03` worldwide redeploy **with a new safety classifier** = card — it ships a
+new fact (effective redeploy + new mechanism), so it stays, even though the
+subject is the same as `07-01`. `06-24` Qwable cloning Fable's behaviour is its
+**own** story that merely references Fable = card on its own merits.
+
 ## Categories (slug → label, canonical order)
 
 `ia` IA & LLMs · `web` Web & Frontend · `robotique` Robotique ·
@@ -162,6 +229,10 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 ## Before finishing — checklist
 
 - [ ] ≤ ~20 items, each genuinely important and 1–3 sentences.
+- [ ] Ran `scripts/recent_coverage.sh`: **no item repeats a fact already told in
+      the last ~7 digests** — but a new beat of an ongoing subject (redeploy after
+      a launch) is kept and cards only the new fact, dated to the event (not the
+      newsletter). See Continuité & nouveauté.
 - [ ] Every item links a **primary** source first (company/paper/repo/article),
       with the newsletter as a `via` entry — no item points only at a newsletter homepage.
 - [ ] `scripts/check_links.sh` shows no `BAD` links (WARN = paywall/anti-bot is OK).
@@ -175,6 +246,8 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 ## Verify
 
 ```bash
+# Continuité: what the last ~7 digests already covered (run BEFORE writing)
+.claude/skills/news-recap/scripts/recent_coverage.sh --before <date>
 # Cover image: pull the primary source's og:image (pass fallbacks after it)
 .claude/skills/news-recap/scripts/og_image.sh <primary-url> [fallback-url …]
 .claude/skills/news-recap/scripts/check_links.sh apps/web/src/content/digests/<date>.mdx

@@ -66,3 +66,8 @@ These patterns read as machine-written. Strip them.
 - Quote figures exactly as the source gives them. Keep currencies/units as-is.
 - One item per story even if 4 newsletters covered it — list them all in
   `sources`.
+- **One story per saga, per transition.** A recurring story (a launch, then its
+  ban, then its return) is not fresh news each day a newsletter re-mentions it.
+  Card it only when its state actually changed, and write *the change*. Date the
+  item to when the event happened, not to when the email arrived. See SKILL.md
+  "Continuité & nouveauté".
