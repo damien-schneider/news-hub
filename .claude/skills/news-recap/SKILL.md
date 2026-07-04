@@ -236,8 +236,8 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 - [ ] Every item links a **primary** source first (company/paper/repo/article),
       with the newsletter as a `via` entry — no item points only at a newsletter homepage.
 - [ ] `scripts/check_links.sh` shows no `BAD` links (WARN = paywall/anti-bot is OK).
-- [ ] `date` quoted; `sourceCount` matches the item count; `categories` lists only present slugs.
-- [ ] Each `<NewsItem category>` has a matching `<Category slug>` divider.
+- [ ] `scripts/check_meta.sh` passes: `sourceCount` = item count, `date` quoted,
+      `categories` == the dividers used, every `<NewsItem category>` has its divider.
 - [ ] Every standalone card has an `image=` cover (primary source `og:image` via
       `scripts/og_image.sh`); bucket/"en bref" cards may skip it.
 - [ ] Media uses real URLs/ids; tweets use the numeric status id.
@@ -251,9 +251,15 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 # Cover image: pull the primary source's og:image (pass fallbacks after it)
 .claude/skills/news-recap/scripts/og_image.sh <primary-url> [fallback-url …]
 .claude/skills/news-recap/scripts/check_links.sh apps/web/src/content/digests/<date>.mdx
+# Frontmatter vs body: sourceCount, categories/dividers, quoted date
+.claude/skills/news-recap/scripts/check_meta.sh apps/web/src/content/digests/<date>.mdx
 cd apps/web && bun run dev            # open /posts/<date>, check render + category filter
 bun run turbo typecheck lint          # from repo root
 ```
 
 `check_links.sh` GETs every URL in the file and flags any that don't resolve
 (status ≥ 400 or no response). Fix or replace every `BAD` link before finishing.
+`check_meta.sh` cross-checks the frontmatter against the body: `sourceCount` =
+number of `<NewsItem>`, `categories` = the `<Category slug>` dividers actually
+used, every `<NewsItem category>` has its divider, no orphan divider, `date`
+quoted. Both accept a glob (`…/digests/*.mdx`) to sweep every file at once.
