@@ -3,7 +3,7 @@ date: "2026-06-21"
 title: "Les agents qui réécrivent leurs propres skills"
 lede: "Édition dominicale : les frameworks d'auto-optimisation traitent les fichiers de skills comme des poids de réseau, et la science livre un capteur de virus aéroportés, une première greffe pulmonaire VIH-vers-VIH et le scanner corporel de Midjourney."
 categories: ["ia", "hardware", "evenements"]
-sourceCount: 6
+sourceCount: 5
 featured: false
 ---
 
@@ -20,15 +20,6 @@ Un fichier de skill est un `.md` qui sert de procédure à un agent ; jusqu'ici 
 - **[SkillOpt](https://github.com/microsoft/SkillOpt)** (Microsoft Research) — boucle rollout → évaluation → réflexion → édits bornés. Sur GPT-5.5, **+23,5 points** en chat direct et **+24,8** en boucle Codex, pour des skills tenant ~920 tokens médians.
 - **[GEPA](https://github.com/gepa-ai/gepa)** (Genetic-Pareto) — algorithme évolutionnaire qui « mute » l'instruction et sélectionne les candidats sur un front de Pareto ; compatible **[DSPy](https://github.com/stanfordnlp/dspy)**.
 - **[EvoSkill](https://github.com/sentient-agi/EvoSkill)** — applique l'idée de GEPA aux workflows de code multi-agents, chaque variante sur sa branche Git, sélection au front de Pareto.
-</NewsItem>
-
-<NewsItem
-  title="Le « loop engineering » remplace le prompt"
-  category="ia"
-  tags={["agents", "méthode"]}
-  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
->
-Le goulot d'étranglement n'est plus le modèle mais la façon d'écrire ses procédures. L'approche : monter une boucle découverte → plan → exécution → vérification avec une condition d'arrêt vérifiable, et laisser l'agent itérer seul. Ces optimiseurs exigent un signal de récompense mesurable et un jeu de validation propre ; le coût se concentre sur la phase d'entraînement, le skill final n'ajoutant rien à l'inférence.
 </NewsItem>
 
 <Category slug="hardware" />
