@@ -1,26 +1,85 @@
-import { ArrowLeft01Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
 import { MDXProvider } from "@mdx-js/react"
-import {
-  createFileRoute,
-  Link,
-  notFound,
-  useLocation,
-} from "@tanstack/react-router"
+import { createFileRoute, notFound, useLocation } from "@tanstack/react-router"
 import { useEffect, useMemo, useState } from "react"
 import { FilterProvider, mdxComponents } from "@/components/mdx"
 import { Reveal } from "@/components/motion/reveal"
+import { BackLink } from "@/components/posts/back-link"
 import { CategoryFilter } from "@/components/posts/category-filter"
 import { PostSearch } from "@/components/posts/post-search"
+import { siteConfig } from "@/config/site"
 import { getDigestComponent, getDigestItems, getDigestSummary } from "@/content"
+import { getCategory } from "@/content/categories"
 import { formatDate } from "@/lib/format"
+import { absoluteImage, absoluteUrl, breadcrumbJsonLd, seo } from "@/lib/seo"
 import { queryMatches } from "@/lib/slug"
+
+/** Google News caps headline relevance ~110 chars; trim at a word boundary. */
+function clampHeadline(title: string): string {
+  if (title.length <= 110) return title
+  return `${title.slice(0, 107).replace(/\s+\S*$/, "")}…`
+}
 
 export const Route = createFileRoute("/posts/$date")({
   loader: async ({ params }) => {
     const summary = await getDigestSummary(params.date)
     if (!summary) throw notFound()
     return { summary, items: getDigestItems(params.date) }
+  },
+  head: ({ loaderData, params }) => {
+    const path = `/posts/${params.date}`
+    if (!loaderData) {
+      return seo({
+        title: `Récapitulatif introuvable — ${siteConfig.brand}`,
+        description: siteConfig.seoDescription,
+        path,
+        noindex: true,
+      })
+    }
+    const { summary, items } = loaderData
+    const cover = items.find((item) => item.image)?.image
+    const sections = summary.categories.map((slug) => getCategory(slug).label)
+    const keywords = Array.from(
+      new Set([...sections, ...items.flatMap((item) => item.tags)])
+    ).slice(0, 18)
+    const published = `${summary.date}T08:00:00.000Z`
+
+    const article = {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "@id": `${absoluteUrl(path)}#article`,
+      url: absoluteUrl(path),
+      mainEntityOfPage: absoluteUrl(path),
+      headline: clampHeadline(summary.title),
+      description: summary.lede,
+      datePublished: published,
+      dateModified: published,
+      inLanguage: siteConfig.lang,
+      image: [absoluteImage(cover)],
+      articleSection: sections,
+      keywords: keywords.join(", "),
+      isPartOf: { "@id": `${siteConfig.url}/#website` },
+      author: { "@id": `${siteConfig.url}/#person` },
+      publisher: { "@id": `${siteConfig.url}/#person` },
+    }
+
+    return seo({
+      title: `${summary.title} — ${siteConfig.brand}`,
+      description: summary.lede,
+      path,
+      type: "article",
+      image: cover,
+      imageAlt: summary.title,
+      publishedTime: summary.date,
+      section: sections[0],
+      jsonLd: [
+        article,
+        breadcrumbJsonLd([
+          ["Accueil", "/"],
+          ["Récapitulatifs", "/posts"],
+          [formatDate(summary.date), path],
+        ]),
+      ],
+    })
   },
   component: DigestPage,
 })
@@ -94,17 +153,7 @@ function DigestPage() {
       <div className="mx-auto max-w-[680px] px-5 py-14 sm:py-20">
         {/* Recap header */}
         <Reveal>
-          <Link
-            to="/posts"
-            className="group inline-flex items-center gap-1 text-muted-foreground text-sm transition-colors hover:text-foreground"
-          >
-            <HugeiconsIcon
-              icon={ArrowLeft01Icon}
-              strokeWidth={2}
-              className="size-4 transition-transform group-hover:-translate-x-0.5"
-            />
-            Articles
-          </Link>
+          <BackLink fallbackTo="/posts" fallbackLabel="Articles" />
 
           <h1 className="mt-5 font-heading text-[32px] text-foreground leading-[1.1]">
             {summary.title}

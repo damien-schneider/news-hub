@@ -1,12 +1,14 @@
+import type { IconSvgElement } from "@hugeicons/react"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { cn } from "@workspace/ui/lib/utils"
 import { LayoutGroup, motion } from "motion/react"
-
 import { getCategory, sortCategories } from "@/content/categories"
 
 interface Chip {
   slug: string | null
   label: string
   accent: string | null
+  icon: IconSvgElement | null
 }
 
 /** Single-select category chips with a sliding active indicator. */
@@ -22,10 +24,10 @@ export function CategoryFilter({
   orientation?: "horizontal" | "vertical"
 }) {
   const chips: Chip[] = [
-    { slug: null, label: "Tous", accent: null },
+    { slug: null, label: "Tous", accent: null, icon: null },
     ...sortCategories(categories).map((slug) => {
       const meta = getCategory(slug)
-      return { slug, label: meta.label, accent: meta.accent }
+      return { slug, label: meta.label, accent: meta.accent, icon: meta.icon }
     }),
   ]
 
@@ -73,10 +75,12 @@ export function CategoryFilter({
                   }
                 />
               )}
-              {chip.accent && (
-                <span
-                  className="size-2 rounded-full"
-                  style={{ backgroundColor: chip.accent }}
+              {chip.icon && (
+                <HugeiconsIcon
+                  icon={chip.icon}
+                  strokeWidth={2}
+                  className="size-3.5 shrink-0"
+                  style={{ color: chip.accent ?? undefined }}
                   aria-hidden
                 />
               )}

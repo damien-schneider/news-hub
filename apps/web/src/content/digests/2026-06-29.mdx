@@ -1,0 +1,157 @@
+---
+date: "2026-06-29"
+title: "L'IA de pointe sous contrôle : Mythos restauré, GPT-5.6 toujours verrouillé"
+lede: "Anthropic rouvre l'accès à Claude Mythos 5 pour une centaine d'organisations américaines, tandis que GPT-5.6 d'OpenAI reste cantonné à une vingtaine de partenaires triés par Washington. Ailleurs : la Chine referme l'écart en cybersécurité IA avec GLM-5.2, Apple répercute la pénurie de puces mémoire sur ses prix, et Volkswagen prépare jusqu'à 100 000 suppressions de postes."
+categories: ["ia", "web", "robotique", "productivite", "finance", "hardware"]
+sourceCount: 12
+highlight:
+  title: "Anthropic restaure l'accès à Claude Mythos 5 pour une centaine d'organisations américaines, GPT-5.6 d'OpenAI reste verrouillé"
+  category: "ia"
+  image: "https://media.cnn.com/api/v1/images/stellar/prod/ap24326751005417.jpg?c=16x9&q=w_800,c_fill"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic restaure l'accès à Claude Mythos 5 pour une centaine d'organisations américaines, GPT-5.6 d'OpenAI reste verrouillé"
+  category="ia"
+  tags={["openai", "anthropic", "sécurité"]}
+  sources={[{ label: "Les Echos", url: "https://www.lesechos.fr/tech-medias/intelligence-artificielle/ia-washington-reautorise-un-acces-limite-au-modele-mythos-danthropic-et-encadre-le-nouveau-lancement-dopenai-2239495" }, { label: "CNN", url: "https://www.cnn.com/2026/06/26/tech/anthropic-mythos-release" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/openai-launched-strongest-new-models" }]}
+  image="https://media.cnn.com/api/v1/images/stellar/prod/ap24326751005417.jpg?c=16x9&q=w_800,c_fill"
+  imageAlt="Restriction d'accès aux modèles d'IA de pointe sur directive du gouvernement américain"
+>
+Claude Mythos 5, le modèle de cybersécurité d'Anthropic capable de repérer des milliers de failles critiques (dont un bug OpenBSD vieux de **27 ans** et des exploits chaînés du noyau Linux), retrouve un accès partiel : une centaine d'organisations américaines — dont les membres du programme Project Glasswing, Apple, Google, Cisco, Nvidia, Microsoft — y sont de nouveau autorisées après un retrait imposé par Washington il y a deux semaines. Fable 5, la version grand public, reste hors ligne ; Anthropic négocierait sa réouverture cette semaine. `GPT-5.6` Sol/Terra/Luna d'OpenAI, lancé vendredi, subit le même traitement — accès limité à une vingtaine de partenaires triés par le gouvernement, un rythme que Sam Altman juge [raisonnable mais pas optimal](https://x.com/sama/status/2070607488274358364).
+</NewsItem>
+
+<NewsItem
+  title="La Chine referme l'écart en cybersécurité IA avec GLM-5.2"
+  category="ia"
+  tags={["chine", "cybersécurité", "open-source"]}
+  sources={[{ label: "The Verge", url: "https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity" }, { label: "Z.ai", url: "https://z.ai/blog/glm-5.2" }, { label: "Semgrep", url: "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+  image="https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/STKS515_CYBER_WARFARE2_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
+  imageAlt="Cybersécurité et intelligence artificielle"
+>
+`GLM-5.2`, le modèle open-weight de Zhipu AI (Z.ai), égalerait Mythos d'Anthropic sur la recherche de vulnérabilités selon des chercheurs cités par le Wall Street Journal — Semgrep confirme un score supérieur à Claude sur son propre benchmark cyber. Le fossé se referme malgré l'écart de **20 à 30 %** que reconnaît le fondateur de 360 Security Technology, dont les outils *Tulongfeng* revendiquent déjà **3 432** vulnérabilités identifiées et qui compare Mythos à une « arme nucléaire cyber ».
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles & recherche IA"
+  category="ia"
+  tags={["recherche", "modèles"]}
+  sources={[{ label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[Hermes Agent — Mixture of Agents](https://hermes-agent.nousresearch.com/)** (Nous Research) — combine Claude Opus 4.8 et GPT-5.5 via un agrégateur, +8 % / +11 % vs solo sur son propre benchmark ; un contournement pour accéder à des capacités frontières sans compte gated.
+- **[VibeThinker-3B](https://the-decoder.com/sinas-open-model-vibethinker-3b-aims-to-show-reasoning-compresses-well-but-factual-knowledge-doesnt/)** (Sina Weibo) — 3 milliards de paramètres, égale des modèles jusqu'à **333×** plus gros (DeepSeek V3.2, Kimi K2.5) en maths et code grâce à un post-entraînement multi-étapes.
+- **[Qwen-AgentWorld](https://qwen.ai/blog?id=qwen-agentworld)** (Alibaba) — modèle de 35 Md de paramètres entraîné à simuler l'environnement lui-même (écran, erreur, terminal) plutôt qu'à agir ; devancerait GPT-4 et Claude sur AgentWorldBench.
+- **[CEO-Bench](https://the-decoder.com/only-three-ai-models-finished-above-starting-capital-in-a-500-day-startup-survival-test/)** (Princeton) — sur 500 jours simulés à la tête d'une entreprise fictive, seuls 3 modèles finissent au-dessus du capital de départ ; une simple heuristique à base de règles, sans IA, bat presque tous les modèles testés.
+</NewsItem>
+
+<NewsItem
+  title="Google plafonne l'accès de Meta à Gemini, faute de calcul disponible"
+  category="ia"
+  tags={["compute", "google"]}
+  sources={[{ label: "The Next Web", url: "https://thenextweb.com/news/google-caps-meta-gemini-compute-shortage" }, { label: "via Superhuman", url: "https://www.superhuman.ai/p/openai-launched-strongest-new-models" }]}
+>
+Google rationne l'usage des modèles Gemini par Meta, invoquant un manque de capacité de calcul. Le groupe paierait par ailleurs **920 M$** par mois à SpaceX pour accéder à **110 000** GPU Nvidia — la pénurie de calcul redessine les alliances entre géants de la tech.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Lectures techniques de la semaine"
+  category="web"
+  tags={["frontend", "perf"]}
+  sources={[{ label: "via Full Stack Focus", url: "https://fullstackfocus.beehiiv.com/p/the-systemic-decay-of-tech-hiring" }]}
+>
+- **[En mémoire de l'ingénieur qui a inventé le soulignement rouge ondulé](https://devblogs.microsoft.com/oldnewthing/20260622-00/?p=112451)** — Tony a fait remonter le correcteur orthographique de MS-DOS vers Windows en reverse-engineering le binaire, sans le code source.
+- **[Toutes les façons de faire communiquer des composants React](https://neciudan.dev/component-communication-patterns-in-react)** — props, contexte, refs, événements : la carte complète des patterns et quand utiliser chacun.
+- **[La façon la plus lente possible de sommer un tableau](https://blog.weineng.me/posts/slowest_add/)** — une plongée volontairement absurde dans les pires façons d'additionner des nombres, pour comprendre ce qui rend une boucle rapide.
+- **[Le manuel de l'ingénierie fintech](https://w.pitula.me/fintech-engineering-handbook/)** — grands livres comptables, précision, idempotence, réconciliation : tout ce qu'on n'enseigne pas sur le code qui touche à l'argent.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Un robot humanoïde Unitree G1 filmé en train de mendier dans une rue de Chengdu"
+  category="robotique"
+  tags={["humanoïde", "chine", "viral"]}
+  sources={[{ label: "YouTube", url: "https://www.youtube.com/watch?v=z6oCo9e7BEI" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+  image="https://i.ytimg.com/vi/z6oCo9e7BEI/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLB6NkpdZsHlXyb68XkRzMqOssmmig"
+  imageAlt="Le robot humanoïde Unitree G1 dans une rue de Chengdu"
+>
+Un Unitree G1 a été filmé à genoux dans une rue de Chengdu, mains jointes, demandant des pièces et des dons par QR code pour, officiellement, payer sa facture d'électricité. La vidéo a fait le tour des réseaux sociaux chinois sans qu'aucun auteur ne revendique la mise en scène. Le stunt illustre la vitesse à laquelle la Chine banalise les humanoïdes dans l'espace public.
+
+<Video src="https://www.youtube.com/watch?v=z6oCo9e7BEI" caption="Le robot Unitree G1 mendiant dans une rue de Chengdu." />
+</NewsItem>
+
+<Category slug="productivite" />
+
+<NewsItem
+  title="L'IA s'infiltre dans le travail d'entreprise"
+  category="productivite"
+  tags={["entreprise", "adoption"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/how-agents-are-transforming-work/" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+>
+- **Codex** génère désormais **99,8 %** des tokens de sortie produits en interne chez OpenAI, contre moins de 10 % un an plus tôt ; la croissance la plus forte vient des équipes juridiques, finance, RH et support (usage hors développement ×137 pour les individus, ×189 pour les organisations depuis août 2025). [OpenAI](https://openai.com/index/how-agents-are-transforming-work/)
+- **HP** étend son partenariat **Frontier** avec OpenAI pour déployer l'IA à l'échelle chez ses clients : expérience client, développement logiciel, opérations d'entreprise. [OpenAI](https://openai.com/index/hp-frontier-partnership)
+- Un professeur de **Brown University** alerte sur une fraude à l'IA généralisée lors d'un examen, débat qui a rassemblé 352 points sur Hacker News. [El País](https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html)
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="OpenAI pourrait décaler son introduction en Bourse à 2027"
+  category="finance"
+  tags={["ipo", "openai"]}
+  sources={[{ label: "TradingSat", url: "https://www.tradingsat.com/actualites/informations-societes/apres-les-debuts-boursiers-de-spacex-a-wall-street-les-craintes-sur-un-report-de-l-introduction-en-bourse-d-openai-jette-un-froid-sur-l-ia-1165734.html" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com/articles/les-marches" }]}
+  image="https://www.tradingsat.com/media/pictures/realsize/news/chatgpt-une-revolution-boursiere-684763.jpg"
+  imageAlt="OpenAI envisage de repousser son introduction en Bourse"
+>
+OpenAI pencherait pour repousser son introduction en Bourse à 2027 plutôt que d'accepter une valorisation sous les **1 000 milliards de dollars** (contre 730 Md$ aujourd'hui) fin 2026. Le titre SpaceX, qui avait levé plus de **85 Md$** lors de son IPO ce mois-ci, a chuté d'environ **32 %** depuis son pic à 202 $ jusqu'à 153 $ — une référence qui refroidit l'appétit des investisseurs pour les valorisations technologiques ambitieuses.
+</NewsItem>
+
+<NewsItem
+  title="Volkswagen envisage de supprimer jusqu'à 100 000 emplois"
+  category="finance"
+  tags={["automobile", "restructuration"]}
+  sources={[{ label: "Le Figaro", url: "https://www.lefigaro.fr/societes/volkswagen-pourrait-supprimer-100-000-emplois-20260626" }, { label: "Financial Times", url: "https://www.ft.com/content/ccea8285-11f9-45c0-b642-1efe9ef0c1da?syn-25a6b1a6=1" }]}
+  image="https://i.f1g.fr/media/cms/1200x630_crop/2026/06/26/33cdf301c00b26f2af6be9eb532d746dc70a4714d28dfbbce98ea2bcaa5c25c2.jpg"
+  imageAlt="Usine Volkswagen en Allemagne"
+>
+Le constructeur allemand envisage d'ajouter **50 000** suppressions de postes à son plan existant et de fermer quatre usines — près d'un salarié sur six —, pour environ **10 Md€** d'économies annuelles. En cause : recul des ventes en Chine, véhicules électriques chinois jusqu'à 6 000 € moins chers, droits de douane américains, marché européen encore 16 % sous son niveau d'avant-pandémie. Le projet doit être présenté au conseil de surveillance le 9 juillet.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés & semiconducteurs"
+  category="finance"
+  tags={["semiconducteurs", "marchés"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai/p/openai-launched-strongest-new-models" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+>
+- Puces mémoire : **Micron** (+296 % depuis janvier, CA trimestriel ×4 à ~42 Md$), **SanDisk** (+780 %) et **SK Hynix** (+294 %, devenu la plus grosse capitalisation sud-coréenne) profitent de la ruée sur la mémoire IA — Samsung et SK Hynix ont pourtant chuté après avoir dévoilé des plans d'investissement pouvant atteindre **1 300 Md$**. [CNBC](https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html), [TechCrunch](https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/)
+- Le « SaaSpocalypse » continue : **Oracle**, **Salesforce** et **ServiceNow** restent plus de 50 % sous leurs sommets malgré un rebond vendredi lié aux restrictions sur `GPT-5.6` ; Big Tech (Meta -29 %, Amazon -15 %, Alphabet -16 %, Microsoft -28 %) recule alors que les géants prévoient environ **725 Md$** de dépenses IA cette année. [Tom's Hardware](https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion)
+- **Baidu** bondit de plus de **7 %** sur des rumeurs d'IPO à **50 Md$** à Hong Kong pour sa filiale de puces IA **Kunlunxin**. [CNBC](https://www.cnbc.com/2026/06/29/baidu-kunlunxin-hong-kong-ipo-50-billion-ai-chips.html)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Apple relève ses prix, invoque la pénurie de puces mémoire dopée par l'IA"
+  category="hardware"
+  tags={["apple", "puces"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/25/apple-macbook-ipad-price-hike-memory.html" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+  image="https://image.cnbcfm.com/api/v1/image/108273477-1782411534878-108273477-1772635556615-gettyimages-2264175476-APPLE_LAUNCH.jpeg?v=1782411573&w=1920&h=1080"
+  imageAlt="Produits Apple, hausse de prix liée aux puces mémoire"
+>
+Apple relève de 100 à 200 dollars, voire davantage, les prix de ses Mac et iPad — le MacBook Air passe de 1 099 à 1 299 dollars, le Pro de 1 699 à 1 999 dollars, l'iPad Pro grimpe à 1 199 dollars —, en pointant la flambée des coûts de puces mémoire et de stockage tirée par la demande d'IA. iPhone, Watch et AirPods sont épargnés pour l'instant ; l'annonce a accompagné la pire séance boursière du titre en plus d'un an.
+</NewsItem>
+
+<NewsItem
+  title="Les vagues de chaleur menacent la résilience des data centers IA"
+  category="hardware"
+  tags={["climat", "data-centers"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/29/ai-data-centers-heatwave-climate-risk-weather.html" }, { label: "via Vision IA", url: "https://vision-ia.beehiiv.com/p/robot-mendiant" }]}
+  image="https://image.cnbcfm.com/api/v1/image/108327468-1782486546955-gettyimages-1556102335-SPAIN_DATA_CENTER.jpeg?v=1782486559&w=1920&h=1080"
+  imageAlt="Data center et vague de chaleur"
+>
+Les épisodes de chaleur extrême font peser un risque concret sur les data centers qui font tourner l'IA mondiale, selon CNBC : surcharge du réseau électrique au moment où le refroidissement consomme le plus, hausse des primes d'assurance et des coûts de maintenance. Le climat devient un enjeu stratégique pour l'infrastructure IA, au même titre que la puissance de calcul.
+</NewsItem>

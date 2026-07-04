@@ -4,7 +4,10 @@ title: "Titre court et factuel de la journée"
 lede: "Une à deux phrases qui résument les faits marquants du jour, sans esbroufe."
 categories: ["ia", "finance"]
 sourceCount: 3
-featured: false
+highlight:
+  title: "Fait principal en IA"
+  category: "ia"
+  image: "https://example.com/cover.jpg"
 ---
 
 {/* Copy this file to apps/web/src/content/digests/<date>.mdx and replace the
@@ -18,8 +21,11 @@ featured: false
   category="ia"
   tags={["modèle", "open-source"]}
   sources={[{ label: "Source", url: "https://example.com/article" }]}
+  image="https://example.com/og-image.jpg"
+  imageAlt="Description de la couverture"
 >
 Résumé factuel en une à trois phrases : le fait, puis le chiffre ou le pourquoi.
+La couverture `image=` vient de l'`og:image` de la source (scripts/og_image.sh).
 
 <NewsImage src="https://cdn.example.com/visuel.jpg" alt="Description" caption="Légende courte." />
 </NewsItem>

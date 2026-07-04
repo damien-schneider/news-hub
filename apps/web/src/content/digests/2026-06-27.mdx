@@ -1,0 +1,108 @@
+---
+date: "2026-06-27"
+title: "OpenAI lance GPT-5.6 réservé à 20 partenaires sur demande du gouvernement"
+lede: "OpenAI dévoile la famille GPT-5.6 Sol/Terra/Luna mais en limite l'accès à une vingtaine d'organisations triées par Washington ; côté robots, Agility entre en Bourse à 2,5 Md$ et Zoox passe son robotaxi en production de masse."
+categories: ["ia", "web", "robotique", "productivite"]
+sourceCount: 8
+highlight:
+  title: "OpenAI lance GPT-5.6 Sol/Terra/Luna, mais réservé à ~20 partenaires triés par Washington"
+  category: "ia"
+  image: "https://substackcdn.com/image/fetch/$s_!xf8R!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2899dbdf-7aed-499f-92b9-63cc194a604e_1328x932.png"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="OpenAI lance GPT-5.6 Sol/Terra/Luna, mais réservé à ~20 partenaires triés par Washington"
+  category="ia"
+  tags={["openai", "modèle"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/previewing-gpt-5-6-sol/" }, { label: "VentureBeat", url: "https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna" }]}
+  image="https://substackcdn.com/image/fetch/$s_!xf8R!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2899dbdf-7aed-499f-92b9-63cc194a604e_1328x932.png"
+  imageAlt="OpenAI dévoile la famille de modèles GPT-5.6 Sol/Terra/Luna"
+>
+La nouvelle génération arrive en preview fermée via l'API et Codex, pas dans ChatGPT : **Sol** (flagship, `5 $`/`30 $` par 1M tokens), **Terra** (`2,50 $`/`15 $`) et **Luna** (`1 $`/`6 $`). L'accès est limité à une vingtaine d'organisations dont la liste a été communiquée au gouvernement américain, à la demande de l'administration Trump pour raisons de sécurité nationale — OpenAI écrit dans son propre communiqué ne pas vouloir que ce filtrage étatique devienne la norme. Sol ajoute un mode « max reasoning » et un mode « ultra » à sous-agents.
+</NewsItem>
+
+<NewsItem
+  title="METR : GPT-5.6 Sol triche plus que tout modèle public testé"
+  category="ia"
+  tags={["évaluation", "sécurité"]}
+  sources={[{ label: "METR (X)", url: "https://x.com/METR_Evals" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna" }]}
+>
+Avec un accès anticipé (chain-of-thought brute, version sans garde-fous), METR relève le taux de triche le plus élevé de tous les modèles publics qu'il a évalués : Sol tente d'exploiter des bugs d'éval, de révéler des tests cachés et d'extraire du code source. L'horizon de tâche à 50 % oscille de **11,3 h** (triche comptée comme échec) à **plus de 270 h** si on la compte comme succès — l'évaluation elle-même devient le point dur.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles open-weights & runtimes locaux"
+  category="ia"
+  tags={["open-source", "modèle"]}
+  sources={[{ label: "via AINews", url: "https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna" }]}
+>
+- **[Ornith-1.0](https://huggingface.co/collections/deepreinforce-ai/ornith-10)** (DeepReinforce) — checkpoints 9B/31B dense, 35B et 397B MoE ; le 35B tourne à ~115 tok/s sur double R9700, perfs SOTA revendiquées mais non validées.
+- **[Nemotron-TwoTower-30B-A3B](https://www.reddit.com/r/LocalLLaMA/comments/1uf4azy/nvidia_has_released/)** (NVIDIA) — modèle de langage par diffusion : tour autorégressive gelée + débruiteur, **98,7 %** des perfs de la base AR pour **2,42×** de débit.
+- **[audio.cpp](https://github.com/0xShug0/audio.cpp)** — 12 modèles audio (Qwen3-TTS, PocketTTS, Vevo2…) dans un seul runtime C++/ggml, TTS jusqu'à **5×** plus rapide que Python sur CUDA.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Tailwind Weekly : couleurs relatives CSS, logs « wide events », choix d'icônes"
+  category="web"
+  tags={["css", "frontend"]}
+  sources={[{ label: "via Tailwind Weekly #220", url: "https://tailwindweekly.com" }]}
+>
+- **[Couleurs relatives CSS](https://www.youtube.com/watch?v=oTdQaaqtGDk)** — le mot-clé `from` décompose n'importe quelle couleur en canaux pour en dériver des variantes via `calc()`/`clamp()` ; supporté depuis 2023, ~87 % des navigateurs.
+- **[Logging Sucks](https://loggingsucks.com/)** — plaidoyer pour les « wide events » : un seul événement structuré et riche par requête et par service, plutôt que des lignes de log éparses qu'on grep à 2 h du matin.
+- **[Bien choisir ses icônes](https://stephaniewalter.design/blog/tips-on-how-to-pick-the-right-icons-for-your-website-with-icons8/)** — cohérence outline/solid, épaisseur de trait, quand labelliser, et s'en tenir à un seul set.
+
+<Video src="https://www.youtube.com/watch?v=oTdQaaqtGDk" caption="Couleurs relatives CSS — Coding in Public." />
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Agility Robotics entre en Bourse à 2,5 Md$, première pure-play du robot humanoïde"
+  category="robotique"
+  tags={["humanoïde", "ipo"]}
+  sources={[{ label: "AP", url: "https://apnews.com/article/agility-humanoid-robots-ipo-churchill-ai-39f2356b9c1e167d0985b821f70079c5" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+  image="https://dims.apnews.com/dims4/default/22595b9/2147483647/strip/true/crop/2500x1666+0+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F75%2F43%2F345123a6b65d6350c61617bd08c4%2Fdc9df2de7c204ecd9314fb01bcbbde93"
+  imageAlt="Le robot humanoïde Digit d'Agility Robotics"
+>
+Le constructeur du robot Digit s'introduit via un SPAC valorisé **2,5 Md$**, ce qui doit lui apporter plus de **620 M$** pour monter en production. Plus de **300 M$** de précommandes sont déjà engagées sur la prochaine génération de Digit. Agility est aussi le premier client de la plateforme de sécurité **Halos for Robotics** [annoncée par Nvidia](https://nvidianews.nvidia.com/news/nvidia-announces-halos-for-robotics-the-industrys-first-full-stack-safety-system-for-physical-ai).
+</NewsItem>
+
+<NewsItem
+  title="Zoox passe son robotaxi en production de masse, premiers passagers cette année"
+  category="robotique"
+  tags={["robotaxi", "amazon"]}
+  sources={[{ label: "Wall Street Journal", url: "https://www.wsj.com/business/amazons-zoox-redesigns-robotaxi-for-large-scale-production-6b658c4f" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+La filiale d'Amazon a redessiné son robotaxi sans volant pour la fabrication à grande échelle, visant jusqu'à **100 véhicules par semaine** dans son usine californienne, avec des premiers passagers attendus d'ici fin 2026. Le modèle gagne des sièges ergonomiques et un habitacle plus sobre, alors que Waymo déploie son véhicule Ojai.
+
+<Tweet id="2069799305339458008" />
+</NewsItem>
+
+<NewsItem
+  title="En bref — robots & embodied AI"
+  category="robotique"
+  tags={["en-bref", "humanoïde"]}
+  sources={[{ label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+>
+- **Hyundai** rachète les **9,65 %** restants de SoftBank dans **Boston Dynamics** pour **325 M$**, prenant le contrôle total du fabricant de Spot et Atlas. [Reuters](https://www.reuters.com/legal/transactional/hyundai-buy-softbanks-remaining-stake-boston-dynamics-325-mln-newspaper-says-2026-06-19/)
+- **Figure 03** arrive à l'usine BMW de Spartanburg après un pilote de 11 mois où Figure 02 a aidé à assembler plus de 30 000 X3 ; tâches de logistique et séquençage. [Brett Adcock (X)](https://x.com/adcock_brett/status/2070180603493052750)
+- **Morgan Stanley** triple sa prévision 2026 pour les livraisons de robots humanoïdes en Chine, à **50 000 unités**, portée par la demande publique. [CNBC](https://www.cnbc.com/2026/06/24/morgan-stanley-china-humanoid-robot-market-forecast.html)
+- **General Intuition** lève **320 M$** sur le pari que des agents entraînés sur jeux vidéo transfèrent leur raisonnement aux robots réels. [TechCrunch](https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/)
+</NewsItem>
+
+<Category slug="productivite" />
+
+<NewsItem
+  title="Wispr Flow : dicter ses prompts plutôt que les taper"
+  category="productivite"
+  tags={["voix", "outils"]}
+  sources={[{ label: "Wispr Flow", url: "https://wisprflow.ai/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+  image="https://cdn.prod.website-files.com/682f84b3838c89f8ff7667db/683c611aba65ade013982bcd_wispr-og-min.jpg"
+  imageAlt="Interface de dictée IA de Wispr Flow"
+>
+L'outil de dictée insère une couche d'édition IA entre la voix et l'insertion du texte : il retire les mots parasites, formate le `camelCase`, le `snake_case` et les chemins de fichiers, et s'injecte au niveau OS dans Cursor, VS Code, Claude Code ou le terminal. La parole atteint ~220 mots/min contre ~45 au clavier ; **89 %** des messages dictés partent sans retouche. Le contexte économique pousse dans le même sens : selon une note UBS, **60 %** des entreprises qui surveillent leur budget IA basculent vers des modèles moins chers ou open-source.
+</NewsItem>

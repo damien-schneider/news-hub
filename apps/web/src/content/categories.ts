@@ -1,3 +1,16 @@
+import {
+  AiBrain01Icon,
+  Calendar03Icon,
+  ChartIncreaseIcon,
+  ChartLineData01Icon,
+  CheckListIcon,
+  ChipIcon,
+  CircleIcon,
+  Robot01Icon,
+  SourceCodeIcon,
+} from "@hugeicons/core-free-icons"
+import type { IconSvgElement } from "@hugeicons/react"
+
 /**
  * The recap categories. These mirror the 8 colour-coded sections of the source
  * newsletter digest. `accent` is a hex colour reused for chips and timeline
@@ -9,51 +22,66 @@ export interface CategoryMeta {
   /** Short label for tight chip rows. */
   short: string
   accent: string
+  /** Hugeicon shown as the section marker. */
+  icon: IconSvgElement
 }
 
 export const CATEGORIES = {
-  ia: { slug: "ia", label: "IA & LLMs", short: "IA", accent: "#e8593b" },
+  ia: {
+    slug: "ia",
+    label: "IA & LLMs",
+    short: "IA",
+    accent: "#e8593b",
+    icon: AiBrain01Icon,
+  },
   web: {
     slug: "web",
     label: "Web & Frontend",
     short: "Web",
     accent: "#d6a256",
+    icon: SourceCodeIcon,
   },
   robotique: {
     slug: "robotique",
     label: "Robotique",
     short: "Robotique",
     accent: "#7bb99b",
+    icon: Robot01Icon,
   },
   growth: {
     slug: "growth",
     label: "Marketing & Growth",
     short: "Growth",
     accent: "#c97bb4",
+    icon: ChartIncreaseIcon,
   },
   productivite: {
     slug: "productivite",
     label: "Productivité & Org",
     short: "Produit",
     accent: "#b8a382",
+    icon: CheckListIcon,
   },
   finance: {
     slug: "finance",
     label: "Finance & Marchés",
     short: "Finance",
     accent: "#7b9dc9",
+    icon: ChartLineData01Icon,
   },
   hardware: {
     slug: "hardware",
     label: "Hardware & Santé",
     short: "Hardware",
     accent: "#9bae85",
+    icon: ChipIcon,
   },
   evenements: {
     slug: "evenements",
     label: "Événements & Loisirs",
     short: "Événements",
     accent: "#e8c75c",
+    icon: Calendar03Icon,
   },
 } as const satisfies Record<string, CategoryMeta>
 
@@ -80,6 +108,7 @@ export function getCategory(slug: string): CategoryMeta {
     label: slug,
     short: slug,
     accent: "var(--muted-foreground)",
+    icon: CircleIcon,
   }
 }
 

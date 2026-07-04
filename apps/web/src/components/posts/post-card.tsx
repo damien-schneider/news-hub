@@ -3,9 +3,9 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { Link } from "@tanstack/react-router"
 import { motion } from "motion/react"
 import { EASE } from "@/components/motion/reveal"
+import { DateBadge } from "@/components/posts/date-badge"
 import type { DigestSummary } from "@/content"
 import { getCategory } from "@/content/categories"
-import { formatDate } from "@/lib/format"
 
 /** A featured recap card (home "À la une" block). */
 export function PostCard({ digest }: { digest: DigestSummary }) {
@@ -17,18 +17,14 @@ export function PostCard({ digest }: { digest: DigestSummary }) {
       <Link
         to="/posts/$date"
         params={{ date: digest.date }}
-        className="group flex items-center gap-4 rounded-2xl border border-border/70 bg-card px-4 py-3.5 shadow-sm transition-colors hover:border-border hover:bg-muted/30"
+        className="group flex items-center gap-4 rounded-2xl border border-border/70 bg-card px-4 py-3.5 shadow-sm transition-colors hover:border-border hover:bg-accent"
       >
         <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-2">
-            <h3 className="font-medium text-foreground">{digest.title}</h3>
-            <span className="text-muted-foreground text-xs">
-              · {formatDate(digest.date)}
-            </span>
-          </div>
+          <h3 className="font-medium text-foreground">{digest.title}</h3>
           <p className="mt-0.5 line-clamp-1 text-muted-foreground text-sm">
             {digest.lede}
           </p>
+          <DateBadge date={digest.date} className="mt-2" />
           <div className="mt-2 flex flex-wrap items-center gap-1.5">
             {digest.categories.slice(0, 8).map((slug) => {
               const meta = getCategory(slug)

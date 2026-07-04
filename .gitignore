@@ -4,6 +4,7 @@ dist
 dist-ssr
 *.local
 .env*
+!.env.example
 .tanstack
 .wrangler
 .output
@@ -19,3 +20,4 @@ todos.json
 
 # scratch
 prompt.txt
+.vercel

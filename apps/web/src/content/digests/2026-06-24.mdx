@@ -1,0 +1,153 @@
+---
+date: "2026-06-24"
+title: "Claude s'installe dans Slack comme coéquipier permanent"
+lede: "Anthropic livre Claude Tag, un agent multijoueur asynchrone dans Slack qui signe déjà 65 % du code de son équipe produit. GPT-5 Pro débloque une énigme immunologique de trois ans, et la Bourse coréenne perd 10 % sur fond de doutes sur le capex IA."
+categories: ["ia", "web", "robotique", "finance", "productivite", "evenements"]
+sourceCount: 12
+highlight:
+  title: "Anthropic livre Claude Tag : Claude devient un coéquipier dans Slack"
+  category: "ia"
+  image: "https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic livre Claude Tag : Claude devient un coéquipier dans Slack"
+  category="ia"
+  tags={["anthropic", "agents"]}
+  sources={[{ label: "Anthropic", url: "https://www.anthropic.com/news/introducing-claude-tag" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via AINews", url: "https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive" }]}
+  image="https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg"
+  imageAlt="Annonce d'Anthropic pour Claude Tag dans Slack"
+>
+On tague `@Claude` dans un canal Slack et on lui délègue une tâche pendant qu'on fait autre chose : un seul Claude par canal, partagé par toute l'équipe, qui garde le contexte et exécute en asynchrone sur des heures ou des jours. En mode *ambient*, il intervient sans être appelé (synthèses, relances de fils en suspens, alertes inter-canaux). Tourne sur **Opus 4.8**, en bêta sur les offres Enterprise et Team, et remplace l'ancienne app Claude in Slack (arrêt le 3 août). Anthropic dit que **65 % du code de son équipe produit** sort déjà de sa version interne — Karpathy y voit le « 3e grand redesign de l'UX des LLM » après le site web et l'app desktop.
+</NewsItem>
+
+<NewsItem
+  title="GPT-5 Pro débloque une énigme immunologique restée trois ans sans réponse"
+  category="ia"
+  tags={["openai", "science"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/gpt-5-immunology-mystery/" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+L'immunologiste Derya Unutmaz (Jackson Laboratory) a soumis un jeu de données vieux de 2022 à GPT-5 Pro, qui a identifié en quelques minutes le mécanisme reliant le métabolisme du glucose à la spécialisation des lymphocytes T, puis proposé l'expérience qui l'a validé. Retombées visées : immunothérapies CAR-T, où il faut garder les lymphocytes actifs sans les épuiser. OpenAI présente le cas comme une découverte *augmentée*, l'expert restant indispensable.
+</NewsItem>
+
+<NewsItem
+  title="Qwable-v1 clone le comportement agentic de Claude Fable 5 sans ses poids"
+  category="ia"
+  tags={["open-weights", "distillation"]}
+  sources={[{ label: "Qwable-v1 (Hugging Face)", url: "https://huggingface.co/lordx64/Qwable-v1" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+  image="https://cdn-thumbnails.huggingface.co/social-thumbnails/models/lordx64/Qwable-v1.png"
+  imageAlt="Page Hugging Face du modèle Qwable-v1"
+>
+Le développeur Taha K. (lordx64) a entraîné un modèle sur les **traces d'usage d'outils** de Claude Fable 5 — la façon dont il appelle des outils et raisonne à travers du code — sans jamais toucher aux poids d'Anthropic. Viral chez les open-weights (plus de 10 000 téléchargements pour les versions quantifiées). La zone grise : les poids sont protégés, le comportement agentic, lui, s'imite. Le savoir-faire fuit par l'usage, pas seulement par le code.
+</NewsItem>
+
+<NewsItem
+  title="OCR : Mistral sort la v4, Baidu ouvre Unlimited-OCR à mémoire plate"
+  category="ia"
+  tags={["ocr", "open-source"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+- **[Mistral OCR 4](https://mistral.ai/news/ocr-4/)** — nouvelle génération du modèle de reconnaissance documentaire du champion français, **464 points** sur Hacker News le jour du lancement.
+- **[Baidu Unlimited-OCR](https://github.com/baidu/Unlimited-OCR)** — open source (MIT), lit des dizaines de pages d'un PDF en une passe via une attention à fenêtre glissante (R-SWA) qui garde le cache KV constant. 3 Md de paramètres, 500 M actifs, **93,23 %** sur OmniDocBench v1.5, devant des modèles 100× plus gros ([arXiv](https://arxiv.org/abs/2606.23050)).
+</NewsItem>
+
+<NewsItem
+  title="Recherche & modèles — en bref"
+  category="ia"
+  tags={["recherche", "open-source"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+- **[GLM-5.2 vs Opus](https://huggingface.co/zai-org/GLM-5.2)** — sur un vrai bug du repo Cline, GLM-5.2 (MIT, 753 Md params, contexte 1M) corrige pour **0,41 $** contre 0,81 $ pour Opus, vérifie sa compilation là où Opus laisse des erreurs de type ; mais 4,7 min et 28 appels d'outils contre 1,6 min et 12 pour Opus.
+- **[« Apprendre de ses propres latents »](https://arxiv.org/abs/2605.27734)** — théorie de complexité d'échantillonnage : prédire ses représentations latentes (façon JEPA/data2vec) demande un nombre d'exemples constant en profondeur de grammaire, contre exponentiel pour le SSL au niveau token.
+- **[Qwen-AgentWorld](https://arxiv.org/abs/2606.24597)** — Alibaba mise sur des *language world models* pour des agents généralistes plus robustes dans des environnements variés.
+- **[OpenAI veut des standards mondiaux](https://openai.com/index/helping-build-shared-standards-for-advanced-ai/)** — spécifications ouvertes et « couche de confiance » via la Appia Foundation, hébergée par la Linux Foundation.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="React : Fragment ref pour la 19.3, compilateur réécrit en Rust"
+  category="web"
+  tags={["react", "compiler"]}
+  sources={[{ label: "via This Week In React", url: "https://thisweekinreact.com/newsletter" }]}
+>
+- **[Fragment ref](https://react.dev/reference/react/Fragment)** — la prop `ref` sur un `Fragment` expose un `FragmentInstance` pour interagir avec ses enfants de premier niveau ; déjà en Canary, prévu pour [React v19.3](https://github.com/react/react/pull/34720).
+- **[React Compiler en Rust](https://github.com/oven-sh/bun/pull/32504)** — Bun 1.4 vise un flag `bun build --react-compiler` jusqu'à **20×** plus rapide que la variante Babel. L'intégration native dans Oxc a en revanche été [retirée de Rolldown/Vite](https://x.com/sebastienlorber/status/2069670573555249498), le binaire grossissant trop.
+</NewsItem>
+
+<NewsItem
+  title="Releases front : React Router 8, Base UI 1.6, Astro 7, TypeScript 7 RC"
+  category="web"
+  tags={["releases", "tooling"]}
+  sources={[{ label: "via This Week In React", url: "https://thisweekinreact.com/newsletter" }]}
+>
+- **[React Router 8.0](https://remix.run/blog/react-router-v8)** — release « ennuyeuse » volontairement : active par défaut les *future flags* de v7, ESM-only.
+- **[Base UI 1.6](https://base-ui.com/react/overview/releases/v1-6-0)** — `OTPField` stabilisé, Drawer amélioré, perfs Combobox, docs redessinées.
+- **[StyleX 0.19](https://stylexjs.com/blog/v0.19.0)** — styles atomiques inline, compatibilité ESLint 10 ; l'équipe **[Linear migre de styled-components vers StyleX](https://www.skovhus.dev/blog/moving-linear-from-styled-components-to-stylex)**.
+- **[Astro 7.0](https://astro.build/blog/astro-7/)** — Vite 8, Rolldown et Rust pour traiter `.astro`/`.md`/`.mdx` : builds **~61 %** plus rapides.
+- **[TypeScript 7.0 RC](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/)** — la réécriture Go presque prête, exécutable à côté de TS6.
+</NewsItem>
+
+<Category slug="robotique" />
+
+<NewsItem
+  title="Un bracelet à ultrasons donne une main robotique d'une dextérité inédite"
+  category="robotique"
+  tags={["robotique", "recherche"]}
+  sources={[{ label: "MIT Technology Review", url: "https://www.technologyreview.com/2026/06/23/1138279/ultrasound-imaging-turns-a-robot-hand-into-a-skillful-mimic/" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+  image="https://wp.technologyreview.com/wp-content/uploads/2026/06/MIT-Hand-Tracker-02-press.jpg?resize=1200,600"
+  imageAlt="Bracelet à ultrasons pilotant une main robotique"
+>
+Des chercheurs du MIT et de l'University of Southern California ont conçu un bracelet à capteur d'ultrasons qui lit en temps réel les mouvements des muscles et tendons du poignet. Un modèle traduit ces images en positions précises des doigts, permettant à une main robotique de jouer du piano ou de manipuler des objets en 3D.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="La Bourse coréenne plonge de 10 %, les puces rattrapées par les doutes sur le capex IA"
+  category="finance"
+  tags={["marchés", "semi-conducteurs"]}
+  sources={[{ label: "The Korea Times", url: "https://www.koreatimes.co.kr/economy/others/20260623/foreign-sell-off-in-samsung-electronics-sk-hynix-drags-kospi-down-10" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+  image="https://newsimg.koreatimes.co.kr/2026/06/23/2d18111a-9a9e-4289-9490-a5c103345600.jpg"
+  imageAlt="Chute de la Bourse coréenne (Kospi)"
+>
+Le Kospi a chuté de **10 %** sur une vente massive des étrangers concentrée sur SK Hynix et Samsung, après l'envolée des dernières semaines. Le déclencheur : l'inquiétude croissante sur le coût des investissements IA, jugés en fuite en avant chez les géants de la tech. Malgré ce repli, l'indice reste en hausse de plus de **172 %** sur un an.
+</NewsItem>
+
+<NewsItem
+  title="Finance & deals — en bref"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+- **SpaceX** lève **25 Md$** en obligations, deux semaines après son IPO, pour une demande proche de **90 Md$** ([CNBC](https://www.cnbc.com/2026/06/23/spacex-debt-bond-market-ipo.html)).
+- **MGX** (Abu Dhabi) lève **~50 Md$** pour accélérer ses deals dans l'IA ([Bloomberg](https://www.bloomberg.com/news/articles/2026-06-23/abu-dhabi-s-mgx-raises-about-50-billion-to-accelerate-ai-deals)).
+- **Meta** développerait *Arena*, une app autonome de marchés de prédiction inspirée de Polymarket et Kalshi ([NYT](https://www.nytimes.com/2026/06/23/technology/meta-prediction-markets-app.html)).
+- **Cerebras** dévisse de **10 %** après son premier rapport trimestriel post-IPO, plombé par une prévision de contraction des marges ([CNBC](https://www.cnbc.com/2026/06/23/cerebras-cbrs-q1-earnings-report-2026.html)).
+</NewsItem>
+
+<Category slug="productivite" />
+
+<NewsItem
+  title="« Inspirer » au travail, c'est porter un point de vue qui déclenche une réaction viscérale"
+  category="productivite"
+  tags={["communication", "management"]}
+  sources={[{ label: "Wes Kao", url: "https://newsletter.weskao.com/p/what-being-inspiring-actually-means" }]}
+  image="https://substackcdn.com/image/fetch/$s_!g2KJ!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe2829ba-7cea-4c2d-b2af-886465e72ccd_3840x2160.jpeg"
+  imageAlt="Article de Wes Kao sur ce qu'inspirer veut dire"
+>
+Inspirer un collègue n'a rien d'un discours enflammé : c'est défendre une position dont l'argument tient debout et touche concrètement ce qui compte pour l'interlocuteur. Kao oppose le feedback abstrait (« ça nuit à l'alignement de l'équipe ») au cadrage viscéral (« tu passes 3× plus de temps à te répéter et à gérer les objections »). Logique et émotion ne s'opposent pas : on classe « rationnel » ce avec quoi on est d'accord.
+</NewsItem>
+
+<Category slug="evenements" />
+
+<NewsItem
+  title="Cercle en danger : le festival au Mexique annulé, appel au soutien du fondateur"
+  category="evenements"
+  tags={["musique", "événement"]}
+  sources={[{ label: "Cercle", url: "https://www.cercle.io/" }]}
+>
+Dix ans après ses débuts (10 000 € d'investissement initial, 200+ shows, 35 salariés), le label de concerts en lieux extraordinaires annonce de « sérieuses difficultés financières ». Le **Cercle Festival au Mexique est annulé**, billets remboursés sous 24-48 h. Le fondateur Derek Barbolla lance un appel au soutien via les ventes de produits, tout en promettant de garder les vidéos gratuites sur YouTube.
+</NewsItem>

@@ -38,27 +38,46 @@ by category. **Signal over completeness** — keep only news that genuinely matt
    benchmarks, or assorted "en bref" — combine them into **one** `<NewsItem>`
    with a bullet list (each bullet keeps its own real link), not many cards.
    Reserve a standalone card for a genuinely major story. See Grouping below.
-4. **Real media.** When the source has an image, a tweet, or a video, embed it
-   with the real URL/id (`<NewsImage>`, `<Gallery>`, `<Tweet>`, `<Video>`).
+4. **Give every standalone card a cover image.** A text-only feed is dull and
+   the layout is built for visuals — so each major `<NewsItem>` should carry an
+   `image=` cover. The most reliable per-story visual is the **`og:image` of the
+   primary source**: get it with
+   `scripts/og_image.sh <primary-url> [fallback-url …]` (prints the first page's
+   OpenGraph/Twitter image; pass several source URLs so it falls back when one
+   blocks bots). Set `imageAlt` too. **The cover and inline media stack** — on
+   top of the cover, add as many in-body visuals as genuinely help: a chart or
+   screenshot (`<NewsImage>`), a set of shots (`<Gallery>`), the real tweet
+   (`<Tweet>`), or a demo clip (`<Video>`). Use a second image when it adds
+   information the cover doesn't (a benchmark chart, a product screenshot, a
+   before/after). Every image opens **full-screen on click** (lightbox), so use
+   the largest clean URL you can. Bucket/"en bref" cards usually skip the cover.
+   Never invent an image URL — a broken image auto-hides at render, and
+   `check_links.sh` verifies every image URL like any other link.
 5. **No AI slop.** Plain, factual French. See [references/style.md](references/style.md).
 6. **French content.** Titles, summaries, and the lede are in French.
 
 ## Workflow
 
-1. **Gather** the day's sources. As Claude with the Gmail MCP, read the
-   `Newsletters` label (id `Label_8428948209629849474`) for that date and open
-   each thread's full body to extract **the real article/source links** plus any
-   images, tweet ids, and video URLs. Other AIs: ask the user to paste the
-   newsletters or the links.
+1. **Gather** the day's sources. As Claude with the Gmail MCP, search the
+   `Newsletters` label for that date — use the **display name**
+   (`label:Newsletters after:YYYY/MM/DD before:YYYY/MM/DD`); the label-id form
+   (`label:Label_8428948209629849474`) returns **nothing** in this MCP. Open each
+   thread's full body (`get_thread`, `messageFormat="FULL_CONTENT"`) to extract
+   **the real article/source links** plus any images, tweet ids, and video URLs.
+   Other AIs: ask the user to paste the newsletters or the links.
 2. **Select & dedupe.** Keep only important items; collapse cross-source
    duplicates into one item with multiple `sources`.
 3. **Categorize** each item into one of the 8 slugs (see Categories below).
-4. **Write** each item as a `<NewsItem>` (1–3 sentences, real sources, tags,
-   media when available). Put a `<Category slug="…" />` divider before the first
-   item of each category, in canonical order.
+4. **Write** each item as a `<NewsItem>` (1–3 sentences, real sources, tags). Add
+   an `image=` cover from the primary source's `og:image`
+   (`scripts/og_image.sh <url>`) on every standalone card, plus inline media when
+   available. Put a `<Category slug="…" />` divider before the first item of each
+   category, in canonical order.
 5. **Frontmatter** — fill the schema below. **Quote the `date`** (unquoted YAML
    parses it as a Date and breaks the schema). Set `sourceCount` = number of
-   `<NewsItem>`. Set `featured: true` only for a standout day.
+   `<NewsItem>`. Set `highlight` to the day's single biggest news (copy the lead
+   `<NewsItem>`'s `title`, `category`, and `image`) — its presence is what makes
+   the recap eligible for the home "À la une". Omit it on a slow day.
 6. **Validate** (see Verify). Start from [assets/template.mdx](assets/template.mdx).
 
 ## Frontmatter schema
@@ -70,7 +89,10 @@ title: "Titre court et factuel"
 lede: "Une à deux phrases qui résument la journée, sans esbroufe."
 categories: ["ia", "finance", "web"]   # only the slugs actually present
 sourceCount: 9                # = number of <NewsItem> in the body
-featured: false
+highlight:                    # the day's #1 news → home "À la une" (omit if none)
+  title: "Titre de la news la plus marquante du jour"
+  category: "ia"             # one of the 8 slugs
+  image: "https://…"         # optional cover; reuse the lead <NewsItem>'s image
 ---
 ```
 
@@ -86,6 +108,8 @@ Full API + examples: [references/components.md](references/components.md).
   category="ia"
   tags={["modèle", "open-source"]}
   sources={[{ label: "TechCrunch", url: "https://example.com/article" }]}
+  image="https://example.com/og-image.jpg"
+  imageAlt="Description de la couverture"
 >
 Résumé factuel en une à trois phrases. Liens inline possibles : [le papier](https://arxiv.org/abs/xxxx).
 
@@ -98,6 +122,9 @@ Résumé factuel en une à trois phrases. Liens inline possibles : [le papier](h
 
 - `category` on `<NewsItem>` **must** match a `<Category slug>` above it (drives filtering).
 - `sources`: `[{ label, url? }]`. `url` optional but **strongly preferred** — that is the whole point.
+- `image` (+ `imageAlt`): cover at the top of the card, clickable to the first
+  source. Fill it from the primary source's `og:image` via
+  `scripts/og_image.sh <url>`. Optional but expected on standalone cards.
 - Media goes **inside** `<NewsItem>` children (blank line before each block).
 
 ## Grouping recurring buckets
@@ -140,12 +167,16 @@ Defined in `apps/web/src/content/categories.ts`. Add a new category there before
 - [ ] `scripts/check_links.sh` shows no `BAD` links (WARN = paywall/anti-bot is OK).
 - [ ] `date` quoted; `sourceCount` matches the item count; `categories` lists only present slugs.
 - [ ] Each `<NewsItem category>` has a matching `<Category slug>` divider.
+- [ ] Every standalone card has an `image=` cover (primary source `og:image` via
+      `scripts/og_image.sh`); bucket/"en bref" cards may skip it.
 - [ ] Media uses real URLs/ids; tweets use the numeric status id.
 - [ ] Read [references/style.md](references/style.md) and stripped the AI-slop tells.
 
 ## Verify
 
 ```bash
+# Cover image: pull the primary source's og:image (pass fallbacks after it)
+.claude/skills/news-recap/scripts/og_image.sh <primary-url> [fallback-url …]
 .claude/skills/news-recap/scripts/check_links.sh apps/web/src/content/digests/<date>.mdx
 cd apps/web && bun run dev            # open /posts/<date>, check render + category filter
 bun run turbo typecheck lint          # from repo root

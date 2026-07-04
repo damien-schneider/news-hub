@@ -1,0 +1,61 @@
+---
+date: "2026-06-28"
+title: "GLM-5.2 s'impose face aux modèles fermés, IBM franchit le seuil du nanomètre"
+lede: "Le modèle open source chinois GLM-5.2 pousse Coinbase à réduire sa facture IA de moitié en le préférant à Claude et GPT ; côté hardware, IBM dévoile la première puce sous le nanomètre et Aleph Neuro capture les images cérébrales non invasives les plus détaillées à ce jour."
+categories: ["ia", "hardware"]
+sourceCount: 3
+highlight:
+  title: "GLM-5.2 : l'open source chinois qui fait chuter de moitié la facture IA de Coinbase"
+  category: "ia"
+  image: "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/zai-org/GLM-5.2.png"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="GLM-5.2 : l'open source chinois qui fait chuter de moitié la facture IA de Coinbase"
+  category="ia"
+  tags={["modèle", "open-source"]}
+  sources={[
+    { label: "Z.ai", url: "https://z.ai/blog/glm-5.2" },
+    { label: "Hugging Face", url: "https://huggingface.co/zai-org/GLM-5.2" },
+    { label: "The Decoder", url: "https://the-decoder.com/coinbase-joins-the-rush-to-chinese-ai-models-as-western-labs-face-a-pricing-stress-test/" },
+    { label: "via AlphaSignal", url: "https://alphasignal.ai" },
+  ]}
+  image="https://cdn-thumbnails.huggingface.co/social-thumbnails/models/zai-org/GLM-5.2.png"
+  imageAlt="Fiche du modèle GLM-5.2 sur Hugging Face"
+>
+Le chinois Z.ai (Zhipu AI) publie GLM-5.2 en poids ouverts sous licence MIT : 744 Md de paramètres MoE (40 Md actifs), contexte de 1M tokens réellement exploitable, `62,1 %` sur SWE-bench Pro. Coinbase a basculé sa passerelle de routage interne sur GLM-5.2 et Kimi-K2.7 par défaut pour les tâches de code plutôt que sur les modèles d'Anthropic ou OpenAI, ce qui a réduit sa facture IA de près de moitié — le taux de cache est passé de `5 %` à `60 %`.
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="IBM dévoile la première puce sous le nanomètre, 100 milliards de transistors"
+  category="hardware"
+  tags={["semi-conducteurs", "recherche"]}
+  sources={[
+    { label: "IBM Newsroom", url: "https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology" },
+    { label: "IBM Research", url: "https://research.ibm.com/blog/sub-1nm-node-chips" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+  image="https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-cms-uploads.s3.us.cloud-object-storage.appdomain.cloud%2FSHOT_08_ANGSTROM_1799_1_e2d9d5ae4a.jpg&w=1200&q=75"
+  imageAlt="Puce sub-1 nanomètre nanostack d'IBM Research"
+>
+IBM annonce le nœud `0,7 nm` (7 angströms) avec une architecture 3D inédite baptisée « nanostack », qui empile et décale les transistors sur deux couches liées par un diélectrique ultrafin. La puce, de la taille d'un ongle, embarque près de 100 milliards de transistors — près du double de densité du nœud 2 nm de 2021 — pour `70 %` d'efficacité énergétique en plus. IBM Research vise une mise en production dans cinq ans.
+</NewsItem>
+
+<NewsItem
+  title="Aleph Neuro capture les images cérébrales non invasives les plus détaillées à ce jour"
+  category="hardware"
+  tags={["santé", "imagerie"]}
+  sources={[
+    { label: "Aleph Neuro", url: "https://alephneuro.com/brain" },
+    { label: "Butterfly Network", url: "https://ir.butterflynetwork.com/News/press-releases/news-details/2026/Butterfly-Networks-Embedded-Partner-Aleph-Neuro-Unveils-Stunning-Brain-Images/default.aspx" },
+    { label: "via Superhuman", url: "https://www.superhuman.ai" },
+  ]}
+  image="https://s.yimg.com/lo/mysterio/api/D3431091C573E8A340B888DF9C9B75318C953AFC12B9EA3E186170CC934ACCCA/subgraphmysterio/resizefill_w1200_h675;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fbusiness-wire.com%2F42f4ce67009b07720b3394c6c579236d"
+  imageAlt="Image 3D du cerveau capturée par ultrasons chez Aleph Neuro"
+>
+Le laboratoire, partenaire du programme Embedded de Butterfly Network, imagine le cerveau à travers le crâne par ultrasons et agent de contraste, en suivant des microbulles dans les vaisseaux pour reconstruire des cartes vasculaires à environ `2,5 mm` de résolution. Aleph Neuro revendique un niveau de détail proche de l'IRM sans perçage ni machine encombrante, et a open-sourcé son pipeline d'imagerie.
+</NewsItem>

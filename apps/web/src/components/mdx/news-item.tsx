@@ -1,17 +1,39 @@
 import { cn } from "@workspace/ui/lib/utils"
 import { motion } from "motion/react"
 import type { CSSProperties, ReactNode } from "react"
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { EASE } from "@/components/motion/reveal"
 import { getCategory } from "@/content/categories"
 import { nodeText } from "@/lib/node-text"
 import { queryMatches, slugify } from "@/lib/slug"
 import { isVisible, useFilter } from "./filter-context"
 import { Source } from "./source"
+import { ZoomImage } from "./zoom-image"
 
 export interface SourceRef {
   label: string
   url?: string
+}
+
+/**
+ * Cover image bleeding to the card edges (typically the primary source's
+ * `og:image`). Click opens it full-screen; it removes itself if the hotlink
+ * fails so a dead preview never leaves a broken-image icon.
+ */
+function LeadImage({ src, alt }: { src: string; alt: string }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  return (
+    <div className="-mx-5 -mt-5 mb-4 aspect-[16/9] overflow-hidden bg-muted">
+      <ZoomImage
+        src={src}
+        alt={alt}
+        onError={() => setFailed(true)}
+        triggerClassName="size-full"
+        className="size-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+      />
+    </div>
+  )
 }
 
 /**
@@ -26,12 +48,16 @@ export function NewsItem({
   category,
   tags = [],
   sources = [],
+  image,
+  imageAlt,
   children,
 }: {
   title: string
   category: string
   tags?: string[]
   sources?: SourceRef[]
+  image?: string
+  imageAlt?: string
   children?: ReactNode
 }) {
   const { active, query, highlight } = useFilter()
@@ -72,44 +98,40 @@ export function NewsItem({
       >
         <div
           className={cn(
-            "rounded-[20px] border border-border/60 bg-card p-5 shadow-sm transition-shadow duration-500",
+            "overflow-hidden rounded-[20px] border border-border/60 bg-card p-5 shadow-sm transition-shadow duration-500",
             highlighted && "ring-2 ring-[var(--accent)] ring-inset"
           )}
         >
-          <div className="flex items-start gap-2.5">
-            <span
-              className="mt-1.5 size-2 shrink-0 rounded-full"
-              style={{ backgroundColor: meta.accent }}
-              aria-hidden
-            />
-            <h3 className="font-medium text-[1.0625rem] text-foreground leading-snug">
-              {title}
-            </h3>
-          </div>
+          {image ? <LeadImage src={image} alt={imageAlt ?? title} /> : null}
+
+          <h3 className="font-medium text-[1.0625rem] text-foreground leading-snug">
+            {title}
+          </h3>
 
           {children ? (
-            <div className="mt-2 ps-4.5 text-muted-foreground text-sm leading-relaxed">
+            <div className="mt-2 text-muted-foreground text-sm leading-relaxed">
               {children}
             </div>
           ) : null}
 
           {(tags.length > 0 || sources.length > 0) && (
-            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 ps-4.5">
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5">
               {tags.length > 0 && (
                 <span className="text-muted-foreground/80 text-sm">
                   {tags.map((tag) => `#${tag}`).join(", ")}
                 </span>
               )}
-              {tags.length > 0 && sources.length > 0 && (
-                <span className="h-3 w-px bg-border" aria-hidden />
+              {sources.length > 0 && (
+                <div className="ms-auto flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                  {sources.map((source) => (
+                    <Source
+                      key={source.label}
+                      label={source.label}
+                      href={source.url}
+                    />
+                  ))}
+                </div>
               )}
-              {sources.map((source) => (
-                <Source
-                  key={source.label}
-                  label={source.label}
-                  href={source.url}
-                />
-              ))}
             </div>
           )}
         </div>

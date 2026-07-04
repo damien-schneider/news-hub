@@ -31,7 +31,7 @@ function parseSummary(path: string, mod: DigestModule): DigestSummary {
     lede: fm.lede,
     categories: fm.categories,
     sourceCount: fm.sourceCount,
-    featured: fm.featured,
+    highlight: fm.highlight,
   }
 }
 

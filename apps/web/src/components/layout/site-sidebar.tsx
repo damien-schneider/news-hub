@@ -1,14 +1,10 @@
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Link } from "@tanstack/react-router"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@workspace/ui/components/avatar"
+import { RssSubscribe } from "@/components/layout/rss-subscribe"
 import { SearchTrigger } from "@/components/search/search-trigger"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
-import { siteConfig, siteInitials } from "@/config/site"
+import { siteConfig } from "@/config/site"
 
 const NAV = [
   { label: "Accueil", to: "/" },
@@ -27,20 +23,17 @@ export function SiteSidebar() {
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[calc((100vw-680px)/2)] min-[1180px]:flex">
       <div className="ml-auto flex h-full w-[210px] flex-col py-14 pr-8 sm:py-16">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2.5">
-          <Avatar size="sm">
-            {siteConfig.avatar ? (
-              <AvatarImage src={siteConfig.avatar} alt={siteConfig.name} />
-            ) : null}
-            <AvatarFallback>{siteInitials()}</AvatarFallback>
-          </Avatar>
-          <span className="font-medium text-sm">{siteConfig.name}</span>
+        <Link to="/" className="group mb-5 block leading-tight">
+          <span className="font-semibold text-foreground text-lg tracking-tight transition-colors group-hover:text-muted-foreground">
+            {siteConfig.brand}
+          </span>
+          <span className="mt-0.5 block text-muted-foreground text-xs">
+            by {siteConfig.name}
+          </span>
         </Link>
 
         {/* Global search */}
-        <div className="mt-8">
-          <SearchTrigger />
-        </div>
+        <SearchTrigger />
 
         {/* Nav */}
         <nav className="mt-4 flex flex-col gap-0.5">
@@ -49,39 +42,40 @@ export function SiteSidebar() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="rounded-lg px-3 py-2 text-muted-foreground text-sm transition-colors hover:bg-muted/60 hover:text-foreground data-[status=active]:bg-muted/60 data-[status=active]:text-foreground"
+              className="rounded-lg px-3 py-2 text-muted-foreground text-sm transition-colors hover:bg-accent hover:text-foreground data-[status=active]:bg-accent data-[status=active]:text-foreground"
             >
               {item.label}
             </Link>
           ))}
-          <div className="mt-1 px-1">
-            <ThemeToggle />
-          </div>
         </nav>
 
         {/* Footer block, pinned to the bottom of the gutter */}
         <div className="mt-auto space-y-3 text-muted-foreground text-sm">
-          <div className="flex items-center gap-3">
-            {siteConfig.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  link.href.startsWith("http")
-                    ? "noreferrer noopener"
-                    : undefined
-                }
-                aria-label={link.label}
-                className="transition-colors hover:text-foreground"
-              >
-                <HugeiconsIcon
-                  icon={link.icon}
-                  strokeWidth={2}
-                  className="size-4"
-                />
-              </a>
-            ))}
+          <RssSubscribe />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              {siteConfig.links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    link.href.startsWith("http")
+                      ? "noreferrer noopener"
+                      : undefined
+                  }
+                  aria-label={link.label}
+                  className="transition-colors hover:text-foreground"
+                >
+                  <HugeiconsIcon
+                    icon={link.icon}
+                    strokeWidth={2}
+                    className="size-4"
+                  />
+                </a>
+              ))}
+            </div>
+            <ThemeToggle />
           </div>
           <span className="block text-xs">
             © {YEAR} {siteConfig.name}

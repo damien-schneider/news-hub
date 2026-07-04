@@ -1,13 +1,9 @@
 import { Link } from "@tanstack/react-router"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@workspace/ui/components/avatar"
+import { RssSubscribe } from "@/components/layout/rss-subscribe"
 import { SearchTrigger } from "@/components/search/search-trigger"
 import { ThemeToggle } from "@/components/theme/theme-toggle"
-import { siteConfig, siteInitials } from "@/config/site"
+import { siteConfig } from "@/config/site"
 
 const NAV = [
   { label: "Accueil", to: "/" },
@@ -16,16 +12,17 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-border/60 border-b bg-background/80 backdrop-blur-xl min-[1180px]:hidden">
-      <div className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-4 px-4">
+    <header className="sticky top-0 z-40 px-4 pt-3 min-[1180px]:hidden">
+      <div className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-4 rounded-2xl border border-border/60 bg-card/80 px-4 shadow-sm backdrop-blur-xl">
         <Link to="/" className="flex items-center gap-2.5">
-          <Avatar size="sm">
-            {siteConfig.avatar ? (
-              <AvatarImage src={siteConfig.avatar} alt={siteConfig.name} />
-            ) : null}
-            <AvatarFallback>{siteInitials()}</AvatarFallback>
-          </Avatar>
-          <span className="font-medium text-sm">{siteConfig.name}</span>
+          <span className="flex flex-col leading-tight">
+            <span className="font-semibold text-sm tracking-tight">
+              {siteConfig.brand}
+            </span>
+            <span className="text-[11px] text-muted-foreground">
+              by {siteConfig.name}
+            </span>
+          </span>
         </Link>
 
         <nav className="flex items-center gap-1">
@@ -40,6 +37,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <SearchTrigger variant="icon" />
+          <RssSubscribe variant="icon" />
           <ThemeToggle />
         </nav>
       </div>

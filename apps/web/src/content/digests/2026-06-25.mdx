@@ -1,0 +1,175 @@
+---
+date: "2026-06-25"
+title: "Anthropic accuse Alibaba d'avoir pillé Claude ; OpenAI grave sa première puce"
+lede: "Dans une lettre obtenue par CNBC, Anthropic dénonce la plus grande campagne de distillation jamais menée contre ses modèles. Même jour : OpenAI dévoile Jalapeño, sa puce d'inférence avec Broadcom, et GPT-5.5 passe gratuit sur ChatGPT."
+categories: ["ia", "web", "growth", "finance", "hardware"]
+sourceCount: 14
+highlight:
+  title: "Anthropic accuse Alibaba de la plus grande distillation jamais menée contre Claude"
+  category: "ia"
+  image: "https://image.cnbcfm.com/api/v1/image/108323235-1781707962297-gettyimages-2282033342-090a1082_o4bhzzd7.jpeg?v=1781727317&w=1920&h=1080"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Anthropic accuse Alibaba de la plus grande distillation jamais menée contre Claude"
+  category="ia"
+  tags={["anthropic", "propriété intellectuelle"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+  image="https://image.cnbcfm.com/api/v1/image/108323235-1781707962297-gettyimages-2282033342-090a1082_o4bhzzd7.jpeg?v=1781727317&w=1920&h=1080"
+  imageAlt="Logos d'Anthropic et d'Alibaba"
+>
+Dans une lettre obtenue par CNBC, Anthropic accuse Alibaba d'avoir mené **« la plus grande attaque de distillation connue à ce jour »** : interroger Claude en masse pour répliquer son comportement dans ses propres modèles, sans payer la R&D. Anthropic parle de campagne illicite et de vol de propriété intellectuelle, et ouvre un nouveau front sino-américain, cette fois sur le terrain de l'IP.
+</NewsItem>
+
+<NewsItem
+  title="GPT-5.5 Instant passe gratuit sur ChatGPT"
+  category="ia"
+  tags={["openai", "modèle"]}
+  sources={[{ label: "OpenAI (X)", url: "https://x.com/openai/status/2069843083701915755" }, { label: "Engadget", url: "https://www.engadget.com/2201255/openai-gpt-5-5-instant-chatgpt-upgrade/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+  image="https://www.engadget.com/img/gallery/openais-free-gpt-5-5-model-makes-chatgpt-better-at-understanding-context/l-intro-1782363918.jpg"
+  imageAlt="Interface de ChatGPT avec GPT-5.5 Instant"
+>
+OpenAI met à jour **GPT-5.5 Instant**, le modèle par défaut de ChatGPT : meilleure lecture de l'intention, suivi du contexte sur plusieurs tours, gestion de contraintes multiples en une passe. Accessible via l'API sous `"chat-latest"` ; payants d'abord, gratuits le lendemain.
+</NewsItem>
+
+<NewsItem
+  title="Gemini 3.5 Flash sait piloter un ordinateur"
+  category="ia"
+  tags={["google", "agents"]}
+  sources={[{ label: "Google DeepMind", url: "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/" }, { label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+  image="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-5__keyword__blog-header__light_7VsKV.width-1300.png"
+  imageAlt="Bannière Gemini 3.5 de Google DeepMind"
+>
+Le « computer use » arrive sur **Gemini 3.5 Flash** : le modèle perçoit l'écran, clique, remplit des formulaires et enchaîne des tâches en plusieurs étapes. En misant sur Flash, sa variante rapide et bon marché, Google attaque les agents d'Anthropic et d'OpenAI sur le même terrain à grande échelle.
+</NewsItem>
+
+<NewsItem
+  title="Claude s'invite dans Slack avec Claude Tag"
+  category="ia"
+  tags={["anthropic", "agents"]}
+  sources={[{ label: "Claude (Anthropic)", url: "https://claude.com/product/tag" }, { label: "AI News", url: "https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+  image="https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68dc371e7b6d3e2cb2ec6230_og-claude-slack.jpg"
+  imageAlt="Claude intégré dans Slack via Claude Tag"
+>
+Les équipes Enterprise et Team invoquent l'assistant dans un canal Slack en tapant **@Claude**. Propulsé par Claude Opus 4.8, il accède aux bases, outils et dépôts de l'entreprise, travaille en asynchrone et affiche ses tâches dans le fil. Claude reçoit sa propre identité, ses actions sont auditables et révocables ; Karpathy y voit [un « nouveau paradigme »](https://x.com/karpathy/status/2069547676849557725), d'autres une simple intégration.
+</NewsItem>
+
+<NewsItem
+  title="Nouveaux modèles open-weights"
+  category="ia"
+  tags={["open-source", "modèles"]}
+  sources={[{ label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+>
+- **[Mistral OCR 4](https://mistral.ai/news/ocr-4/)** — rend une carte structurée du document (bounding box, type de bloc, score de confiance par mot) en une passe, 170 langues, auto-hébergeable. Tarif **4 $/1 000 pages** (2 $ en batch). Taux de préférence de 72 % sur 600+ documents, mais benchmarks à valider.
+- **[Krea 2](https://github.com/krea-ai/krea-2)** — DiT 12B image en open weights, variantes Raw (fine-tuning) et Turbo (2K en ~2 s). Les builds fp8 de la communauté le font tourner sur GPU **12 Go**.
+- **[Talos (Microsoft Research)](https://www.microsoft.com/en-us/research/blog/talos-scaling-rare-disease-diagnosis-with-automated-iterative-genomic-reanalysis/)** — réanalyse génomique automatique, open-source : **241 nouveaux diagnostics** sur ~5 000 patients non diagnostiqués (+5,1 %), 1,3 variante à examiner en moyenne.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Les Fragments React peuvent enfin recevoir un ref"
+  category="web"
+  tags={["react", "frontend"]}
+  sources={[{ label: "react.dev", url: "https://react.dev/reference/react/Fragment" }, { label: "via Import React", url: "https://importreact.beehiiv.com" }]}
+  image="https://react.dev/images/og-reference.png"
+  imageAlt="Documentation de référence React"
+>
+En Canary : poser un `ref` sur un `<Fragment>` donne un handle qui attache des écouteurs d'événements, gère focus/blur sur tous les enfants et branche un seul `IntersectionObserver` partagé. De quoi supprimer la `div` wrapper ajoutée juste pour obtenir un nœud DOM.
+</NewsItem>
+
+<NewsItem
+  title="Outils web : Astro 7, le verbe HTTP QUERY, et une campagne de malware sur GitHub"
+  category="web"
+  tags={["outils", "sécurité"]}
+  sources={[{ label: "via Import React", url: "https://importreact.beehiiv.com" }]}
+>
+- **[Astro 7](https://astro.build/blog/astro-7)** — compilateur `.astro` et pipeline Markdown réécrits en Rust, bundler Rolldown de Vite 8 : builds **15 à 61 % plus rapides** (parfois ×2). Détecte un agent de code et lance le serveur de dev en arrière-plan.
+- **[HTTP a un verbe QUERY](https://datatracker.ietf.org/doc/rfc10008/)** — la RFC 10008 ajoute un verbe sûr et idempotent : comme POST, mais avec un corps de requête cacheable et auto-réessayable. Le débat du « GET avec body » a sa réponse.
+- **[~10 000 dépôts GitHub piégés](https://orchidfiles.com/github-repositories-distributing-malware/)** — les attaquants copient l'historique de commits et la liste de contributeurs pour mimer le signal de confiance ; le zip lié passe à 0 sur VirusTotal, pas son contenu.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="Coûts des Ads 2026 : CPC moyen Google à 5,42 $"
+  category="growth"
+  tags={["publicité", "benchmarks"]}
+  sources={[{ label: "WordStream", url: "https://www.wordstream.com/blog/2026-google-ads-benchmarks" }, { label: "via LaGrowthNews", url: "https://www.lagrowthmachine.com" }]}
+  image="https://www.wordstream.com/wp-content/uploads/2026/05/2026-google-ads-benchmarks-blog-feature.png"
+  imageAlt="Benchmarks Google Ads 2026 de WordStream"
+>
+Sur Google Ads, le **CPC moyen est de 5,42 $** et le coût par lead de **66,69 $** en 2026, avec de forts écarts par secteur (avocats à 8,58 $/clic, 131,63 $/lead). Facebook reste moins cher (CPC ~0,62 $, CPL 27,66 $) mais capte des intentions plus faibles ; LinkedIn est le plus cher au clic.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Clim' ou pas clim' : la canicule rebat le débat politique français"
+  category="finance"
+  tags={["climat", "politique"]}
+  sources={[{ label: "Le Figaro", url: "https://www.lefigaro.fr/politique/climatisation-du-rn-aux-ecologistes-la-fin-d-un-tabou-politique-20260623" }, { label: "France Info", url: "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/ce-sera-la-france-des-ventilateurs-contre-la-france-des-climatiseurs-la-canicule-fait-aussi-grimper-la-temperature-du-debat-politique_8073581.html" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+  image="https://i.f1g.fr/media/cms/1200x630_crop/2026/06/23/07341a05949a6b69128240628c1f28d431c3f584d385778014d5f5ebbdf73e58.jpg"
+  imageAlt="Climatisation et canicule en France"
+>
+Après une journée à 30 °C de moyenne nationale (record), la climatisation cesse d'être un tabou : les écologistes l'admettent, le gouvernement la veut « partout où c'est nécessaire », le RN réclame un « plan climatisation ». Seuls **25 % des logements** sont climatisés en France (56 % en Italie), et l'argument énergétique pèse moins, le mix électrique étant largement décarboné. Le financement public reste le point de friction.
+</NewsItem>
+
+<NewsItem
+  title="Micron explose ses résultats, l'action +16 %"
+  category="finance"
+  tags={["semi-conducteurs", "résultats"]}
+  sources={[{ label: "CNBC", url: "https://www.cnbc.com/2026/06/24/micron-is-techs-margin-king-memory-crisis-pushes-it-past-nvidia-meta.html" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+  image="https://image.cnbcfm.com/api/v1/image/108077580-1734535519603-gettyimages-2183174751-vcg111528688268.jpeg?v=1774379555&w=1920&h=1080"
+  imageAlt="Puces mémoire Micron"
+>
+Porté par la demande IA, Micron publie un chiffre d'affaires de **41,46 Md$** (contre 35,84 attendus, +340 % sur un an) et un bénéfice net de **28,24 Md$** (1,89 Md$ un an plus tôt). Il vise ~50 Md$ au trimestre en cours ; l'action gagne **16 %** après clôture.
+</NewsItem>
+
+<NewsItem
+  title="Alan lève 480 M€ et passe à 5,5 Md€ de valorisation"
+  category="finance"
+  tags={["levée", "assurtech"]}
+  sources={[{ label: "Le Figaro", url: "https://www.lefigaro.fr/flash-eco/l-assureur-sante-alan-leve-480-millions-d-euros-et-est-desormais-valorise-a-5-5-milliards-d-euros-20260624" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+  image="https://i.f1g.fr/media/cms/1200x630_crop/2026/06/24/f18786b440c980abd895139a8697d62c06007c977947cd6a955947cc011011b6.jpg"
+  imageAlt="L'assureur santé Alan"
+>
+L'assureur santé français lève **480 M€** mené par le néerlandais Prosus, valorisation à **5,5 Md€**, quelques semaines après un tour de 100 M€. ARR proche de **787 M€** (+54 %), rentable en France mais −26 M€ au niveau groupe en 2025.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés"
+  category="finance"
+  tags={["en-bref"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Binance** suspend ses activités en France au 1er juillet, faute d'agrément MiCA ; les utilisateurs ne pourront plus que retirer leurs fonds. [Le Parisien](https://www.leparisien.fr/high-tech/cryptomonnaies-le-geant-binance-suspend-ses-activites-en-france-a-partir-du-1er-juillet-24-06-2026-AQMUCOBV4NBBDKXT2TJZMGNICA.php)
+- **Universités** : un rapport remis au gouvernement préconise de quintupler les frais d'inscription (~900 € en licence, 1 300 € en master) ; le ministre exclut tout changement pour 2026 et 2027. [France Info](https://www.franceinfo.fr/economie/neuf-cents-euros-pour-une-annee-de-licence-1-300-euros-en-master-un-rapport-preconise-de-quintupler-les-frais-d-inscription-a-l-universite_8077289.html)
+- **SK Hynix** prépare une cotation historique aux États-Unis (Nasdaq) pour lever **29,4 Md$**, sur fond de demande en puces mémoire. [Bloomberg](https://www.bloomberg.com/news/articles/2026-06-24/sk-hynix-looks-to-raise-29-4-billion-with-new-us-lising)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="OpenAI dévoile Jalapeño, sa première puce d'inférence avec Broadcom"
+  category="hardware"
+  tags={["openai", "puces"]}
+  sources={[{ label: "OpenAI", url: "https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" }, { label: "The Decoder", url: "https://the-decoder.com/openai-and-broadcom-unveil-jalapeno-a-custom-chip-built-for-llm-inference/" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+  image="https://the-decoder.com/wp-content/uploads/2026/06/openai-broadcom-jalapeno-inference-chip-image.webp"
+  imageAlt="Puce d'inférence Jalapeño d'OpenAI et Broadcom"
+>
+Co-conçue avec **Broadcom** et optimisée pour l'inférence (pas l'entraînement), **Jalapeño** vise à réduire la dépendance à NVIDIA et à abaisser le coût des appels API. Conçue en **9 mois**, déjà testée en labo, déploiement à grande échelle attendu fin 2026. OpenAI a utilisé ses propres modèles pour aider à la concevoir.
+</NewsItem>
+
+<NewsItem
+  title="Qualcomm rachète Modular ; Agility Robotics vise la Bourse"
+  category="hardware"
+  tags={["fusions-acquisitions", "robotique"]}
+  sources={[{ label: "via Vision IA", url: "https://www.vision-ia.fr" }]}
+>
+- **[Qualcomm rachète Modular](https://www.wired.com/story/qualcomm-buys-buzzy-chip-startup-modular-for-nearly-dollar4-billion/)** pour ~**4 Md$**, renforçant son offre logicielle d'infrastructure IA ; l'open-source de Mojo resterait maintenu.
+- **[Agility Robotics](https://techcrunch.com/2026/06/24/agility-robotics-plans-to-go-public-via-spac-in-a-2-5b-deal/)** prépare son entrée en Bourse via SPAC, valorisation **2,5 Md$**, pour lever 620 M$.
+- **[Amazon mise sur le combustible TRISO](https://www.amazon.science/blog/the-fuel-of-the-future-is-already-here-why-triso-matters)** pour ses datacenters : particules à confinement quadruple, aucune défaillance après 300 h à 1 600 °C.
+</NewsItem>

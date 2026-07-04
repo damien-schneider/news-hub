@@ -1,3 +1,4 @@
+import { HugeiconsIcon } from "@hugeicons/react"
 import { motion } from "motion/react"
 import { EASE } from "@/components/motion/reveal"
 import { getCategory } from "@/content/categories"
@@ -25,9 +26,11 @@ export function Category({ slug }: { slug: string }) {
       className="overflow-hidden"
     >
       <div className="flex items-center gap-3 pt-12 pb-5">
-        <span
-          className="size-2.5 shrink-0 rounded-full"
-          style={{ backgroundColor: meta.accent }}
+        <HugeiconsIcon
+          icon={meta.icon}
+          strokeWidth={2}
+          className="size-5 shrink-0"
+          style={{ color: meta.accent }}
           aria-hidden
         />
         <h2 className="font-heading font-medium text-2xl leading-none tracking-tight">

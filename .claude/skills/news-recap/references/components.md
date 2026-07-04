@@ -30,6 +30,8 @@ One news card. Props:
 | `category` | slug (required) | Must match a `<Category slug>` above it — drives the filter. |
 | `tags` | `string[]` | 1–3 short lowercase tags. Rendered as `#tag, #tag`. |
 | `sources` | `{ label: string; url?: string }[]` | Real attribution. Prefer `url`. |
+| `image` | string (URL) | Cover image at the top of the card, clickable to the first source. Use the **primary source's `og:image`** (see below). Expected on every standalone card. |
+| `imageAlt` | string | Alt text for the cover (defaults to `title`). |
 | children | MDX | 1–3 sentence summary + optional media. |
 
 ```mdx
@@ -41,6 +43,8 @@ One news card. Props:
     { label: "The Information", url: "https://www.theinformation.com/articles/…" },
     { label: "Bloomberg", url: "https://www.bloomberg.com/news/…" },
   ]}
+  image="https://www.theinformation.com/og/anthropic-350b.jpg"
+  imageAlt="Logo Anthropic"
 >
 La levée valorise Anthropic à 350 Md$, soit 3× son tour précédent. Le tour est mené par un fonds souverain.
 </NewsItem>
@@ -48,6 +52,24 @@ La levée valorise Anthropic à 350 Md$, soit 3× son tour précédent. Le tour 
 
 Summary writing: lead with the fact, then the number/why. No preamble. Concrete
 figures over adjectives. 1–3 sentences max.
+
+### Cover image (`image=`) — pull the `og:image`
+
+Most article, paper, company and repo pages expose an `og:image` (or
+`twitter:image`) meta tag — a stable, hotlink-friendly preview. That is the
+cover for a card. Don't hand-pick fragile newsletter-CDN images (expiring or
+truncated query strings); use the primary source's OpenGraph image instead.
+
+```bash
+# Prints the first page's og:image; pass fallbacks so it skips bot-blockers.
+.claude/skills/news-recap/scripts/og_image.sh \
+  https://openai.com/index/gpt-5-6 \
+  https://www.theverge.com/…   # fallback if the first 403s
+```
+
+Paste the printed URL into `image=`. A cover that later dies is hidden
+automatically at render (no broken-image icon), and `check_links.sh` flags it
+like any other link. Skip the cover on bucket/"en bref" cards.
 
 ## `<Source label="…" href="…" />`
 
@@ -64,6 +86,13 @@ standalone form only for an extra inline citation inside the prose.
 
 Put media blocks **inside** `<NewsItem>` children, each separated by a blank line.
 Always use **real** URLs/ids from the source. Never invent media.
+
+These **stack with the card's `image=` cover** — a card can have a cover *and*
+one or more in-body visuals. Add a `<NewsImage>` / `<Gallery>` whenever a second
+visual carries information the cover doesn't (a benchmark chart, a product
+screenshot, a before/after). Every `<NewsImage>`, `<Gallery>` image and markdown
+image **opens full-screen on click** (lightbox, closes on click/Esc), so prefer
+the largest clean URL available. A broken image hides itself at render.
 
 ### `<NewsImage src alt caption />`
 

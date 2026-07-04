@@ -1,17 +1,20 @@
 import type { ComponentProps } from "react"
+import { useState } from "react"
+import { ZoomImage } from "./zoom-image"
 
-/** Markdown image (`![alt](src)`) → rounded, lazy, responsive. */
-export function MdxImage(props: ComponentProps<"img">) {
+/** Markdown image (`![alt](src)`) → rounded, lazy, responsive, click-to-zoom. */
+export function MdxImage({ src, alt }: ComponentProps<"img">) {
+  if (typeof src !== "string") return null
   return (
-    <img
-      {...props}
-      loading="lazy"
+    <ZoomImage
+      src={src}
+      alt={typeof alt === "string" ? alt : undefined}
       className="my-3 w-full rounded-xl border border-border/70 bg-muted object-cover"
     />
   )
 }
 
-/** Explicit single image with optional caption. */
+/** Explicit single image with optional caption. Click to view full-screen; disappears if it fails. */
 export function NewsImage({
   src,
   alt,
@@ -21,20 +24,14 @@ export function NewsImage({
   alt?: string
   caption?: string
 }) {
+  if (!src) return null
   return (
-    <figure className="my-3">
-      <img
-        src={src}
-        alt={alt ?? caption ?? ""}
-        loading="lazy"
-        className="w-full rounded-xl border border-border/70 bg-muted object-cover"
-      />
-      {caption ? (
-        <figcaption className="mt-1.5 text-muted-foreground text-xs">
-          {caption}
-        </figcaption>
-      ) : null}
-    </figure>
+    <ZoomImage
+      src={src}
+      alt={alt}
+      caption={caption}
+      className="w-full rounded-xl border border-border/70 bg-muted object-cover"
+    />
   )
 }
 
@@ -44,33 +41,41 @@ interface MediaItem {
   type?: "image" | "video"
 }
 
+/** A single gallery cell that drops out of the strip if its media fails to load. */
+function GalleryCell({ item }: { item: MediaItem }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  return (
+    <div className="relative aspect-[1.8/1] h-40 shrink-0 snap-start overflow-hidden rounded-lg border border-border/60 bg-muted">
+      {item.type === "video" ? (
+        <video
+          src={item.src}
+          muted
+          loop
+          playsInline
+          controls
+          onError={() => setFailed(true)}
+          className="size-full object-cover"
+        />
+      ) : (
+        <ZoomImage
+          src={item.src}
+          alt={item.alt}
+          onError={() => setFailed(true)}
+          triggerClassName="size-full"
+          className="size-full object-cover"
+        />
+      )}
+    </div>
+  )
+}
+
 /** Horizontal, snap-scrolling media strip (matches the timeline-feed look). */
 export function Gallery({ items }: { items: MediaItem[] }) {
   return (
     <div className="my-3 flex snap-x snap-mandatory gap-1.5 overflow-x-auto pb-2 [-ms-overflow-style:none] [mask-image:linear-gradient(to_right,#000_88%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {items.map((item) => (
-        <div
-          key={item.src}
-          className="relative aspect-[1.8/1] h-40 shrink-0 snap-start overflow-hidden rounded-lg border border-border/60 bg-muted"
-        >
-          {item.type === "video" ? (
-            <video
-              src={item.src}
-              muted
-              loop
-              playsInline
-              controls
-              className="size-full object-cover"
-            />
-          ) : (
-            <img
-              src={item.src}
-              alt={item.alt ?? ""}
-              loading="lazy"
-              className="size-full object-cover"
-            />
-          )}
-        </div>
+        <GalleryCell key={item.src} item={item} />
       ))}
     </div>
   )

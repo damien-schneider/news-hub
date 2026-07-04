@@ -23,6 +23,8 @@ export interface SearchItem {
   category: string
   tags: string[]
   summary: string
+  /** Cover image URL, when the authored card carries one. */
+  image?: string
 }
 
 /** A ranked search result spanning both recaps and individual items. */
@@ -83,6 +85,8 @@ function parseItems(date: string, body: string): SearchItem[] {
       tags.push(t[1] || t[2] || "")
     }
 
+    const image = attrs.match(/\bimage="([^"]*)"/)?.[1] || undefined
+
     items.push({
       date,
       anchor: `item-${slugify(title)}`,
@@ -90,6 +94,7 @@ function parseItems(date: string, body: string): SearchItem[] {
       category,
       tags,
       summary: toPlainText(match[2]),
+      image,
     })
   }
   return items

@@ -2,6 +2,23 @@ import type { ComponentType } from "react"
 import { z } from "zod"
 
 /**
+ * The single headline news of a recap, surfaced on the home "À la une" block.
+ * Authored in frontmatter (not in a `<NewsItem>` body flag) so it stays in the
+ * serializable `DigestSummary` the list loaders read — no MDX body parsing, and
+ * it survives the future Convex backend swap untouched.
+ */
+export const HighlightSchema = z.object({
+  /** Headline of the day's biggest news (may differ from the recap `title`). */
+  title: z.string(),
+  /** Category slug of that news (drives the accent chip). */
+  category: z.string(),
+  /** Cover image URL for the À la une card. Optional. */
+  image: z.string().url().optional(),
+})
+
+export type Highlight = z.infer<typeof HighlightSchema>
+
+/**
  * Frontmatter authored at the top of each digest `.mdx` file.
  * `date` (YYYY-MM-DD) doubles as the route slug.
  */
@@ -13,8 +30,8 @@ export const DigestFrontmatterSchema = z.object({
   categories: z.array(z.string()).default([]),
   /** Number of news items in the recap (shown on lists). */
   sourceCount: z.number().int().nonnegative().default(0),
-  /** Highlighted on the home "Featured" block. */
-  featured: z.boolean().default(false),
+  /** Day's headline news — present ⇒ eligible for the home "À la une". */
+  highlight: HighlightSchema.optional(),
 })
 
 export type DigestFrontmatter = z.infer<typeof DigestFrontmatterSchema>
@@ -35,7 +52,8 @@ export interface DigestSummary {
   lede: string
   categories: string[]
   sourceCount: number
-  featured: boolean
+  /** Day's headline news, when authored — drives the home "À la une". */
+  highlight?: Highlight
 }
 
 /**

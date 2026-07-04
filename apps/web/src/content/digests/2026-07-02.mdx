@@ -1,0 +1,153 @@
+---
+date: "2026-07-02"
+title: "Gemini Spark de Google débarque sur Mac, Anthropic détaille le prix de Sonnet 5"
+lede: "Google déploie son assistant agentique Gemini Spark en bêta sur macOS pendant qu'Anthropic précise le tarif de Sonnet 5 (2 $/10 $ le million de tokens). Côté business, Meta pousse ses connecteurs IA dans la gestion des pubs, Lime entre en Bourse et Etched sort de stealth avec une puce dédiée à l'inférence."
+categories: ["ia", "web", "growth", "finance", "hardware"]
+sourceCount: 12
+highlight:
+  title: "Gemini Spark, l'assistant agentique de Google, arrive sur Mac"
+  category: "ia"
+  image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Spark.width-1300.jpg"
+---
+
+<Category slug="ia" />
+
+<NewsItem
+  title="Gemini Spark, l'assistant agentique de Google, arrive sur Mac"
+  category="ia"
+  tags={["agent", "google"]}
+  sources={[{ label: "Google", url: "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+  image="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Spark.width-1300.jpg"
+  imageAlt="Gemini Spark sur macOS"
+>
+Gemini Spark peut désormais manipuler les fichiers locaux d'un Mac depuis l'app macOS : trier un dossier Téléchargements encombré ou transformer des fichiers du bureau en doc ou en feuille de calcul. Disponible en bêta pour les abonnés Google AI Ultra ; Google promet bientôt l'exécution de tâches à distance depuis le téléphone vers le Mac.
+</NewsItem>
+
+<NewsItem
+  title="Claude Sonnet 5 : Anthropic détaille le prix, 2 $/10 $ le million de tokens jusqu'au 31 août"
+  category="ia"
+  tags={["anthropic", "pricing"]}
+  sources={[{ label: "Anthropic", url: "https://www.anthropic.com/news/claude-sonnet-5" }, { label: "via AlphaSignal", url: "https://alphasignal.ai" }]}
+  image="https://cdn.sanity.io/images/4zrzovbb/website/458ea645ef6b729f6847cba16932716e6b547f2f-2880x1620.png"
+  imageAlt="Claude Sonnet 5"
+>
+Sonnet 5 approche Opus 4.8 sur l'agentic coding (**63,2 %** contre **69,2 %**) pour environ **40 %** de son prix : **2 $/10 $** par million de tokens en entrée/sortie jusqu'au 31 août, puis **3 $/15 $**. Contexte d'**1 million de tokens**, sortie plafonnée à **128 000 tokens**, et modèle par défaut sur les plans Free et Pro dès aujourd'hui.
+</NewsItem>
+
+<NewsItem
+  title="Skill engineering : donner aux agents un vocabulaire de design plutôt qu'un mode automatique"
+  category="ia"
+  tags={["agents", "design"]}
+  sources={[{ label: "Latent Space", url: "https://www.latent.space/p/skill-engineering-design" }, { label: "Latent Space (AIEWF)", url: "https://www.latent.space/p/aiewf-daily-dispatch-agency" }]}
+  image="https://substackcdn.com/image/fetch/$s_!JOvz!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c23df3d-275c-48a8-a914-994c53dcd352_1280x720.jpeg"
+  imageAlt="Paul Bakaus, créateur d'Impeccable"
+>
+Paul Bakaus, créateur d'Impeccable (système de design open-source pour agents codeurs), donne aux adjectifs de design — « plus audacieux », « plus sobre » — une définition opérationnelle précise plutôt que de laisser le modèle deviner. Sa règle : l'agent produit les 80 % de base, l'humain garde les 20 % qui comptent, « il n'y a pas de mode auto ». Même débat à l'AI Engineer World's Fair, où Addy Osmani (ex-Google) distingue la boucle intérieure (exécution, déléguée à l'agent) de la boucle extérieure (jugement, qui doit rester humaine).
+</NewsItem>
+
+<NewsItem
+  title="Bridgewater et Thinking Machines : un modèle fine-tuné bat les frontier models sur le jugement financier"
+  category="ia"
+  tags={["finance", "fine-tuning"]}
+  sources={[{ label: "Thinking Machines", url: "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/" }, { label: "via Superhuman", url: "https://www.superhuman.ai" }]}
+  image="https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/images/cover-social.png"
+  imageAlt="Bridgewater x Thinking Machines"
+>
+Sur une tâche de pertinence d'actualité financière jugée trop subjective pour être bien notée, Gemini, Claude et GPT plafonnaient à **50 %** de précision avec des prompts basiques. Des prompts rédigés par des experts Bridgewater ont fait monter le score à ~75 %, puis le fine-tuning du modèle ouvert Qwen3-235B sur des données annotées par des experts l'a poussé de **78 % à 85 %**, pour un coût environ **14 fois inférieur** à celui des frontier models.
+</NewsItem>
+
+<Category slug="web" />
+
+<NewsItem
+  title="Deux nouvelles API navigateur : badges d'app et fermeture unifiée"
+  category="web"
+  tags={["api", "pwa"]}
+  sources={[{ label: "Modern Web Weekly", url: "https://modernwebweekly.substack.com/p/indicate-unread-notifications-with" }]}
+>
+- **Badging API** — `navigator.setAppBadge(n)` affiche un badge numéroté sur l'icône d'une PWA (Chrome, Edge, Safari), généralement combinée à l'event `push` du service worker pour compter les notifications non lues.
+- **CloseWatcher** — API unique pour intercepter la fermeture d'un composant (touche Échap, bouton retour Android, geste iOS) sans détecter le device à la main ; événements `cancel` puis `close`, le `cancel` n'étant annulable qu'une seule fois pour éviter les abus.
+</NewsItem>
+
+<Category slug="growth" />
+
+<NewsItem
+  title="Meta ouvre ses pubs aux connecteurs IA : gérer ses campagnes depuis ChatGPT ou Claude"
+  category="growth"
+  tags={["meta", "publicité"]}
+  sources={[{ label: "Meta for Business", url: "https://www.facebook.com/business/news/meta-ads-ai-connectors" }, { label: "via LaGrowthNews", url: "https://news.deux.io/" }]}
+  image="https://static.xx.fbcdn.net/mci_ab/public/cms/?ab_b=e&ab_page=CMS&ab_entry=1510159120671129&version=1778221440&transcode_extension=webp"
+  imageAlt="Meta Ads AI Connectors"
+>
+Les connecteurs Meta Ads AI branchent ChatGPT et Claude directement sur les données de campagnes via le serveur MCP de Meta : créer, modifier et analyser des pubs en langage naturel, sans configuration API ni permissions techniques préalables. **29 outils** de la Marketing API sont exposés, du reporting au diagnostic des signaux, en bêta ouverte.
+</NewsItem>
+
+<NewsItem
+  title="Google confirme l'arrivée d'AI Overviews et AI Mode en France avant le 23 septembre"
+  category="growth"
+  tags={["google", "seo"]}
+  sources={[{ label: "Blog du Modérateur", url: "https://www.blogdumoderateur.com/google-ai-overviews-france-ete/" }, { label: "via LaGrowthNews", url: "https://news.deux.io/" }]}
+  image="https://f.hellowork.com/blogdumoderateur/2026/06/AI-OverviewsFrance-2026.jpg"
+  imageAlt="Google AI Overviews en France"
+>
+Dans une lettre aux éditeurs de presse français du 29 juin, Google promet trois garanties avant le déploiement : le choix d'apparaître ou non dans les résultats génératifs, la transparence sur les impressions générées, et une rémunération au titre des droits voisins. La France était l'un des derniers grands marchés sans ces fonctionnalités, déjà actives dans plus de 120 pays.
+</NewsItem>
+
+<NewsItem
+  title="Claude Tag : Anthropic installe Claude dans Slack, dix cas d'usage pour le marketing"
+  category="growth"
+  tags={["anthropic", "slack"]}
+  sources={[{ label: "Anthropic", url: "https://www.anthropic.com/news/introducing-claude-tag" }, { label: "via LaGrowthNews", url: "https://news.deux.io/" }]}
+  image="https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg"
+  imageAlt="Claude Tag dans Slack"
+>
+En taguant `@Claude` dans un canal Slack, l'équipe délègue une tâche qui s'exécute en arrière-plan et reste visible de tous — une seule instance par canal, pas une par utilisateur. LaGrowthNews détaille des usages marketing concrets : veille des KPI d'acquisition avec alertes, reporting hebdomadaire automatisé, qualification des leads entrants, suivi SEO. Encore en bêta, réservé aux plans Enterprise et Team.
+</NewsItem>
+
+<Category slug="finance" />
+
+<NewsItem
+  title="Lime entre en Bourse à 1,73 Md$ de valorisation"
+  category="finance"
+  tags={["ipo", "mobilité"]}
+  sources={[{ label: "TechCrunch", url: "https://techcrunch.com/2026/07/01/lime-raises-167m-in-ipo-after-years-of-teasing-a-public-debut/" }, { label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+  image="https://techcrunch.com/wp-content/uploads/2022/07/image_6483441-e1657681037469.jpg?resize=1200,780"
+  imageAlt="Trottinette Lime"
+>
+L'opérateur de trottinettes et vélos lève **167 M$** en fixant son action à **25 $**, avant un bond de **+8 %** à l'ouverture. Lime reste déficitaire (perte nette de **59,3 M$** en 2025) mais dégage **103,7 M$** de free cash flow, pour un chiffre d'affaires de **886,7 M$** (+30 % sur un an) ; Uber, actionnaire à 22 %, a mis 20 M$ dans l'IPO.
+</NewsItem>
+
+<NewsItem
+  title="Meta prépare une offre cloud pour revendre son surplus de calcul IA"
+  category="finance"
+  tags={["meta", "cloud"]}
+  sources={[{ label: "TechCrunch", url: "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/" }, { label: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute" }]}
+  image="https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2225880947.jpg?w=1024"
+  imageAlt="Data center"
+>
+En interne surnommé « Meta Compute », le projet louerait de la puissance de calcul et vendrait des modèles sur le format d'AWS ou Azure. Meta a englouti **183 Md$** dans ses infrastructures IA sans avoir encore vu de demande à la hauteur pour ses propres services ; l'action a bondi de plus de **10 %** à l'annonce.
+</NewsItem>
+
+<NewsItem
+  title="En bref — marchés & IPO"
+  category="finance"
+  tags={["en-bref", "marchés"]}
+  sources={[{ label: "via Aktionnaire", url: "https://www.aktionnaire.com" }]}
+>
+- **Bending Spoons** (AOL, Vimeo, WeTransfer, Evernote) grimpe de **+41 %** à ses débuts au Nasdaq après une IPO à 29 $/action, valorisant le groupe italien **25,5 Md$**. [Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/bending-spoons-p-announces-pricing-235600487.html)
+- Un tribunal suédois condamne **Google** à verser **~1,97 Md$** à PriceRunner (filiale de Klarna) pour avoir favorisé son propre comparateur de prix. [The Next Web](https://thenextweb.com/news/swedish-court-google-klarna-pricerunner-antitrust-damages)
+- **CMA CGM** rachète la filiale logistique de FedEx aux États-Unis pour **1,4 Md$**, avec à la clé ~150 entrepôts et 20 000 salariés. [FedEx](https://newsroom.fedex.com/newsroom/global-english/cma-cgm-group-to-acquire-fedex-supply-chain-at-an-enterprise-value-of-1-4-billion-strengthening-its-logistics-presence-in-north-america)
+- **Le Slip Français** s'introduit à la Bourse de Paris le 14 juillet, action fixée à 14,80 €, avec l'ambition de doubler son chiffre d'affaires d'ici 2030. [Le Slip Français](https://leslipenactions.fr/)
+</NewsItem>
+
+<Category slug="hardware" />
+
+<NewsItem
+  title="Etched sort de stealth : puce Sohu, 5 Md$ de valorisation, 1 Md$ de contrats signés"
+  category="hardware"
+  tags={["puce", "inférence"]}
+  sources={[{ label: "Etched", url: "https://www.etched.com/" }, { label: "TechCrunch", url: "https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/" }]}
+  image="https://cdn.sanity.io/images/rwbees58/development/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&h=630&fm=png&fit=max&auto=format"
+  imageAlt="Puce Sohu d'Etched"
+>
+La puce Sohu, un ASIC gravé en 4 nm chez TSMC et spécialisé transformer, équipe des « frontier inference clusters » dont les premières livraisons commencent cet été. Etched revendique **500 000 tokens/seconde** sur Llama 70B avec un serveur à 8 puces, contre ~25 000 pour 8 H100 Nvidia, et a déjà signé plus d'**1 Md$** de contrats clients pour **800 M$** levés au total.
+</NewsItem>

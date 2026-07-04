@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite"
 import { devtools } from "@tanstack/devtools-vite"
 import { tanstackStart } from "@tanstack/react-start/plugin/vite"
 import viteReact from "@vitejs/plugin-react"
+import { nitro } from "nitro/vite"
 import remarkFrontmatter from "remark-frontmatter"
 import remarkGfm from "remark-gfm"
 import remarkMdxFrontmatter from "remark-mdx-frontmatter"
@@ -53,6 +54,11 @@ function digestSources(): Plugin {
 
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
+  // Inline npm deps into the SSR bundle so the Vercel serverless function is
+  // self-contained. Without this, Nitro externalises `react` et al. and the
+  // bun-symlinked `node_modules/.bun/*` layout breaks the function file-trace,
+  // crashing at runtime with "Cannot find module 'react'".
+  ssr: { noExternal: true },
   plugins: [
     devtools(),
     tailwindcss(),
@@ -71,6 +77,7 @@ const config = defineConfig({
       }),
     },
     tanstackStart(),
+    nitro(),
     viteReact({ include: /\.(jsx|js|mdx|md|tsx|ts)$/ }),
   ],
 })
